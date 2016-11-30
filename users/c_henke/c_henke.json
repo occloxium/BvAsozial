@@ -1,0 +1,91 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Stiller Denker"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "s_alper": "Naja",
+                "s_becke": "Naja.",
+                "d_hasle": "Zu schnell, Anzeige ist raus"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "d_hasle": "Christian Alexander Werner",
+                "a_kring": "",
+                "s_becke": "Anders, Einzigartig, Anstrengend",
+                "l_cleme": "lustig, Physik-Lk , Henke",
+                "s_alper": "Christian Alexander Werner"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "d_hasle": "Dass du dir trotz deiner leichten ADHS-Art noch (fast) keine Todfeinde gemacht hast",
+                "a_kring": "",
+                "s_becke": "Du kannst alle in nur 2 Minuten auf die Palme bringen.",
+                "b_calis": "Du machst die besten \"schlechte-Witze\"",
+                "l_cleme": "Du redest lustig.",
+                "s_alper": "Christian hat drei Vornamen"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "d_hasle": "\"war mal wieder im retard Modus\" #physikkojoten #schneiderrulez",
+                "a_kring": "",
+                "s_alper": "Hier einen dummen Kommentar einf\u00fcgen."
+            }
+        },
+        {
+            "frage": "Welche Eigenschaft hatte ich in der 5. noch nicht?",
+            "antworten": {
+                "d_hasle": "Deine immense Wortgewandheit, die allerdings h\u00e4ufig in recht nervt\u00f6tende Gefilde abdriftet",
+                "a_barto": "Bier zu trinken",
+                "a_kring": "",
+                "s_becke": "Die Angwohnheit jeden innerhalb von 2 Minuten abzufucken",
+                "b_calis": "Humor",
+                "l_cleme": "Die Eigenschaft Bitches an Karneval zu kl\u00e4ren",
+                "s_alper": "So unlustige Kommentare wie jetzt abgeben."
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Eher der Abschreiber aber teilweise auch andersherum"
+        },
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Portemonnaie, Schl\u00fcsselbund, Handy"
+        },
+        {
+            "frage": "Seit wann bist du speifrei? (nur alkoholische Verschuldungen)",
+            "antwort": "12.02.1998"
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Hiob. Mit Abstand"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "USA, Australien, \u00c4gypten, China und Brasilien. Eigentlich m\u00f6chte ich die ganze Welt sehen."
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": "Schule ist wie Frankreich. Da muss man durch"
+        },
+        {
+            "frage": "Was wirst du von deiner Schulzeit vermissen?",
+            "antwort": "Die Ferien!"
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Subway und andere Schnellrestaurants"
+        }
+    ]
+}

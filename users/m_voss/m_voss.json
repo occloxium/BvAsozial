@@ -1,0 +1,73 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "a_kring": "",
+                "m_mast": ""
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "a_kring": "",
+                "m_mast": ""
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "a_kring": "",
+                "m_mast": ""
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "a_kring": "Geburtstag von Julian und Simon",
+                "m_mast": ""
+            }
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": {
+                "a_kring": "Schw\u00e4che: w\u00e4hrend des Autofahrens mir zur\u00fcck winken ",
+                "m_mast": ""
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Lasse abschreiben, ist aber eh falsch."
+        },
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Cameron Diaz"
+        },
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "Wenn ich wach bin"
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Maria Stuart"
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "Too Good"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Australien"
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": "Klappt schon irgendwie"
+        }
+    ]
+}

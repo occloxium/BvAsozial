@@ -1,0 +1,99 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "j_assma": "Zickig",
+                "s_\u00f6lker": "Aggro",
+                "a_heine": "aggro... ",
+                "l_schne": "Aggro",
+                "k_pethk": "Auf jeden Fall aggro",
+                "c_herge": "Aggro",
+                "a_kr\u00e4me": "model und ratti "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "j_assma": "H\u00fcbsch,asozial,behindert ",
+                "s_\u00f6lker": "",
+                "a_heine": "",
+                "c_herge": "hilfsbereit, gute Laune, asi",
+                "m_milan": "humorvoll, ehrlich, gro\u00df"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "j_assma": "",
+                "s_\u00f6lker": "\"Ja? Sch\u00f6n f\u00fcr dich\"",
+                "a_heine": "Ok ",
+                "l_schne": "Va bene ",
+                "k_pethk": "Ich vermisse Katziii",
+                "c_herge": "Fahr mal nach Hause, LOLOLOLOLOL, Hundert",
+                "m_milan": "Va bene ",
+                "a_kr\u00e4me": "ich liebe bio und franze hahahah"
+            }
+        },
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": {
+                "j_assma": "Eigentlich alle",
+                "s_\u00f6lker": "Alles was du sagst ist dumm ",
+                "a_heine": "Fahr mal nach Hause ",
+                "k_pethk": "Du bringst eigentlich nur dumme Spr\u00fcche ",
+                "l_schne": "Fahr mal nach Hause ",
+                "a_kr\u00e4me": "rechnerisch ne 5 aber gebe dir ne 4 "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "j_assma": "mit dir kann man kein Spa\u00df haben ",
+                "s_\u00f6lker": "",
+                "a_heine": "Abifestival 2015 \ud83d\ude02",
+                "m_milan": "Busabenteuer mit Jeremy und seiner Gang",
+                "l_schne": "Berlin, Biologie",
+                "a_kr\u00e4me": "Paris unsicher gemacht, franze und bio geschw\u00e4nzt, sport immer 1 abger\u00e4umt "
+            }
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": {
+                "j_assma": "",
+                "s_\u00f6lker": "",
+                "a_heine": ""
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du der Typ beleidigt, zickig oder aggro?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wer geh\u00f6rt zu deinem Freundeskreis?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wie bringt man dich auf 180?",
+            "antwort": ""
+        }
+    ]
+}

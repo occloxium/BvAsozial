@@ -1,0 +1,96 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "j_malys": "Gar nichts von den sachen"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "m_heimb": "Alles !",
+                "j_malys": "Abiball planen "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "m_heimb": "Bist die Beste ",
+                "j_malys": "abiball Komitee Chefin "
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "m_heimb": "Oleks aka Olexesh ",
+                "j_malys": "Olexesh"
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "m_heimb": "Sich immer f\u00fcr alles zu rechtfertigen  ",
+                "j_malys": "Jeden Mittwoch Klapse "
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "m_heimb": "Singen wie Elsa ",
+                "j_malys": "Work work work "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "m_heimb": "Jeden Mittwoch Klapse ?! ",
+                "j_malys": "Bei Mel getrunken "
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "j_malys": "Klapse "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Ich lasse abschreiben "
+        },
+        {
+            "frage": "Bist du der Typ beleidigt, zickig oder aggro?",
+            "antwort": "zickig"
+        },
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Zac Efron"
+        },
+        {
+            "frage": "Wann das letzte Mal bei einem Helene Fischer-Song mitgesungen?",
+            "antwort": "Jeden Mittwoch in der Klapse"
+        },
+        {
+            "frage": "Was ist das d\u00fcmmste was du je gemacht hast?",
+            "antwort": "Mich f\u00fcr das BvA zu entscheiden "
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Wei\u00df"
+        },
+        {
+            "frage": "Wer geh\u00f6rt zu deinem Freundeskreis?",
+            "antwort": "Melina und Konstantin "
+        },
+        {
+            "frage": "Wovor hast du Angst?",
+            "antwort": "Vor der Zukunft "
+        }
+    ]
+}

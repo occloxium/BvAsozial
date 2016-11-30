@@ -1,0 +1,51 @@
+/*@import url('mobile.css') only screen and (max-width: 768px);*/
+@import url('list.css');
+html * {
+	box-sizing: border-box;
+}
+footer {
+	position: relative;
+	bottom: 0;
+	padding: 2em;
+	background: #ddd;
+	width: 100%;
+}
+footer a {
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	color: #666;
+} footer a:active, footer a:hover {
+	color: #424242;
+}
+nav {
+	padding: 1em 2em;
+	display: flex;
+	align-items: center;
+	background: #efefef;
+}
+
+.navigation__logo img {
+	height: 64px;
+}
+.navigation__link {
+	padding: 0 1em;
+	text-decoration: none;
+	text-align: center;
+	display: flex;
+	align-items: center;
+} .navigation__link:active, .navigation__link:hover {
+	color: #424242;
+}
+.navigation__link i {
+	font-size: 2.33em;
+	margin-right: 4px;
+}
+.navigation__spacer {
+	display: inline-block;
+	width: 100%;
+}
+
+.mdl-list {
+	max-width: 500px;
+}

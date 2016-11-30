@@ -1,0 +1,107 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "s_wagne": "Die Welt bereisen ",
+                "c_thiem": "spontan zum Flughafen und zusammen einen Flug ins Nirgendwo nehmen"
+            }
+        },
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "f_tietz": "Die Welt erkunden und neue Leute kennen lernen!",
+                "m_k\u00fchn": "Neuseeland",
+                "s_wagne": "",
+                "n_st\u00fcbn": "Eine Weltreise machen und so"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "f_tietz": "Hippie, Tierfreund und Dauergrinserin",
+                "m_k\u00fchn": "",
+                "c_smiat": "Spontan, vorsichtig, lustig",
+                "s_wagne": "Nett, stilsicher, sympathisch ",
+                "c_thiem": "unsportlich unsportlich unsportlich :*",
+                "s_cimes": "hilfsbereit, selbstbewusst, humorvoll",
+                "n_st\u00fcbn": "Wundersch\u00f6n, total lieb"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "f_tietz": "RiRi oder Frau Kainz",
+                "m_k\u00fchn": "\u00d6ko",
+                "s_wagne": "Kenne  glaube ich keinen "
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "f_tietz": "Du schaffst es nie, p\u00fcnktlich zu sein :*",
+                "m_k\u00fchn": "Tanzen ",
+                "s_wagne": "",
+                "n_st\u00fcbn": "Fu\u00dfball spielen (auch wenn du nicht so gut bist wie ich), auf alle aufpassen"
+            }
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": {
+                "s_wagne": "Bungeejumping",
+                "n_st\u00fcbn": "Dir ein Piercing stechen "
+            }
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": {
+                "f_tietz": "Du solltest mal versuchen, mich zu schminken ...",
+                "m_k\u00fchn": "",
+                "c_smiat": "W\u00fcrmer essen ",
+                "s_wagne": ""
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Iron Man"
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "\"Just like fire\" P!NK"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Asien,Hawaii,Neuseeland -am besten jeden Kontinent einmal  bereisen"
+        },
+        {
+            "frage": "Was w\u00fcrdest du tun wenn du im Lotto gewinnen w\u00fcrdest?",
+            "antwort": "So viele Spendenorganisationen wie m\u00f6glich unterst\u00fctzen"
+        },
+        {
+            "frage": "Wenn du ein Zeichentrickcharakter w\u00e4rst, welcher w\u00e4re das?",
+            "antwort": "Vilma von Scooby Doo"
+        },
+        {
+            "frage": "Wie bringt man dich auf 180?",
+            "antwort": "Wenn man behauptet,dass Menschen J\u00e4ger sind und deswegen Fleisch essen m\u00fcssen"
+        },
+        {
+            "frage": "Wie kann man dich am besten beeindrucken?",
+            "antwort": "Wenn man witzig und spontan ist - oder wenn man den Zauberw\u00fcrfel in 1 Minute gel\u00f6st kriegt "
+        },
+        {
+            "frage": "Worauf hast du zuletzt getanzt?",
+            "antwort": ""
+        }
+    ]
+}

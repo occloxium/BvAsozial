@@ -1,0 +1,94 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Dani"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "j_malys": "Aggro-Berlin ",
+                "s_\u00f6lker": "Beleidigt ",
+                "k_pethk": "Zickig du diva",
+                "a_kr\u00e4me": "Stets gut gelaunt ",
+                "l_schne": "Zickig",
+                "a_urbat": "Z I C K I G"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "j_malys": "Augenbrauen malen ",
+                "s_\u00f6lker": "Bescheuert sein ",
+                "k_pethk": "Gute Laune verbreiten",
+                "a_kr\u00e4me": "Tanzen , tweerken",
+                "m_milan": "Du kannst gut zuh\u00f6ren und bist ein Make-Up Profi ",
+                "a_urbat": "h\u00e4sslich sein "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "j_malys": "Schmink-Queen",
+                "s_\u00f6lker": "Lustig, lieb, einf\u00fchlsam ",
+                "k_pethk": "Ehrlich, humorvoll, zielstrebig ",
+                "l_schne": "H\u00fcbsch, lustig, cool",
+                "l_weihr": "verr\u00fcckt, h\u00fcbsch, witzig",
+                "m_milan": "H\u00fcbsch, witzig, charakterstark ",
+                "a_urbat": "behindert, Sp\u00e3nisher akcent, mau"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "j_malys": "Du bist bekloppt ",
+                "m_milan": "Du liebst Katzen und bist sogar auf der F\u00e4hre nach England mit Katzenohren rumgelaufen "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "j_malys": "Zu vieles kann ich nicht aufz\u00e4hlen ",
+                "a_kr\u00e4me": "Haben einen kleiner jungen beobachtet mit seiner brotdose ",
+                "l_schne": "Schiffe-versenken spielen ",
+                "l_weihr": "Jede Stunde in Bio einfach gelacht, \"du bist komisch\"",
+                "m_milan": "Sportunterricht bei Herr Volkenrath, afrikanischer Tanz - LAPTOP",
+                "a_urbat": "ik kann nit mehr "
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "s_\u00f6lker": "Dora ",
+                "a_kr\u00e4me": "Dani Sahne ",
+                "a_urbat": "Katzi"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du der Typ beleidigt, zickig oder aggro?",
+            "antwort": ""
+        },
+        {
+            "frage": "L\u00e4uft bei dir?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was kann dir keiner nehmen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wer ist die d\u00fcmmste Person die du kennst?",
+            "antwort": ""
+        }
+    ]
+}

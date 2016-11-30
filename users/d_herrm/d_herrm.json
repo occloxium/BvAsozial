@@ -1,0 +1,82 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "DomeH"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "a_kring": "korrekt, sportlich, bestes Taxi"
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "a_kring": "zickig sein"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": {
+                "a_kring": "heirate doch anna, Marie"
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "a_kring": "karneval"
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": [
+
+            ]
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": ""
+        },
+        {
+            "frage": "Du hast eine S\u00fcnde frei, welche verbotene Sache w\u00fcrdest du machen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Welches Schulfach war dein pers\u00f6nlicher Super- GAU?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wer ist die d\u00fcmmste Person die du kennst?",
+            "antwort": ""
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bei welchem Film muss ich immer weinen?",
+            "antworten": {
+                "n_st\u00fcbn": "K\u00f6nig der L\u00f6wen"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "r_sieve": "gl\u00fccklich, offen, Japanfan",
+                "n_st\u00fcbn": "S\u00fc\u00dfes naives Blondchen",
+                "f_tietz": "Hilfsbereit, lustig und zum Liebhaben!!"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "r_sieve": "Deinen Katzen passieren die lustigsten Dinge",
+                "n_st\u00fcbn": "Du leidest unter deinen gro\u00dfen Br\u00fcsten"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "r_sieve": "\"Guck mal da ist (hier beliebigen Anime\/Manga Charakter einf\u00fcgen)\" - Du auf jeder Convention",
+                "n_st\u00fcbn": "Spiegelei mit Kr\u00e4utersalz."
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "r_sieve": "z\u00e4hlt 'sans' als Zeichentrickcharakter?",
+                "n_st\u00fcbn": "Bambi"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was waren die Helden deiner Kindheit?",
+            "antwort": ""
+        },
+        {
+            "frage": "Welche 5 Dinge w\u00fcrdest du mit auf eine einsame Insel nehmen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wenn du ein Zeichentrickcharakter w\u00e4rst, welcher w\u00e4re das?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wenn du nicht du w\u00e4rst, wer w\u00e4rst du dann?",
+            "antwort": ""
+        }
+    ]
+}

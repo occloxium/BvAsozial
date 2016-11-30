@@ -1,0 +1,52 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "a_heine": "laut, asozial, besoffen ",
+                "c_herge": "asozial, aber trotzdem auf irgendeiner Art liebenswert, bekloppt",
+                "l_cleme": "asozial, K\u00f6lner, Knacki",
+                "a_urbat": "einfach nur durch ",
+                "k_pethk": "Immer der Vollste"
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "a_heine": "",
+                "c_herge": "bei dir Bierpong spielen ",
+                "l_cleme": "Schalke - Hoffenheim",
+                "a_urbat": "Felder und ihre Pf\u00fctzen erkundigt "
+            }
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": {
+                "a_heine": "",
+                "l_cleme": ""
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": "Hauptsache Abitur "
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "Subway"
+        },
+        {
+            "frage": "Wer ist die d\u00fcmmste Person die du kennst?",
+            "antwort": "Mein Bruder, Chiara Hergesell"
+        }
+    ]
+}

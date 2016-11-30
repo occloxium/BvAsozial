@@ -1,0 +1,88 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "a_kr\u00e4me": "Zickig ",
+                "f_tietz": "Zickig oder beleidigt, vllt auch aggro ??"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "f_tietz": "Auf dich aufmerksam machen!"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "a_heine": "Auto fahren ",
+                "c_herge": "saufen",
+                "s_\u00f6lker": "Saufen",
+                "j_assma": "Nichts ",
+                "l_schne": "Saufen",
+                "m_milan": "Autofahren, vor allem in K\u00f6ln."
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "m_milan": "humorvoll, selbstbewusst, ehrlich ",
+                "a_kr\u00e4me": "Krissi Crossi hottie"
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "a_kr\u00e4me": "Aufdringlich zu sein "
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "a_heine": "",
+                "c_herge": "\u00fcber rote Ampeln fahren",
+                "s_\u00f6lker": "",
+                "j_assma": "Schwanzgeil"
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "a_heine": "......",
+                "c_herge": "",
+                "s_\u00f6lker": "Jede Deutschstunde ",
+                "j_assma": "Rumgemacht",
+                "l_schne": "Amsterdam-Trip",
+                "m_milan": "Tupperware in der Mikrowelle geschmolzen",
+                "a_kr\u00e4me": "Skifreizeit im M\u00e4dchenhaus die Toilette nie abgezogen "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Ich lasse abschreiben "
+        },
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Elyas M'Barek "
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "Schlafen im SV-Raum"
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": "Englisch-LK mit Frau Licht und den schlausten Sch\u00fclern der Stufe"
+        },
+        {
+            "frage": "Welche 5 Dinge w\u00fcrdest du mit auf eine einsame Insel nehmen?",
+            "antwort": "Anna, Miriam, Chiara, Svenja und 'n Kasten Bier"
+        }
+    ]
+}

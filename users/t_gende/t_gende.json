@@ -1,0 +1,95 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "a_heine": "Candy Crush ",
+                "a_kring": "ein arschgesicht sein",
+                "c_herge": "Fahrrad fahren",
+                "k_pethk": "Bio",
+                "l_cleme": "Tipico ",
+                "m_milan": "Leute zum Lachen bringen und au\u00dferdem bist du ein Virtuose an der Triangel ",
+                "s_alper": "Kugelsto\u00dfen"
+            }
+        },
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "a_heine": "",
+                "a_kring": "mir egal, aber komm mich blo\u00df nicht besuchen",
+                "c_herge": "mit deinem Fahrrad durch die Welt fahren :P",
+                "k_pethk": "Eine Weltreise",
+                "l_cleme": "Max. bet :D",
+                "m_milan": "Einen Marathon laufen"
+            }
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "a_heine": "",
+                "a_kring": "nichts, weil ich eh s\u00fc\u00dfer bin",
+                "c_herge": "deine Sportlichkeit",
+                "k_pethk": "Diese Biokenntnisse",
+                "m_milan": "deine Sportlichkeit"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "a_heine": "Toto ",
+                "a_kring": "arschgesicht",
+                "c_herge": "Toto",
+                "k_pethk": "Totoooo",
+                "l_cleme": "Toto",
+                "m_milan": "Toto",
+                "s_alper": "Genders"
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "a_heine": "",
+                "a_kring": "alles, bei dir gibts nichts gutes",
+                "c_herge": "",
+                "k_pethk": "Schleimen bei Lehrern",
+                "m_milan": "Die Rechtschreibung anderer Leute zu korrigieren."
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "a_heine": "",
+                "a_kring": "hast keins ",
+                "c_herge": "",
+                "k_pethk": "Spooort.. das wars dann aber auch",
+                "m_milan": "Singen (aber nur wenn du etwas getrunken hast)."
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Beides"
+        },
+        {
+            "frage": "Seit wann bist du speifrei? (nur alkoholische Verschuldungen)",
+            "antwort": "Sommerurlaub 2015"
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "Subway"
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Schwarz"
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Subway"
+        }
+    ]
+}

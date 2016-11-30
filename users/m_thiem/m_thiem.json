@@ -1,0 +1,79 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Aktuelles Lieblingslied?",
+            "antworten": {
+                "d_hasle": "Amazing Horse",
+                "m_p\u00fctz": "Helene Fischer - Atemlos"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "d_hasle": "Verlieren",
+                "m_p\u00fctz": "Gute Frage"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "p_walla": "Schule :)",
+                "\u00fc_genc": "Beinis kassieren",
+                "j_thiem": "Wenn ich das w\u00fcsste...",
+                "f_bleck": "Klavier, absolutes Geh\u00f6r, Mathe",
+                "j_li": "Spr\u00fcche raushauen "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "m_p\u00fctz": "Gro\u00df, Blond, Streber ",
+                "d_hasle": "Traurig, einfach traurig"
+            }
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "d_hasle": "Meinst du das ernst? Als ob du irgendwas h\u00e4ttest.."
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "m_p\u00fctz": "Momo",
+                "d_hasle": "Hackfresse <3",
+                "m_scham": "Momo aka Ralph"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "p_walla": "Team",
+                "m_scham": "Momo aka Ralph",
+                "\u00fc_genc": "Toritz Mhiem",
+                "j_thiem": "Brudi, Momo",
+                "f_bleck": "Toritz Miehm",
+                "j_li": "Vllt Momo?  :D ",
+                "l_cleme": "Momo"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": "Kiosk"
+        },
+        {
+            "frage": "Was w\u00fcrdest du tun wenn du im Lotto gewinnen w\u00fcrdest?",
+            "antwort": "Nochmal spielen"
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Blau"
+        }
+    ]
+}

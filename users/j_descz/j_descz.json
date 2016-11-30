@@ -1,0 +1,44 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": [
+
+            ]
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Hiob (von Joseph Roth)"
+        },
+        {
+            "frage": "Was ist dein aktuelles Handy?",
+            "antwort": "IPhone 5S"
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "Show Me Love (Robin Schulz); Faded (Alan Walker); Sweet Lovin (Sigala); Arcade (Dimitri Vegas & Like Mike); Clarity (Zedd); Cobra (Hardwell)"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Rom; M\u00fcnchen; Berlin; London; Stockholm; Oslo; Lillehammer; Prag; Krakau "
+        }
+    ]
+}

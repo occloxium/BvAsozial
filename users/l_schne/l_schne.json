@@ -1,0 +1,95 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "a_urbat": "zickig",
+                "k_pethk": "Zickig ",
+                "c_herge": "beleidigt",
+                "a_heine": "Gar nichts, du bist toll ",
+                "c_landm": "Zickig",
+                "m_heimb": "Du bist schon so ne kleine Zicke ",
+                "c_kuren": "Beleidigt :D ",
+                "r_chris": "Zickig passt",
+                "j_malys": "unnormal aggressiv "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "a_urbat": "ich bin zusp\u00e4t ",
+                "c_herge": "liebenswert, der immer lacht, spontan",
+                "a_heine": "unp\u00fcnktlich, verschlafen, freundlich ",
+                "c_landm": "Gescheit, streits\u00fcchtig, liebenswert",
+                "j_malys": "Autofahren= mein Hobby ",
+                "c_kuren": "Auto fahren "
+            }
+        },
+        {
+            "frage": "Was ist mein Lieblingsschnaps\/ -bier\/ -zigarette\/ -zigarre?",
+            "antworten": {
+                "a_urbat": "gauloises blondes",
+                "k_pethk": "Gauloises",
+                "c_herge": "Zigaretten: Goulias, sehe dich zu selten am Saufen",
+                "a_heine": "Benson & Hedges (alte Zeiten)",
+                "c_landm": "Gauloises",
+                "j_malys": "PallMall ist ekelig ",
+                "c_kuren": "Fr\u00fcher Lucky's "
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "k_pethk": "Mein Gesicht auf deine Brust",
+                "a_heine": "NE - LE 2211",
+                "c_landm": "Markus Lanz Ultras",
+                "m_heimb": "Ein Bild von Lara Hellmich",
+                "j_malys": "mein Gesicht ",
+                "c_kuren": "Den Punkt aus Flensburg ",
+                "r_chris": "Bergins4Ever mit vielen Herzen"
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "a_urbat": "essen und Zigaretten ",
+                "k_pethk": "Tank, Zigaretten und Essen",
+                "a_heine": "Sprit und Kippen",
+                "c_landm": "Auto",
+                "m_heimb": "Sprit und Zigaretten ",
+                "j_malys": "Autofahren ",
+                "c_kuren": "Kippen "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Autoschl\u00fcssel "
+        },
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "Viel zu sp\u00e4t "
+        },
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": "Raucherecke"
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was wirst du von deiner Schulzeit vermissen?",
+            "antwort": "Meine Freunde jeden Tag zu sehen "
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Sprit, Zigaretten "
+        }
+    ]
+}

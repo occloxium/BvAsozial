@@ -1,0 +1,83 @@
+{
+    "spruch": "Long hair, don't care ",
+    "rufnamen": [
+        "Jessi "
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Aktuelles Lieblingslied?",
+            "antworten": {
+                "j_thiem": "\u00c4ndert sich st\u00e4ndig",
+                "d_hasle": "Keinen Schimmer, irgendwas von Beyonce oder Ariana Grande? Ich bin nach wie vor f\u00fcr Gute Bekannte von Alligatoah",
+                "s_\u00f6lker": "Love yourself - Justin Bieber",
+                "a_kring": "dear no one",
+                "\u00fc_genc": "Tinh nhi nu - Loi Viet: Diem Son thu tqv  thu tqv.... bester Song...",
+                "b_salci": "",
+                "j_reide": "Wenn Inge tanzt..",
+                "j_descz": ""
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "j_thiem": "Quatschen, Sprachen, Sport, Musik, Kochen, also eigentlich kannst du alles",
+                "d_hasle": "Den verschimmelten Toast als neu verkaufen und Interesse heucheln",
+                "p_walla": "Gute Zusammenfassungen f\u00fcrs Abi schreiben !!!",
+                "s_\u00f6lker": "Mathe ",
+                "a_kring": "b\u00f6se gucken, wenn ich wieder was dummes gesagt habe ",
+                "\u00fc_genc": "",
+                "b_salci": "",
+                "j_reide": "Andere \u00fcberzeugen :) ",
+                "m_kaspe": "ALLES",
+                "s_becke": "Viel zu viel",
+                "a_kr\u00e4me": "Englisch & franz\u00f6sich reden ",
+                "n_berg": "optimistisch sein und mut geben "
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "j_thiem": "Je m\u00b4appelle pomme de terre.",
+                "d_hasle": "Wo soll man da anfangen? Werd erwachsen; lauft Kinder; lasst ihn steinigen; es ist nicht so wie es aussieht; er ist ein Stein; OK.; ah ok; ich bin immer nett; ich kenne niemanden bei chinesischen Mafia; ich kenne wirklich niemanden bei der chinesischen Mafia; ich kenne gar nicht so viele Leute; ich bin wirklich immer nett; lasst ihn verbrennen; ich muss lernen; oh mein Gott, ich hab eine 5; Hi, wie geht's dir?; nein, dieses Mal habe ich wirklich eine f\u00fcnf.. Und das sind nur die, die mir spontan eingefallen sind",
+                "p_walla": "Alles gut ?",
+                "s_\u00f6lker": "\"Ja Herr M'Barek, ich wei\u00df\" ",
+                "a_kring": "werd erwachsen ",
+                "\u00fc_genc": "Poki",
+                "b_salci": "Werd erwachsen",
+                "l_lelit": "Die Sowi-Klausur war nicht sooo gut ",
+                "j_reide": "Flip the table! ",
+                "c_henke": "Ok.",
+                "a_bieri": "Du schaffst das!!"
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "j_thiem": "Make-Up das du im Endeffekt nicht benutzt weil du auch ohne gorgeous bist :)",
+                "d_hasle": "Parfum, definitiv Parfum!!!",
+                "p_walla": "Detox Zeug ",
+                "s_\u00f6lker": "",
+                "a_kring": "geschenke ",
+                "\u00fc_genc": "Anscheinend nicht f\u00fcr Eis.",
+                "b_salci": "Essen",
+                "l_lelit": "Smoothies",
+                "a_kr\u00e4me": "Klamotten und smoothies\/S\u00e4fte ",
+                "n_berg": "du erscheinst mir sehr sparsam"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "Dear No One - Tori Kelly "
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Seoul und Jeju-do "
+        },
+        {
+            "frage": "Wer ist die d\u00fcmmste Person die du kennst?",
+            "antwort": ""
+        }
+    ]
+}

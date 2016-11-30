@@ -1,0 +1,98 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "d_hasle": "Ein Wort reicht aus: Different!",
+                "p_walla": "Lustig, Nett, Tollpatschig ",
+                "j_thiem": "verpeilt, verpeilt, verpeilt",
+                "s_\u00f6lker": "Ehrgeizig, Hilfsbereit, Nett",
+                "n_romei": "verr\u00fcckt, lebendig, intelligent",
+                "l_lelit": "Mathe, lustig, schlau"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "d_hasle": "Sahneschnubbi <3"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "p_walla": "Haram ",
+                "r_chris": "Betscher",
+                "j_thiem": "Quotent\u00fcrke",
+                "s_\u00f6lker": "",
+                "n_romei": "Beatcher",
+                "l_lelit": "Agentin Bet\u00fcl "
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "m_thiem": "Einfach different"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "p_walla": "Haram ",
+                "j_thiem": "",
+                "s_\u00f6lker": "\"Jaaaaaaa, genau.\"",
+                "l_lelit": "",
+                "d_hasle": "\"Also langsam wird's peinlich, Leute\""
+            }
+        },
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": {
+                "d_hasle": "\"Also langsam wird's peinlich, Leute\"",
+                "r_chris": "Kommt \u00fcberhaupt was schlaues?",
+                "j_thiem": "",
+                "s_\u00f6lker": "",
+                "l_lelit": ""
+            }
+        },
+        {
+            "frage": "Welche Eigenschaft hatte ich in der 5. noch nicht?",
+            "antworten": {
+                "s_\u00f6lker": "Deine Selfie Sucht",
+                "d_hasle": "Witze erkl\u00e4ren"
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "j_thiem": "Clumsy Schlumpf",
+                "d_hasle": "Dory aus Findet Nemo"
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "d_hasle": "F\u00fcr neue Handynummern"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": ""
+        },
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Abschreiberlasser\ud83d\udc4c\ud83c\udffb"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "k_pethk": "Nein nie ",
+                "j_malys": "Immer ",
+                "m_milan": "Bestimmt ",
+                "c_herge": "l\u00e4uft immer! ;)",
+                "g_vlamo": "L\u00e4uft Bruder"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "s_\u00f6lker": "Verpeilt, zielstrebig, biologieass",
+                "r_chris": "Want some Crack?",
+                "j_malys": "Fitness Model 100",
+                "l_weihr": "lustig, mega nett, offen",
+                "m_milan": "humorvoll, h\u00fcbsch, ehrlich ",
+                "c_herge": "witzig, gechillt, partymaus",
+                "l_lelit": "Goofy, Roma, Suff "
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "j_malys": "Gymbuddy",
+                "l_weihr": "Fr\u00fcher immer Alin\u00b4chen :D",
+                "l_lelit": "Linikack",
+                "b_calis": "Alina ACK",
+                "a_urbat": "Ratti ",
+                "g_vlamo": "Liniii \/Claudi"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "s_\u00f6lker": "Dein zweiter Name ",
+                "k_pethk": "Dass du an meinen Geburtstag was mit miris Bruder hattest ",
+                "r_chris": "Crack",
+                "j_malys": "du bist motivierter als ich haha "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "r_chris": "Kindergartenzeit Yugioh gezockt",
+                "j_malys": "Fremde Kinder beleidigt und gemobbt ",
+                "l_weihr": "Boah wir haben fr\u00fcher so viel zusammen gemacht.. Wie wir einfach immer auf dem Schulhof gechillt haben und diese komischen Nudeln gegessen haben :p Oder jedes mal beim Schie\u00dfen auf dieser H\u00fcpfburg.. Wir haben eigentlich so gut wie alles zusammen gemacht :D",
+                "m_milan": "Geisterbeschw\u00f6rung bei dir im Keller, Ali und Mario ",
+                "l_lelit": "In Rom Abends mit dir \"einen\" Trinken...",
+                "g_vlamo": "Auf unserer Kunstausstellung betrunken"
+            }
+        },
+        {
+            "frage": "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
+            "antworten": {
+                "s_\u00f6lker": "Ron von Kim Possible",
+                "k_pethk": "Yannick Schmitz ",
+                "j_malys": "Ich ",
+                "l_lelit": "Konstantin",
+                "g_vlamo": "Nat\u00fcrlich Georgios Vlamos!"
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "r_chris": "Crack?!",
+                "j_malys": "Du bist ein geizkragen",
+                "l_lelit": "Essen ",
+                "g_vlamo": "Tabakwaren"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Zac Efron "
+        },
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Handy & Musik"
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "Adele -when we were Young "
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Amerika, Asien "
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war dein dreister Spicker oder Schummeltrick?",
+            "antwort": "Ganzer Vorgeschriebener Text in Klausurbogen gelegt"
+        },
+        {
+            "frage": "Was wirst du von deiner Schulzeit vermissen?",
+            "antwort": "Schulausfl\u00fcge "
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Essen , Alkohol & Klamotten "
+        }
+    ]
+}

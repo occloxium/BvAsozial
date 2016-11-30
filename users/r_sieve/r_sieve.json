@@ -1,0 +1,133 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "f_tietz": "Super sympathisch, Kreativit\u00e4t pur und Japan",
+                "d_hasle": "Japanophil, Rockmusik, Haarfarben",
+                "m_k\u00fchn": "",
+                "m_kaspe": "aufgeschlossen, ehrlich, Serienfan",
+                "j_li": "",
+                "n_st\u00fcbn": "Viel zu lieb",
+                "s_cimes": "zuverl\u00e4ssig, s\u00fc\u00df, gutm\u00fctig",
+                "e_neufe": "herallerliebst, famos, nett"
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "f_tietz": "Du kannst sehr gut zeichnen!",
+                "d_hasle": "Die Pr\u00e4senz von Gutm\u00fctigkeit und diese auch auszustrahlen",
+                "m_k\u00fchn": "",
+                "m_kaspe": "Freunden mit voller Begeisterung zu helfen und aufzuheitern",
+                "j_li": "",
+                "n_st\u00fcbn": "Zuh\u00f6ren, Tassenkuchen backen",
+                "e_neufe": "Organisation! "
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "f_tietz": "Du bist verr\u00fcckt nach Mangas ",
+                "d_hasle": "",
+                "m_k\u00fchn": "",
+                "m_kaspe": "Du magst pummlige und fette Tiere ",
+                "j_li": "",
+                "n_st\u00fcbn": "Du wirst richtig sauer, wenn man dich was nicht ordentlich planen l\u00e4sst ",
+                "s_cimes": "tr\u00e4gst immer gestreifte Socken ! "
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "d_hasle": "",
+                "m_k\u00fchn": "",
+                "j_li": "",
+                "n_st\u00fcbn": "Ich hab ein problem.",
+                "m_kaspe": "[...], weil ich so niedlich bin",
+                "s_cimes": "Ach Taddl....",
+                "e_neufe": "\"Ha, Genau.\" "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "d_hasle": "Kraftklub!!! (und das Japanviertel ^^)",
+                "m_k\u00fchn": "Als Kinder haben wir zusammen mit deiner Schwester, Kreide, Walki Talkis und vielen Lachanf\u00e4llen so manche Nachmittage verbracht",
+                "j_li": "Alles was jemals in Ddorf passiert ist :D ",
+                "n_st\u00fcbn": "Bei dieser Fabrik aufs Dach klettern (als du deine Hose abschneiden musstet), fr\u00fcher auf Cons gehen und so, nach London fahren etc...",
+                "s_cimes": "Einbruch in eine leerstehende Fabrik"
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "d_hasle": "Undercut und Jutebeutel, ich trinke Club Marte oder gibt's den Kaffee Latte auch mit Sojamilch?",
+                "m_k\u00fchn": "",
+                "j_li": "",
+                "n_st\u00fcbn": "Einen Joint.",
+                "m_kaspe": "Ein Regenbogen-Alpaka",
+                "s_cimes": "ein fettes \"Dr. Martens\""
+            }
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": {
+                "d_hasle": "Sake sollte schlimm genug sein..",
+                "m_k\u00fchn": "Bungee jumping mit verbundenen Augen",
+                "j_li": "",
+                "n_st\u00fcbn": "Wettsaufen mit Martin.",
+                "s_cimes": "Marilyn Manson bei\u00dfen ",
+                "e_neufe": "Unterhalte Dich zehn Minuten mit den Zeugen Jehovas. "
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "d_hasle": "Ich kenne doch keine Animes!",
+                "m_k\u00fchn": "",
+                "j_li": "Wahrscheinlich Totoro :D ",
+                "n_st\u00fcbn": "Schneewittchen",
+                "m_kaspe": "Fin aus Adventure Time"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Andrew Scott"
+        },
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "wenn ich frei hab gegen 13Uhr"
+        },
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Das Schicksal ist ein mieser Verr\u00e4ter"
+        },
+        {
+            "frage": "Was ist dein Lieblingsstar?",
+            "antwort": "Andrew Scott, Troye Sivan, Marilyn Manson, Norman Reedus"
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": "The Walking Dead, Fear the Walking Dead"
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "Subway oder nach Hause fahren um zu schlafen "
+        },
+        {
+            "frage": "Was w\u00fcrdest du tun wenn du im Lotto gewinnen w\u00fcrdest?",
+            "antwort": "Reisen"
+        },
+        {
+            "frage": "Welches Schulfach war dein pers\u00f6nlicher Super- GAU?",
+            "antwort": "Mathe"
+        }
+    ]
+}

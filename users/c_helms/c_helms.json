@@ -1,0 +1,67 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "t_schne": "Zickig \ud83d\ude1b"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "c_smiat": "Nicht mehr die ps4 :D"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "c_smiat": "Helmi",
+                "t_schne": "Schatzi "
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was sind Eigenschaften die dich an mir nerven?",
+            "antworten": [
+
+            ]
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Ich lie\u00df abschreiben."
+        },
+        {
+            "frage": "Was ist dein aktuelles Handy?",
+            "antwort": "Iphone6s"
+        },
+        {
+            "frage": "Was w\u00fcrdest du tun wenn du im Lotto gewinnen w\u00fcrdest?",
+            "antwort": "Das Geld behalten und damit durch das Leben kommen. "
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Wei\u00df"
+        },
+        {
+            "frage": "Wer geh\u00f6rt zu deinem Freundeskreis?",
+            "antwort": "Corinna Smiatek, Daniel Schumalla, Marco Kosian, Laura Strauch, Tatjana Schneegans, Julia Desczyck"
+        }
+    ]
+}

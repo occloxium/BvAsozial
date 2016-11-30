@@ -1,0 +1,68 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Warum ist D\u00fcsseldorf die sch\u00f6nste Stadt der Welt?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": [
+
+            ]
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Du hast eine S\u00fcnde frei, welche verbotene Sache w\u00fcrdest du machen?",
+            "antwort": ""
+        },
+        {
+            "frage": "F\u00fcr wieviel Geld w\u00fcrdest du ins Dschungelcamp gehen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Welche 5 Dinge w\u00fcrdest du mit auf eine einsame Insel nehmen?",
+            "antwort": ""
+        }
+    ]
+}

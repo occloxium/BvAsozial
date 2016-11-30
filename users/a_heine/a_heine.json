@@ -1,0 +1,113 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "c_herge": "Nase",
+                "k_pethk": "Einen knackigen Po, der jede Hose komplett ausf\u00fcllt",
+                "s_\u00f6lker": "",
+                "t_gende": "Burton Snowboard",
+                "a_benzo": "geld",
+                "j_assma": "Dicke titten",
+                "l_cleme": "",
+                "m_milan": "Deine Haare"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "c_herge": "",
+                "k_pethk": "Ronja",
+                "s_\u00f6lker": "Kang Wang Goo",
+                "a_benzo": "sommerweib",
+                "l_cleme": "Anna-Banana",
+                "a_urbat": "blondi",
+                "l_schne": "\u00c4nnchen von Tara",
+                "m_milan": "Anna"
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "c_herge": "Mordpl\u00e4ne schmieden",
+                "k_pethk": "Alles fallen lassen, alles dreckig machen, laut sein",
+                "s_\u00f6lker": "Singen ",
+                "a_benzo": "gut aussehen",
+                "l_cleme": "Gut aussehen ",
+                "j_assma": "Tut mir leid aber du hast keins ",
+                "a_urbat": "Durchsagen machen ",
+                "l_schne": "Sch\u00f6n aussehen",
+                "m_milan": "Singen"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "c_herge": "\"Ich hab schon wieder R\u00fcckenblockaden\"",
+                "k_pethk": "Regel Nr.1: denke immer zuerst an dich selbst",
+                "s_\u00f6lker": "",
+                "a_benzo": "seid doch mal leise jeeeeeetzt",
+                "l_cleme": "",
+                "j_assma": "\"H\u00e4, verstehe ich nicht\"",
+                "a_urbat": "ich habe ja bald meinen F\u00fchrerschein ",
+                "l_schne": "Ich bin h\u00fcbsch!!"
+            }
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": {
+                "c_herge": "",
+                "k_pethk": "St\u00e4rken: Selbstbewusstsein, Schw\u00e4chen: die Feinmotorik ist ausbauf\u00e4hig",
+                "s_\u00f6lker": "",
+                "a_benzo": "",
+                "l_cleme": "",
+                "l_schne": "Gute Reisef\u00fchrerin -keine Schw\u00e4chen-"
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "c_herge": "",
+                "k_pethk": "Mein Gesicht",
+                "s_\u00f6lker": "",
+                "a_benzo": "loser auf die stirn",
+                "l_cleme": "",
+                "m_milan": "Ein Arschgeweih"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Orlando Bloom "
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Der Prozess"
+        },
+        {
+            "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "Subway"
+        },
+        {
+            "frage": "Welche 5 Dinge w\u00fcrdest du mit auf eine einsame Insel nehmen?",
+            "antwort": "Kristin Pethke, Miriam Schmitz, Chiara Hergesell, Svenja Lenzen und ein Kasten Bier "
+        },
+        {
+            "frage": "Wer geh\u00f6rt zu deinem Freundeskreis?",
+            "antwort": "Die BvA Bitches "
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Essen und Kleidung"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Der Don"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Aktuelles Lieblingslied?",
+            "antworten": {
+                "a_barto": "Captain Jack - Captain Jack (Strolchfreunde Edit)",
+                "s_becke": "Captain Jack",
+                "d_hasle": "F\u00fcrst Uranov!!"
+            }
+        },
+        {
+            "frage": "Bei welchem Film muss ich immer weinen?",
+            "antworten": {
+                "a_barto": "Findet Nemo",
+                "s_becke": "Dornr\u00f6schen ",
+                "d_hasle": "Irgendwas von Disney?"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "a_barto": "Nutella auf den Toast schmieren",
+                "s_becke": "Alles.",
+                "c_henke": "Videos schneiden ",
+                "s_alper": "Toast mit Nutella machen",
+                "d_hasle": "Zu Hause verschimmeln"
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "a_barto": "Mit schier minimalem Aufwand Dinge passabel hinzubekommen",
+                "l_cleme": "M\u00e4dels klar machen",
+                "d_hasle": "Dich mit deinem trockenem Humor \u00fcberall durchzulabern"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "d_hasle": "Wir m\u00fcssen dringend mal wieder einen diebeln gehen!"
+            }
+        },
+        {
+            "frage": "Was ist mein Lieblingsschnaps\/ -bier\/ -zigarette\/ -zigarre?",
+            "antworten": {
+                "a_barto": "Cuba Libre <3",
+                "s_becke": "Cuba Libre",
+                "d_hasle": "Cuba Libre ^^"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "Irgendwann Nachmittags"
+        },
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Die Verurteilten"
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": "Mehr war leider nicht drin"
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wie bringt man dich auf 180?",
+            "antwort": ""
+        },
+        {
+            "frage": "Worauf hast du zuletzt getanzt?",
+            "antwort": ""
+        }
+    ]
+}

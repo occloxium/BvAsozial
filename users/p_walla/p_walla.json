@@ -1,0 +1,112 @@
+{
+    "spruch": "A mile of highway will take you just one mile, but a mile of runway will take you anywhere!",
+    "rufnamen": [
+        "Pat the German",
+        "PattheGerman"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "s_becke": "Am Besten keine mehr..:D",
+                "c_henke": "",
+                "d_hasle": "Weiter auf Reisen zu gehen, um die Welt und deren Menschen besser kennenzulernen",
+                "a_barto": "D\u00fcsseldorf erkunden",
+                "a_kring": "Dschungelcamp",
+                "j_thiem": "",
+                "m_thiem": "",
+                "f_bleck": "Lebe deinen Traum und werde Captain America",
+                "j_li": ""
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "s_becke": "Pat the German",
+                "c_henke": "PatTheGerman",
+                "d_hasle": "PatTheGerman Sugardaddy Heisenberg, was auch sonst ^^",
+                "a_barto": "Pat the German",
+                "a_kring": "patthegerman",
+                "b_salci": "Patricia",
+                "j_thiem": "Pat the German",
+                "m_thiem": "Patty",
+                "f_bleck": "Pat",
+                "j_li": "Pat ",
+                "b_calis": "Patricia"
+            }
+        },
+        {
+            "frage": "Was ist mein Lieblingsschnaps\/ -bier\/ -zigarette\/ -zigarre?",
+            "antworten": {
+                "s_becke": "cubanische Zigarren",
+                "c_henke": "Alles was fl\u00fcssig ist.",
+                "d_hasle": "K\u00f6lsch ist klar, aber ich wei\u00df nicht welches, glaube aber Reissdorf",
+                "a_barto": "K\u00f6lsch oder Vodka-E, was anderes kommt nicht ins Haus",
+                "a_kring": "\"teure\" Zigarre f\u00fcr 3\u20ac aus Kiosk",
+                "j_thiem": "K\u00d6LSCH",
+                "m_thiem": "",
+                "f_bleck": "K\u00f6lsch",
+                "j_li": ""
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "s_becke": "#denkterw\u00e4recool",
+                "c_henke": "",
+                "d_hasle": "I <3 D\u00fcsseldorf :*",
+                "a_barto": "Den Atomkraft? Nein Danke! Aufkleber mit K\u00f6ln anstatt Atomkraft",
+                "a_kring": "schlaubi schlumpf ",
+                "j_thiem": "\"I love D\u00fcsseldorf\" auf deine Stirn",
+                "m_thiem": "",
+                "f_bleck": "95 ol\u00e9",
+                "j_li": "",
+                "b_salci": "Bitch"
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "s_becke": "F\u00fcrs Auto :D",
+                "c_henke": "",
+                "d_hasle": "Eig f\u00fcr kaum was, h\u00f6chstens Zigarren ^^",
+                "a_barto": "Alkohol & Auto",
+                "a_kring": "anz\u00fcge ",
+                "b_salci": "Anz\u00fcge \ud83d\ude02",
+                "j_thiem": "",
+                "m_thiem": "Alkohol",
+                "j_li": "Ich glaube du gibst eigentlich kaum Geld aus "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "F\u00fcr wieviel Geld w\u00fcrdest du ins Dschungelcamp gehen?",
+            "antwort": " Da ich schon einen Skorpion, Mehlw\u00fcrmer, Blut etc. gegessen habe, denke ich, dass es eine coole Challenge f\u00fcr mich w\u00e4re. Somit w\u00fcrde ich f\u00fcr 1000 Euro mitmachen."
+        },
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "Ich bin Fr\u00fchaufsteher und bin in der Regel um 6-8 Uhr wach."
+        },
+        {
+            "frage": "Was ist dein aktuelles Handy?",
+            "antwort": "iPhone 5"
+        },
+        {
+            "frage": "Was kann dir keiner nehmen?",
+            "antwort": "Erinnerungen, Abenteuer und Erfahrungen"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Ich liebe es zu reisen und neue Erfahrungen zu sammeln. Somit m\u00f6chte ich um die ganze Welt reisen. "
+        },
+        {
+            "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
+            "antwort": "Einige Wochen zuvor im Mathe LK: Es wird gefr\u00fchst\u00fcckt und ich habe Rice Crisby Bars (Riegel aus Marshmallows ) mitgebracht. Einige Wochen sp\u00e4ter im Physik GK: Mister Gottschalk m\u00f6chte ein Experiment mit Schokolade machen. Ich komme auf die Idee, dass ich einige Rice Crispy Bars mitnehmen kann. Daraufhin sagt Mr. Gottschalk: \"Nein nein, die Kleben mir noch zwischen den Z\u00e4hnen. \" Ich :\"Dann m\u00fcssen Sie sich die Z\u00e4hne besser putzen!\""
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Definitiv Orange !!!"
+        }
+    ]
+}

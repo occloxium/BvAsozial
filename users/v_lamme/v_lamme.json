@@ -1,0 +1,56 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "e_neufe": "Hilfsbereit, kreativ, nett",
+                "s_cimes": "vertr\u00e4umt, still, unheimlich lieb "
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "e_neufe": "Zeichnen!",
+                "s_cimes": "unglaublich gut zeichnen ! "
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "s_cimes": "vermutlich ein Mangacharakter der den gesamten Kosmos mit Magie \u00fcberh\u00e4uft :D "
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "s_cimes": "Mangas & Zeichenkrams - GUT SO !"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Hachiko - Eine wunderbare Freundschaft; Das M\u00e4dchen, das durch die Zeit sprang; Prinzessin Mononoke; Puella Magi Madoka Magica 3 - Rebellion"
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "No Scared - One Ok Rock, Sakura Nagashi - Hikaru Utada, Kimi no Gin no Niwa - Kalafina"
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": "Grimm, Once upon a Time, Death Parade, Jigoku Shoujo, Puella Magi Madoka Magica"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Japan, Spanien"
+        },
+        {
+            "frage": "Was waren die Helden deiner Kindheit?",
+            "antwort": "Sora (Kingdom Hearts), Maron Kusakabe\/Jeanne d'Arc (Jeanne, die Kamikaze Diebin), Sailor Moon, Sakura Kinomoto (Card Captor Sakura)"
+        }
+    ]
+}

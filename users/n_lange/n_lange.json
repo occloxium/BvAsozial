@@ -1,0 +1,53 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "\u00fc_genc": "Kannste mir `nen Gefallen tun?",
+                "r_kainz": "\"Tust du mir einen Gefallen\""
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "\u00fc_genc": "Roadrunner",
+                "d_hasle": "Drake von Drake und Josh (ist kein Zeichentrick, ich wei\u00df)",
+                "r_kainz": "Vince aus disney gro\u00dfe Pause"
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "\u00fc_genc": "Panini Sticker....",
+                "r_kainz": "Panini sticker :p",
+                "m_scham": ""
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Ariana Grande"
+        },
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "12 Uhr, wenn es geht"
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "Lorde - Team"
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": "The Big Bang Theory\/ The Man in the High Castle\/ Drake&Josh"
+        },
+        {
+            "frage": "Was waren die Helden deiner Kindheit?",
+            "antwort": "Detektiv Conan\/ James Dean\/ Roy Makaay"
+        }
+    ]
+}

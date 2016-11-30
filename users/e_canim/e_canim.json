@@ -1,0 +1,51 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Esobaba"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "s_\u00f6lker": "Fliegt bei dir ",
+                "r_chris": "Ja,aber beim ps4 buisness, naja"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "s_\u00f6lker": "Das Geburtsdatum auf deinem Ausweis ist falsch ",
+                "r_chris": "Bremen Fan, richtig lustig und l\u00e4cherlich haha"
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "s_\u00f6lker": "Ein Ohr, damit du mir mal zuh\u00f6rst ",
+                "r_chris": "HSV4EVER"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Du hast eine S\u00fcnde frei, welche verbotene Sache w\u00fcrdest du machen?",
+            "antwort": "Mein Jurastudium f\u00e4lschen und Drogen verkaufen"
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Kleider machen Leute "
+        },
+        {
+            "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
+            "antwort": "Was denn mit dir du ziggi"
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": "Der Hausmeister "
+        },
+        {
+            "frage": "Wenn du nicht du w\u00e4rst, wer w\u00e4rst du dann?",
+            "antwort": "Der Pr\u00e4sident der vereinigten kurdischen Emirate "
+        }
+    ]
+}

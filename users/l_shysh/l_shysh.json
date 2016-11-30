@@ -1,0 +1,56 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "n_st\u00fcbn": "Mit dem Rauchen aufh\u00f6ren "
+            }
+        },
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "n_st\u00fcbn": "Bei dir immer "
+            }
+        },
+        {
+            "frage": "Warum ist D\u00fcsseldorf die sch\u00f6nste Stadt der Welt?",
+            "antworten": {
+                "n_st\u00fcbn": "Nein."
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "n_st\u00fcbn": "Ein Ei"
+            }
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": [
+
+            ]
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "Schlafen \ud83d\ude34"
+        },
+        {
+            "frage": "Welche 5 Dinge w\u00fcrdest du mit auf eine einsame Insel nehmen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Pink"
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Essen "
+        }
+    ]
+}

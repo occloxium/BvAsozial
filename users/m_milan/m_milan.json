@@ -1,0 +1,93 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "l_cleme": "Singen",
+                "s_\u00f6lker": "S\u00fc\u00df sein ",
+                "c_herge": "singen",
+                "k_pethk": "Gute Laune verbreiten ",
+                "l_weihr": "Du warst immer die beste Sitznachbarin im Unterricht, ohne dich w\u00e4re es einfach immer langeweilig gewesen und du bist f\u00fcr jeden Spa\u00df zu haben ",
+                "t_gende": "Partituren lesen!",
+                "a_kr\u00e4me": "Singen "
+            }
+        },
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "a_heine": "H&M Karriere",
+                "l_cleme": "Weltreise",
+                "s_\u00f6lker": "Tauchen mit Walen ",
+                "l_weihr": "Viel von der Welt sehen und einfach alles erleben, was dich gl\u00fccklich macht.",
+                "t_gende": "Den F\u00fchrerschein machen "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "a_heine": "s\u00fc\u00df & keine haare",
+                "l_cleme": "h\u00fcbsch, intelligent, nett",
+                "s_\u00f6lker": "S\u00fc\u00df, sch\u00fcchtern, nett ",
+                "c_herge": "lieb, super Laune, lustig",
+                "a_guder": "zuverl\u00e4ssig, liebenswert, h\u00fcbsch",
+                "l_weihr": "Spa\u00dfbombe, einzigartig, spontan",
+                "t_gende": "Klug, sch\u00fcchtern, humorvoll",
+                "a_kr\u00e4me": "H\u00fcbsch , humorvoll, einfach Mario "
+            }
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "a_heine": "Figur ",
+                "c_herge": "deinen Popo ",
+                "k_pethk": "Eine Hammer Figur ",
+                "l_weihr": "Deinen Bauch!!",
+                "t_gende": "Den Toast Pullie",
+                "j_malys": "Deine Model Figur "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "a_heine": "Ein Obenfoto",
+                "l_cleme": "Damals sehr viele lustige Dinge :)",
+                "c_herge": "deine Partys bei dir waren der hammer! mehr sag ich dazu nicht :P",
+                "k_pethk": "Tupperdose in der Mikrowelle geschmolzen, Leute bei Sch\u00fclerVZ verarscht",
+                "l_weihr": "Oh Gott wir haben schon viel zu viele bescheuerte Dinge zusammen gemacht.. schon alleine wie wir in London versucht haben die Spinne mit dem B\u00fcgelbrett zu t\u00f6ten :D Oder wie wir im Bett lagen und irgendeinen M\u00fcll gesungen haben, nachdem wir fast vom Bett gefallen sind, weil wir dachten, dass ein Einbrecher am Fenster steht.. Achja und unsere Erlebnisse jedes Mal wenn wir in K\u00f6ln sind und unser \"mentales Vorbereiten\" auf jeden Schei\u00df :D",
+                "t_gende": "Pizza essen, bowlen, vielleicht bald lasertag :D",
+                "a_kr\u00e4me": "Waren im phantasialand haha ",
+                "j_malys": "Bilder vor Edeka im Schnee "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Ich lasse abschreiben."
+        },
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Handy, Schl\u00fcssel, Portemonnaie & ganz wichtig: B\u00fcrste"
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": "Breaking Bad & Desperate Housewives "
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "China, Thailand, S\u00fcdafrika, Amerika..."
+        },
+        {
+            "frage": "Wie bringt man dich auf 180?",
+            "antwort": "Durch lautes Schmatzen & Zusp\u00e4tkommen "
+        },
+        {
+            "frage": "Wovor hast du Angst?",
+            "antwort": "Dunkelheit"
+        }
+    ]
+}

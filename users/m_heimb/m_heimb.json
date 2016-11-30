@@ -1,0 +1,107 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "l_schne": "Aggro ",
+                "j_malys": "Aggro-Mel",
+                "c_kuren": "Aggro",
+                "a_dubov": "Eine Mischung aus allem .. Kommt auf den Tag an !"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "j_malys": "Du bist cool",
+                "c_kuren": "Premium ficker squat ",
+                "a_dubov": "Offen Loyal Zuverl\u00e4ssig "
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "j_malys": "Asi sein ",
+                "l_schne": "Immer auf Krawall geb\u00fcrstet \ud83d\ude02",
+                "a_dubov": "Auf Partys weg zulaufen "
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "j_malys": "Dein Auto ",
+                "c_kuren": "Du hast Fergus Geminis "
+            }
+        },
+        {
+            "frage": "Was ist mein Lieblingsschnaps\/ -bier\/ -zigarette\/ -zigarre?",
+            "antworten": {
+                "l_schne": "Marlboro",
+                "j_malys": "Gauliose ohne Zus\u00e4tze ",
+                "c_kuren": "Bacadi sprite",
+                "a_dubov": "Korn\/K\u00f6lsch\/Marlboro Flavor Mix"
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "j_malys": "So gut wie alles ist lustig das wir machen ",
+                "c_kuren": "Fergus Geminis zu haben ",
+                "a_dubov": "Berlin Klapse Baraki London "
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "l_schne": "Die Straaberger Gemeinde",
+                "j_malys": "Alle hassen Malyska ",
+                "c_kuren": "Fergus Geminis ",
+                "a_dubov": "Ein gemeinsames Tattoo "
+            }
+        },
+        {
+            "frage": "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
+            "antworten": {
+                "l_schne": "Der Gere",
+                "j_malys": "Olexesh"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Du hast eine S\u00fcnde frei, welche verbotene Sache w\u00fcrdest du machen?",
+            "antwort": "In ne Bank einsteigen, Safe rausholen und damit wie bei Fast Five durch die City fahren."
+        },
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Vin Diesel"
+        },
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": "Raucherecke"
+        },
+        {
+            "frage": "Was kann dir keiner nehmen?",
+            "antwort": "Meine Familie und meine Freunde, der Rest ist mir egal"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Jamaika, Brasilien, Abu Dhabi"
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": "Eigentlich alles."
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Rosa, weil ich eine Prinzessin bin ! "
+        },
+        {
+            "frage": "Wie kann man dich am besten beeindrucken?",
+            "antwort": "Ehrlichkeit und Offenheit "
+        }
+    ]
+}

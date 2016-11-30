@@ -1,0 +1,73 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Aktuelles Lieblingslied?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "j_descz": "zeichen\/malen",
+                "s_cimes": "Meinung durchsetzen, lachen & zum Lachen bringen, zeichnen, punkig stark und toll sein :D "
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "j_descz": "Angi",
+                "s_cimes": "Tatzi",
+                "m_k\u00fchn": "Angi"
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "s_cimes": "einen kleinen Fuchs"
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "s_cimes": "Jerry aus Tom & Jerry "
+            }
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "m_k\u00fchn": "Tattos, Piercings und alles was dazu geh\u00f6rt"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": "Rogers - Lila Blume"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Die ganze Welt mit Rucksack bereisen"
+        },
+        {
+            "frage": "Was waren die Helden deiner Kindheit?",
+            "antwort": "Alice (im Wunderland)"
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Gr\u00fcn"
+        },
+        {
+            "frage": "Wie bringt man dich auf 180?",
+            "antwort": "Mit ekelhafter Militanz"
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Piercings"
+        }
+    ]
+}

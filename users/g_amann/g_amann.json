@@ -1,0 +1,49 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "s_cimes": "einen kleines gr\u00fcnes Koboldh\u00fctchen",
+                "v_lamme": "Einen Leuchtturm vielleicht? xD (in England warst du meiner - mit deiner gelben Tasche konnte ich dich, vor allem nachts bei der Jack-the-Ripper-Tour, gut sehen xD)"
+            }
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": {
+                "s_cimes": " ausgestatt mit R\u00fcstung, Helm und Schwert die St. Crispins Day Rede bei einem Vorstellungsgespr\u00e4ch halten  "
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "s_cimes": "Peter Pan"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Kleidung"
+        },
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Drive"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Die Welt als Vagabund zu entdecken"
+        },
+        {
+            "frage": "Wie kann man dich am besten beeindrucken?",
+            "antwort": "Indem man mich nicht beeindrucken m\u00f6chte"
+        },
+        {
+            "frage": "Worauf hast du zuletzt getanzt?",
+            "antwort": "Walther von Vogelweide - Unter den Linden"
+        }
+    ]
+}

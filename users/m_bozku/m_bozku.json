@@ -1,0 +1,62 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "s_\u00f6lker": " "
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Wof\u00fcr gebe ich zu viel Geld aus?",
+            "antworten": {
+                "s_\u00f6lker": "Redbull "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist dein aktuelles Handy?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war dein dreister Spicker oder Schummeltrick?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was waren die Helden deiner Kindheit?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": ""
+        }
+    ]
+}

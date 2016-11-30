@@ -1,0 +1,101 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Dodi"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "m_k\u00fchn": "Zockerin, verl\u00e4sslich, stark",
+                "c_thiem": "",
+                "f_bleck": "klein aber oho",
+                "s_wagne": "Nett, lustig, toll",
+                "a_bieri": "nett, lustig, hilfsbereit",
+                "s_cimes": "immer gut gelaunt, lustig, verst\u00e4ndnisvoll",
+                "c_smiat": "Lockenkopf, spontan, lustig"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "m_k\u00fchn": "",
+                "c_thiem": "",
+                "f_bleck": "",
+                "s_wagne": "Du backst die geilsten Torten \ud83d\ude02",
+                "a_bieri": "Du redest viel zu schnell!! :D",
+                "s_cimes": "sprichst stets gerade zu euphorisch ",
+                "c_smiat": "Die Milch ist Schuld ^^"
+            }
+        },
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": {
+                "m_k\u00fchn": "eigentlich kann ich das, aber das Problem ist *hier einen Grund einf\u00fcgen*",
+                "c_thiem": "\"Du schaffst es sowieso nicht, mich einzuholen\" beim joggen ... was soll ich sagen... stimmt einfach",
+                "f_bleck": "",
+                "s_wagne": "Kenne keinen von dir \ud83d\ude01",
+                "c_smiat": "....aber das Problem ist.."
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "m_k\u00fchn": "Zusammen den Saturn gerockt",
+                "c_thiem": "",
+                "f_bleck": "Karneval bei Manes",
+                "c_smiat": "Zocker Tag, Silvester :D",
+                "s_wagne": "Fahrradtouren, Abende am Rhein , Kuchen backen, Filmabende ",
+                "a_bieri": "Die loopingrutsche im Aqualand und Longboard fahren ",
+                "s_cimes": "hast einem Taddeus geholfen der tats\u00e4chlich zwischen einer Bank und einer Glaswand stecken geblieben ist *hust* "
+            }
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": {
+                "m_k\u00fchn": "trinke einen Pina Colada, w\u00e4hrend du von Kokosn\u00fcssen umgeben bist und Atemlos in einer Dauerschleife l\u00e4uft, bis das Getr\u00e4nk leer ist",
+                "c_thiem": "1 Liter Kokosnuss\u00f6l trinken",
+                "f_bleck": "Handball gegen mich spielen",
+                "a_bieri": "Iss eine Ananas und rieche dabei an einer Kokosnuss. Du musst so tun, als w\u00e4re es das leckerste auf der Welt!",
+                "s_wagne": "Bungeejumping",
+                "s_cimes": "deine Gedanken zu Kokos inform eines Gedichtes zu Papier bringen und in einem Restaurant laut vortragen ",
+                "c_smiat": "In Kokosnuss\u00f6l baden"
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "m_k\u00fchn": "Sandy Cheecks",
+                "c_thiem": "",
+                "f_bleck": "Donald Duck",
+                "s_wagne": "Spongebob \ud83d\ude02\ud83d\ude01"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "Aufgrund meines guten Schlafrhythmuses meistens nicht vor 11 oder 12 Uhr"
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": "Momentan \u00fcbertrifft nichts Criminal Minds"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Australien und die Karibik"
+        },
+        {
+            "frage": "Was wirst du von deiner Schulzeit vermissen?",
+            "antwort": "Die Pausen und Freistunden mit meinen Freunden,in dennen so einige sch\u00f6ne und lustige Erinnerungen entstanden sind"
+        },
+        {
+            "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
+            "antwort": "Warscheinlich blaue Kreide"
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "Auf jeden Fall f\u00fcr S\u00fc\u00dfigkeiten"
+        }
+    ]
+}

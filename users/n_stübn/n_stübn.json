@@ -1,0 +1,83 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "r_sieve": "sinnloses Zeug labern wenn du betrunken bist",
+                "m_kaspe": "Disneylieder mit mir singen",
+                "r_kainz": "Fu\u00dfball spielen ^^",
+                "c_thiem": "Rauchen"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "r_sieve": "super tolle Freundin",
+                "m_kaspe": "tolernte attraktive Quaselstrippe",
+                "r_kainz": "Freaky, witzig und zuckers\u00fc\u00df "
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "r_sieve": "Di\u00e4ten",
+                "m_kaspe": "kannst nicht im Takt klatschen",
+                "r_kainz": "Das Rauchen - aber so schlimm ist das nicht^^"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "r_sieve": "Ich bin nicht betrunken.",
+                "c_smiat": "Komm schooon"
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "r_sieve": "London, die Abende im Streetlife, shoppen in D\u00fcsseldorf ",
+                "c_smiat": "Sch\u00fctzenfest, Taiz\u00e9",
+                "r_kainz": "Am Rhein mit ein paar Freunden den Abend zu verbringen :*",
+                "c_thiem": ""
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "r_sieve": "ein Steak",
+                "c_smiat": "Arschgeweih :D",
+                "r_kainz": "Ein Herz mit meinem Namen drinne... :D"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du der Typ beleidigt, zickig oder aggro?",
+            "antwort": "Beleidigt."
+        },
+        {
+            "frage": "L\u00e4uft bei dir?",
+            "antwort": "Nat\u00fcrlich"
+        },
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "So gegen 1"
+        },
+        {
+            "frage": "Was ist das d\u00fcmmste was du je gemacht hast?",
+            "antwort": "In einem Restaurant w\u00fctend gegen eine Glast\u00fcr laufen..."
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": "Unterricht und so"
+        },
+        {
+            "frage": "Welches Schulfach war dein pers\u00f6nlicher Super- GAU?",
+            "antwort": "Sport."
+        }
+    ]
+}

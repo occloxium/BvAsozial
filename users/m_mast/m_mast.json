@@ -1,0 +1,97 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Marie "
+    ],
+    "freundesfragen": [
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "a_kring": "nur, wenn du mit mir unterwegs bist",
+                "j_thiem": "Immer :)",
+                "j_pesch": "Offiziell l\u00e4uft sehr bei dir! ",
+                "l_cleme": "Ja mega!",
+                "j_reide": "L\u00e4uft auf jeden Fall! ",
+                "j_li": "",
+                "c_landm": "Nein.",
+                "s_becke": "Bestimmt"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "a_kring": "dumm, d\u00fcmmer, Marie",
+                "j_thiem": "Laut, s\u00fc\u00df, abenteuerlustig",
+                "j_pesch": "\u00dcberdreht, laut, emotionaler als du manchmal zeigst ",
+                "l_cleme": "H\u00fcbsch, klug, blond",
+                "j_reide": "Gro\u00dfherzig, laut und offen :)",
+                "j_li": "",
+                "l_lelit": "schlau, aufgedreht, blond",
+                "c_landm": "Blond, Pferd, Streber",
+                "j_schmi": "klug, Sonnenschein, hilfsbereit ",
+                "s_becke": "Blond, Lustig, Anna"
+            }
+        },
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "a_kring": "tollpatschig sein",
+                "j_thiem": "Immer gute Laune zu verbreiten",
+                "j_pesch": "Du bringst einen definitiv immer zum lachen und auf andere Gedanken.",
+                "l_cleme": "",
+                "j_reide": "Die positive Ausstrahlung \ud83d\ude0a",
+                "j_li": "",
+                "c_landm": "Quasseln",
+                "j_schmi": "immer alles positiv zu sehen "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "a_kring": "Hafenbar, Karneval, Abifestival, mein Geburtstag ",
+                "j_thiem": "Jede Sportstunde abgespackt",
+                "j_pesch": "Stundenlang Singstar spielen, \"simikolon, du Spasti\"",
+                "l_cleme": "Karneval & bald Mallorca",
+                "j_reide": "",
+                "j_li": "Theoretisch jedes Mal Hafenbar ",
+                "l_lelit": "Popcornschlacht",
+                "c_landm": "Haha als wir fr\u00fcher immer Pferd gespielt haben",
+                "s_becke": "Hochseilgarten "
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "a_kring": "Dick&Doof f\u00fcr immer ",
+                "j_thiem": "den ganzen K\u00f6rper schwarz damit deine Augen krass zur Geltung kommen *__*",
+                "l_cleme": "'Schei\u00df' auf Schicki-Micki - ich will noch'n Bier'",
+                "j_reide": "Den Namen deines zuk\u00fcnftigen Pferdes \ud83d\ude0a\ud83d\udc0e ",
+                "j_li": "",
+                "l_lelit": "deinen Kater",
+                "j_schmi": "Einen Teddyb\u00e4ren mit Lollypop "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Handy,Portmonee"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Malediven,New York"
+        },
+        {
+            "frage": "Was wirst du von deiner Schulzeit vermissen?",
+            "antwort": "Dass man nicht mehr t\u00e4glich mit den gleichen,vertrauten Leuten zusammen ist "
+        },
+        {
+            "frage": "Wer ist die d\u00fcmmste Person die du kennst?",
+            "antwort": "meine liebe Anna \u2764\ufe0f"
+        },
+        {
+            "frage": "Wovor hast du Angst?",
+            "antwort": "Davor,dass meine Pl\u00e4ne nicht funktionieren und ich meine Ziele nicht erreiche "
+        }
+    ]
+}

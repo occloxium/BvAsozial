@@ -1,0 +1,110 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Sunshine Honey",
+        "Brudi"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "a_kring": "du kannst besser schimmeln, als ein Toast",
+                "m_mast": "Tanzen,Lernen,Gute Laune verbreiten..aber schimmeln kannst du bestimmt auch gut :D",
+                "\u00fc_genc": "espanol hablan und entienden und so",
+                "j_li": "Menschen motivieren ",
+                "p_walla": "Schule \u270c\ud83c\udffd\ufe0f",
+                "m_thiem": "Lassen wir mal unkommentiert",
+                "b_salci": "Alles",
+                "s_becke": "Das kluge Gegenst\u00fcck von Anna sein",
+                "n_romei": "Eigentlich fast Alles!",
+                "s_wagne": "Mir Mathe beibringen \u2764\ufe0f\ud83d\ude01",
+                "d_hasle": "In Englisch Interesse heucheln :D",
+                "n_st\u00fcbn": "Irgendwie alles"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "a_kring": "intelligent, intelligenter, Eierbirne ",
+                "m_mast": "Lustig,Schlau,f\u00fcr alles zu haben ",
+                "\u00fc_genc": "Frau  Licht`s Liebling",
+                "l_cleme": "Blond, intelligent, Krankenschwester",
+                "b_salci": "S\u00fc\u00df. Lustig, schlau",
+                "s_becke": "Blond, klug, verr\u00fcckt",
+                "n_romei": "intelligent, fr\u00f6hlich, unternehmungslustig",
+                "s_wagne": "H\u00fcbsch, toll , nett",
+                "d_hasle": "Miss Light Jr.",
+                "n_st\u00fcbn": "Gl\u00fccklich, richtiger Mustersch\u00fcler"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "a_kring": "Schlaukopf ",
+                "m_mast": "",
+                "\u00fc_genc": "Juliet",
+                "j_li": "Jules \ud83d\ude0a",
+                "p_walla": "Sunshine Honey ",
+                "l_cleme": "Blondi",
+                "s_wagne": "Julchen ",
+                "s_becke": "Jules :D",
+                "d_hasle": "Sunshine Honey *-*",
+                "n_st\u00fcbn": "Super Ju :D "
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "a_kring": "bist einfach blond und machst alles kaputt ",
+                "m_mast": "",
+                "\u00fc_genc": "",
+                "s_becke": "Du bist einer von Drillingen",
+                "s_wagne": "Du beh\u00e4ltst immer die Nerven wenn es darum ging , mir in Mathe etwas zu erkl\u00e4ren \ud83d\ude01",
+                "d_hasle": "Dass du gar nicht so bl\u00f6d bist, wie du aussiehst :P :*"
+            }
+        },
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": {
+                "a_kring": "wohin fliegen wir nochmal, Anna? Barcelona, Julia, Barcelona ",
+                "m_mast": "",
+                "\u00fc_genc": "",
+                "j_li": "Noch so'n Spruch, Kieferbruch?   :D ist der \u00fcberhaupt von dir? ",
+                "s_wagne": "Kenne keinen :)",
+                "d_hasle": "Ach was, von dir gibt es nur intelligente Aussagen! *hust*"
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "a_kring": "Blond, aber halbwegs intelligent ",
+                "m_mast": "ein Bild davon,wie Anna,du und ich mit deinen Schildkr\u00f6ten Mario Kart spielen ",
+                "\u00fc_genc": "",
+                "p_walla": "Dreimal h\u00e4lt besser \ud83d\udd76",
+                "n_romei": "Den Duden mit all seinen sch\u00f6nen W\u00f6rtern.",
+                "s_wagne": "",
+                "s_becke": "Member des Thiem-Teams",
+                "d_hasle": "Frau Lichts Gesicht xD",
+                "n_st\u00fcbn": "Eine Wildwasserbahn "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "F\u00fcr wieviel Geld w\u00fcrdest du ins Dschungelcamp gehen?",
+            "antwort": "Never ever"
+        },
+        {
+            "frage": "Was ist das d\u00fcmmste was du je gemacht hast?",
+            "antwort": "Gl\u00e4ser zerbissen"
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "ESSEN"
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": "h\u00f6chst aktiven Menschen 8 Uhr morgens (!) zu begegnen"
+        }
+    ]
+}

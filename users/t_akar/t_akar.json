@@ -1,0 +1,68 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
+            "antworten": [
+
+            ]
+        },
+        {
+            "frage": "Welches Talent untersch\u00e4tzte ich?",
+            "antworten": {
+                "t_gende": "Singen"
+            }
+        },
+        {
+            "frage": "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
+            "antworten": [
+
+            ]
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Seit wann bist du speifrei? (nur alkoholische Verschuldungen)",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist das d\u00fcmmste was du je gemacht hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was kann dir keiner nehmen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was waren die Helden deiner Kindheit?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was wolltest du schon immer mal machen, hast dich aber nie getraut?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wer geh\u00f6rt zu deinem Freundeskreis?",
+            "antwort": ""
+        }
+    ]
+}

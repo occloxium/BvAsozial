@@ -1,0 +1,75 @@
+{
+    "spruch": "If you never try you'll never know.",
+    "rufnamen": [
+        "Lilli"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Bin ich der Typ beleidigt, zickig oder aggro?",
+            "antworten": {
+                "t_schne": "Aggro\ud83d\ude1b",
+                "c_smiat": "Weder noch? :D",
+                "s_wagne": "Gar nichts von denen (:"
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "c_smiat": "Du bist bekloppt",
+                "s_wagne": "Nett, sympathisch, lustig ",
+                "m_k\u00fchn": "immer am  lachen"
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "s_wagne": "Kenne keine ",
+                "a_sande": "Deine Entschuldigungen f\u00fcr Sachen die du nicht schuld bist"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "s_wagne": "Wie ich englisch liebe \ud83d\ude02"
+            }
+        },
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": {
+                "t_schne": "\"Als ob bei einer Ampel wirklich gr\u00fcn oben ist?!\" \ud83d\ude02",
+                "s_wagne": "",
+                "c_smiat": "Welche Farbe hat die Ampel oben nochmal?"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "definitiv Chris Brown \ud83d\ude0d\ud83d\ude29\ud83d\udcaf"
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Woyzeck \ud83d\ude11"
+        },
+        {
+            "frage": "Was ist dein Lieblingsstar?",
+            "antwort": "Chris Brown \ud83d\ude0b\ud83d\ude02"
+        },
+        {
+            "frage": "Was ist deine Lieblingsserie\/-sendung?",
+            "antwort": "Empire"
+        },
+        {
+            "frage": "Was kann dir keiner nehmen?",
+            "antwort": "meine Lebensfreude"
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": "hauptsache bestehen \ud83d\ude02\ud83d\ude29"
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "zum Netto gehen und schlafen \ud83d\ude02\ud83d\ude33"
+        }
+    ]
+}

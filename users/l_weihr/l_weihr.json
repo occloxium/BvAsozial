@@ -1,0 +1,67 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "m_milan": "Mathe! Besonders bei Herr M'Barek"
+            }
+        },
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "j_malys": "Fahr nach Bangkok ",
+                "m_milan": "Die Welt bereisen "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "c_herge": "Meckertante, lustig, offen",
+                "j_malys": "Nissan Micra",
+                "m_milan": "Witzig, loyal, blond ",
+                "a_kr\u00e4me": "Zielstrebig, nett, flei\u00dfig "
+            }
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "c_herge": "deine Anziehsachen",
+                "m_milan": "Deine Haare "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "c_herge": "Im Sommer bei Mcs, als dein Smoothiebecher kaputt gegangen ist und alles am Boden verteilt war, sogar in deinem Schuh :P wir haben uns so weggelacht!",
+                "m_milan": "Fr\u00fcher immer unsere Mc's Abende, als wir in London die Spinne mit dem B\u00fcgelbrett t\u00e4ten wollten oder wo wir alle nach O-Saft gefragt haben...",
+                "a_kr\u00e4me": "In der Grundschule immer Kummerkasten angerufen und die verarscht ... Dann Tokio Hotel immer gesungen haha und die anderen Klassenkameraden beleidigt (wir waren richtig fies) "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Diplomatie in Franz\u00f6sisch & Leben des Galilei"
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Prisoners"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "Mallorca, T\u00fcrkei, Griechenland"
+        },
+        {
+            "frage": "Wovor hast du Angst?",
+            "antwort": "Spinnen, Alleinsein im dunkeln"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "l_cleme": "Cello spielen, gut aussehen",
+                "c_henke": "Auf der B\u00fchne auftreten",
+                "s_\u00f6lker": "Zu viel nachdenken ",
+                "s_becke": "Lustig sein.",
+                "a_kr\u00e4me": "Lachen und dabei fast zusammenklappen "
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "l_cleme": "h\u00fcbsch, ehrlich, liebevoll",
+                "s_\u00f6lker": "Selbstbewusst, schlau, lieb ",
+                "a_kr\u00e4me": "Beauty, stalker , humorvoll"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "l_cleme": " Dein Name h\u00f6rt sich an wie eine beliebte Mini-Salami ",
+                "s_becke": "Du hast dich seit der Grundschule vom Gesicht nicht soo viel ver\u00e4ndert ",
+                "a_kr\u00e4me": "Du bist Berfin\u00e7a und stehst auf 'deutsche' Typen "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "l_cleme": "Literaturkurs ",
+                "s_\u00f6lker": "Als ich das erste mal bei dir war, mehr muss ich dazu nicht erz\u00e4hlen",
+                "c_henke": "Gelacht ",
+                "a_kr\u00e4me": "\u00dcber Boys lustig machen und h\u00e4ssliche selfies schicken"
+            }
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": {
+                "s_\u00f6lker": "Du hast alles im Griff\/ du denkst zu viel ",
+                "a_kr\u00e4me": "Beste Person zum Reden "
+            }
+        },
+        {
+            "frage": "Welches Talent untersch\u00e4tzte ich?",
+            "antworten": {
+                "s_\u00f6lker": "Deine Ausstrahlung ( ist das ein Talent ?)",
+                "c_henke": "Deine sprungkraft"
+            }
+        },
+        {
+            "frage": "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
+            "antworten": {
+                "l_cleme": "Ich glaub das wei\u00dft du besser als ich ",
+                "s_\u00f6lker": "Ich (Secil \u00d6lker)",
+                "s_becke": "Jonas Nink",
+                "a_kr\u00e4me": "Ashton Kutcher "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Beyonce"
+        },
+        {
+            "frage": "Seit wann bist du speifrei? (nur alkoholische Verschuldungen)",
+            "antwort": "04.05.1998"
+        },
+        {
+            "frage": "Was ist dein Lieblingsstar?",
+            "antwort": "Beyonce"
+        },
+        {
+            "frage": "Was sind deine Reiseziele?",
+            "antwort": "W\u00fcrde gerne die Extremen der Welt sehen also Dschungel, W\u00fcste und die Polarlichter"
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was war der peinlichste Moment deiner Schulzeit?",
+            "antwort": "Meine zusammengewachsenen Augenbrauen (Hoch lebe Mc's)"
+        },
+        {
+            "frage": "Worauf achtest du beim anderen Geschlecht?",
+            "antwort": "Nackenfrisur und gepflegtes Auto"
+        }
+    ]
+}

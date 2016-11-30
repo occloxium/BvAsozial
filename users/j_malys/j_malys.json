@@ -1,0 +1,122 @@
+{
+    "spruch": "ich werd' reich",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "m_heimb": "Bei dir sowieso",
+                "l_schne": "Klar Sunny",
+                "a_kr\u00e4me": "Immer , au\u00dfer im Gym ",
+                "a_dubov": "Immer "
+            }
+        },
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "a_kr\u00e4me": "",
+                "a_dubov": "Ja "
+            }
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "m_heimb": "Freunde \ud83d\ude02",
+                "l_schne": "BMW",
+                "a_kr\u00e4me": "krassestes Selbstbewusstsein \u00fcberhaupt ",
+                "a_urbat": "einen gucci Schal ",
+                "a_dubov": "Katja "
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "m_heimb": "Was geht ?",
+                "a_kr\u00e4me": "Du kommst nie ins Gym haha"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "m_heimb": "Was geht ?",
+                "l_schne": "\"In dem Sinne\" ",
+                "a_kr\u00e4me": "Ich bin m\u00fcde ",
+                "a_urbat": "Bin auf Reserve Hahahahahaha ",
+                "a_dubov": "Ich schw\u00f6\u00f6\u00f6reee ...."
+            }
+        },
+        {
+            "frage": "Was sind dumme Spr\u00fcche von mir?",
+            "antworten": {
+                "m_heimb": "Work, work, work",
+                "a_kr\u00e4me": "Ich bin m\u00fcde "
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "l_schne": "Berlin-Trip",
+                "l_weihr": "Fr\u00fcher immer mit dir und Alina bei deiner Oma gechillt und irgendwelche Lieder gesungen oder diese komische Nummer gegen Kummer angerufen, weil wir das total witzig fanden :D",
+                "a_kr\u00e4me": "In der Grundschule Kinder beleidigt und immer in der ersten Reihe gestanden nat\u00fcrlich nur zu zweit ",
+                "a_urbat": "mit dir kann man kein Spa\u00df haben "
+            }
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": {
+                "m_heimb": "Du bist stark wenn du Beautyday gemacht hast ",
+                "a_kr\u00e4me": "Du gibst zu schnell auf aber bist immer f\u00fcr deine Freunde da ! "
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "m_heimb": "Mein Gesicht "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "L\u00e4uft bei dir?",
+            "antwort": "Ja"
+        },
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Autoschl\u00fcssel"
+        },
+        {
+            "frage": "Was kann dir keiner nehmen?",
+            "antwort": "Andrea"
+        },
+        {
+            "frage": "Was war dein Motto zur Schullaufbahn?",
+            "antwort": "Abitur durch die T\u00fcr "
+        },
+        {
+            "frage": "Was wirst du von deiner Schulzeit vermissen?",
+            "antwort": "Mottowoche"
+        },
+        {
+            "frage": "Wer geh\u00f6rt zu deinem Freundeskreis?",
+            "antwort": "alle"
+        },
+        {
+            "frage": "Wer ist die d\u00fcmmste Person die du kennst?",
+            "antwort": "fraglich"
+        },
+        {
+            "frage": "Wie kann man dich am besten beeindrucken?",
+            "antwort": "sei einfach nett "
+        },
+        {
+            "frage": "Wie w\u00fcrdest du eine Bar leertrinken?",
+            "antwort": "ich w\u00fcrde sie ausrauben oder kaufen "
+        },
+        {
+            "frage": "Wof\u00fcr gibst du zu viel Geld aus?",
+            "antwort": "eindeutig Essen "
+        }
+    ]
+}

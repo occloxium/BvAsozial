@@ -1,0 +1,73 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Elise"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Warum ist D\u00fcsseldorf die sch\u00f6nste Stadt der Welt?",
+            "antworten": {
+                "r_kainz": "Naja der Welt w\u00fcrde ich jetzt nicht sagen- die ist ganz okay ^^",
+                "\u00fc_genc": "nicht wegen dem Bier",
+                "c_smiat": "Ist sie nicht",
+                "s_wagne": "Ist einfach so \ud83d\ude01",
+                "s_doder": "Diese Frage kann ich dir leider nicht beantworten ^^",
+                "f_tietz": "Ist die Frage wirklich ernst gemeint oder nur mal wieder deine Art von Humor\/Ironie? :D",
+                "d_hasle": "Altstadt, Bier, Fortuna..",
+                "j_li": "Ist sie nicht. ",
+                "n_st\u00fcbn": "Nein."
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "r_kainz": "",
+                "\u00fc_genc": "Mh, is klar",
+                "s_wagne": "Gibt zu viele S\u00e4tze \ud83d\ude48",
+                "f_tietz": "\"Ich muss dir sp\u00e4ter noch was erz\u00e4hlen!\" - was du dann aber nicht vergisst!",
+                "n_st\u00fcbn": "Ich hab bestimmt ne 6..."
+            }
+        },
+        {
+            "frage": "Was sind Eigenschaften die dich an mir nerven?",
+            "antworten": {
+                "r_kainz": "Viel zu sportlich :p",
+                "\u00fc_genc": "wolltest mir Spanisch beibringen...",
+                "s_wagne": "Gar keine ",
+                "f_tietz": "So viele Antwortm\u00f6glichkeiten ... SPA\u00df!",
+                "n_st\u00fcbn": "Du bist zu schlau."
+            }
+        },
+        {
+            "frage": "Was w\u00fcrdest du mir gerne t\u00e4towieren?",
+            "antworten": {
+                "r_kainz": "Einen Tiger :p",
+                "\u00fc_genc": "Dios mio, estoy frio.",
+                "d_hasle": "Voy a presentar",
+                "s_wagne": "Gute Frage \ud83d\ude01",
+                "m_k\u00fchn": "3.14159265359",
+                "s_doder": "chirurgische Instrumente (Traumberuf= \u00c4rztin)",
+                "n_st\u00fcbn": "Einen Knutschfleck",
+                "c_smiat": "Eine Sonne um den Bauchnabel"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Schuhe"
+        },
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": "Atrium"
+        },
+        {
+            "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
+            "antwort": "Ich bin doch ein nettes M\u00e4dchen..."
+        },
+        {
+            "frage": "Worauf hast du zuletzt getanzt?",
+            "antwort": "IF YOU WANNABE MY LOVER LALALA"
+        }
+    ]
+}

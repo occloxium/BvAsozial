@@ -1,0 +1,47 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": {
+                "d_hasle": "Naturwissenschaschaften :D",
+                "l_cleme": "Physik & Mathe",
+                "m_thiem": "Naturwissenschaften",
+                "j_li": "Sportlich sein",
+                "m_p\u00fctz": "Physik"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "j_li": "Ok.",
+                "m_scham": "Ok. "
+            }
+        },
+        {
+            "frage": "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
+            "antworten": {
+                "d_hasle": "Ferb von Phineas und Ferb",
+                "m_thiem": "Kenny",
+                "m_p\u00fctz": "T\u00e4trapack"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist das d\u00fcmmste was du je gemacht hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": ""
+        }
+    ]
+}

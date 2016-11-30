@@ -1,0 +1,104 @@
+{
+    "spruch": "",
+    "rufnamen": [
+
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "h_detme": "Dem Staat auf der Tasche liegen",
+                "r_chris": "ANALysieren",
+                "a_kr\u00e4me": "Nicht rauchen ",
+                "n_berg": "fahrrad fahren"
+            }
+        },
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "h_detme": "Arbeiten gehen",
+                "r_chris": "Ein Roman mit Frau Leitzgen schreiben",
+                "n_berg": "in ein Studium "
+            }
+        },
+        {
+            "frage": "L\u00e4uft bei mir?",
+            "antworten": {
+                "h_detme": "L\u00e4ubift Habibo",
+                "r_chris": "Tzaziki",
+                "a_kr\u00e4me": "immer ",
+                "n_berg": "ja du bist schlie\u00dflich Grieche "
+            }
+        },
+        {
+            "frage": "Was besitze ich, dass du gerne h\u00e4ttest?",
+            "antworten": {
+                "h_detme": "Du hast ein Ohr das man irgendwie umst\u00fclpen kann",
+                "n_berg": "deine Ruhe "
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "h_detme": "Griechmael",
+                "a_kr\u00e4me": "j\u00f6rges , j\u00f6rgi",
+                "n_berg": "Grieche, Jorgiiii"
+            }
+        },
+        {
+            "frage": "Was ist ein lustiger Fakt \u00fcber mich?",
+            "antworten": {
+                "h_detme": "Du hast ein Ohr das man irgendwie umst\u00fclpen kann",
+                "r_chris": "Du bist Grieche hihi",
+                "a_kr\u00e4me": "gyros for life "
+            }
+        },
+        {
+            "frage": "Was ist mein Lieblingsschnaps\/ -bier\/ -zigarette\/ -zigarre?",
+            "antworten": {
+                "h_detme": "Immer das jeweils g\u00fcnstigste",
+                "a_kr\u00e4me": "gyros!!!!!!",
+                "n_berg": "Ouzo"
+            }
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": {
+                "h_detme": "Zwei Kinder gro\u00dfgezogen",
+                "r_chris": "Im Unterricht andere abgefucked",
+                "a_kr\u00e4me": "f\u00fcr die Kunstausstellung Werbung gemacht und bei der Kunstausstellung erstmal vollgesaufen haha",
+                "n_berg": "mit dir Auto fahren ist ein Erlebnis "
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "L\u00e4uft bei dir?",
+            "antwort": "L\u00e4ubift."
+        },
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": "Schlechte Absichten"
+        },
+        {
+            "frage": "Wann stehst du in der Regel auf?",
+            "antwort": "Zu sp\u00e4t "
+        },
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Lucky Number Slevin"
+        },
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": "Park"
+        },
+        {
+            "frage": "Welches Schulfach war dein pers\u00f6nlicher Super- GAU?",
+            "antwort": "Chemie"
+        },
+        {
+            "frage": "Worauf achtest du beim anderen Geschlecht?",
+            "antwort": "Ausschlie\u00dflich auf innere Werte"
+        }
+    ]
+}

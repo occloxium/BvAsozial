@@ -1,0 +1,79 @@
+{
+    "spruch": "",
+    "rufnamen": [
+        "Rick5B"
+    ],
+    "freundesfragen": [
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "b_calis": "rappen ",
+                "r_chris": "Zeichnen",
+                "g_vlamo": "Dem Staat auf der Tasche liegen",
+                "\u00fc_genc": "Flowen wie der Hudson River....oder so"
+            }
+        },
+        {
+            "frage": "Ein Toast kann gut schimmeln, was kann ich gut?",
+            "antworten": {
+                "g_vlamo": ""
+            }
+        },
+        {
+            "frage": "Was beschreibt mich in 3 Worten?",
+            "antworten": {
+                "b_calis": "kreativ, heimlicher romantiker ",
+                "g_vlamo": "Verdammt coole Socke"
+            }
+        },
+        {
+            "frage": "Was ist der Spitzname von mir?",
+            "antworten": {
+                "l_cleme": "Rick5b",
+                "r_chris": "Rick5b (ich hoffe es ist richtig)",
+                "g_vlamo": "K\u00fcking",
+                "\u00fc_genc": "Homeboy Henning"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "g_vlamo": ",,Was stimmt blo\u00df nicht mit dir, Jorgo?!''"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Du hast eine S\u00fcnde frei, welche verbotene Sache w\u00fcrdest du machen?",
+            "antwort": "Eine Haschzigarette ausprobieren"
+        },
+        {
+            "frage": "L\u00e4uft bei dir?",
+            "antwort": "Volle M\u00f6hre"
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "Teile schmei\u00dfen"
+        },
+        {
+            "frage": "Was wirst du von deiner Schulzeit vermissen?",
+            "antwort": "Die Leute und die Freiheiten"
+        },
+        {
+            "frage": "Welche CD ist dir am peinlichsten?",
+            "antwort": "Alle von Bj\u00f6rk"
+        },
+        {
+            "frage": "Wenn du nicht du w\u00e4rst, wer w\u00e4rst du dann?",
+            "antwort": "2Pac"
+        },
+        {
+            "frage": "Wie kann man dich am besten beeindrucken?",
+            "antwort": "Gemeinsamkeiten, denn ich bin so ein toller Hecht"
+        },
+        {
+            "frage": "Worauf achtest du beim anderen Geschlecht?",
+            "antwort": "Den Arsch und nat\u00fcrlich die Pers\u00f6nlichkeit :^)"
+        }
+    ]
+}
