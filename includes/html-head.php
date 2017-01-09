@@ -11,13 +11,13 @@
 <meta name="apple-mobile-web-app-title" content="BvAsozial">
 <meta name="msapplication-TileColor" content="#252830">
 
-<link rel="shortcut icon" href="<?= ABS_PATH ?>img/favicon.png">
+<link rel="shortcut icon" href="/img/favicon.png">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<link rel="stylesheet" href="<?= ABS_PATH ?>css/bvasozial.mdl.src.css">
-<link rel="stylesheet" href="<?= ABS_PATH ?>css/sidewide.css">
-<link rel="stylesheet" href="<?= ABS_PATH ?>css/admin.css">
+<link rel="stylesheet" href="/css/bvasozial.mdl.src.css">
+<link rel="stylesheet" href="/css/sidewide.css">
+<link rel="stylesheet" href="/css/admin.css">
 
-<script src="<?= ABS_PATH ?>js/jquery-2.1.4.min.js"></script>
+<script src="/js/jquery-2.1.4.min.js"></script>

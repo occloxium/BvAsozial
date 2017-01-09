@@ -136,7 +136,7 @@
 	<body>
 		<div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
 			<div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-				<?php _getNav('/'); ?>
+				<?php _getNav('root'); ?>
 			</div>
 			<main class="mdl-layout__content mdl-color--grey-100">
 				<div class="container--fullsize mdl-color--blue-grey-900">
@@ -147,9 +147,6 @@
 						<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white" href="/anmelden/">
 							Anmelden
 						</a>
-					</div>
-					<div class="navicon mdl-color-text--blue-grey-800">
-						<a class="material-icons" href="#einleitung">keyboard_arrow_down</a>
 					</div>
 				</div>
 			</main>

@@ -12,7 +12,7 @@
 <body>
     <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
         <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-            <?php _getNav('anmelden'); ?>
+            <?php _getNav('login'); ?>
         </div>
         <main class="mdl-layout__content mdl-color--blue-grey-900">
             <div class="mdl-card mdl-color--white mdl-shadow--2dp container container--margin-top">
