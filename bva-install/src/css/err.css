@@ -1,0 +1,33 @@
+main {
+	flex-direction: column;
+	display: flex !important;
+}
+
+.layout.is-small-screen .co {
+	min-height: 100vh;
+}
+.co {
+	flex-grow: 1;
+	min-height: calc(100vh);
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.bl {
+	margin: 0 auto;
+    max-width: 726px;
+    width: 90%;
+}
+
+.ti {
+    text-align: left;
+    font-size: 3em;
+    font-weight: bold;
+}
+.su {
+	text-align: left;
+	font-size: 2em;
+	font-weight: 200;
+    line-height: 1.2;
+}

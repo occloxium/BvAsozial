@@ -1,0 +1,206 @@
+<?php
+	include_once '../includes/functions.php';
+	include_once '../includes/db_connect.php';
+	
+	include_once './_ajax/frage.php';
+
+	ini_set('display_errors',1);
+
+	secure_session_start();
+	if(login_check($mysqli) == true) :
+		$user = getUser($_SESSION['username'], $mysqli);
+?>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>BvAsozial</title>
+		
+		<meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/images/android-desktop.png">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="BvAsozial">
+    <link rel="apple-touch-icon-precomposed" href="/images/ios-desktop.png">
+		
+		<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#252830">
+		
+		<link rel="shortcut icon" href="/images/favicon.png">
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		
+		<link rel="stylesheet" href="/css/bvasozial.mdl.min.css">
+		<link rel="stylesheet" href="/css/sidewide.css">
+		<link rel="stylesheet" href="/css/questions.css">
+		<script src="/js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+      <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="drawer-header">
+          <img class="avatar" src="<?php echo '/users/' . $user['directory'] . '/avatar.jpg'?>">
+					<div>
+						<div class="flex-container">
+							<span><?php echo $user['email']; ?></span>
+							<div class="mdl-layout-spacer"></div>
+						</div>
+					</div>
+        </header>
+         <nav class="navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Übersicht</a>
+					<a class="mdl-navigation__link" href="/users/me/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i>Mein Profil</a>
+					<a class="mdl-navigation__link" href="/freunde/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Freunde finden</a>
+					<a class="mdl-navigation__link" href="/freunde/anfragen/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_add</i>Freundschafts-<br>anfragen</a>
+					<a class="mdl-navigation__link" href="/fragen/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">question_answer</i>Fragen</a>
+					<a class="mdl-navigation__link" href="/logout/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i>Abmelden</a>
+					<div class="mdl-layout-spacer"></div>
+					<a class="mdl-navigation__link" href="/support/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100" data-username="<?php echo $user['uid'] ?>" data-directory="<?php echo $user['directory'] ?>" data-friends="<?php echo $user['freundesanzahl'] ?>">
+				<div class="mdl-card fragen-container fragen-container--margin-top mdl-color--white mdl-shadow--2dp mdl-card--border" id="meine-fragen">
+					<h1 class="mdl-typography--headline">Meine eigenen Fragen</h1>
+					<ol id="my-questions">
+						<?php
+							$path = "../users/{$user['directory']}/{$user['uid']}.json";
+							$jsonstr = file_get_contents($path);
+							$obj = json_decode($jsonstr, true);
+							$obj = $obj['eigeneFragen'];
+							$i = 1;
+							foreach($obj as $frage){
+								echo frage($frage, $user, null, $i, false);
+								$i++;
+							}
+						?>
+					</ol>
+					<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect save-all">
+						Alles abspeichern
+					</button>
+				</div>
+				<div class="mdl-card fragen-container mdl-color--white mdl-shadow--2dp mdl-card--border" id="meine-freunde">
+					<h1 class="mdl-typography--headline">Meine Freunde</h1>
+					<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+						<div class="mdl-tabs__tab-bar">
+							<?php
+								$freunde = freunde($user['uid'], $mysqli);
+								
+								if($user['freundesanzahl'] > 4){ 
+									if(isset($_GET['p'])) {
+										$p = intval($_GET['p']) - 1;
+										for($i = 1; $i <= 4; $i++){
+											$friend = $freunde[$p*4+$i-1];
+											if($friend != null) : 
+												$freund = getUser($friend, $mysqli);
+												if($i == 1){
+													echo "<a href=\"#{$freund['uid']}-panel\" class=\"mdl-tabs__tab is-active\">{$freund['name']}</a>";
+												} else {
+													echo "<a href=\"#{$freund['uid']}-panel\" class=\"mdl-tabs__tab\">{$freund['name']}</a>";
+												}
+											endif;
+										}
+									} else { 
+										$_GET['p'] = 1;
+										$p = intval($_GET['p']) - 1;
+										for($i = 1; $i <= 4; $i++){
+											$friend = $freunde[$p*4+$i-1];
+											if($friend != null) : 
+												$freund = getUser($friend, $mysqli);
+												if($i == 1){
+													echo "<a href=\"#{$freund['uid']}-panel\" class=\"mdl-tabs__tab is-active\">{$freund['name']}</a>";
+												} else {
+													echo "<a href=\"#{$freund['uid']}-panel\" class=\"mdl-tabs__tab\">{$freund['name']}</a>";
+												}
+											endif;
+										}
+									}
+									echo "</div>";
+									for($i = 1; $i <= 4; $i++){
+										$friend = $freunde[$p*4+$i-1];
+										$freund = getUser($friend, $mysqli);
+										if($freund != null) : 
+											$obj = json_decode(file_get_contents("../users/{$freund['directory']}/{$freund['uid']}.json"), true);
+											if($i === 1){ ?>
+												<div class="mdl-tabs__panel is-active" id="<?php echo $freund['uid']?>-panel">
+											<?php 
+											} else { ?>
+												<div class="mdl-tabs__panel" id="<?php echo $freund['uid']?>-panel">
+											<?php } ?>
+												<ol>
+													<?php 
+														$j = 1;
+														foreach($obj['freundesfragen'] as $frage){ 
+															if(!isset($frage['antworten'][$user['uid']])){
+																$frage['antworten'][$user['uid']] = null;
+															}
+															echo frage($frage, $user, $freund, $j, true);
+															$j++;																				 
+														} ?>
+												</ol>
+												<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect save-all">
+													Alles abspeichern
+												</button>
+											</div>
+										<?php
+										endif;
+									} 
+								} else {
+									for($i = 1; $i <= 4; $i++){
+											$index = $i - 1;
+											$friend = $freunde[$index];
+											if($friend != null) : 
+												$freund = getUser($friend, $mysqli);
+												if($i == 1){
+													echo "<a href=\"#{$freund['uid']}-panel\" class=\"mdl-tabs__tab is-active\">{$freund['name']}</a>";
+												} else {
+													echo "<a href=\"#{$freund['uid']}-panel\" class=\"mdl-tabs__tab\">{$freund['name']}</a>";
+												}
+											endif;
+										}
+									echo "</div>";
+									for($i = 1; $i <= 4; $i++){
+										$index = $i - 1;
+										$friend = $freunde[$index];
+										$freund = getUser($friend, $mysqli);
+										if($freund != null) : 
+											$obj = json_decode(file_get_contents("../users/{$freund['directory']}/{$freund['uid']}.json"), true);
+											if($i === 1) {
+												echo "<div class=\"mdl-tabs__panel is-active\" id=\"{$freund['uid']}-panel\">";
+											
+											} else { 
+												echo "<div class=\"mdl-tabs__panel\" id=\"{$freund['uid']}-panel\">";
+											} ?>
+												<ol>
+													<?php 
+														$j = 1;
+														foreach($obj['freundesfragen'] as $frage){ 
+															if(!isset($frage['antworten'][$user['uid']])){
+																$frage['antworten'][$user['uid']] = null;
+															}
+															echo frage($frage, $user, $freund, $j, true);
+															$j++;																				 
+														} ?>
+												</ol>
+												<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect save-all">
+													Alles abspeichern
+												</button>
+											</div>
+									<?php
+										endif;
+									} ?>
+						</div>
+					</div>
+				</div>
+      </main>
+    </div>
+		<script src="/js/fragen.js"></script>
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	</body>
+</html>
+<?php else : 
+				header('Location: ../'); 
+			endif; ?>

@@ -1,0 +1,22 @@
+.register_form > * {
+	display: block;
+	width: 100%;
+}
+.register_form > button {
+	max-width: 320px;
+	margin: 0 auto;
+}
+.container.is-collaped {
+	height: 0%;
+}
+.container {
+	transition: height .5s ease;
+	height: auto;
+}
+iframe {
+	border: none;
+}
+pre {
+	width: 100%;
+	word-break: break-all;
+}
