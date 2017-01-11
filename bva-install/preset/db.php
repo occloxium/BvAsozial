@@ -1,21 +1,17 @@
-<?php
-$query = <<<QUERY
-DROP TABLE IF EXISTS `admin_login`;
-CREATE TABLE `admin_login` (
+<?php $query = <<<QUERY
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+CREATE TABLE `admins` (
   `id` int(11) NOT NULL,
-  `uid` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `boundTo` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `anfragen`;
 CREATE TABLE `anfragen` (
   `von` varchar(100) NOT NULL,
   `an` varchar(100) NOT NULL,
   `sent` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `ausstehende_einladungen`;
 CREATE TABLE `ausstehende_einladungen` (
   `id` int(11) NOT NULL,
   `uid` varchar(100) NOT NULL,
@@ -25,22 +21,34 @@ CREATE TABLE `ausstehende_einladungen` (
   `directory` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `freunde`;
 CREATE TABLE `freunde` (
   `uid` varchar(100) NOT NULL,
   `friend` varchar(100) NOT NULL,
   `friendsSince` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `login`;
 CREATE TABLE `login` (
   `id` int(11) NOT NULL,
   `uid` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL COMMENT 'sha2(x,384)',
+  `password` varchar(100) NOT NULL COMMENT 'sha1',
   `email` varchar(100) NOT NULL COMMENT 'Für "Passwort vergessen"'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `person`;
+CREATE TABLE `moderatoren` (
+  `id` int(12) NOT NULL,
+  `boundTo` varchar(128) NOT NULL,
+  `strikes` int(32) NOT NULL,
+  `suspended` int(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DELIMITER $$
+CREATE TRIGGER `ban_on_3_strikes` BEFORE UPDATE ON `moderatoren` FOR EACH ROW BEGIN
+	IF NEW.strikes >= 2 THEN
+    	SET NEW.suspended = 1;
+    END IF;
+END
+$$
+DELIMITER ;
+
 CREATE TABLE `person` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -52,7 +60,6 @@ CREATE TABLE `person` (
   `finalisiert` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `statistiken`;
 CREATE TABLE `statistiken` (
   `date` datetime NOT NULL COMMENT 'Datum des Tages der Erhebung',
   `registrierte_benutzer` int(32) NOT NULL,
@@ -60,17 +67,15 @@ CREATE TABLE `statistiken` (
   `versendete_freundschaftsanfragen` int(32) NOT NULL,
   `finalisierte_profile` int(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabelle zur täglichen Erhebung der Benutzerstatistik';
-
-
-DROP TRIGGER IF EXISTS `default_date`;
 DELIMITER $$
 CREATE TRIGGER `default_date` BEFORE INSERT ON `statistiken` FOR EACH ROW SET new.date = CURDATE()
 $$
 DELIMITER ;
 
-ALTER TABLE `admin_login`
+
+ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `uid` (`uid`);
+  ADD UNIQUE KEY `boundTo` (`boundTo`);
 
 ALTER TABLE `anfragen`
   ADD UNIQUE KEY `von` (`von`,`an`);
@@ -86,6 +91,10 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `uid` (`uid`);
 
+ALTER TABLE `moderatoren`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `boundTo` (`boundTo`);
+
 ALTER TABLE `person`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `uid` (`uid`);
@@ -94,17 +103,17 @@ ALTER TABLE `statistiken`
   ADD PRIMARY KEY (`date`),
   ADD UNIQUE KEY `date` (`date`);
 
-ALTER TABLE `admin_login`
-  CHANGE `id` int(11) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `ausstehende_einladungen`
-  CHANGE `id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `login`
-  CHANGE `id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `moderatoren`
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `person`
-  CHANGE `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `anfragen`
   ADD CONSTRAINT `anfragen_ibfk_1` FOREIGN KEY (`von`) REFERENCES `person` (`uid`) ON DELETE CASCADE;
@@ -113,8 +122,7 @@ ALTER TABLE `login`
   ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `person` (`uid`) ON DELETE CASCADE;
 
 DELIMITER $$
-DROP EVENT IF EXISTS `update_statistics`$$
-CREATE DEFINER=`bvasozial-2017`@`localhost` EVENT `update_statistics` ON SCHEDULE EVERY 12 HOUR STARTS NOW() ON COMPLETION PRESERVE ENABLE DO BEGIN
+CREATE DEFINER=`bvasozialadmin`@`localhost` EVENT `update_statistics` ON SCHEDULE EVERY 6 HOUR STARTS '2016-10-20 05:00:00' ON COMPLETION PRESERVE ENABLE DO BEGIN
 INSERT
 INTO
   bvasozial.statistiken(DATE)
@@ -170,5 +178,6 @@ WHERE
 END$$
 
 DELIMITER ;
+
 QUERY;
 ?>

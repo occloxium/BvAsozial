@@ -1,9 +1,4 @@
-html, body { height: 100%; }
-html * {
-	box-sizing: border-box;
-}
 form {
-	width: 100%;
 	margin: 0 auto;
 	padding: 2em;
 	max-width: none !important;
@@ -19,15 +14,8 @@ form > .mdl-button {
 	display: block;
 	color: #fff;
 }
-
-h1 {
-	font-size: 2em;
-	-webkit-margin-after: 0;
-	margin-bottom: 0;
+.mdl-card {
+	width: 90%;
+	max-width: 768px;
+	margin: 12rem auto;
 }
-pre {
-	font-size: 80%;
-	margin: 0;
-}
-
-

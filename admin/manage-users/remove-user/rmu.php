@@ -1,10 +1,10 @@
 <?php
-	include_once '../../includes/db_connect.php';
-	include_once '../../includes/functions.php';
+	require_once('constants.php');
+	require_once(ABS_PATH.INC_PATH.'functions.php');
 	secure_session_start();
 
 	if(isset($_POST['uid'])){
-		if(login_check($mysqli)){
+		if(login_check($mysqli) && $_SESSION['user']['is_admin']){
 			if(isUser($_POST['uid'], $mysqli)){
 				$uid = $_POST['uid'];
 				$mysqli->query("DELETE FROM person WHERE uid = '$uid'");
