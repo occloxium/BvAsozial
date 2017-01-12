@@ -6,7 +6,7 @@
 Wie bereits erwähnt bringt 1.5 eine neue Gruppe von Benutzern mit sich:
 - [x] __Moderatoren__ : Admins können bestimmte normale Benutzer zu Moderatoren der Plattform machen. Moderatoren können
     - [ ] auf alle Profile zugreifen
-    - [ s] Rufnamen löschen und verändern
+    - [ ] Rufnamen löschen und verändern
     - [ ] Antworten auf Fragen aller Personen bearbeiten und löschen
 - [ ] __Profilbilder__ : Nun können Benutzer ihre eigenen Profilbilder setzen und auch wieder löschen
 - [ ] __Privatsphäre-Einstellungen für Profile__ : Nutzer können nun festlegen, ob sie mit der Suche gefunden werden wollen oder nicht und welche Daten von ihnen angezeigt werden sollen
