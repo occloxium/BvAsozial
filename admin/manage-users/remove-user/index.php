@@ -64,12 +64,10 @@
 								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append($('<pre></pre>').text(data)));
 							}
 						} catch (e) {
-							debugger;
 							console.log(data);
 						}
 					},
 					error: function(data){
-						debugger;
 						console.log(data);
 					}
 				})
@@ -78,4 +76,4 @@
 	</body>
 </html>
 
-<?php else : header('Location: ../../login/'); exit; endif; ?>
+<?php else : header('Location: ../'); exit; endif; ?>

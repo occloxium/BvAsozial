@@ -1,46 +1,19 @@
 <?php
-	include_once '../includes/db_connect.php';
-	include_once '../includes/functions.php';
+	require_once('constants.php');
+	require_once(ABS_PATH.INC_PATH.'functions.php');
 
 	secure_session_start();
-	if(login_check($mysqli) == true):
+	if(login_check($mysqli) == true && $_SESSION['user']['is_admin']) :
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-		<title>BvAsozial</title>
-
-		<meta name="mobile-web-app-capable" content="yes">
-    	<link rel="icon" sizes="192x192" href="/images/android-desktop.png">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-   		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-    	<meta name="apple-mobile-web-app-title" content="BvAsozial">
-    	<link rel="apple-touch-icon-precomposed" href="/images/ios-desktop.png">
-
-		<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
-    	<meta name="msapplication-TileColor" content="#252830">
-
-		<link rel="shortcut icon" href="/images/favicon.png">
-
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-		<link rel="stylesheet" href="/css/bvasozial.mdl.src.css">
-		<link rel="stylesheet" href="/css/sidewide.css">
-		<link rel="stylesheet" href="/css/overview.css">
-		<link rel="stylesheet" href="../css/admin.css">
-		<link rel="stylesheet" href="../css/registerUser.css">
-
-		<script src="/js/jquery-2.1.4.min.js"></script>
+		<?php _getHead('dashboard','admin'); ?>
 	</head>
 	<body>
 		<div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
 		  <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-				<?php get_nav('register-user'); ?>
+				<?php _getNav('register-user'); ?>
 		  </div>
 		  <main class="mdl-layout__content mdl-color--grey-100">
 			  <div class="mdl-card mdl-color--white mdl-shadow--2dp container container--margin-top">
@@ -76,7 +49,4 @@
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	</body>
 </html>
-<?php
-	else : header("Location: ../login/"); exit;
-	endif;
-?>
+<?php else : header("Location: ../login/"); exit; endif; ?>

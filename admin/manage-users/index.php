@@ -6,14 +6,14 @@
   if(login_check($mysqli) == true && $_SESSION['user']['is_admin']) :
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html>
 	<head>
 		<?php _getHead('admin'); ?>
 	</head>
 	<body>
 		<div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
 		  <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-				<?php get_nav('manange-users'); ?>
+				<?php _getNav('manange-users'); ?>
 			  </div>
 			  <main class="mdl-layout__content mdl-color--grey-100">
 				  <div class="mdl-card mdl-color--white mdl-shadow--2dp container container--margin-top container--wide">
@@ -58,4 +58,4 @@
 		 <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	</body>
 </html>
-<?php else : header('Location: ../login/'); exit; endif; ?>
+<?php else : header('Location: ../'); exit; endif; ?>

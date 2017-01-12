@@ -3,33 +3,34 @@ var $ = jQuery;
 	document.title = "BvAsozial - " + $('main').attr('data-name');
 	$('textarea').autogrow({onInitialize: true});
 }());
+
 $('ul.data-section__list').on("click", '.mdl-chip.mdl-chip--deletable > .mdl-chip__action', function(e){
-    if($(this).hasClass('is-confirming')){
-    	var data = {
-                username: $('main').attr('data-username'),
-                name: $(this).prev('span').text(),
-                directory: $('main').attr('data-directory')
-            };
-        $.ajax({
-            method: 'post',
-            url: '/includes/removeName.php',
-            data: data
-        }).done(function(d){
-            try {
-                var obj = JSON.parse(d);
-                if(obj.success){
-                    _EVENTS_.updateList_(obj.html);
-                } else {
-                    throw new Error(obj.msg);
-                }
-            } catch (e) {
-                console.log(d);
-                console.log(e);
-            }
-        });
-    } else {
-        $(this).addClass('is-confirming').children('i').text('done');
-    }
+  if($(this).hasClass('is-confirming')){
+  	var data = {
+      username: $('main').attr('data-username'),
+      name: $(this).prev('span').text(),
+      directory: $('main').attr('data-directory')
+    };
+	  $.ajax({
+      method: 'post',
+      url: '/includes/removeName.php',
+      data: data
+	  }).done(function(d){
+      try {
+	      var obj = JSON.parse(d);
+	      if(obj.success){
+          _EVENTS_.updateList_(obj.html);
+	      } else {
+          throw new Error(obj.msg);
+	      }
+      } catch (e) {
+        console.log(d);
+        console.log(e);
+      }
+	  });
+  } else {
+    $(this).addClass('is-confirming').children('i').text('done');
+  }
 });
 
 $('button#addQuote').click(function(){
@@ -49,6 +50,7 @@ $('button#addQuote').click(function(){
 		console.log(d);
 	})
 });
+
 $('button#updateUserData').click(function(){
 	$.ajax({
 		method: 'post',
@@ -89,13 +91,12 @@ $('li button').click(function(){
 		console.error(e);
 	})
 });
+
 $('li.frage input').change(function(){
 	var e = $(this).parent('div').next('button').children('i');
 	if(e.text() == 'done_all')
 		e.text('save');
 })
-
-
 
 var _DATA_ = {
 	signedInUser: {
@@ -115,6 +116,7 @@ var Rufnamen = {
 	}
 };
 window.document['Rufnamen'] = Rufnamen;
+
 var _EVENTS_ = {
 	updateList_: function (html) {
 		var list = $('.data-section__list');
@@ -125,10 +127,10 @@ var _EVENTS_ = {
 	},
 	pushNameToServer: function() {
 		var	postData = {
-					for: _DATA_.specatedUser.username,
-					name: $('#textfieldAddName').val(),
-					postedBy: _DATA_.signedInUser.username
-				};
+			for: _DATA_.specatedUser.username,
+			name: $('#textfieldAddName').val(),
+			postedBy: _DATA_.signedInUser.username
+		};
 		if(postData.name.length <= 1){
 			var snackbar = $('.mdl-snackbar');
 			snackbar.attr('data-success', "false");
@@ -138,7 +140,7 @@ var _EVENTS_ = {
 			});
 			console.warn('Kein Name.');
 			return;
-		}		
+		}
 		$(this).children('i.material-icons').text('done');
 		$.ajax({
 			method: 'post',
@@ -154,7 +156,7 @@ var _EVENTS_ = {
 					// success
 					snackbar.attr('data-success', 'true');
 					snackbar[0].MaterialSnackbar.showSnackbar({
-						message: 'Dein vorgeschlagener Rufname wurde verpasst.', 
+						message: 'Dein vorgeschlagener Rufname wurde verpasst.',
 						timeout: 2000,
 						actionHandler: _EVENTS_.undoPushAndRemoveName,
 						actionText: 'Rückgängig'
@@ -168,7 +170,7 @@ var _EVENTS_ = {
 					// failure serverside
 					snackbar.attr('data-success', 'false');
 					snackbar[0].MaterialSnackbar.showSnackbar({
-						message: obj.error, 
+						message: obj.error,
 						timeout: 2000,
 					});
 					$('#saveNameAndPushToServer').children('i.material-icons').text('save');
@@ -186,14 +188,14 @@ var _EVENTS_ = {
 	appendForm: function () {
 		$(this).off('click', _EVENTS_.appendForm).on('click', _EVENTS_.detachForm).children('i.material-icons').text('close');
 		var textfield = $('<div></div>').addClass('mdl-textfield mdl-js-textfield mdl-textfield__floating-label flex-element flex-element--fill flex-element--no-padding').append([
-					$('<input/>').addClass('mdl-textfield__input').attr('type','text').attr('id','textfieldAddName').attr('name','rufname').on('change', function(){
-						$('#saveNameAndPushToServer').prop('disabled', false);
-						$(this).off(this);
-					}),
-					$('<label></label>').addClass('mdl-textfield__label').attr('for','textfieldAddName').text('Rufnamen hinzufügen')
-				]),
-				button = $('<button></button').addClass('mdl-button mdl-js-button mdl-button--icon').attr('id','saveNameAndPushToServer').prop('disabled', true).attr('type','button').on('click', _EVENTS_.pushNameToServer).append($('<i></i>').addClass('material-icons').text('save')),
-				form = $('<div></div>').addClass('data-section__form data-section__form--active flex-container');
+			$('<input/>').addClass('mdl-textfield__input').attr('type','text').attr('id','textfieldAddName').attr('name','rufname').on('change', function(){
+				$('#saveNameAndPushToServer').prop('disabled', false);
+				$(this).off(this);
+			}),
+			$('<label></label>').addClass('mdl-textfield__label').attr('for','textfieldAddName').text('Rufnamen hinzufügen')
+		]),
+		button = $('<button></button').addClass('mdl-button mdl-js-button mdl-button--icon').attr('id','saveNameAndPushToServer').attr('type','button').on('click', _EVENTS_.pushNameToServer).append($('<i></i>').addClass('material-icons').text('save')),
+		form = $('<div></div>').addClass('data-section__form data-section__form--active flex-container');
 		window.componentHandler.upgradeElement(textfield[0]);
 		window.componentHandler.upgradeElement(button[0]);
 		form.append([textfield, button]);
@@ -219,14 +221,14 @@ var _EVENTS_ = {
 				if(obj.success == true){
 					snackbar.attr('data-success','true');
 					snackbar[0].MaterialSnackbar.showSnackbar({
-						message: 'Änderungen erfolgreich rückgängig gemacht', 
+						message: 'Änderungen erfolgreich rückgängig gemacht',
 						timeout: 2000,
 					});
 				} else {
 					console.error(obj.error);
 					snackbar.attr('data-success','false');
 					snackbar[0].MaterialSnackbar.showSnackbar({
-						message: obj.error, 
+						message: obj.error,
 						timeout: 2000,
 					});
 				}
@@ -272,8 +274,11 @@ var _EVENTS_ = {
 		});
 	}
 };
+
 $('button#btnaddname').on('click', _EVENTS_.appendForm);
+
 $('button.btnaddfriend').on('click', _EVENTS_.sendFriendRequest);
+
 $('.data-section__form').on('submit', function(e){
 	e.preventDefault();
 });

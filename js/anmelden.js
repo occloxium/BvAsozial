@@ -1,7 +1,13 @@
 var $ = jQuery;
 
+var hash_password = function(form){
+	var password = form.find("#password").val();
+	form.find("#password").val(new hash('SHA-384').update(password).getHash());
+}
+
 $('form button').click(function(e){
 	e.preventDefault();
+	hash_password($('form'));
 	$.ajax({
 		method: 'post',
 		url: '/includes/processLogin.php',
@@ -10,6 +16,9 @@ $('form button').click(function(e){
 		try {
 			var obj = JSON.parse(data);
 			if(obj.success){
+				if(obj.data.is_admin){
+					location.replace('../admin/');
+				}
 				location.replace('../');
 			} else {
 				$('.mdl-snackbar')[0].MaterialSnackbar.showSnackbar({

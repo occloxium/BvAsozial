@@ -1,5 +1,21 @@
 # Changenotes
 
+# Version 1.2.25
+**12.01.2017**
+
+* **Introduced new group function** : `is_privileged` determines if a user is allowed to perform certain changes
+* `/admin/register-user/` :
+  * Fixed page not working at all
+  * Improved user creation and removed some unnecessary cases of error catching
+* `/includes/addName.php, /includes/removeName.php` :
+  * Updated scripts to fit stylistic needs of _**1.2.x**_
+  * Increased security measures
+  * Usage of `is_privileged`
+* Fixed some unnecessary queries in group functions in case a session is already created
+* Updated some CSS
+* _Beautified_ more files
+* **SECURITY** : Added client-side hashing of passwords at the login to increase security of passwords. Passwords are now transmitted completely hashed with SHA-384 by JavaScript
+
 # Version 1.2.24
 **11.01.2017**
 

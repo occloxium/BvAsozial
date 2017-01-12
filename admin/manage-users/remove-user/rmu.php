@@ -8,9 +8,9 @@
 			if(isUser($_POST['uid'], $mysqli)){
 				$uid = $_POST['uid'];
 				$mysqli->query("DELETE FROM person WHERE uid = '$uid'");
-				unlink("../../../users/$uid/$uid.json");
-				unlink("../../../users/$uid/avatar.jpg");
-				rmdir("../../../users/$uid/");
+				unlink(ABS_PATH . "/users/$uid/$uid.json");
+				unlink(ABS_PATH . "/users/$uid/avatar.jpg");
+				rmdir(ABS_PATH . "/users/$uid/");
 				echo success(["message"=>"Benutzer wurde entfernt"]);
 			} else {
 				echo error('internalError', 500, 'Cannot find user in database');

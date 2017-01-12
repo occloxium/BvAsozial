@@ -77,5 +77,4 @@
 	</body>
 </html>
 
-<?php else : header('Location: ../../login/'); exit;
-			endif; ?>
+<?php else : header('Location: ../'); exit; endif; ?>

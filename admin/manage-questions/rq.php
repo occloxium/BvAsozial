@@ -5,7 +5,7 @@
 
 	if(isset($_POST['id'])){
 		if(login_check($mysqli) && $_SESSION['user']['is_admin']){
-      $fragenkatalog = json_decode(file_get_contents("{ABS_PATH}/registrieren/fragenkatalog.json"), true);
+      $fragenkatalog = json_decode(file_get_contents(ABS_PATH . "/registrieren/fragenkatalog.json"), true);
 			$id = $_POST['id'];
 			$type = substr($id, 9, 1);
 			$frage = substr($id, 11);
@@ -17,7 +17,7 @@
 				//eigeneFragen
 				unset($fragenkatalog['eigeneFragen'][$id]);
 			}
-			if(file_put_contents("{ABS_PATH}/registrieren/fragenkatalog.json", json_encode($fragenkatalog, JSON_PRETTY_PRINT)) > 0){
+			if(file_put_contents(ABS_PATH . "/registrieren/fragenkatalog.json", json_encode($fragenkatalog, JSON_PRETTY_PRINT)) > 0){
 				success(['id' => $_POST['id']]);
 			} else {
 				error('internalError', 500, "Could not write to file");

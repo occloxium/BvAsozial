@@ -275,45 +275,78 @@
    * @param $mysqli the mysqli object refering to the database
    */
   function is_admin($username, $mysqli){
-    $stmt = $mysqli->prepare("SELECT boundTo FROM admins WHERE boundTo = ? LIMIT 1");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->store_result();
-    if(isset($_SESSION)){
-      if($stmt->num_rows == 1){
-        $_SESSION['user']['is_admin'] = true;
+    if(isset($_SESSION['user']) && $_SESSION['user']['uid'] == $username){
+      if($_SESSION['user']['is_admin']){
         return true;
       } else {
-        $_SESSION['user']['is_admin'] = false;
         return false;
       }
+    } else {
+      $stmt = $mysqli->prepare("SELECT boundTo FROM admins WHERE boundTo = ? LIMIT 1");
+      $stmt->bind_param("s", $username);
+      $stmt->execute();
+      $stmt->store_result();
+      if(isset($_SESSION)){
+        if($stmt->num_rows == 1){
+          $_SESSION['user']['is_admin'] = true;
+          return true;
+        } else {
+          $_SESSION['user']['is_admin'] = false;
+          return false;
+        }
+      } else {
+        return false;
+      }
+    }
+  }
+
+  /**
+   * Checks if a user is a moderator and, in case of that event, sets a session variable to mark the user as a moderator
+   * @param $username the username to be searched for
+   * @param $mysqli the mysqli object refering to the database
+   */
+  function is_mod($username, $mysqli){
+    if(isset($_SESSION['user']) && $_SESSION['user']['uid'] == $username){
+      if($_SESSION['user']['is_mod']){
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      $stmt = $mysqli->prepare("SELECT * FROM moderatoren WHERE boundTo = ? LIMIT 1");
+      $stmt->bind_param("s", $username);
+      $stmt->execute();
+      $stmt->store_result();
+      if(isset($_SESSION)){
+        if($stmt->num_rows == 1){
+          $_SESSION['user']['is_mod'] = true;
+          return true;
+        } else {
+          $_SESSION['user']['is_mod'] = false;
+          return false;
+        }
+      } else {
+        return false;
+      }
+    }
+  }
+
+  /**
+   * Checks if a user is allowed to alter another user's additional names
+   * @param $accessor the user trying to alter
+   * @param $target the user whose profile is to be altered
+   * @param $mysqli the mysqli object refering to the database
+   * @return true if the $accessor is privileged to alter, otherwise false
+   */
+  function is_privileged($accessor, $target, $mysqli){
+    if(is_admin($accessor) || is_mod($accessor) || $accessor == $target){
+      return true;
     } else {
       return false;
     }
   }
 
-  /**
-   * Checks, if a user is a moderator and, in case of that event, sets a session variable to mark the user as a moderator
-   * @param $username the username to be searched for
-   * @param $mysqli the mysqli object refering to the database
-   */
-  function is_mod($username, $mysqli){
-    $stmt = $mysqli->prepare("SELECT * FROM moderatoren WHERE boundTo = ? LIMIT 1");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->store_result();
-    if(isset($_SESSION)){
-      if($stmt->num_rows == 1){
-        $_SESSION['user']['is_mod'] = true;
-        return true;
-      } else {
-        $_SESSION['user']['is_mod'] = false;
-        return false;
-      }
-    } else {
-      return false;
-    }
-  }
+
 
   /**
    * GETs a data set of currently a invited users who has not accepted the invitation yet
@@ -528,15 +561,16 @@
    */
   function rufnamenliste($user, $logged_in_user, $rufnamen){
     $html = "";
+    $detailedUser = getMinimalUser($user);
     // signed-in user and requesting user are equivalent -> add option button to remove names
     if(empty($rufnamen))
-        return "<li class=\"list__item\" id=\"noname\">{$user['name']} ist (noch) anonym</li>";
-    if($user['uid'] === $logged_in_user || $_SESSION['user']['is_mod'] || $_SESSION['user']['is_admin']){
-        foreach($rufnamen as $name)
-            $html .= "<span class=\"mdl-chip mdl-chip--deletable\" data-name=\"$name\"><span class=\"mdl-chip__text\">$name</span><button type=\"button\" class=\"mdl-chip__action\"><i class=\"material-icons\">cancel</i></button></span>";
+      return "<li class=\"list__item\" id=\"noname\">{$detailedUser['name']} ist (noch) anonym</li>";
+    if(is_privileged($logged_in_user, $user)){
+      foreach($rufnamen as $name)
+        $html .= "<span class=\"mdl-chip mdl-chip--deletable\" data-name=\"$name\"><span class=\"mdl-chip__text\">$name</span><button type=\"button\" class=\"mdl-chip__action\"><i class=\"material-icons\">cancel</i></button></span>";
     } else {
-        foreach($rufnamen as $name)
-            $html .= "<span class=\"mdl-chip\" data-name=\"$name\"><span class=\"mdl-chip__text\">$name</span></span>";
+      foreach($rufnamen as $name)
+        $html .= "<span class=\"mdl-chip\" data-name=\"$name\"><span class=\"mdl-chip__text\">$name</span></span>";
     }
     return $html;
   }
@@ -576,7 +610,7 @@
 			$stmt->store_result();
 			$stmt->bind_result($user_id, $user, $db_password, $email);
 			$stmt->fetch();
-			$password = hash('sha384', $password);
+      // Password already hashed transmitted @since 1.2.25
 			if($stmt->num_rows == 1){
 				if($db_password == $password){
 					$user_browser = $_SERVER['HTTP_USER_AGENT'];

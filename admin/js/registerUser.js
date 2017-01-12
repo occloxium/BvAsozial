@@ -1,11 +1,11 @@
 var $ = jQuery;
 (function(){
-	$('.register_form').find('#password').val(Math.random().toString(36).substr(2,8));
+	$('.register_form').find('#password').val(Math.random().toString(36).substr(2,10));
 }());
 var userExists = function(uid, callbackFailure){
 	$.ajax({
 		method: 'post',
-		url: '/admin/includes/userExists.php',
+		url: '/includes/userExists.php',
 		data: {u: uid},
 		success: function(data){
 			try {
@@ -26,7 +26,7 @@ var validateForm = function(form){
 			password = form.find('#password').val();
 	if(name.length > 0 && uid.length > 0 && !form.children('#uidContainer').hasClass('is-invalid') && email.length > 0 && password.length > 0){
 		return true;
-	} 
+	}
 	return false;
 }
 var resizeIframe = function(obj){
@@ -57,7 +57,7 @@ $('.register_form button').click(function(){
 		var formData = new FormData($('.register_form')[0]);
 		$.ajax({
 			method: 'POST',
-			url: '/admin/includes/registerUser.php',
+			url: '/includes/registerUser.php',
 			data: $('.register_form').serialize(),
 			error: function(data){
 				console.error(data);

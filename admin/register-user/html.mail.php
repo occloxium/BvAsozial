@@ -1,5 +1,5 @@
 <?php
-	if(isset($e_uid, $e_pw, $e_name)) : 
+	if(isset($e_uid, $e_pw, $e_name)) :
 		$vorname = explode(' ', $e_name)[0];
 		return <<<MAIL
 <div class="wrapper" style="background-color: #131814;">
@@ -8,7 +8,7 @@
         <tbody>
 					<tr>
 						<td class="preheader__snippet" style="padding: 10px 0 5px 0;vertical-align: top;width: 280px;">
-							<p style="Margin-top: 0;Margin-bottom: 0;font-size: 12px;line-height: 19px;">BvAsozial.de - Einladung</p>
+							<p style="Margin-top: 0;Margin-bottom: 0;font-size: 12px;line-height: 19px;">BvAsozial - Einladung</p>
 						</td>
 					</tr>
       	</tbody>
@@ -22,7 +22,7 @@
 				<h1 style="Margin-top: 0;Margin-bottom: 20px;font-style: normal;font-weight: normal;color: #fff;font-size: 14px;line-height: 34px;font-family: avenir,sans-serif;text-align: center;">
 					<span class="font-avenir"><span style="color:#ffffff">bvasozial.de</span></span>
 				</h1>
-			</div> 
+			</div>
 			<div style="Margin-left: 10px;Margin-right: 10px;">
 				<div style="line-height:40px;font-size:1px">&nbsp;</div>
 			</div>
@@ -68,12 +68,9 @@
       <div style="font-family: Roboto, Tahoma, sans-serif; color: #5c6266; font-size: 20px;line-height: 20px;mso-line-height-rule: exactly;">&nbsp;</div>
 			<div class="footer__inner" style="font-family: Roboto, Tahoma, sans-serif; color: #5c6266; padding: 0;font-size: 12px;line-height: 19px; width: 300px; margin: 24px auto 0;">
 				<div>
-					<div>Abi-Zeitungs-Team BvA mit dem bvasozial.de-Entwicklerteam mit Alexander Bartolomey, Mark Wolff und Jan-Philipp Kiel</div>
+					<div>Abi-Zeitungs-Team Bettina-von-Arnim Gymnasium</div>
 				</div>
-				<div class="footer__permission" style="Margin-top: 18px; padding-bottom: 24px">
-					<div>Du hast ein Foto eingesendet, also erhälst du eine Einladung zur bvasozial-Plattform</div>
-				</div>
-			</div>   
+			</div>
 		</div>
 MAIL;
 	else : header("HTTP/1.1 403 Forbidden");

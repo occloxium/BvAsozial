@@ -2,8 +2,7 @@
     require('constants.php');
     require(ABS_PATH . INC_PATH . 'functions.php');
     secure_session_start();
-    if (login_check($mysqli)) :
-      $user = getUser($_SESSION['username'], $mysqli);
+    if (login_check($mysqli) && !$_SESSION['user']['is_admin']) :
 ?>
 <!doctype html>
 <html lang="de">
@@ -15,17 +14,17 @@
 	  <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
 	    <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
 	      <header class="drawer-header">
-	        <img class="avatar" src="<?php echo '/users/'.$user['directory'].'/avatar.jpg'?>">
+	        <img class="avatar" src="<?php echo '/users/'.$_SESSION['user']['directory'].'/avatar.jpg'?>">
 	        <div>
 	          <div class="flex-container">
-	            <span><?php echo $user['name']; ?></span>
+	            <span><?php echo $_SESSION['user']['name']; ?></span>
 	            <div class="mdl-layout-spacer"></div>
 	          </div>
 	        </div>
 	      </header>
 	      <?php _getNav('root') ?>
 	    </div>
-  	<main class="mdl-layout__content mdl-color--blue-grey-900" data-username="<?php echo $user['uid'] ?>" data-directory="<?php echo $user['directory'] ?>" data-friends="<?php echo $user['freundesanzahl'] ?>">
+  	<main class="mdl-layout__content mdl-color--blue-grey-900" data-username="<?php echo $_SESSION['user']['uid'] ?>" data-directory="<?php echo $_SESSION['user']['directory'] ?>" data-friends="<?php echo $_SESSION['user']['freundesanzahl'] ?>">
 	    <header class="header mdl-layout__header mdl-color--blue-grey-900 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">Übersicht</span>
@@ -47,27 +46,27 @@
 	    <div class="mdl-grid content">
 	        <div class="mdl-color--white personal-data mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 	            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-desktop">
-	                <img class="avatar" src="<?php echo './users/'.$user['directory'].'/avatar.jpg'?>">
+	                <img class="avatar" src="<?php echo './users/'.$_SESSION['user']['directory'].'/avatar.jpg'?>">
 	            </div>
 	            <div class="mdl-cell mdl-cell--8-col mdl-cell--8-desktop">
 								<div class="data-container" id="personalData">
-									<span class="data-container__title"><?php echo $user['name'] ?></span>
+									<span class="data-container__title"><?php echo $_SESSION['user']['name'] ?></span>
 									<ul class="data-list">
 										<li class="data-list__item">
 											<span class="data-list__item--index">Erhaltene Freundschaftsanfragen</span>
-											<span class="data-list__item--content"><?php echo $user['received_requests'] ?></span>
+											<span class="data-list__item--content"><?php echo $_SESSION['user']['received_requests'] ?></span>
 										</li>
 										<li class="data-list__item">
 											<span class="data-list__item--index">Gesendete Freundschaftsanfragen</span>
-											<span class="data-list__item--content"><?php echo $user['sent_requests'] ?></span>
+											<span class="data-list__item--content"><?php echo $_SESSION['user']['sent_requests'] ?></span>
 										</li>
 										<li class="data-list__item">
 											<span class="data-list__item--index">Benutzerverzeichnis</span>
-											<span class="data-list__item--content">/users/<?php echo $user['directory'] ?>/</span>
+											<span class="data-list__item--content">/users/<?php echo $_SESSION['user']['directory'] ?>/</span>
 										</li>
 										<li class="data-list__item">
 											<span class="data-list__item--index">Registriert seit</span>
-											<span class="data-list__item--content"><?php echo date('d.m.Y', strtotime($user['registered_since'])) ?></span>
+											<span class="data-list__item--content"><?php echo date('d.m.Y', strtotime($_SESSION['user']['registered_since'])) ?></span>
 										</li>
 									</ul>
 								</div>
@@ -125,6 +124,7 @@
 </html>
 <?php
   else :
+    if(login_check($mysqli) && $_SESSION['user']['is_admin']) : header('Location: ./admin/'); else :
 ?>
 <!-- Blank HTML Preset -->
 <!DOCTYPE html>
@@ -158,4 +158,4 @@
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	</body>
 </html>
-<?php endif; ?>
+<?php endif; endif; ?>

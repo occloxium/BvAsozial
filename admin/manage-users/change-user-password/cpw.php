@@ -5,7 +5,7 @@
 
 	if(isset($_POST['uid'], $_POST['password'])){
 		if(login_check($mysqli) && $_SESSION['user']['is_admin']){
-			$h_pw = sha1($_POST['password']);
+			$h_pw = hash('sha384', $_POST['password']);
 			if($stmt = $mysqli->prepare('UPDATE login SET password = ? WHERE uid = ?')){
 				$stmt->bind_param('ss', $h_pw, $_POST['uid']);
 				$stmt->execute();

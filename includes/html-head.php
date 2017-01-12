@@ -1,8 +1,9 @@
+<?php echo <<<HTML
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-<title>BvAsozial &gt; Admin &gt; Dashboard</title>
+<title>BvAsozial</title>
 
 <meta name="mobile-web-app-capable" content="yes">
 
@@ -17,7 +18,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 <link rel="stylesheet" href="/css/bvasozial.mdl.src.css">
-<link rel="stylesheet" href="/css/sidewide.css">
-<link rel="stylesheet" href="/css/admin.css">
 
+<link rel="stylesheet" href="/css/sidewide.css?v=1.2.25">
+<script src="/js/sha.js"></script>
+<script src="/js/hash.js"></script>
 <script src="/js/jquery-2.1.4.min.js"></script>
+HTML;
+?>

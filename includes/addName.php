@@ -1,58 +1,48 @@
-<?php 
-	include_once 'db_connect.php';
-	include_once 'functions.php';
-    
-    secure_session_start();
-    if(!isset($_SESSION['username'])){
-        error('clientError', 403, 'Forbidden');
-        exit;
-    }
+<?php
+	/**
+	 * Adds a certain additional name of a user
+	 * Alexander Bartolomey - 2017
+	 *
+	 * @package BvAsozial 1.2
+	 */
+
+	require('constants.php');
+ 	require_once(ABS_PATH.INC_PATH.'functions.php');
+ 	secure_session_start();
+
 	if(isset($_POST['for'], $_POST['name'], $_POST['postedBy'])){
-		// Posted
-		// get users profile .json file from his directory : directory request form database -> file_get_contents($dir) -> json_decode($jsonstr)
-		
-		$_request = [
-			"for" => $_POST['for'],
-			"name" => $_POST['name'],
-			"postedBy" => $_POST['postedBy']
-		];
-		$user = getUser($_POST['for'], $mysqli);
-		$directory = '../users/' . $user['directory'] . '/' . $user['uid'] . '.json';
-		$json = json_decode(file_get_contents($directory), true);
-		if(!isset($_POST['undo'])){
-			// regular name post
-			if(isFriendsWith($_POST['for'], $_POST['postedBy'], $mysqli)){
+		if(login_check($mysqli) && (is_privileged($_POST['postedBy'], $_POST['for']) || isFriendsWith($_POST['for'], $_POST['postedBy'], $mysqli))){
+			$directory = '../users/' . $user['directory'] . '/' . $user['uid'] . '.json';
+			$json = json_decode(file_get_contents($directory), true);
+			if(!isset($_POST['undo'])){
 				if(!in_array(strtolower($_POST['name']), array_map('strtolower', $json['rufnamen']))){
 					array_push($json['rufnamen'], $_POST['name']); // Success!
-                    $html = rufnamenliste($user, $_SESSION['username'], $json['rufnamen']);
-                    success(["html" => $html, "new_name" => $_request['name']]);
+          $html = rufnamenliste($user, $_SESSION['user']['uid'], $json['rufnamen']);
+          success(["html" => $html]);
 				} else {
 					error('clientError', 400, 'Bad Request', ["Der angegebene Rufname ist ein Dublikat und bereits vorhanden"]);
 				}
 			} else {
-				error('clientError', 400, 'Bad Request', ["Du bist nicht mit dem Benutzer befreundet"]);
+				// undo post
+				// find requested 'name' in 'rufnamen'-array and remove the entry.
+				$list = $json['rufnamen'];
+				$key = array_search($_POST['name'], $list);
+				if($key !== false){
+					unset($list[$key]);
+					// echo response object
+	        $html = rufnamenliste($_POST['username'], $_SESSION['user']['uid'], $list);
+					success(["html" => $html]);
+					$json['rufnamen'] = $list;
+				} else {
+	        $html = rufnamenliste($user, $_SESSION['username'], $list);
+					success(["html" => $html, "request" => $_request, "error" => "Konnte zu widerrufenden Rufnamen nicht mehr in der Liste finden"]);
+				}
 			}
+			file_put_contents($directory, json_encode($json, JSON_PRETTY_PRINT));
 		} else {
-			// undo post
-			// find requested 'name' in 'rufnamen'-array and remove the entry.
-			$list = $json['rufnamen'];
-			$key = array_search($_POST['name'], $list);
-			if($key !== false){
-				unset($list[$key]);
-				// echo response object
-                $html = rufnamenliste($user, $_SESSION['username'], $list);
-				success(["html" => $html, "request" => $_request]);
-				$json['rufnamen'] = $list;
-			} else {
-                $html = rufnamenliste($user, $_SESSION['username'], $list);
-				success(["html" => $html, "request" => $_request, "error" => "Konnte zu widerrufenden Rufnamen nicht mehr in der Liste finden"]);
-			}
+			error('clientError', 403, 'Forbidden');
 		}
-		file_put_contents($directory, json_encode($json, JSON_PRETTY_PRINT));
-        exit;
 	} else {
-		// refuse communication.
 		error('clientError', 400, 'Bad Request');
-        exit;
 	}
 ?>

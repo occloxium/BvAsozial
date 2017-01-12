@@ -1,29 +1,27 @@
 <?php
-	include_once 'db_connect.php';
-	include_once 'functions.php';
+	/**
+	 * Adds a qoute for a user
+	 * Alexander Bartolomey - 2017
+	 *
+	 * @package BvAsozial 1.2
+	 */
 
+	require('constants.php');
+	require_once(ABS_PATH.INC_PATH.'functions.php');
 	secure_session_start();
+
 	if(isset($_POST['uid'], $_POST['quote'])){
 		if(login_check($mysqli) == true){
-			try {
-				if(!isset($_POST['uid'], $_POST['quote'])){
-					throw new Exception("Invalid POST");
-				}
-				$directory = getMinimalUser($_POST['uid'], $mysqli)['directory'];
-				$path = "../users/$directory/{$_POST['uid']}.json";
-				$jsonstr = file_get_contents($path);
-				$o = json_decode($jsonstr, true);
-				$o['spruch'] = $_POST['quote'];
-				file_put_contents($path, json_encode($o, JSON_PRETTY_PRINT));
-				echo json_encode(['spruch'=>$_POST['quote']], JSON_PRETTY_PRINT);
-			}	
-			catch (Exception $e){
-				echo error('internalError', 500, $e->getMessage());
-			}
+			$path = ABS_PATH . "/users/{$_POST['uid']}/{$_POST['uid']}.json";
+			$jsonstr = file_get_contents($path);
+			$o = json_decode($jsonstr, true);
+			$o['spruch'] = $_POST['quote'];
+			file_put_contents($path, json_encode($o, JSON_PRETTY_PRINT));
+			success(['spruch' => $_POST['quote']]);
 		} else {
-			echo error('clientError', 403, 'not logged in');
+			error('clientError', 403, 'Forbidden');
 		}
 	} else {
-		echo error('clientError', 400, 'Bad Request');
+		error('clientError', 400, 'Bad Request');
 	}
 ?>

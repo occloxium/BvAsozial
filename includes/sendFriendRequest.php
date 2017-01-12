@@ -1,7 +1,6 @@
 <?php
-	include_once 'db_connect.php';
-	include_once 'functions.php';
-
+	require('constants.php');
+	require_once(ABS_PATH.INC_PATH.'functions.php');
 	secure_session_start();
 
 	if(isset($_POST['from'], $_POST['to'])){
@@ -12,15 +11,15 @@
 			];
 			if(!requestSent($request['from'], $request['to'], $mysqli)){
 				if($e = sendFriendRequest($request['from'], $request['to'], $mysqli)){
-                    echo success([]);
-                } else {
-                    echo error('internalError', 500, $e);
-                }
+          echo success([]);
+        } else {
+            echo error('internalError', 500, $e);
+        }
 			} else {
 				echo error('internalError', 500, 'Already sent');
 			}
 		} else {
-			echo error('clientError', 403, 'Forbidden');	
+			echo error('clientError', 403, 'Forbidden');
 		}
 	} else {
 		echo error('clientError', 400, 'Bad Request');
