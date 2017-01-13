@@ -4,7 +4,7 @@ Weil während der Entwicklung das volle Potential einer solchen Plattform auffie
 Stufen bei der Produktion ihrer Abiturzeitung helfen.
 
 ## Installation
-Wenn ihr die Plattform auf unseren Servern nutzen wollt, dann stellt einen Antrag an abi.zeitung.bva2016@gmail.com und wir werden diesen so schnell wie möglich bearbeiten.
+Wenn ihr die Plattform auf unseren Servern nutzen wollt, dann stellt einen Antrag an occloxium@gmail.com und wir werden diesen so schnell wie möglich bearbeiten.
 Wenn ihr die Plattform lieber selber hosten wollt, müsst ihr euch noch ein bisschen gedulten, wir arbeiten mit Hochtouren an einem einfach zu installierenen Paket, dass das gesamte Drum und Dran installiert, da neben den ganzen angepassten Dateien auch noch eine Datenbank erforderlich ist.
 
 ## Meilensteine
@@ -14,3 +14,7 @@ Wenn ihr die Plattform lieber selber hosten wollt, müsst ihr euch noch ein biss
 ## Changenotes
 
 [Changenotes](changenotes.md)
+
+## Versionsnotizen
+
+[Versionsnotizen](version-notes.md)

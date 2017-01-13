@@ -3,7 +3,7 @@ if(isset($_SESSION['username'])){
   if($_SESSION['user']['is_admin']){
     ?>
     <nav class="navigation mdl-navigation mdl-color--blue-grey-800" data-active="#<?= $active ?>">
-      <a class="mdl-navigation__link" id="home" href="/admin/"><i class="material-icons">home</i><span>Admin-Bereich</span></a>
+      <a class="mdl-navigation__link" id="admin" href="/admin/"><i class="material-icons">home</i><span>Admin-Bereich</span></a>
       <a class="mdl-navigation__link" id="manage-users" href="/admin/manage-users/"><i class="material-icons">view_headline</i><span>Benutzer verwalten</span></a>
       <a class="mdl-navigation__link" id="register-user" href="/admin/register-user/"><i class="material-icons">playlist_add</i><span>Benutzer einladen</span></a>
       <a class="mdl-navigation__link" id="manage-invitations" href="/admin/manage-invitations/"><i class="material-icons">dns</i><span>Einladungen verwalten</span></a>

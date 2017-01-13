@@ -275,7 +275,7 @@
    * @param $mysqli the mysqli object refering to the database
    */
   function is_admin($username, $mysqli){
-    if(isset($_SESSION['user']) && $_SESSION['user']['uid'] == $username){
+    if(isset($_SESSION['user']['is_admin'])){
       if($_SESSION['user']['is_admin']){
         return true;
       } else {
@@ -306,7 +306,7 @@
    * @param $mysqli the mysqli object refering to the database
    */
   function is_mod($username, $mysqli){
-    if(isset($_SESSION['user']) && $_SESSION['user']['uid'] == $username){
+    if(isset($_SESSION['user']['is_mod'])){
       if($_SESSION['user']['is_mod']){
         return true;
       } else {
@@ -614,8 +614,8 @@
 			if($stmt->num_rows == 1){
 				if($db_password == $password){
 					$user_browser = $_SERVER['HTTP_USER_AGENT'];
-					$_SESSION['id'] = $user_id;
-					$_SESSION['username'] = $user;
+          $_SESSION['id'] = $user_id;
+          $_SESSION['username'] = $user;
           $_SESSION['user'] = getUser($user, $mysqli);
           _checkGroups($user, $mysqli);
           $_SESSION['login_string'] = hash('sha384', $password . $user_browser);

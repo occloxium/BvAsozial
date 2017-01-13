@@ -54,3 +54,40 @@ Wenn ein privilegierter Benutzer etwas an den Inhalten ändert, so wird das auf 
 Der Besitzer kann sich anzeigen lassen, *wer* *wann* etwas an seinem Profil geändert hat und die Änderung ggf. beanstanden. Für die inhaltliche Reversion ist er aber selbst zuständig.
 
 Die Beanstandung führt aber dazu, dass, über eine weitere Tabelle namens `reports`, in der Benutzername, Zeitpunkt des Reports und **Prüfsumme** (jeder solchen Änderung wird eine Prüfsumme verliehen, `SHA-384 BENUTZERNAME . ZEITPUNKT`) der Änderung zur Identifikation gespeichert werden, ein Eintrag angelegt wird, der von *Admins* bewertet werden kann und der *Moderator* aufgrunddessen einen Strike erhalten kann. Nach 3 Strikes wird der Moderator-Account als *suspended* markiert und bei der Überprüfung durch `is_mod` nicht mehr gefunden. Damit wird somit der Moderatoren-Status eines Accounts zurückgerufen.
+
+### Einstellungen
+
+Ein neuer Menüeintrag führt zur Einstellungs-Seite, die accountbezogene Informationen zur Änderung präsentiert (E-Mail, Passwort ändern, Namen ändern etc.)
+Auf der Einstellungsseite kann auch die Privatsphäre des Benutzers eingestellt werden. Zu diesem Zweck wird der Benutzer über die Privatsphäre-Einstellung informiert und die Tiefe der Änderungen erklärt.
+
+JavaScript-Dateien, die bisher auf `/users/index.php` die persönlichen Daten ändern, werden entsprechend in eine `/js/settings.js`-Datei ausgelagert.
+
+### Profilbilder
+
+Die Benutzer sollen ihre Profilbilder selbst anpassen können. Das ist schon sei **1.0** klar, aber eine solche Implementierung ist bisher immer daran gescheitert, dass nicht klar definiert war, ob Bilder vom Server zurechtgeschnitten werden sollen, ob der Benutzer auswählen sollen darf, wie sein Bild zugeschnitten wird, ob die Bilder im Rohformat abgespeichert werden sollen und dann hinterher überlegt, wie zugeschnitten wird und auf der Seite einfach das Bild zentriert in ein Quadrat gequetscht wird. Eine derartige Standardisierung geht der Implementierung voraus.
+
+Danach müssen, je nach Wahl, Fähigkeiten mit der PHP-Image-Manipulation Library angeeignet werden. Dies ist wieder mit mehr Aufwand verbunden. Zu diesem Zweck schlage ich Option 3 vor.
+
+Der Benutzer lädt sein Bild einfach unverändert hoch, es ersetzt den Standard-Avatar in seinem Verzeichnis. Auf den Seiten, auf denen die Avatare verwendet werden (Profil, Freunde, Meine Freunde, Dashboard) werden anstatt `img`-Tags, die das Bild stauchen würden, Container in der Größe des vorgesehenen Bilds mit einem Unterobjekt, das das Bild als Hintergrund lädt, verwendet. Der Code dafür könnte so aussehen:
+##### HTML
+```html
+<div class="profile-image__container">
+  <div class="profile-image__inner" style="background-image: url(<Avatar>)">
+  </div>
+</div>
+```
+##### CSS
+```css
+.profile-image__container {
+  width: <Breite>;
+  height: <Höhe>;
+  position: relative;
+}
+.profile-image_inner {
+  background-image: <Default-Avatar>;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+```
