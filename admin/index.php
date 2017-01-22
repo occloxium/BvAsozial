@@ -74,7 +74,7 @@
 										<button id="<?php echo 'extra-'.$uid ?>" class="mdl-button mdl-js-button mdl-button--icon">
 											<i class="material-icons">more_vert</i>
 										</button>
-										<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="<?php echo 'extra-'.$uid ?>">
+										<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="<?php echo 'extra-'.$uid ?>">
 											<li class="mdl-menu__item">Name: <?php echo $name ?></li>
 											<li class="mdl-menu__item">Benutzername: <?php echo $uid ?></li>
 										</ul>

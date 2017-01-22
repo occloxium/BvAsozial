@@ -65,6 +65,7 @@
     closedir($dir);
   }
   recursive_copy("src","bvasozial");
+  exec('php ../composer.phar install');
   if($success == true) :
 ?>
 <!doctype html>

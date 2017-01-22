@@ -1,5 +1,16 @@
 # Changenotes
 
+# Version 1.2.30
+**22.01.2017**
+
+*   Fixed errors with registration (403 when accessing)
+*   Removed some old JavaScript files
+*   Updated installer to auto-install composer on the server (*indev*)
+
+### Notes
+*   Installer: db.php is definitely outdated, constants.pre.php is probably outdated
+*   Validate composer installation script does what it's supposed to
+
 # Version 1.2.29
 **22.01.2017**
 

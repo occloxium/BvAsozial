@@ -1,16 +1,16 @@
 <?php
-	require_once('functions.php');
-	if(isset($e_uid, $e_pw, $e_name, $vorname, $invite_name)) :
-		$enc_h_pw = base64_encode(hash('sha384', $e_pw));
-		$enc_uid = base64_encode($e_uid);
-		$linkData = [
-			"invite_name" => base64_encode($invite_name),
-			"uid" => base64_encode($e_uid),
-			"pw" => base64_encode($e_pw),
-			"name" => base64_encode($e_name),
-			"vorname" => base64_encode($vorname)
-		];
-		return <<<MAIL
+require_once('functions.php');
+if(isset($e_uid, $e_pw, $e_name, $vorname, $invite_name)) :
+	$enc_h_pw = base64_encode(hash('sha384', $e_pw));
+	$enc_uid = base64_encode($e_uid);
+	$linkData = [
+		"invite_name" => base64_encode($invite_name),
+		"uid" => base64_encode($e_uid),
+		"pw" => base64_encode($e_pw),
+		"name" => base64_encode($e_name),
+		"vorname" => base64_encode($vorname)
+	];
+	return <<<MAIL
 <div style="background-color: #252830;">
 	<div style="margin: 0 auto; padding: 24px 0;">
 		<div>
@@ -52,6 +52,6 @@
 	</div>
 </div>
 MAIL;
-	else : error('clientError', 403, 'Forbidden');
-	endif;
+else : error('clientError', 403, 'Forbidden', ['requirenments not met', __LINE__, __FILE__]);
+endif;
 ?>

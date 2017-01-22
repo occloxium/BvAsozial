@@ -81,7 +81,7 @@
     	  <i class="material-icons">add</i>
     	</a>
     </div>
-    <script src="../js/manage-questions.js"></script>
+    <script src="/js/manage-questions.js"></script>
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   </body>
   </html>

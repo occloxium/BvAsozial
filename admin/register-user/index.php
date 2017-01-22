@@ -45,8 +45,8 @@
 			  </div>
 		  </main>
 		</div>
-		<script src="../js/registerUser.js"></script>
+		<script src="/js/registerUser.js"></script>
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	</body>
 </html>
-<?php else : header("Location: ../login/"); exit; endif; ?>
+<?php else : header("Location: ../"); exit; endif; ?>
