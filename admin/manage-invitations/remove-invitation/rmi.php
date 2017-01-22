@@ -7,6 +7,7 @@
 		if(login_check($mysqli) && $_SESSION['user']['is_admin']){
 			if(isUser($_POST['uid'], $mysqli)){
 				$uid = $_POST['uid'];
+				$mysqli->query("INSERT INTO entfernte_einladungen (uid) VALUES ('$uid')");
 				$mysqli->query("DELETE FROM ausstehende_einladungen WHERE uid = '$uid'");
 				unlink(ABS_PATH . "/users/$uid/$uid.json");
 				unlink(ABS_PATH . "/users/$uid/avatar.jpg");

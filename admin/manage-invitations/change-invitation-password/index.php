@@ -10,11 +10,22 @@
 <html>
 	<head>
 		<?php _getHead(); ?>
+		<style>
+			.successful-response {
+				border-left: solid 2px rgb(30, 215, 96);
+				min-height: 0;
+			}
+			.successful-response b {
+				display: block;
+				font-size: 16px;
+				padding: 1em;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="mdl-layout__container">
 			<div class="layout-wrapper">
-				<header class="layout__header layout__header--small mdl-color--blue-grey-800 mdl-color-text--blue-grey-50">
+				<header class="layout__header layout__header--small mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
 					<img class="logo prime" src="/img/logo-cropped.png">
 					<div class="header__inner">
 						<p class="mdl-typography--headline header__title">
@@ -23,7 +34,7 @@
 					</div>
 				</header>
 				<main class="page-content mdl-color--grey-100">
-					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
+					<div class="mdl-card container form mdl-color--white mdl-shadow--2dp">
 						<form action="./cpw.php">
 							<input type="hidden" name="step" value="0">
 							<p class="mdl-typography--headline">Passwort neu setzen...</p>
@@ -59,9 +70,10 @@
 						try {
 							var obj = JSON.parse(data);
 							if(obj.success){
-								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append(obj.html));
+								$('.form').slideUp(200).delay(200).detach();
+								$('main').append($('<div></div>').addClass('mdl-card container mdl-shadow--2dp mdl-color--white successful-response').append(obj.html));
 							} else {
-								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append($('<pre></pre>').text(data)));
+								$('main').append($('<div></div>').addClass('mdl-card container mdl-shadow--2dp mdl-color--white ').append($('<pre></pre>').text(data)));
 							}
 						} catch (e) {
 							console.log(data);

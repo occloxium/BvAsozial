@@ -1,7 +1,7 @@
 <?php
 	include_once '../../../includes/db_connect.php';
 	include_once '../../../includes/functions.php';
-	
+
 	ini_set('display_errors', 1);
 
 	secure_session_start();
@@ -40,7 +40,7 @@
 	<body>
 		<div class="mdl-layout__container">
 			<div class="layout-wrapper">
-				<header class="layout__header layout__header--small mdl-color--blue-grey-800 mdl-color-text--blue-grey-50">
+				<header class="layout__header layout__header--small mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
 					<img class="logo prime" src="/img/logo-cropped.png">
 					<div class="header__inner">
 						<p class="mdl-typography--headline header__title">
@@ -55,7 +55,7 @@
 							<p class="mdl-typography--body-1">Hier kannst du deine eigenen Fragen anpassen, solltest du dir vorher unsicher gewesen sein</p>
 							<b class="">Wenn du vorher bereits beantwortete Fragen abwählst, verfallen deine Antworten für diese Fragen! Dieser Schritt kann nicht von uns rückgängig gemacht werden!</b>
 							<div>&nbsp;</div><div>&nbsp;</div>
-							<table class="fragenkatalog-table mdl-shadow--2dp" id="freundesfragen">				
+							<table class="fragenkatalog-table mdl-shadow--2dp" id="freundesfragen">
 								<?php
 									$user_fragen = json_decode(file_get_contents("../../../users/{$user['directory']}/{$user['uid']}.json"), true);
 									$obj = json_decode(file_get_contents('../../../registrieren/fragenkatalog.json'), true);
@@ -86,7 +86,7 @@
 							</button>
 					</form>
 					<a style="max-width: 240px; margin: 2em auto; display: block;" class="mdl-button mdl-js-button mdl-color--accent mdl-color-text--white mdl-js-ripple-effect" href="../../">
-						Zurück zu meinen Fragen	
+						Zurück zu meinen Fragen
 					</a>
 					</div>
 				</main>
@@ -101,5 +101,5 @@
 	</body>
 </html>
 
-<?php else : header('Location: ../../../'); exit; 
+<?php else : header('Location: ../../../'); exit;
 			endif; ?>

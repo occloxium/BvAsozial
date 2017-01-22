@@ -35,12 +35,12 @@
 								<label for="uid" class="mdl-textfield__label">Benutzername</label>
 							</div>
 							<div class="flex-container">
-								<a class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect" href="../">
-									Abbrechen
-								</a>
 								<button class="mdl-button mdl-js-button mdl-color--accent mdl-color-text--white mdl-js-ripple-effect" type="button">
 									Entfernen
 								</button>
+								<a class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect" href="../">
+									Abbrechen
+								</a>
 							</div>
 						</form>
 					</div>

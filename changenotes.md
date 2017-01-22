@@ -1,5 +1,33 @@
 # Changenotes
 
+# Version 1.2.29
+**22.01.2017**
+
+*   Added avatar customisation option to registration
+*   Added wrapper functions for *Notification System*
+*   Added email bodies for *Notification System*
+*   Added some helper functions to `functions.php`
+*   Added client-side hashing of all transmitted passwords to increase security
+*   Altered most login and verification functions to not hash parameter passwords anymore (because of client-side hashing)
+
+# Version 1.2.28
+**19.01.2017**
+
+*   Fixed some errors with single-action-pages (mostly admin area), also restyled the headers
+*   Fixed some not-yet-updated PHP scripts
+*   Fixed most of the registration process
+*   **Proposed** *Notification System* (see [version notes](version-notes.md))
+*   The sent registration link now automatically tries to log the receivant in
+
+# Version 1.2.27
+**17.01.2017**
+
+*   Added Composer for managing the *PHPMailer* package
+*   Revoked outdated installation files
+*   Generalised invitation: Sending mails is now bound to configurable constants (see `/bva-install/` changes)
+*   Fixed some issues
+*   **Proposed** *Autobuild* feature to generate installation zip files from current version without `constants.php` & `.htaccess`
+
 # Version 1.2.26
 **13.01.2017**
 
@@ -15,12 +43,12 @@
 *   Fixed page not working at all
 *   Improved user creation and removed some unnecessary cases of error catching
 *   `/includes/addName.php, /includes/removeName.php` :
-*   Updated scripts to fit stylistic needs of _**1.2.x**_
+*   Updated scripts to fit stylistic needs of **1.2.x**
 *   Increased security measures
 *   Usage of `is_privileged`
 *   Fixed some unnecessary queries in group functions in case a session is already created
 *   Updated some CSS
-*   _Beautified_ more files
+*   *Beautified* more files
 *   **SECURITY** : Added client-side hashing of passwords at the login to increase security of passwords. Passwords are now transmitted completely hashed with SHA-384 by JavaScript
 
 # Version 1.2.24
@@ -32,7 +60,7 @@
 *   Added documentation for `/includes/functions.php` to explain each and every function.
 *   Fixed some of the completely destroyed `/admin/` directory. Complete fix will follow up next.
 *   Switched to SHA-384 for most hashing to provide more security
-*   Updated Database to fit the needs for _User Groups_. You can find the complete definition of the database at `/bva-install/preset/db.php`
+*   Updated Database to fit the needs for *User Groups*. You can find the complete definition of the database at `/bva-install/preset/db.php`
 
 # Version 1.2.23
 **09.01.2017**

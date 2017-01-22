@@ -1,4 +1,9 @@
 <?php
+
+
+	// Domain
+	define('DOMAIN','bvasozial.de');
+	
 	// Sicherheitskonstante
 	define('SECURE', false);
 
@@ -10,11 +15,18 @@
 	define('INC_PATH', '/includes/');
 	define('ADMIN_PATH', '/admin/');
 
-	// load mysqli connection
+	// Datenbank-Daten
   define('HOST', $db_host);
 	define('USER', $db_user);
 	define('PASSWORD', $db_password);
 	define('DATABASE', $db_name);
+
+	// SMTP-Daten
+	define('INVITE_HOST', $smtp_host);
+	define('INVITE_NAME', $smtp_name);
+	define('INVITE_MAIL', $smtp_mail);
+	define('INVITE_PASSWORD', $smtp_password);
+	define('INVITE_PORT', $smtp_port);
 
   require_once('db_connect.php');
 ?>

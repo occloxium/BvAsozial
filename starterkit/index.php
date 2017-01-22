@@ -15,7 +15,7 @@ if(login_check($mysqli) == true) :
 		<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<title>BvAsozial</title>
-		
+
 		<meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="/images/android-desktop.png">
 
@@ -23,19 +23,19 @@ if(login_check($mysqli) == true) :
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="BvAsozial">
     <link rel="apple-touch-icon-precomposed" href="/images/ios-desktop.png">
-		
+
 		<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#252830">
-		
+
 		<link rel="shortcut icon" href="/images/favicon.png">
-		
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		
+
 		<link rel="stylesheet" href="/css/bvasozial.mdl.min.css">
 		<link rel="stylesheet" href="/css/sidewide.css">
 		<link rel="stylesheet" href="/css/starterkit.css">
-		
+
 		<script src="/js/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
@@ -53,7 +53,7 @@ if(login_check($mysqli) == true) :
 							<span><?php echo $user['email']; ?></span>
 					</div>
         </header>
-			 	<nav class="navigation mdl-navigation mdl-color--blue-grey-800">
+			 	<nav class="navigation mdl-navigation mdl-color--blue-grey-900">
 					<a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Übersicht</a>
 					<a class="mdl-navigation__link" href="/users/me/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i>Mein Profil</a>
 					<a class="mdl-navigation__link" href="/freunde/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Freunde finden</a>

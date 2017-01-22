@@ -135,9 +135,14 @@
    */
   function createNewUser($user, $mysqli){
     if(!createUserDirectory($user['uid'])){
+      error("internalError", 500, "Failed to create directory");
       return false;
     }
-    if(!addUserToDatabase($user, $mysqli) == false){
+    if(!addUserToDatabase($user, $mysqli)){
+      if(!revertChanges($user)){
+        error("internalError", 500, "Failed to revert changes");
+      }
+      error("internalError", 500, "Failed to insert into database");
       return false;
     }
     return true;
@@ -159,7 +164,7 @@
 				"registered_since" => date("Y-m-d")
 			];
 		} else {
-			echo error('clientError', 400, 'Not all required information set or POST corrupted');
+			error('clientError', 400, 'Not all required information set or POST corrupted');
 			return null;
 		}
 	}
@@ -195,7 +200,7 @@
    */
   function createUserDirectory($username, $override = true){
     $path = ABS_PATH . "/users/$username/";
-    if(@mkdir($path)){
+    if(mkdir($path)){
       $json = [
         "spruch" => "",
         "rufnamen" => [],
@@ -205,17 +210,39 @@
       $jsonfile = json_encode($json, JSON_PRETTY_PRINT);
       if(!file_put_contents($path . $username . ".json", $jsonfile)){
         error('internalError', 500, 'Unable to create initial json file. Check if your creating user has rights to create files');
+        return false;
       }
       // Copy default avatar from /img/avatar.jpg
       if(!copy(ABS_PATH . "/img/avatar.jpg", $path . "avatar.jpg")){
         error('internalError', 500, 'Unable to copy default avatar. Check if it\'s existant at all and if your creating user has rights to create files');
+        return false;
       }
+      return true;
     } else {
-      error('internalError', 500, 'Unable to create user directory');
+      error('internalError', 500, 'Unable to create user directory', ["path" => $path, "permissions" => umask()]);
+      return false;
     }
   }
-
-
+  /**
+   * Reverts changes to the filesystem in case the insertion to database, performed after file system changes, fails
+   * @param $user the user object containing all data
+   * @return true, when done right, false otherwise
+   */
+  function revertChanges($user){
+    $path = ABS_PATH . "/users/{$user['uid']}/";
+    try {
+      if(!unlink($path.$user['uid'].'.json'))
+        throw new Exception("File unlink failed");
+      if(!unlink($path.'avatar.jpg'))
+        throw new Exception("File unlink failed");
+      if(!rmdir($path))
+        throw new Exception("Directory removal failed");
+      return true;
+    } catch(Exception $e) {
+      error("internalError", 500, $e->getMessage());
+      return false;
+    }
+  }
   /**
    * Checks if a user exists by searching in the `person` table at all, including the invited users. Reports if there's something horribly wrong with the database. Also see @link _findUser
    * @param $uid the uid to be searched
@@ -372,7 +399,6 @@
    */
   function isValidInvite($uid, $password, $mysqli){
     if($stmt = $mysqli->prepare("SELECT password FROM ausstehende_einladungen WHERE (email = ? OR uid = ?) AND password = ? LIMIT 1")){
-      $password = hash('sha384', $password);
       $stmt->bind_param("sss", $uid, $uid, $password);
       $stmt->execute();
       $stmt->bind_result($db_password);
@@ -388,7 +414,7 @@
   }
 
   /**
-   * Checks if a given user is invited. Reports if there's something horribly wrong with the database
+   * Checks if a given user is invited.
    * @param $uid the uid of the potentially invited user
    * @param $mysqli the mysqli object refering to the database
    * @return true in case the uid was found, otherwise false
@@ -398,17 +424,34 @@
       $stmt->bind_param('s', $uid);
       $stmt->execute();
       $stmt->store_result();
-      if ($stmt->num_rows == 1) {
+      if ($stmt->num_rows == 1)
         return true;
-      } elseif ($stmt->num_rows == 0) {
+      else
         return false;
-      } else {
-        error('internalError', 500, 'Potential dublicate! Fix the database immediately');
-      }
     } else {
       error('internalError', 500, $mysqli->error . " ({$mysqli->errno})");
     }
   }
+
+  /**
+   * Checks if a given uid belongs to an expired or removed invite
+   * @param $uid the uid corresponding to the invite
+   * @param $mysqli the mysqli object refering to the database
+   * @return true, if it's expired or removed, otherwise false
+   */
+  function isExpiredInvite($uid, $mysqli){
+    if ($stmt = $mysqli->prepare("SELECT uid FROM entfernte_einladungen WHERE uid = ? LIMIT 1")) {
+      $stmt->bind_param('s', $uid);
+      $stmt->execute();
+      $stmt->store_result();
+      if($stmt->num_rows == 1)
+        return true;
+      else
+        false;
+    }
+  }
+
+
   /*
   * USER FUNCTIONS END ---------------------------------------------------------
   */
@@ -543,7 +586,7 @@
    * loads the basic html head tag and appends an optional css file
    * @param $extension optional css files to be appended
    */
-  function _getHead($extension){
+  function _getHead($extension = []){
     require_once('html-head.php');
     $param = func_get_args();
     foreach($param as $p){
@@ -704,6 +747,35 @@
 		}
 		return ($j >= count($arr) ? true : false);
 	}
+
+  /**
+   * Converts a given image to jpg in case of all usual image types (@see http://stackoverflow.com/a/14549647/3306373)
+   * @param $originalImage the image given
+   * @param $outputImage path to output the existing image
+   * @param $quality quality setting, default 100
+   * @return 1 in case of success, otherwise 0
+   */
+  function convertImage($originalImage, $outputImage, $quality = 100)
+  {
+    $exploded = explode('.',$originalImage['name']);
+    $ext = $exploded[count($exploded) - 1];
+    if (preg_match('/jpg|jpeg/i',$ext))
+        $imageTmp=imagecreatefromjpeg($originalImage['tmp_name']);
+    else if (preg_match('/png/i',$ext))
+        $imageTmp=imagecreatefrompng($originalImage['tmp_name']);
+    else if (preg_match('/gif/i',$ext))
+        $imageTmp=imagecreatefromgif($originalImage['tmp_name']);
+    else if (preg_match('/bmp/i',$ext))
+        $imageTmp=imagecreatefrombmp($originalImage['tmp_name']);
+    else
+        return 0;
+
+    // quality is a value from 0 (worst) to 100 (best)
+    imagejpeg($imageTmp, $outputImage, $quality);
+    imagedestroy($imageTmp);
+
+    return 1;
+  }
 
   /*
    * HELPER FUNCTIONS END ------------------------------------------------------

@@ -1,4 +1,10 @@
 <?php echo <<<HTML
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -19,7 +25,7 @@
 
 <link rel="stylesheet" href="/css/bvasozial.mdl.src.css" />
 <link rel="stylesheet" type="text/css" href="/css/dialog-polyfill.css" />
-<link rel="stylesheet" href="/css/sidewide.css?v=1.2.25">
+<link rel="stylesheet" href="/css/sidewide.css?v=1.2.28">
 <script src="/js/sha.js"></script>
 <script src="/js/hash.js"></script>
 <script src="/js/jquery-3.1.1.min.js"></script>

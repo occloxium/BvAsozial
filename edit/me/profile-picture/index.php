@@ -38,7 +38,7 @@
 	<body>
 		<div class="mdl-layout__container">
 			<div class="layout-wrapper">
-				<header class="layout__header layout__header--small mdl-color--blue-grey-800 mdl-color-text--blue-grey-50">
+				<header class="layout__header layout__header--small mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
 					<div class="header__inner">
 						<p class="mdl-typography--headline header__title">
 							Profilbild ändern

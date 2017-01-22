@@ -76,6 +76,33 @@
 						<small id="db_name_help">Bereits gesetzt</small>
 					</div>
 				</section>
+        <section>
+          <h3>E-Mail-Konfiguration</h3>
+          <p>
+            Bitte gebe die dir übermittelten Daten für den Mailserver ein, damit die Einladungen ordnungsgemäß versendet werden können.
+          </p>
+          <div class="form_group">
+            <label for="smtp_host">SMTP-Host</label>
+            <input type="text" value="mail.bvasozial.de" class="form-control" id="smtp_host" name="smtp_host" />
+          </div>
+          <div class="form_group">
+            <label for="smtp_port">SMTP-Port</label>
+            <input type="text" value="587" class="form-control" aria-describedby="smtp_port_help" id="smtp_port" name="smtp_port" />
+            <small id="smtp_port_help">Standardmäßig <code>587</code> für TLS</small>
+          </div>
+          <div class="form_group">
+            <label for="smtp_name">SMTP-Name</label>
+            <input type="text" value="" class="form-control" id="smtp_name" name="smtp_name" />
+          </div>
+          <div class="form_group">
+            <label for="smtp_host">SMTP-Mail-Adresse</label>
+            <input type="text" value="" class="form-control" id="smtp_mail" name="smtp_mail" />
+          </div>
+          <div class="form_group">
+            <label for="smtp_host">SMTP-Passwort</label>
+            <input type="text" value="localhost" class="form-control" id="smtp_password" name="smtp_password" />
+          </div>
+        </section>
 				<section>
 					<h3>Administrations-Konto</h3>
 					<p>

@@ -1,15 +1,3 @@
-.logo {
-	width: 200px;
-	display: block;
-	margin: 32px auto 0;
-}
-
-.logo.prime {
-	float: right;
-	margin-right: 16px;
-	margin-top: 15px;
-}
-
 .container form {
 	max-width: 360px;
 	margin: 0 auto;
@@ -33,7 +21,13 @@ img.avatar {
 	display: block;
 	border-radius: 1000px;
 }
-
+.avatar__image {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+}
 .slider-wrapper {
 	margin: 1em auto 2em;
 	max-width: 360px;

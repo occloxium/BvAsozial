@@ -5,15 +5,18 @@
     $success = false;
     die("No input received");
   }
-  if($_POST['db_host'] != "localhost"){
-    $success = false;
-    die("wrong input");
-  }
-  //create independant variables
-  $db_host = "localhost";
+
+  //create independent variables
+  $db_host = $_POST['db_host'];
   $db_user = $_POST['db_user'];
   $db_password = $_POST['db_password'];
   $db_name = $_POST['db_name'];
+  $smtp_host = $_POST['smtp_host'];
+  $smtp_port = $_POST['smtp_port'];
+  $smtp_mail = $_POST['smtp_mail'];
+  $smtp_password = $_POST['smtp_password'];
+  $smtp_name = $_POST['smtp_name'];
+
   // create temporary mysqli for creating tables
   $mysqli = new mysqli($db_host, $db_user, $db_password, $db_name) or die('Wrong login data for mysql server');
 
@@ -41,7 +44,10 @@
 
   // constants file
   $content = file_get_contents('preset/constants.pre.php');
-  $content = str_replace(['$include_path','$db_host','$db_user','$db_password','$db_name'], ["'$include_path'","'$db_host'","'$db_user'","'$db_password'","'$db_name'"], $content);
+  $content = str_replace(
+    ['$include_path','$db_host','$db_user','$db_password','$db_name','$smtp_host','$smtp_port','$smtp_mail','$smtp_password','$smtp_name'],
+    ["'$include_path'","'$db_host'","'$db_user'","'$db_password'","'$db_name'","'$smtp_host'","'$smtp_port'","'$smtp_mail'","'$smtp_password'","'$smtp_name'"],
+    $content);
   file_put_contents(__DIR__.'/bvasozial/includes/constants.php', $content);
 
   // move other predefined files
@@ -129,6 +135,25 @@
             </li>
             <li class="list-group-item">
               Passwort: &nbsp;<strong> <?= $admin_password ?></strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h5>SMTP-Anmeldedaten</h5>
+        <p>
+          Überlass' das besser den Profis und speichere sie Dir nur irgendwo sicher ab.
+        </p>
+        <div class="card">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              Benutzername: &nbsp;<strong> <?= $smtp_mail ?></strong>
+            </li>
+            <li class="list-group-item">
+              Passwort: &nbsp;<strong> <?= $smtp_password ?></strong>
+            </li>
+            <li class="list-group-item">
+              Name: &nbsp;<strong> <?= $smtp_name ?></strong>
             </li>
           </ul>
         </div>

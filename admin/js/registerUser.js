@@ -38,7 +38,7 @@ $('#name.mdl-textfield__input').change(function(e){
 	if($(this).val().length > 0){
 		var name = $(this).val().toLowerCase();
 		var split = name.split(" ");
-		var uid = split[0].substr(0, 1) + '_' + split[split.length-1].substr(0, 5);
+		var uid = split[0].substr(0, 1) + '_' + split[split.length-1];
 		$('#uid.mdl-textfield__input').val(uid).parent().addClass('is-dirty');
 		userExists(uid, function(){
 			var c = window.componentHandler;

@@ -9,3 +9,8 @@ function hash(type){
   }
   return this;
 }
+
+var hash_password = function(form){
+	var password = form.find("#password").val();
+	form.find("#password").val(new hash('SHA-384').update(password).getHash());
+}
