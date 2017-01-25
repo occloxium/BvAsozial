@@ -29,7 +29,7 @@
 								$stmt->store_result();
 								if($stmt->num_rows < 1) :
 						?>
-							<p class="none">Keine kürzlichen Registrierungen. <a class="none__anchor" href="./register-user/">Lade neue Leute ein!</a></p>
+							<p class="none">Keine kürzlichen Registrierungen. <a class="none__anchor" href="/admin/register-user/">Lade neue Leute ein!</a></p>
 						<?php
 							else :
 								$stmt->bind_result($id, $uid, $password, $name, $email, $verzeichnis);

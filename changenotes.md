@@ -1,13 +1,27 @@
 # Changenotes
 
+# Version 1.2.31
+**25.01.2017**
+
+*   *Finally* fixed the errors in user registering by an admin (There were some missplaced dependencies)
+*   Fixed some bugs in general admin operations
+*   Fixed some issues in the completely **unstable** process of registration
+*   Prepared avatar setting from registration
+
+**Notes**
+
+*   the question subsection of the registration process is completely broken. Fix it ASAP. 
+
+
 # Version 1.2.30
 **22.01.2017**
 
-*   Fixed errors with registration (403 when accessing)
+*   ~~Fixed errors with registration (403 when accessing)~~
 *   Removed some old JavaScript files
 *   Updated installer to auto-install composer on the server (*indev*)
 
-### Notes
+**Notes**
+
 *   Installer: db.php is definitely outdated, constants.pre.php is probably outdated
 *   Validate composer installation script does what it's supposed to
 
@@ -26,7 +40,7 @@
 
 *   Fixed some errors with single-action-pages (mostly admin area), also restyled the headers
 *   Fixed some not-yet-updated PHP scripts
-*   Fixed most of the registration process
+*   ~~Fixed most of the registration process~~
 *   **Proposed** *Notification System* (see [version notes](version-notes.md))
 *   The sent registration link now automatically tries to log the receivant in
 

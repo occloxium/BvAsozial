@@ -5,7 +5,7 @@
   <div style="margin: 0 auto; padding: 24px 0;">
     <div>
       <p style="color: #cccccc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 11px; max-width: 360px; width: 90%; text-align: center; margin: 0 auto;" align="center">
-        Diese E-Mail wird nicht vernünftig angezeigt? Öffne sie im <a href="http://www.bvasozial.de/notify/email?n={$linkData['invite_name']}&na={$linkData['name']}&e={$linkData['msg']}&ma={$linkData['invite_mail']}" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">Browser!</a>
+        Diese E-Mail wird nicht vernünftig angezeigt? Öffne sie im <a href="http://{$linkData['domain']}/notify/email?n={$linkData['invite_name']}&na={$linkData['name']}&e={$linkData['msg']}&ma={$linkData['invite_mail']}" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">Browser!</a>
       </p>
     </div>
     <div style="max-width: 360px; width: 90%; margin: 0 auto; padding: 32px 0;">
@@ -27,11 +27,11 @@
       <p style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: 360px; width: 90%; margin: 0 auto;">
         <b>Dein Team der $invite_name</b>
       </p>
-      <a href="http://www.bvasozial.de" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; text-align: center; display: block; max-width: 360px; width: 90%; margin: 64px auto 0;">http://wwww.bvasozial.de</a>
+      <a href="http://{$linkData['domain']}" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; text-align: center; display: block; max-width: 360px; width: 90%; margin: 64px auto 0;">http://w{$linkData['domain']}</a>
     </div>
     <div>
       <p style="color: #cccccc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: 360px; width: 90%; font-size: 11px; text-align: center; margin: 0 auto;" align="center">
-        Du kannst dem Empfang weiterer solcher Benachrichtigungs-E-Mails widersprechen, indem du dich auf <a href="http://www.bvasozial.de/anmelden/" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">http://www.bvasozial.de/anmelden/</a> anmeldest und in den Einstellungen deines Profils die Benachrichtigungen per E-Mail abschaltest. <br /> Wenn dein Account gelöscht wird oder dein Passwort von einem Administrator geändert wird, wirst du trotzdem benachrichtigt.
+        Du kannst dem Empfang weiterer solcher Benachrichtigungs-E-Mails widersprechen, indem du dich auf <a href="http://{$linkData['domain']}/anmelden/" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">http://{$linkData['domain']}/anmelden/</a> anmeldest und in den Einstellungen deines Profils die Benachrichtigungen per E-Mail abschaltest. <br /> Wenn dein Account gelöscht wird oder dein Passwort von einem Administrator geändert wird, wirst du trotzdem benachrichtigt.
       </p>
     </div>
   </div>

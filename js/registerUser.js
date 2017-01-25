@@ -56,7 +56,7 @@ $('.register_form button').click(function(){
 	if(validateForm($('.register_form'))){
 		var formData = new FormData($('.register_form')[0]);
 		$.ajax({
-			method: 'POST',
+			method: 'post',
 			url: '/includes/registerUser.php',
 			data: $('.register_form').serialize(),
 			error: function(data){
@@ -68,7 +68,7 @@ $('.register_form button').click(function(){
 			try {
 				var obj = JSON.parse(data);
 				if (obj.success){
-					container.append(obj.email);
+					container.append(obj.html);
 				} else {
 					container.append($('<pre></pre>').text(data));
 				}

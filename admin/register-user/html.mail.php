@@ -1,5 +1,4 @@
 <?php
-require_once('functions.php');
 if(isset($e_uid, $e_pw, $e_name, $vorname, $invite_name)) :
 	$enc_h_pw = base64_encode(hash('sha384', $e_pw));
 	$enc_uid = base64_encode($e_uid);
@@ -10,12 +9,13 @@ if(isset($e_uid, $e_pw, $e_name, $vorname, $invite_name)) :
 		"name" => base64_encode($e_name),
 		"vorname" => base64_encode($vorname)
 	];
+	$domain = DOMAIN;
 	return <<<MAIL
 <div style="background-color: #252830;">
 	<div style="margin: 0 auto; padding: 24px 0;">
 		<div>
 			<p style="color: #cccccc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 11px; max-width: 360px; width: 90%; text-align: center; margin: 0 auto;" align="center">
-				Diese E-Mail wird nicht vernünftig angezeigt? Öffne sie im <a href="http://www.bvasozial.de/register/email?n={$linkData['invite_name']}&na={$linkData['vorname']}&u={$linkData['uid']}&p={$linkData['pw']}" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">Browser!</a>
+				Diese E-Mail wird nicht vernünftig angezeigt? Öffne sie im <a href="http://$domain/register/email?n={$linkData['invite_name']}&na={$linkData['vorname']}&u={$linkData['uid']}&p={$linkData['pw']}" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">Browser!</a>
 			</p>
 		</div>
 		<div style="max-width: 360px; width: 90%; margin: 0 auto; padding: 32px 0;">
@@ -37,21 +37,24 @@ if(isset($e_uid, $e_pw, $e_name, $vorname, $invite_name)) :
 			<p style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: 360px; width: 90%; margin: 0 auto;">
 				Also leg los, hier sind Deine Anmeldedaten, das Passwort kannst Du bei der Registrierung ändern, such Deine Fragen aus und füge Freunde hinzu, um selbst Fragen von anderen zu beantworten!
 			</p>
-			<p style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: none; width: 75%; font-weight: bold; border-radius: 5px; font-size: 20px; margin: 24px auto; padding: 8px 12px; border: 1px solid #dddddd;">
+			<p style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: 480px; width: 75%; font-weight: bold; border-radius: 5px; font-size: 20px; margin: 24px auto 0; padding: 8px 12px; border: 1px solid #dddddd;">
 				Benutzername: {$e_uid} <br />
 				Passwort: {$e_pw}
 			</p>
-			<p style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: 360px; width: 90%; margin: 0 auto;">
-				<a style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; text-align: center; display: block; max-width: 360px; width: 90%; margin: 64px auto 0;" href="http://www.bvasozial.de/registrieren/?bva_1=$enc_uid&bva_2=$enc_h_pw">http://www.bvasozial.de/registrieren/</a>
+			<p style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: 360px; width: 90%; margin: 0 auto; padding: 32px 0">
+				<a style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; text-align: center; display: block; max-width: 360px; width: 90%; margin: 32px auto;" href="http://$domain/registrieren/?bva_1=$enc_uid&bva_2=$enc_h_pw">http://$domain/registrieren/</a>
 			</p>
 			<p style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; max-width: 360px; width: 90%; margin: 0 auto;">
-				<b>Dein Team der $invite_name</b>
+				<b>Dein $invite_name-Team</b>
 			</p>
-			<a href="http://www.bvasozial.de" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; text-align: center; display: block; max-width: 360px; width: 90%; margin: 64px auto 0;">http://wwww.bvasozial.de</a>
+			<a href="http://$domain" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; text-align: center; display: block; max-width: 360px; width: 90%; margin: 64px auto 0;">http://$domain</a>
 		</div>
 	</div>
 </div>
 MAIL;
-else : error('clientError', 403, 'Forbidden', ['requirenments not met', __LINE__, __FILE__]);
+else :
+	require('constants.php');
+	require_once(ABS_PATH.INC_PATH.'functions.php');
+	error('clientError', 400, 'Bad Request', ['requirenments not met', __LINE__, __FILE__, $linkData]);
 endif;
 ?>

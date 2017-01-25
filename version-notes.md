@@ -1,5 +1,14 @@
 # Versionsnotizen
 
+## Cookies & Session
+
+Bisher werden nur Cookies für die Session gesetzt. Zu diesem Zweck muss der Benutzer beim erstmaligen (normaler Cookie) darauf hingewiesen werden, dass die Seite Cookies verwendet (Cookie-Richtlinien usw.). Im `head` liegt dafür ein Skript, der checkt, ob der *intro*-Cookie gesetzt ist. Wenn dem nicht so ist, dann wird die Benachrichtigung für die Cookie-Richtlinien angezeigt.
+
+Bei der Registrierung wird weiterhin ein Cookie gesetzt, gesondert von der Session, sodass die Registrierung an einem späteren Zeitpunkt wieder aufgenommen werden kann.
+In dem Cookie wird daher ein JSON-String mit uid, gehashtem Passwort und der aktuellen Anzahl der Schritte gespeichert.
+
+Wenn also nach dem Einloggen durch den User ein Abgleich der Login-Daten korrekt ausgewertet wird, dann wird die Schritt-Variable automatisch auf den Wert gesetzt, bei dem der Cookie gespeichert wurde.
+
 ## Notification System
 
 Da Admins gewisse Sachen an Benutzerprofilen ändern können, wie kritische Informationen wie Passwörter, oder einen Account auch komplett suspendieren können, verlangt es, damit der Benutzer informiert bleibt, nach einem System, das ihn benachrichtigt, eben wenn ein Administrator Änderungen an seinem Profil durchführt.
@@ -45,7 +54,7 @@ Um überprüfen zu können, ob der Benutzer Mails überhaupt erhalten will, wird
 
 ## Einladungen
 
-Versandt wird eine E-Mail nicht länger über den GMail-Account der Abi-Zeitung 2016, sondern über ein eigenes Postfach auf bvasozial.de versendet. Dafür wird `/admin/register-user/mail.php` soweitgehend umgeschrieben, dass es für diese Header-Daten weitere vordefinierte, bei der Installation gesetzte Konstanten benutzt.
+-   [x] Versandt wird eine E-Mail nicht länger über den GMail-Account der Abi-Zeitung 2016, sondern über ein eigenes Postfach auf bvasozial.de versendet. Dafür wird `/admin/register-user/mail.php` soweitgehend umgeschrieben, dass es für diese Header-Daten weitere vordefinierte, bei der Installation gesetzte Konstanten benutzt.
 
 ## Moderatoren-Anpassungen
 
@@ -65,14 +74,14 @@ Versandt wird eine E-Mail nicht länger über den GMail-Account der Abi-Zeitung 
     ```
     an den `/includes/changeName.php` und updatet mit der HTML Response die Liste
 
--   **PHP**: `rufnamenliste` muss so angepasst werden, dass nur _Privilegierte_ den Dialog öffnen können.
+-   **PHP**: `rufnamenliste` muss so angepasst werden, dass nur *Privilegierte* den Dialog öffnen können.
       Dazu wird `_DATA_.signedInUser` in `users.js` um eine Eigenschaft `isPrivileged` ergänzt, die ebenfalls aus dem `body`-Tag extrahiert wird. Beim Seitenaufbau wird diese durch PHP gesetzt, da PHP entscheiden kann, ob der `$requestor` die Seite überhaupt sehen darf. Der Wert dieser Eigenschaft steuert, ob der Benutzer überhaupt die Seite sehen darf (Profil-Privatsphäre).
       `is_privileged` ist als Zahl zwischen 0 und 2 konstruiert, 0 schließt jegliche Lese-(Betrachtungs-)Rechte von persönlichen Daten aus, 1 erlaubt das Betrachten der Persönlichen Eigenschaften, 2 erlaubt das Ändern.
-      By default haben _Mods_ und _Admins_ immer 2, ebenso der Besitzer des Profils selbst. Der Besitzer des Profils kann unter _Eintstellungen_ konfigurieren, ob für Freunde `isPrivileged` auf 0 oder 1 gesetzt wird.
+      By default haben *Mods* und *Admins* immer 2, ebenso der Besitzer des Profils selbst. Der Besitzer des Profils kann unter *Eintstellungen* konfigurieren, ob für Freunde `isPrivileged` auf 0 oder 1 gesetzt wird.
 
 -   Bei `click` auf den Rufnamen wird `isPrivileged` überprüft und entsprechend gehandelt.
       Bei 0 wird jede Aktion und Folgeaktion sofort terminiert, der Benutzer darf eigentlich keinen Zugriff auf die Rufnamen haben.
-      Zu dem Zweck wird dann eine Funktion `updateRelation` aufgerufen, die dann eine möglicherweise manipulierte `isPrivileged`-Variable korrigiert und auch die Metadaten im `body`-Tag. Sollte beim weiteren Überprüfen auf dem Server auffallen, dass die Variable (erneut) manipuliert wurde, dann sendet der Server bekanntlich ein **error**-Objekt mit _403_. Wird diese Antwort von JavaScript interpretiert, wird ebenfalls `updateRelation` aufgerufen
+      Zu dem Zweck wird dann eine Funktion `updateRelation` aufgerufen, die dann eine möglicherweise manipulierte `isPrivileged`-Variable korrigiert und auch die Metadaten im `body`-Tag. Sollte beim weiteren Überprüfen auf dem Server auffallen, dass die Variable (erneut) manipuliert wurde, dann sendet der Server bekanntlich ein **error**-Objekt mit *403*. Wird diese Antwort von JavaScript interpretiert, wird ebenfalls `updateRelation` aufgerufen
       `updateRelation` muss also nicht nur die Variablen anpassen, sondern auch den dem Benutzer präsentierten Inhalt. Benutzer dafür `$().remove()` auf alle relevanten Daten, um irreversibel zu sein. Ggf. kann auch die ganze Seite neu geladen werden.
 
 -   **PHP** : Um weitere Verschachtelung zu vermeiden, wird beim `GET` von `/users/index.php` die Rückgabe von `is_privileged`
@@ -83,13 +92,13 @@ Versandt wird eine E-Mail nicht länger über den GMail-Account der Abi-Zeitung 
 
 Der Zugriff erfolgt auf **PHP**-Seite durch die Rückgabe von `is_privileged($requestor, $target, $mysqli)`.
 
-Ist diese _false_, so wird danach überprüft, ob der Benutzer, auf dessen Profil zugegriffen wird, erlaubt hat, dass Fremde auch seine persönlichen Informationen sehen können. Ist dies der Fall, so wird die Seite so erstellt, als wäre der Benutzer mit dem zugreifenden Benutzer befreundet. Ansonsten wird dem Benutzer, der zugreift, Sicht auf jegliche persönliche Informationen verwehrt, nur der Name, der Standard-Avatar, Möglichkeit der Freundschaftsanfrage und Freundesanzahl werden gezeigt.
+Ist diese *false*, so wird danach überprüft, ob der Benutzer, auf dessen Profil zugegriffen wird, erlaubt hat, dass Fremde auch seine persönlichen Informationen sehen können. Ist dies der Fall, so wird die Seite so erstellt, als wäre der Benutzer mit dem zugreifenden Benutzer befreundet. Ansonsten wird dem Benutzer, der zugreift, Sicht auf jegliche persönliche Informationen verwehrt, nur der Name, der Standard-Avatar, Möglichkeit der Freundschaftsanfrage und Freundesanzahl werden gezeigt.
 
-Ist diese aber _true_, so wird die Seite gerendert, als wären A und B befreundet und die client-side-Variable `data-is-privileged` auf 2 gesetzt, um JavaScript zu informieren, dass der Zugreifende auch Schreibzugriff auf die Eigenschaften des Profils hat.
+Ist diese aber *true*, so wird die Seite gerendert, als wären A und B befreundet und die client-side-Variable `data-is-privileged` auf 2 gesetzt, um JavaScript zu informieren, dass der Zugreifende auch Schreibzugriff auf die Eigenschaften des Profils hat.
 
-Wenn ein privilegierter Benutzer etwas an den Inhalten ändert, so wird das auf PHP-Seite erneut überprüft, wenn die Änderung stattfindet. Ist sie dann noch legitim, wenn Manipulation durch den Benutzer ausgeschlossen werden kann, so wird in einer Tabelle `logs` auf der Datenbank diese Aktion abgespeichert. Dieses Logging dient dem Umgehen einer inhaltlichen Evaluierung der Änderung. Der Besitzer kann sich anzeigen lassen, _wer_ _wann_ etwas an seinem Profil geändert hat und die Änderung ggf. beanstanden. Für die inhaltliche Reversion ist er aber selbst zuständig.
+Wenn ein privilegierter Benutzer etwas an den Inhalten ändert, so wird das auf PHP-Seite erneut überprüft, wenn die Änderung stattfindet. Ist sie dann noch legitim, wenn Manipulation durch den Benutzer ausgeschlossen werden kann, so wird in einer Tabelle `logs` auf der Datenbank diese Aktion abgespeichert. Dieses Logging dient dem Umgehen einer inhaltlichen Evaluierung der Änderung. Der Besitzer kann sich anzeigen lassen, *wer* *wann* etwas an seinem Profil geändert hat und die Änderung ggf. beanstanden. Für die inhaltliche Reversion ist er aber selbst zuständig.
 
-Die Beanstandung führt aber dazu, dass, über eine weitere Tabelle namens `reports`, in der Benutzername, Zeitpunkt des Reports und **Prüfsumme** (jeder solchen Änderung wird eine Prüfsumme verliehen, `SHA-384 BENUTZERNAME . ZEITPUNKT`) der Änderung zur Identifikation gespeichert werden, ein Eintrag angelegt wird, der von _Admins_ bewertet werden kann und der _Moderator_ aufgrunddessen einen Strike erhalten kann. Nach 3 Strikes wird der Moderator-Account als _suspended_ markiert und bei der Überprüfung durch `is_mod` nicht mehr gefunden. Damit wird somit der Moderatoren-Status eines Accounts zurückgerufen.
+Die Beanstandung führt aber dazu, dass, über eine weitere Tabelle namens `reports`, in der Benutzername, Zeitpunkt des Reports und **Prüfsumme** (jeder solchen Änderung wird eine Prüfsumme verliehen, `SHA-384 BENUTZERNAME . ZEITPUNKT`) der Änderung zur Identifikation gespeichert werden, ein Eintrag angelegt wird, der von *Admins* bewertet werden kann und der *Moderator* aufgrunddessen einen Strike erhalten kann. Nach 3 Strikes wird der Moderator-Account als *suspended* markiert und bei der Überprüfung durch `is_mod` nicht mehr gefunden. Damit wird somit der Moderatoren-Status eines Accounts zurückgerufen.
 
 ## Einstellungen
 

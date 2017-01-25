@@ -58,7 +58,8 @@
         "msg" => base64_encode($this->message),
         "invite_mail" => base64_encode(INVITE_MAIL),
         "invite_name" => base64_encode(INVITE_NAME),
-        "name" => base64_encode($this->name)
+        "name" => base64_encode($this->name),
+        "url_root" => DOMAIN
       ];
 
       $this->email->body = require_once('body.mail.php');

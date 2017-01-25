@@ -1,5 +1,4 @@
 <?php
-require_once('functions.php');
 if(isset($e_uid, $e_pw, $e_name, $vorname, $invite_name)) :
   $enc_h_pw = base64_encode(hash('sha384', $e_pw));
   $enc_uid = base64_encode($e_uid);
@@ -12,7 +11,7 @@ if(isset($e_uid, $e_pw, $e_name, $vorname, $invite_name)) :
   ];
   return <<<MAIL
 Diese E-Mail wird nicht vernünftig angezeigt? Öffne sie
-im Browser! ( http://www.bvasozial.de/register/email?n={$linkData['invite_name']}&na={$linkData['vorname']}&u={$linkData['uid']}&p={$linkData['pw']} )
+im Browser! ( http://$domain/register/email?n={$linkData['invite_name']}&na={$linkData['vorname']}&u={$linkData['uid']}&p={$linkData['pw']} )
 
 BvAsozial
 $invite_name
@@ -43,12 +42,15 @@ zu beantworten!
 Benutzername: {$e_uid}
 Passwort: {$e_pw}
 
-Registrieren! ( http://www.bvasozial.de/registrieren/?bva_1=$enc_uid&bva_2=$enc_h_pw )
+Registrieren! ( http://$domain/registrieren/?bva_1=$enc_uid&bva_2=$enc_h_pw )
 
 Dein Team der $invite_name
 
-http://wwww.bvasozial.de ( http://www.bvasozial.de )
+http://$domain ( http://$domain )
 MAIL;
-else : error('clientError', 403, 'Forbidden');
+else :
+  require('constants.php');
+  require_once(ABS_PATH.INC_PATH.'functions.php');
+  error('clientError', 400, 'Bad Request');
 endif;
  ?>

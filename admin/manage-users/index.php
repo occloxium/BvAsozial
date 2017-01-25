@@ -28,10 +28,10 @@
                 $stmt->store_result();
                 if ($stmt->num_rows < 1) :
             ?>
-				      <p class="none">Keine kürzlichen Registrierungen. <a class="none__anchor" href="./register-user/">Lade neue Leute ein!</a></p>
+				      <p class="none">Keine kürzlichen Registrierungen. <a class="none__anchor" href="/admin/register-user/">Lade neue Leute ein!</a></p>
 					  <?php
                 else :
-                  $stmt->bind_result($id, $name, $uid, $erhaltene_anfragen, $gesendete_anfragen, $verzeichnis, $datum, $finalisiert);
+                  $stmt->bind_result($id, $name, $uid, $erhaltene_anfragen, $gesendete_anfragen, $verzeichnis, $datum, $finalisiert, $allowedEmails);
                   while ($stmt->fetch()) :
             ?>
   						<li class="mdl-list__item mdl-list__item--two-line">

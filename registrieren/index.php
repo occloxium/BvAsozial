@@ -60,7 +60,7 @@
         <?php
           if(isset($_GET['bva_1'], $_GET['bva_2'])) :
             // Versuche, Benutzer anzumelden
-            echo "<script>attemptLogin({$_GET['bva_1']}, {$_GET['bva_2']});</script>";
+            echo "<script>attemptLogin(atob('{$_GET['bva_1']}'), atob('{$_GET['bva_2']}'));</script>";
           endif;
         ?>
     	</body>
@@ -68,7 +68,11 @@
     <?php
   else : // (4)
     if(isValidInvite($_SESSION['registering']['uid'], $_SESSION['registering']['password'], $mysqli)) :
-      switch($_SESSION['registering']['step']):
+      $user = getInvitedUser($_SESSION['registering']['uid'], $mysqli);
+      if(isset($_POST['steps']) && $_POST['steps'] == $_SESSION['registering']['steps'] + 1){
+        $_SESSION['registering']['steps']++;
+      }
+      switch($_SESSION['registering']['steps']):
         case 0 :
           ?>
           <!doctype html>
@@ -80,7 +84,7 @@
           		<div class="mdl-layout__container">
           			<div class="layout-wrapper">
           				<header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-          					<img class="logo" src="/img/logo-cropped.png">
+          					<img class="logo prime" src="/img/logo-cropped.png">
           					<div class="header__inner">
           						<p class="mdl-typography--headline header__title">
           							Überprüfung
@@ -89,7 +93,6 @@
           							Schritt 1 von 4 ...
           						</p>
           					</div>
-          					<div id="global-progress" class="mdl-progress mdl-js-progress mdl-color--grey-100"></div>
           				</header>
           				<main class="page-content mdl-color--grey-100">
           					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
@@ -110,6 +113,7 @@
           							<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect" type="submit">
           								Weiter <i class="material-icons">keyboard_arrow_right</i>
           							</button>
+                        <input name="steps" value="1" type="hidden" hidden />
           						</form>
           					</div>
           				</main>
@@ -120,6 +124,7 @@
           	</body>
           </html>
           <?php
+          break;
         case 1 :
           ?>
           <!doctype html>
@@ -131,7 +136,7 @@
           		<div class="mdl-layout__container">
           			<div class="layout-wrapper">
           				<header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-          					<img class="logo" src="/img/logo-cropped.png">
+          					<img class="logo prime" src="/img/logo-cropped.png">
           					<div class="header__inner">
           						<p class="mdl-typography--headline header__title">
           							Personalisierung
@@ -140,7 +145,6 @@
           							Schritt 2 von 4 ...
           						</p>
           					</div>
-          					<div id="global-progress" class="mdl-progress mdl-js-progress mdl-color--grey-100"></div>
           				</header>
           				<main class="page-content mdl-color--grey-100">
           					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
@@ -157,6 +161,7 @@
           							<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
           								Weiter <i class="material-icons">keyboard_arrow_right</i>
           							</button>
+                        <input name="steps" value="2" type="hidden" hidden />
           						</form>
           					</div>
           				</main>
@@ -168,9 +173,10 @@
           	</body>
           </html>
           <?php
+          break;
         case 2 :
           // handles potential file upload
-          if(isset($_FILES['avatar'])) :
+          if(isset($_FILES['avatar']) && $_FILES['avatar']['size'] > 0) :
             $target = ABS_PATH . "/users/{$_SESSION['registering']['uid']}/avatar.jpg";
             $filename = basename($_FILES['avatar']['name']);
 
@@ -186,7 +192,7 @@
                 		<div class="mdl-layout__container">
                 			<div class="layout-wrapper">
                 				<header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-                					<img class="logo" src="/img/logo-cropped.png">
+                					<img class="logo prime" src="/img/logo-cropped.png">
                 					<div class="header__inner">
                 						<p class="mdl-typography--headline header__title">
                 							Personalisierung
@@ -195,7 +201,6 @@
                 							Schritt 3 von 4 ...
                 						</p>
                 					</div>
-                					<div id="global-progress" class="mdl-progress mdl-js-progress mdl-color--grey-100"></div>
                 				</header>
                 				<main class="page-content mdl-color--grey-100">
                 					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
@@ -212,6 +217,7 @@
                 							<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
                 								Weiter <i class="material-icons">keyboard_arrow_right</i>
                 							</button>
+                              <input name="steps" value="1" type="hidden" hidden />
                 						</form>
                 					</div>
                 				</main>
@@ -228,7 +234,7 @@
               ?>
               <?php
             else :
-              $_SESSION['registering']['steps']-=2;
+              $_SESSION['registering']['step'] = 0;
               ?>
               <!doctype html>
               <html>
@@ -239,7 +245,7 @@
                   <div class="mdl-layout__container">
                     <div class="layout-wrapper">
                       <header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-                        <img class="logo" src="/img/logo-cropped.png">
+                        <img class="logo prime" src="/img/logo-cropped.png">
                         <div class="header__inner">
                           <p class="mdl-typography--headline header__title">
                             Personalisierung
@@ -248,7 +254,6 @@
                             Schritt 3 von 4 ...
                           </p>
                         </div>
-                        <div id="global-progress" class="mdl-progress mdl-js-progress mdl-color--grey-100"></div>
                       </header>
                       <main class="page-content mdl-color--grey-100">
                         <div class="mdl-card container mdl-color--white mdl-shadow--2dp">
@@ -266,6 +271,7 @@
                             <a href="./" class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
                               Zurück <i class="material-icons">keyboard_arrow_right</i>
                             </a>
+                            <input name="steps" value="2" type="hidden" hidden />
                           </form>
                         </div>
                       </main>
@@ -288,7 +294,7 @@
               <div class="mdl-layout__container">
                 <div class="layout-wrapper">
                   <header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-                    <img class="logo" src="/img/logo-cropped.png">
+                    <img class="logo prime" src="/img/logo-cropped.png">
                     <div class="header__inner">
                       <p class="mdl-typography--headline header__title">
                         Personalisierung
@@ -297,7 +303,6 @@
                         Schritt 3 von 4 ...
                       </p>
                     </div>
-                    <div id="global-progress" class="mdl-progress mdl-js-progress mdl-color--grey-100"></div>
                   </header>
                   <main class="page-content mdl-color--grey-100">
                     <div class="mdl-card container mdl-color--white mdl-shadow--2dp">
@@ -311,6 +316,7 @@
                         <button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
                           Weiter <i class="material-icons">keyboard_arrow_right</i>
                         </button>
+                        <input name="steps" value="3" type="hidden" hidden />
                       </form>
                     </div>
                   </main>
@@ -323,6 +329,7 @@
           </html>
           <?php
           endif;
+          break;
         case 3 :
           ?>
           <!doctype html>
@@ -334,7 +341,7 @@
           		<div class="mdl-layout__container">
           			<div class="layout-wrapper">
           				<header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-          					<img class="logo" src="/img/logo-cropped.png">
+          					<img class="logo prime" src="/img/logo-cropped.png">
           					<div class="header__inner">
           						<p class="mdl-typography--headline header__title">
           							Fragenauswahl
@@ -343,7 +350,6 @@
           							Schritt 4 von 4 ...
           						</p>
           					</div>
-          					<div id="global-progress" class="mdl-progress mdl-js-progress mdl-color--grey-100"></div>
           				</header>
           				<main class="page-content mdl-color--grey-100">
           					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
@@ -388,10 +394,10 @@
           								echo "</tbody>";
           							?>
           						</table>
-          						<input type="hidden" value="3" name="step">
           						<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
           							Weiter <i class="material-icons">keyboard_arrow_right</i>
           						</button>
+                      <input name="steps" value="4" type="hidden" hidden />
           					</form>
           					</div>
           				</main>
@@ -406,10 +412,9 @@
           	</body>
           </html>
           <?php
+          break;
         case 4 :
           $user = $_SESSION['registering'];
-          // Final steps
-          unset($_POST['step']);
           // iterate over $_POST and add questions to <user>.json
           $obj = json_decode(file_get_contents('fragenkatalog.json'), true);
 
@@ -436,12 +441,12 @@
             }
           }
           // Save changes
-          if(file_put_contents("../users/{$user['directory']}/{$user['uid']}.json", json_encode($userfile, JSON_PRETTY_PRINT)) <= 0){
+          if(file_put_contents(ABS_PATH . "/users/{$user['uid']}/{$user['uid']}.json", json_encode($userfile, JSON_PRETTY_PRINT)) <= 0){
             exit;
           }
 
           // Create user entries in Database
-          $query = "INSERT INTO person (name, uid, directory, registered_since) VALUES ('{$user['name']}','{$user['uid']}','{$user['directory']}', CURRENT_DATE);";
+          $query = "INSERT INTO person (name, uid, directory, registered_since) VALUES ('{$user['name']}','{$user['uid']}','{$user['uid']}', CURRENT_DATE);";
           $mysqli->query($query);
           $query = "INSERT INTO login (uid, password, email) VALUES ('{$user['uid']}', '{$user['password']}', '{$user['email']}');";
           $mysqli->query($query);
@@ -460,9 +465,9 @@
             header('Location: ../anmelden/index.php');
             exit;
           }
-        default : unset($_SESSION); unset($_POST); unset($_GET); header('Location: ./'); // Post wurde manipuliert. Lösche alle daten aus Request und starte neu
+        break;
+        default : unset($_SESSION); unset($_POST); unset($_GET); header('Location: ./'); break;// Post wurde manipuliert. Lösche alle daten aus Request und starte neu
       endswitch;
-      $_SESSION['registering']['steps']++;
     else :
       // Einladung ist abgelaufen. Lösche alle bisherigen Daten aus dem Request
       unset($_SESSION); unset($_POST); unset($_GET); header('Location: ./');

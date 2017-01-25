@@ -19,7 +19,7 @@
 				// Hash uid for removal file name
 				$filename = md5($uid);
 				$file = json_encode($backup, JSON_PRETTY_PRINT);
-				file_put_contents(ABS_PATH . "/backup/$filename.bak");
+				file_put_contents(ABS_PATH . "/backup/$filename.bak", $file);
 				$mysqli->query("INSERT INTO entfernte_profile (uid, recovery_file) VALUES ('$uid', '$filename')");
 				// END recovery
 				$mysqli->query("DELETE FROM person WHERE uid = '$uid'");

@@ -1,6 +1,4 @@
 <?php
-require('constants.php');
-require_once(ABS_PATH.INC_PATH.'functions.php');
 if(isset($num, $frage, $type, $type_long)) :
 	$type_long = ($type == "f" ? "freundesfragen" : "eigeneFragen");
 return <<<TR
@@ -13,6 +11,9 @@ return <<<TR
 	<td class="frage">$frage</td>
 </tr>
 TR;
-else : error('clientError', 400, 'Bad Request');
+else :
+	require('constants.php');
+	require_once(ABS_PATH.INC_PATH.'functions.php');
+	error('clientError', 400, 'Bad Request');
 endif;
 ?>

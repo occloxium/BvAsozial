@@ -11,16 +11,18 @@
 					'registering' => [
 						'steps' => 0,
 						'uid' => $_POST['uid'],
-						'password' => $_POST['password']
+						'password' => $_POST['password'],
+						'email' => getInvitedUser($_POST['uid'], $mysqli)['email'],
+						'name' => getInvitedUser($_POST['uid'], $mysqli)['name']
 					]
 				];
 			}
   		success(["isValid" => true]);
     } else {
-			if(isInvited($_POST['uid'])){
+			if(isInvited($_POST['uid'], $mysqli)){
 				success(["isValid" => false, "message" => "Wrong password"]);
 			} else {
-				if(isExpiredInvite($_POST['uid'])){
+				if(isExpiredInvite($_POST['uid'], $mysqli)){
 					success(["isValid" => false, "message" => "invite expired"]);
 				} else {
 					success(["isValid" => false, "message" => "Unknown username and / or password"]);

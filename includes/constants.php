@@ -29,4 +29,7 @@
 
 	// load mysqli connection
 	require_once('db_connect.php');
+
+	// Load Composer dependencies
+	require(ABS_PATH.'/vendor/autoload.php');
 ?>

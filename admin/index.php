@@ -61,7 +61,7 @@
                 <p class="none">Keine kürzlichen Registrierungen. <a class="none__anchor" href="./register-user/">Lade neue Leute ein!</a></p>
                 <?php
                   else :
-                    $stmt->bind_result($id, $name, $uid, $erhaltene_anfragen, $gesendete_anfragen, $verzeichnis, $datum);
+                    $stmt->bind_result($id, $name, $uid, $erhaltene_anfragen, $gesendete_anfragen, $verzeichnis, $datum, $finalized, $allowedEmails);
                     while ($stmt->fetch()) :
                 ?>
               	<li class="mdl-list__item mdl-list__item--two-line">
