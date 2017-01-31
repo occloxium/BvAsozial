@@ -1,26 +1,23 @@
 var $ = jQuery;
-
+/**
+ * Checkboard to keep track of the files the user selected.
+ * A users 'confidence' means the maximum amout of questions he's allowed to have. That name is actually quite misleading.
+ * the 'selected' arrays shall save the id of the questions selected.
+ * the 'removeQuestion' function is working as expected
+ * 'displayError' works as expected, if an error is triggered
+ */
 (function () {
 	'use strict';
 	var checkboard = {
 		_data: {
 			freundesfragen: {
-				max: 4,
+				max: 8,
 				selected: []
 			},
 			eigeneFragen: {
-				max: 4,
+				max: 8,
 				selected: []
 			}
-		},
-		setConfidence: function (s) {
-			if (s <= 8) {
-				window.Checkboard._data.freundesfragen.max = s;
-				window.Checkboard._data.eigeneFragen.max = s;
-			} else {
-				console.warn(s + ' has to be 8 or less');
-			}
-			$('.mdl-slider')[0].MaterialSlider.change(s);
 		},
 		removeQuestion: function (element) {
 			if(element.substr(0,1) == "f"){
@@ -59,14 +56,13 @@ $('.mdl-checkbox__input').on('click', function (e) {
 	if ($(this).prop('checked')) {
 		switch($(this).attr('data-category')){
 			case 'freundesfragen' :
-				if(c._data.freundesfragen.selected.length >= 8){
+				var ca = c._data.freundesfragen;
+				if(ca.selected.length >= 8){
 					c.displayError('Entferne eine andere Frage aus dieser Rubrik, um mehr auswählen zu können');
 					$(this).prop('checked', false);
-				}	
+				}
 				else {
-					c._data.freundesfragen.selected.push($(this).attr('id'));
-					if(c._data.freundesfragen.selected.length > c.getConfidence())
-						c.setConfidence(c.getConfidence() + 1);
+					ca.selected.push($(this).attr('id'));
 				}
 				break;
 			case 'eigeneFragen' :
@@ -76,8 +72,6 @@ $('.mdl-checkbox__input').on('click', function (e) {
 				}
 				else {
 					c._data.eigeneFragen.selected.push($(this).attr('id'));
-					if(c._data.eigeneFragen.selected.length > c.getConfidence())
-						c.setConfidence(c.getConfidence() + 1);
 				}
 				break;
 		}

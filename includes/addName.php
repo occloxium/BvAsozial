@@ -34,7 +34,7 @@
 					success(["html" => $html]);
 					$json['rufnamen'] = $list;
 				} else {
-	        $html = rufnamenliste($user, $_SESSION['username'], $list);
+	        $html = rufnamenliste($user, $_SESSION['user']['uid'], $list);
 					success(["html" => $html, "request" => $_request, "error" => "Konnte zu widerrufenden Rufnamen nicht mehr in der Liste finden"]);
 				}
 			}

@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['username'])){
+if(isset($_SESSION['user']['uid'])){
   if($_SESSION['user']['is_admin']){
     ?>
     <nav class="navigation mdl-navigation mdl-color--blue-grey-800" data-active="#<?= $active ?>">

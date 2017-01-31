@@ -59,6 +59,9 @@
 						try {
 							var obj = JSON.parse(data);
 							if(obj.success){
+                $('form .mdl-button').detach();
+                $('form').append($('<p>Benutzer wurde entfernt. <br /><small>Backup wurde gespeichert.</small></p>'));
+                $('form').append($('<a></a>').addClass('mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect').attr('href','../').append($('<i></i>').addClass('material-icons').text('keyboard_arrow_left')).text('Zurück');
 								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append(obj.html));
 							} else {
 								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append($('<pre></pre>').text(data)));

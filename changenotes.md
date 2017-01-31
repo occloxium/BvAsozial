@@ -1,5 +1,15 @@
 # Changenotes
 
+# Version 1.2.32
+**31.01.2017**
+
+*   Changed the accent color of the whole platform to a bright blue
+*   Fixed all errors in main user interaction files like `/fragen/`, `/users/`, `/freunde/` etc.
+*   Removed the remaining usage of `$_SESSION['username']` and replaced it with `$_SESSION['user']['uid']` to access the complete user object instead of an own value out of context
+*   Reworked most of the AJAX PHP Content files to use the the `require` functions
+*   Fixed some other bugs in quite a few files
+*   Minor changes to backend structure
+
 # Version 1.2.31
 **25.01.2017**
 
@@ -10,7 +20,7 @@
 
 **Notes**
 
-*   the question subsection of the registration process is completely broken. Fix it ASAP. 
+*   the question subsection of the registration process is completely broken. Fix it ASAP.
 
 
 # Version 1.2.30

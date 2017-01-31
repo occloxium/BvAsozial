@@ -112,8 +112,8 @@
    * @return an array containing the uid of the user's friend
    */
 	function getFriends($username, $mysqli){
+    $friends = [];
 		if($stmt = $mysqli->prepare("SELECT friend FROM freunde WHERE uid = ? ORDER BY friendsSince ASC")){
-			$friends = [];
 			$stmt->bind_param('s',$username);
 			$stmt->execute();
 			$stmt->bind_result($friend);
@@ -121,10 +121,8 @@
 			while($stmt->fetch()){
 				$friends[] = $friend;
 			}
-			return $friends;
-		} else {
-			return array();
 		}
+    return $friends;
 	}
 
   /**
@@ -646,37 +644,36 @@
    * @param $mysqli the mysqli object refering to the database
    * @return true in case of a correct password & username
    */
-	function login($username, $password, $mysqli){
-		if($stmt = $mysqli->prepare("SELECT * FROM login WHERE uid = ? OR email = ?")){
-			$stmt->bind_param('ss',$username, $username);
-			$stmt->execute();
-			$stmt->store_result();
-			$stmt->bind_result($user_id, $user, $db_password, $email);
-			$stmt->fetch();
-      // Password already hashed transmitted @since 1.2.25
-			if($stmt->num_rows == 1){
-				if($db_password == $password){
-					$user_browser = $_SERVER['HTTP_USER_AGENT'];
-          $_SESSION['id'] = $user_id;
-          $_SESSION['username'] = $user;
-          $_SESSION['user'] = getUser($user, $mysqli);
-          _checkGroups($user, $mysqli);
-          $_SESSION['login_string'] = hash('sha384', $password . $user_browser);
-          return true;
-				}
-			}
-		}
-		return false;
-	}
+  function login($username, $password, $mysqli){
+ 		if($stmt = $mysqli->prepare("SELECT * FROM login WHERE uid = ? OR email = ?")){
+ 			$stmt->bind_param('ss',$username, $username);
+ 			$stmt->execute();
+ 			$stmt->store_result();
+ 			$stmt->bind_result($user_id, $user, $db_password, $email);
+ 			$stmt->fetch();
+       // Password already hashed transmitted @since 1.2.25
+ 			if($stmt->num_rows == 1){
+ 				if($db_password == $password){
+ 					$user_browser = $_SERVER['HTTP_USER_AGENT'];
+           $_SESSION['id'] = $user_id;
+           $_SESSION['user'] = getUser($user, $mysqli);
+           _checkGroups($user, $mysqli);
+           $_SESSION['login_string'] = hash('sha384', $password . $user_browser);
+           return true;
+ 				}
+ 			}
+ 		}
+ 		return false;
+ 	}
 
   /**
    * Checks the login state of a user by comparing hash sums of the current browser user agent concated with h
    * @param $mysqli the mysqli object refering to the database
    */
 	function login_check($mysqli){
-		if(isset($_SESSION['username'],$_SESSION['login_string'])){
+		if(isset($_SESSION['user']['uid'],$_SESSION['login_string'])){
 			$login_string = $_SESSION['login_string'];
-			$username = $_SESSION['username'];
+			$username = $_SESSION['user']['uid'];
 			$user_browser = $_SERVER['HTTP_USER_AGENT'];
       // CHANGE: admins and users are stored in the same table, though admins get marked by an extra table containing the bound admin usernames
       // is_admin determines if a found username is an admin
@@ -698,7 +695,8 @@
 	* Logs the user out and kills the current session
 	*/
 	function logout(){
-		secure_session_start();
+    if(!isset($_SESSION))
+		  secure_session_start();
 		$_SESSION = array(); // Reset session variables
 		$params = session_get_cookie_params();
 		setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]); // Override session cookie

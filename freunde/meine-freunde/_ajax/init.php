@@ -1,13 +1,13 @@
 <?php
-	include_once '../../../includes/db_connect.php';
-	include_once '../../../includes/functions.php';
-	
-	secure_session_start();
-	if(login_check($mysqli) == true){
+  require_once('constants.php');
+  require_once(ABS_PATH.INC_PATH.'functions.php');
+
+  secure_session_start();
+	if(login_check($mysqli)){
 		$output = "";
 		// fetch all data
 		$stmt = $mysqli->prepare('SELECT friend FROM freunde WHERE uid = ? ORDER BY friendsSince DESC');
-		$stmt->bind_param('s', $_SESSION['username']);
+		$stmt->bind_param('s', $_SESSION['user']['uid']);
 		$stmt->execute();
 		$stmt->bind_result($von);
 		$stmt->store_result();
@@ -17,7 +17,7 @@
                 $output .= '<li class="mdl-list__item">
                                 <a class="seamless-anchor mdl-list__item-primary-content" href="/users/index.php/' . $fetched_user['uid'] . '/">
                                     <span class="inherit-flex">
-                                        <img class="mdl-list__item-icon request__user-avatar" src="/users/' . $fetched_user['directory'] . '/avatar.jpg">
+                                        <img class="mdl-list__item-icon request__user-avatar" src="/users/' . $fetched_user['uid'] . '/avatar.jpg">
                                         <span>' . $fetched_user['name'] . '</span>
                                     </span>
                                 </a>
@@ -29,13 +29,12 @@
                             </li>';
 			}
 		} else {
-			$output .= '<li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                Momentan hast Du keine Freunde ;(<br>
-                                <b>Füge jetzt Freunde hinzu</b><br>
-                                <a href="../index.php">Freunde finden</a>
-                            </span>
-                        </li>';
+			$output .= '<p class="no-entries">
+                    Momentan hast Du keine Freunde ;(
+                  </p>
+                  <p class="no-entries">
+                    <b>Füge jetzt Freunde hinzu: </b><a href="../index.php">Freunde finden</a>
+                  </p>';
 		}
 		echo $output;
 	} else {

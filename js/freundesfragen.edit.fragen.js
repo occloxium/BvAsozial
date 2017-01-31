@@ -10,3 +10,23 @@ $('.mdl-checkbox__input').on('click', function (e) {
 		}
 	}
 });
+$('form mdl-button').click(function(){
+  $.ajax({
+    method: 'post',
+		url: '/fragen/edit/freundesfragen/uf.php',
+		data: $('form').serialize();
+  }).done(function(data){
+    try {
+			var obj = JSON.parse(data);
+			if(obj.success){
+				location.replace("../../");
+			} else {
+				console.error(data);
+			}
+		} catch (e) {
+			console.error(data);
+		}
+  }).fail(function(data){
+    console.error(data);
+  });
+});

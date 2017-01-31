@@ -10,7 +10,7 @@ var attemptLogin = function(uid, password){
   $.ajax({
     method: 'post',
     url: '/includes/isValidInvite.php',
-    data: {"uid": uid, "password": password}
+    data: {uid: uid.val(), password: password.val()}
   }).done(function(data){
     try {
 			var obj = JSON.parse(data);

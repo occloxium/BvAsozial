@@ -5,7 +5,7 @@ include_once '../includes/functions.php';
 secure_session_start();
 
 if(login_check($mysqli) == true) :
-	$user = getUser($_SESSION['username'], $mysqli);
+	$user = getUser($_SESSION['user']['uid'], $mysqli);
 ?>
 	<!-- Blank HTML Preset -->
 <!DOCTYPE html>

@@ -46,7 +46,8 @@
         "44": "Wof\u00fcr gibst du zu viel Geld aus?",
         "45": "Worauf achtest du beim anderen Geschlecht?",
         "46": "Worauf hast du zuletzt getanzt?",
-        "47": "Wovor hast du Angst?"
+        "47": "Wovor hast du Angst?",
+        "48": "Was sind deine alternativen Fakten?"
     },
     "freundesfragen": [
         "Aktuelles Lieblingslied?",
@@ -75,6 +76,7 @@
         "Wenn ich ein Zeichentrickcharakter w\u00e4re, welcher w\u00e4re das?",
         "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
         "Wof\u00fcr gebe ich zu viel Geld aus?",
-        "Was ist denn nur mit Carsten los?"
+        "Was ist denn nur mit Carsten los?",
+        "Was sind deine alternativen Fakten?"
     ]
 }

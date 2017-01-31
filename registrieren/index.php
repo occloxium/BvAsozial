@@ -358,13 +358,8 @@
           					</p>
           					<input type="hidden" value="2" name="step">
           					<p class="mdl-typography--body-1">
-          						Jetzt ans Eingemachte! An dem Regler hier kannst du einstellen, wie sicher du dir bist. Entsprechend danach wird die Maximalanzahl deiner Fragen ausgerechnet. Wähle dann so viele aus der Liste aus, wie du dir zutraust, für dich und für deine Freunde. Ein Maximum sind jeweils 8 Fragen pro Rubrik
-          					</p>
-          					<div class="slider-wrapper">
-          						<label class="slider__min">3 Fragen</label>
-          						<input class="mdl-slider mdl-js-slider" type="range" min="3" max="8" value="4" tabindex="0">
-          						<label class="slider__max">8 Fragen</label>
-          					</div>
+          						Jetzt ans Eingemachte! Wähle deine Fragen aus, deine eigenen und die für deine Freunde. Maximal jedoch 8 aus jeder Kategorie. Du kannst deine Fragen auch später noch ändern.
+                    </p>
           					<form class="form--fill-wrapper" method="post" action="./index.php">
           						<p class="mdl-typography--title">Fragen für Dich</p>
           						<table class="fragenkatalog-table mdl-shadow--2dp" id="eigeneFragen">
@@ -373,10 +368,9 @@
           								$obj = json_decode($jsonstr, true);
           								echo "<tbody>";
                           $type = 'e';
-          								for($i = 0; $i < count($obj['eigeneFragen']); $i++) {
-          									$frage = $obj['eigeneFragen'][$i];
-          									$num = $i + 1;
-                            echo require_once(ABS_PATH . INC_PATH . 'fragen.registrierung.php');
+                          foreach($obj['eigeneFragen'] as $index=>$frage) {
+                            $num = $index + 1;
+                            echo require(ABS_PATH . INC_PATH . 'fragen.registrierung.php');
           								}
           								echo "</tbody>";
           							?>
@@ -386,10 +380,9 @@
           							<?php
           								echo "<tbody>";
                           $type = 'f';
-          								for($i = 0; $i < count($obj['freundesfragen']); $i++) {
-          									$frage = $obj['freundesfragen'][$i];
-          									$num = $i + 1;
-                            echo require_once(ABS_PATH . INC_PATH . 'fragen.registrierung.php');
+          								foreach($obj['freundesfragen'] as $index=>$frage) {
+                            $num = $index + 1;
+                            echo require(ABS_PATH . INC_PATH . 'fragen.registrierung.php');
           								}
           								echo "</tbody>";
           							?>
@@ -418,7 +411,12 @@
           // iterate over $_POST and add questions to <user>.json
           $obj = json_decode(file_get_contents('fragenkatalog.json'), true);
 
-          $userfile = json_decode(file_get_contents("../users/{$user['directory']}/{$user['uid']}.json"), true);
+          $userfile = json_decode(file_get_contents("../users/{$user['uid']}/{$user['uid']}.json"), true);
+
+          $userfile['freundesfragen'] = [];
+          $userfile['eigeneFragen'] = [];
+          $userfile['spruch'] = "";
+          $userfile['rufnamen'] = [];
 
           foreach($_POST as $key=>$element){
             if(preg_match("/^[ef]-frage-[1-9][0-9]*/", $key)){

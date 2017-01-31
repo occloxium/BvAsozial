@@ -11,9 +11,12 @@
 	secure_session_start();
 
 	if(isset($_POST['user'], $_POST['friend'])){
-		if(login_check($mysqli) && $_POST['user'] != $_SESSION['username']){
+		if(login_check($mysqli) && $_POST['user'] == $_SESSION['user']['uid']){
 			$self = $_POST['user'];
 			$friend = $_POST['friend'];
+      // Refresh session user array
+      $_SESSION['user'] = getUser($_SESSION['user']['uid'], $mysqli);
+      _checkGroups($_SESSION['user']['uid'], $mysqli);
 			echo addAsFriend($friend, $self, $mysqli);
 		} else {
 			error('clientError', 403, 'Forbidden');

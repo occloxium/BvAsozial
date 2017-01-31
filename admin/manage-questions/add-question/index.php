@@ -8,7 +8,6 @@
 <html>
   <head>
     <?php _getHead('admin'); ?>
-    <script src="/js/jquery-2.1.4.min.js"></script>
     <script src="/js/autogrow.js"></script>
   </head>
   <body>

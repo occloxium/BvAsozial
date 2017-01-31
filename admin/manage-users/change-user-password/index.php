@@ -58,17 +58,17 @@
 						try {
 							var obj = JSON.parse(data);
 							if(obj.success){
-								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append(obj.html));
-							} else {
+                $('.mdl-button').detach();
+                $('form').append($('<p>Passwort wurde geändert.</p>'));
+                $('form').append($('<a></a>').addClass('mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect').attr('href','../').append($('<i></i>').addClass('material-icons').text('keyboard_arrow_left')).text('Zurück');
+              } else {
 								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append($('<pre></pre>').text(data)));
 							}
 						} catch (e) {
-							debugger;
 							console.log(data);
 						}
 					},
 					error: function(data){
-						debugger;
 						console.log(data);
 					}
 				})

@@ -1,16 +1,15 @@
 <?php
-	include_once '../../includes/db_connect.php';
-	include_once '../../includes/functions.php';
+  require_once('constants.php');
+  require_once(ABS_PATH . INC_PATH . 'functions.php');
 
 	secure_session_start();
 
-	
-	if(!isset($_GET['uid']) || $_GET['uid'] != $_SESSION['username']){
+
+	if(!isset($_GET['uid']) || $_GET['uid'] != $_SESSION['user']['uid']){
 		echo error('clientError', 400, 'Bad Request');
 	} else {
-		$user = getMinimalUser($_GET['uid'], $mysqli);
-		$path = "../users/{$user['directory']}/{$user['uid']}.json";
-		$jsonstr = file_get_contents($path);
+		$user = $_SESSION['user'];
+		$jsonstr = file_get_contents("../users/{$user['uid']}/{$user['uid']}.json");
 		$obj = json_decode($jsonstr, true);
 		$obj = $obj['eigeneFragen'];
 		$output = "";

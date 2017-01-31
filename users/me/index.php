@@ -1,6 +1,6 @@
 <?php
-	include_once $_SERVER['DOCUMENT_ROOT'] . "/includes/db_connect.php";
-	include_once $_SERVER['DOCUMENT_ROOT'] . "/includes/functions.php";
+	require_once('constants.php');
+  require_once(ABS_PATH . INC_PATH . 'functions.php');
 	secure_session_start();
-	header('Location: ../index.php/' . $_SESSION['username']);
+	header('Location: ../index.php/' . $_SESSION['user']['uid']);
 ?>

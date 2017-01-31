@@ -1,6 +1,37 @@
 {
-    "spruch": "",
+    "spruch": "Besser widerlich als wiederlich.\r\n- Maschis in Aachen",
     "rufnamen": [],
     "freundesfragen": [],
-    "eigeneFragen": []
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Lasse abschreiben, oder besser: Schreibe f\u00fcr andere von meiner L\u00f6sung ab",
+            "beantwortet": true
+        },
+        {
+            "frage": "L\u00e4uft bei dir?",
+            "antwort": "Ich denke ja, mein Bruder sagt: JA!",
+            "beantwortet": true
+        },
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "Auf der einen Seite: Jennifer Aniston, Jennifer Lawrence, Scarlett Johanson, Bradley Cooper (Favorit), Ryan Gosling... Auf der anderen Seite: Ich w\u00fcrde den Mund nicht aufbekommen",
+            "beantwortet": true
+        },
+        {
+            "frage": "Was ist dein Lieblingsfilm?",
+            "antwort": "Interstellar",
+            "beantwortet": true
+        },
+        {
+            "frage": "Was ist dein Lieblingsstar?",
+            "antwort": "Bradley Cooper (Schauspieler), ansonsten Jennifer Lawrence",
+            "beantwortet": true
+        },
+        {
+            "frage": "Welche 5 Dinge w\u00fcrdest du mit auf eine einsame Insel nehmen?",
+            "antwort": "Nen Laptop, UMTS-Stick f\u00fcr Internet, 2 F\u00e4sser Bacardi, Bermudas und meine Freundin",
+            "beantwortet": true
+        }
+    ]
 }

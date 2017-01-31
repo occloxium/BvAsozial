@@ -18,13 +18,15 @@ $('form button').click(function(e){
 			if(obj.success){
 				if(obj.data.is_admin){
 					location.replace('../admin/');
-				}
-				location.replace('../');
+				} else {
+          location.replace('../');
+        }
 			} else {
 				$('.mdl-snackbar')[0].MaterialSnackbar.showSnackbar({
 					message: obj.message,
 					timeout: 5000
 				});
+        $('form #password').val('');
 			}
 		} catch (e) {
 			location.replace('../index.php');

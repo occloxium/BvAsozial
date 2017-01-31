@@ -29,18 +29,6 @@
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">Übersicht</span>
           <div class="mdl-layout-spacer"></div>
-          <form class="header__form" action="/freunde/" method="get">
-            <label>Suche nach Freunden</label>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-								<i class="material-icons">search</i>
-							</label>
-              <div class="mdl-textfield__expandable-holder">
-                <input class="mdl-textfield__input" type="text" name="search" id="search">
-                <label class="mdl-textfield__label" for="search">Suche nach Freunden...</label>
-            	</div>
-            </div>
-          </form>
         </div>
 	    </header>
 	    <div class="mdl-grid content">
@@ -91,7 +79,7 @@
 									var pie1 = new PieChart({
 										total: 8,
 										initial: 0,
-										color: '#00b84f',
+										color: '#00bcd4',
 										radius: 30,
 	                  strokeWidth: 8,
 										container: '.chart-1'
@@ -99,7 +87,7 @@
 									var pie2 = new PieChart({
 										total: 8,
 										initial: 0,
-										color: '#00b84f',
+										color: '#00bcd4',
 										radius: 30,
 	                	strokeWidth: 8,
 										container: '.chart-2'
@@ -107,7 +95,7 @@
 									var pie3 = new PieChart({
 										total: 8,
 										initial: 0,
-										color: '#00b84f',
+										color: '#00bcd4',
 										radius: 30,
 	                  strokeWidth: 8,
 										container: '.chart-3'
@@ -124,7 +112,8 @@
 </html>
 <?php
   else :
-    if(login_check($mysqli) && $_SESSION['user']['is_admin']) : header('Location: ./admin/'); else :
+    if(login_check($mysqli) && $_SESSION['user']['is_admin']) : header('Location: ./admin/');
+    else :
 ?>
 <!-- Blank HTML Preset -->
 <!DOCTYPE html>

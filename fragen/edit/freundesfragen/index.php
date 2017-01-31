@@ -1,15 +1,16 @@
 <?php
-	require_once('constants.php');
-	require_once(ABS_PATH.INC_PATH.'functions.php');
+  require_once('constants.php');
+  require_once(ABS_PATH . INC_PATH . 'functions.php');
 
-	secure_session_start();
-	if(login_check($mysqli) == true) :
-		$user = getUser($_SESSION['username'], $mysqli);
+  secure_session_start();
+
+  if(login_check($mysqli)) :
+    $user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php _getHead(); ?>
+		<?php _getHead('registrierung'); ?>
 	</head>
 	<body>
 		<div class="mdl-layout__container">
@@ -31,28 +32,29 @@
 							<div>&nbsp;</div><div>&nbsp;</div>
 							<table class="fragenkatalog-table mdl-shadow--2dp" id="freundesfragen">
 								<?php
-									$user_fragen = json_decode(file_get_contents("../../../users/{$user['directory']}/{$user['uid']}.json"), true);
-									$obj = json_decode(file_get_contents('../../../registrieren/fragenkatalog.json'), true);
-									echo "<tbody>";
-									for($i = 0; $i < count($obj['freundesfragen']); $i++) {
-										$found = false;
-										$frage = $obj['freundesfragen'][$i];
-										$num = $i + 1;
-										foreach($user_fragen['freundesfragen'] as $user_frage){
-											if(stripos($frage, $user_frage['frage']) !== false){
-												$found = true;
-											}
-										}
-										echo '<tr>
-														<td>
-															<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="f-frage-' . $num .'">
-																<input type="checkbox" data-category="freundesfragen" id="f-frage-' . $num .'" class="mdl-checkbox__input" name="f-frage-' . $num .'" ' . ($found ? 'checked' : '') .  '>
-															</label>
-														</td>
-														<td class="frage">' . $frage . '</td>
-													</tr>';
-									}
-									echo "</tbody>";
+                $user_fragen = json_decode(file_get_contents(ABS_PATH . "/users/{$user['uid']}/{$user['uid']}.json"), true);
+                $obj = json_decode(file_get_contents(ABS_PATH . '/registrieren/fragenkatalog.json'), true);
+                echo "<tbody>";
+                foreach($obj['freundesfragen'] as $key=>$frage) {
+                  $num = $key + 1;
+                  $found = false;
+                  if($user_fragen != false){
+                      foreach($user_fragen['freundesfragen'] as $user_frage){
+                        if(stripos($frage, $user_frage['frage']) !== false){
+                          $found = true;
+                        }
+                      }
+                  }
+                  echo '<tr>
+                          <td>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="f-frage-' . $num .'">
+                              <input type="checkbox" data-category="freundesfragen" id="f-frage-' . $num .'" class="mdl-checkbox__input" name="f-frage-' . $num .'" ' . ($found ? 'checked' : '') .  '>
+                            </label>
+                          </td>
+                          <td class="frage">' . $frage . '</td>
+                        </tr>';
+                }
+                echo "</tbody>";
 								?>
 							</table>
 							<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">

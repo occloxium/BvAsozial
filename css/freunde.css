@@ -37,3 +37,7 @@ form {
 	width: 64px;
 }
 
+.no-entries {
+  color: rgba(0,0,0,0.33);
+  text-align: center;
+}

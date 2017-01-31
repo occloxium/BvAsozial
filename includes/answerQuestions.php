@@ -27,7 +27,7 @@ if(login_check($mysqli) && $_POST['uid'] == $_SESSION['user']['uid']){
           }
 					$obj['eigeneFragen'][$frage['frageID']]['antwort'] = $frage['antwort'];
 				}
-				file_put_contents("../users/{$user['directory']}/{$user['uid']}.json", json_encode($obj, JSON_PRETTY_PRINT));
+				file_put_contents("../users/{$user['uid']}/{$user['uid']}.json", json_encode($obj, JSON_PRETTY_PRINT));
 				success(["msg" => "Frage beantwortet"]);
 			} else {
 				error('internalError', 403, 'Forbidden', ['There was no relationship and/or privilege found for the requesting user']);

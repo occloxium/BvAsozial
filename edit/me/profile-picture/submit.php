@@ -5,7 +5,7 @@
   secure_session_start();
 
   if(login_check($mysqli) == true){
-    $user = getUser($_SESSION['username'], $mysqli);
+    $user = getUser($_SESSION['user']['uid'], $mysqli);
     // move temporary file to directory where it has to be cropped before setting it.
 
     if(move_uploaded_file($_FILES['img']['tmp_name'], "/../../img/" . basename($_FILES['img']['name']))){

@@ -1,27 +1,15 @@
 <?php
-	/**
-	*	Returns an array of friends of the given user by requesting them from the data base
-	*/
-	function freunde($uid, $mysqli){
-		$freunde = array();
-		if($stmt = $mysqli->prepare('SELECT uid FROM freunde WHERE friend = ?')){
-			$stmt->bind_param('s', $user['uid']);
-			$stmt->execute();
-			$stmt->bind_result($an);
-			$stmt->store_result();
-			while($stmt->fetch()){
-				$freunde[] = $an;
-			}
-		}
-		return $freunde;
-	}
+
+  require_once('constants.php');
+  require_once(ABS_PATH . INC_PATH . 'functions.php');
+
 	/**
 	*	Returns an HTML representation of a given user question and differs between friend questions and own ones.
 	* 0 = eigeneFrage ; 1 = antwortAufEigeneFrage ; 2 = freundesfrage
 	*/
 	function frage($frage, $user, $freund, $i, $typ){
 		switch($typ){
-			case 0 : 
+			case 0 :
 				if(strlen($frage['antwort']) <= 35){
 					return <<<EOT
 <li class="frage">
@@ -54,7 +42,7 @@ EOT;
 EOT;
 				}
 			break;
-		case 1 : 
+		case 1 :
 			if(strlen($frage['antworten'][$freund['uid']]) <= 35){
 				return <<<EOT
 <li class="frage">
@@ -65,7 +53,7 @@ EOT;
 			<label class="mdl-textfield__label" for="item-$i">{$freund['vorname']}'s Antwort</label>
 		</div>
 	</div>
-</li>		
+</li>
 EOT;
 			} else {
 				return <<<EOT
@@ -77,7 +65,7 @@ EOT;
 			<label class="mdl-textfield__label" for="item-$i">{$freund['vorname']}'s Antwort</label>
 		</div>
 	</div>
-</li>		
+</li>
 EOT;
 			}
 			break;
@@ -95,7 +83,7 @@ EOT;
 			<i class="material-icons">save</i>
 		</button>
 	</div>
-</li>	
+</li>
 EOT;
 			} else {
 				return <<<EOT
@@ -110,7 +98,7 @@ EOT;
 			<i class="material-icons">save</i>
 		</button>
 	</div>
-</li>	
+</li>
 EOT;
 			}
 			break;

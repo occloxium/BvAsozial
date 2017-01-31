@@ -27,7 +27,7 @@
 	vertical-align: sub;
 	line-height: 1.5em;
 }
-.highlight--hover:hover, 
+.highlight--hover:hover,
 .highlight--hover:active {
 	color: #1ed760;
 }
@@ -75,6 +75,11 @@
 }
 .quicknav a::before {
 	content: "> ";
+}
+.no-friends {
+  color: rgba(0,0,0, 0.33);
+  text-align: center;
+  margin: 2em 5em 0;
 }
 @media only screen and (max-width: 768px){
 	ol {
