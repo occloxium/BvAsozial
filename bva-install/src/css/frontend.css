@@ -1,0 +1,78 @@
+.layout.is-small-screen .container--fullsize {
+	min-height: 100vh;
+}
+.container--fullsize {
+	flex-grow: 1;
+	min-height: calc(100vh - 4.5em);
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+main {
+	flex-direction: column;
+	display: flex !important;
+}
+
+.container--fullsize div {
+	margin: 0 auto;
+}
+.logo {
+	max-width: 360px;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.container--fullsize div p {
+	text-align: center;
+}
+.container--fullsize div a.mdl-button {
+	display: block;
+	max-width: 150px;
+	margin: 3em auto 0;
+}
+.navicon {
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 4em;
+}
+.navicon a {
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+}
+section header .header-img {
+	width: 100%;
+	min-height: 250px;
+	height: 50vh;
+	background: url('/img/ex/header-sec-1.jpg') center top no-repeat;
+}
+
+section header {
+	width: 100%;
+	position: relative;
+}
+section header .overlay {
+	position: absolute;
+	top: 0;
+	left: 0; 
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0, 0.5);
+	transition: opacity 1s ease;
+}
+section header .overlay:hover, 
+section header .overlay:active {
+	opacity: 0.66;
+}
+.mdl-typography--headline-big {
+	font-size: 3em !important;
+	margin: 1em 0;
+}
+
+section .mdl-grid {
+	max-width: 768px;
+}
+
+

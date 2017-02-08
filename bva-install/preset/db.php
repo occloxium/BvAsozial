@@ -16,10 +16,23 @@ CREATE TABLE `ausstehende_einladungen` (
   `id` int(11) NOT NULL,
   `uid` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL COMMENT 'sha1',
-  `name` varchar(255) NOT NULL,
+  `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `email` varchar(100) NOT NULL,
   `directory` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `entfernte_einladungen` (
+  `id` int(11) NOT NULL,
+  `uid` varchar(128) COLLATE latin1_german2_ci NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+CREATE TABLE `entfernte_profile` (
+  `id` int(11) NOT NULL,
+  `uid` varchar(128) COLLATE latin1_german2_ci NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `recovery_file` varchar(128) COLLATE latin1_german2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 CREATE TABLE `freunde` (
   `uid` varchar(100) NOT NULL,
@@ -40,14 +53,6 @@ CREATE TABLE `moderatoren` (
   `strikes` int(32) NOT NULL,
   `suspended` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-DELIMITER $$
-CREATE TRIGGER `ban_on_3_strikes` BEFORE UPDATE ON `moderatoren` FOR EACH ROW BEGIN
-	IF NEW.strikes >= 2 THEN
-    	SET NEW.suspended = 1;
-    END IF;
-END
-$$
-DELIMITER ;
 
 CREATE TABLE `person` (
   `id` int(11) NOT NULL,
@@ -57,7 +62,8 @@ CREATE TABLE `person` (
   `sent_requests` int(11) NOT NULL,
   `directory` varchar(255) NOT NULL,
   `registered_since` date NOT NULL,
-  `finalisiert` tinyint(1) NOT NULL DEFAULT '0'
+  `finalisiert` tinyint(1) NOT NULL DEFAULT '0',
+  `allowedEmails` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `statistiken` (
@@ -81,6 +87,13 @@ ALTER TABLE `anfragen`
   ADD UNIQUE KEY `von` (`von`,`an`);
 
 ALTER TABLE `ausstehende_einladungen`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `uid` (`uid`);
+
+ALTER TABLE `entfernte_einladungen`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `entfernte_profile`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `uid` (`uid`);
 
@@ -108,19 +121,16 @@ ALTER TABLE `admins`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `ausstehende_einladungen`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `entfernte_einladungen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `entfernte_profile`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `moderatoren`
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `person`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `anfragen`
-  ADD CONSTRAINT `anfragen_ibfk_1` FOREIGN KEY (`von`) REFERENCES `person` (`uid`) ON DELETE CASCADE;
-
-ALTER TABLE `login`
-  ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `person` (`uid`) ON DELETE CASCADE;
-
 DELIMITER $$
 CREATE DEFINER=`bvasozialadmin`@`localhost` EVENT `update_statistics` ON SCHEDULE EVERY 6 HOUR STARTS '2016-10-20 05:00:00' ON COMPLETION PRESERVE ENABLE DO BEGIN
 INSERT
@@ -178,6 +188,5 @@ WHERE
 END$$
 
 DELIMITER ;
-
 QUERY;
 ?>

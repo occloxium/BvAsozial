@@ -1,4 +1,7 @@
 <?php
+  ini_set('display_errors','1');
+  $umask = umask();
+  umask(0002);
   // verify post input is valid
   $success = true;
   if(!isset($_POST)){
@@ -16,6 +19,7 @@
   $smtp_mail = $_POST['smtp_mail'];
   $smtp_password = $_POST['smtp_password'];
   $smtp_name = $_POST['smtp_name'];
+  $domain = $_POST['domain'];
 
   // create temporary mysqli for creating tables
   $mysqli = new mysqli($db_host, $db_user, $db_password, $db_name) or die('Wrong login data for mysql server');
@@ -35,20 +39,19 @@
     die('failure on db creation');
   }
   // Create root folder & include folder
-  @mkdir(__DIR__ . '/bvasozial/');
-  @mkdir(__DIR__ . '/bvasozial/includes/');
+  mkdir(__DIR__ . '/../includes/');
 
   // htaccess
-  $include_path = realpath(__DIR__ . '/bvasozial/includes/');
-  file_put_contents(__DIR__. "/bvasozial/.htaccess", "php_value include_path \"$include_path\"");
+  $include_path = realpath(__DIR__ . '/../includes/');
+  file_put_contents(__DIR__. "/../.htaccess", "php_value include_path \"$include_path\"");
 
   // constants file
   $content = file_get_contents('preset/constants.pre.php');
   $content = str_replace(
-    ['$include_path','$db_host','$db_user','$db_password','$db_name','$smtp_host','$smtp_port','$smtp_mail','$smtp_password','$smtp_name'],
-    ["'$include_path'","'$db_host'","'$db_user'","'$db_password'","'$db_name'","'$smtp_host'","'$smtp_port'","'$smtp_mail'","'$smtp_password'","'$smtp_name'"],
+    ['$domain','$include_path','$db_host','$db_user','$db_password','$db_name','$smtp_host','$smtp_port','$smtp_mail','$smtp_password','$smtp_name'],
+    ["'$domain'","'$include_path'","'$db_host'","'$db_user'","'$db_password'","'$db_name'","'$smtp_host'","'$smtp_port'","'$smtp_mail'","'$smtp_password'","'$smtp_name'"],
     $content);
-  file_put_contents(__DIR__.'/bvasozial/includes/constants.php', $content);
+  file_put_contents(__DIR__.'/../includes/constants.php', $content);
 
   // move other predefined files
   function recursive_copy($src,$dst) {
@@ -64,9 +67,16 @@
     }
     closedir($dir);
   }
-  recursive_copy("src","bvasozial");
-  exec('php ../composer.phar install');
+  recursive_copy("src","../");
+
+  // Create composer Installer
+  $composer_installer = "<?php exec('php composer.phar install'); exec('php composer.phar require phpmailer/phpmailer'); ?>";
+  file_put_contents('../composer-installer.php', $composer_installer);
+  require_once('../composer-installer.php');
+  // Created Composer and PHPMailer
+
   if($success == true) :
+    umask($umask);
 ?>
 <!doctype html>
 <html>
@@ -105,6 +115,17 @@
 			}
       section {
         padding: 1.5rem 0;
+      }
+      @media print {
+        header {
+          display: none;
+        }
+        main > p {
+          display: none;
+        }
+        main > h1 {
+          display: none;
+        }
       }
 		</style>
 	</head>

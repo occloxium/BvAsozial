@@ -53,6 +53,14 @@
 		</header>
 		<main>
 			<form action="install.php" method="post">
+        <section>
+          <h3>Webserver</h3>
+          <div class="form_group">
+						<label for="db_host">Datenbank-Host</label>
+						<input type="text" value="" class="form-control" id="domain" aria-describedby="domain_help" name="domain" />
+						<small id="domain_help">Die Domain, die dieses Script ausführt</small>
+					</div>
+        </section>
 				<section>
 					<h3>Datenbank</h3>
 					<div class="form_group">
@@ -72,8 +80,7 @@
 					</div>
 					<div class="form_group">
 						<label for="db_name">Datenbank-Name</label>
-						<input type="text" readonly value="bvasozial-2017" class="form-control" id="db_name" aria-describedby="db_name_help" name="db_name" />
-						<small id="db_name_help">Bereits gesetzt</small>
+						<input type="text" value="bvasozial" class="form-control" id="db_name" aria-describedby="db_name_help" name="db_name" />
 					</div>
 				</section>
         <section>
@@ -100,7 +107,7 @@
           </div>
           <div class="form_group">
             <label for="smtp_host">SMTP-Passwort</label>
-            <input type="text" value="localhost" class="form-control" id="smtp_password" name="smtp_password" />
+            <input type="text" value="k" class="form-control" id="smtp_password" name="smtp_password" />
           </div>
         </section>
 				<section>

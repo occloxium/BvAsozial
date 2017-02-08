@@ -68,7 +68,8 @@
 													echo "<li class=\"list__item\" id=\"noname\">{$user['name']} ist noch anonym</li>";
 												else :
 													foreach($json['rufnamen'] as $name){
-                          	if($_SESSION['user']['uid'] === $user['uid']){
+                          	if($_SESSION['user']['uid'] === $user['uid'] || $_SESSION['user']['is_mod']){
+                              // Can edit names
                           		echo "<span class=\"mdl-chip mdl-chip--deletable\" data-name=\"$name\">
                               	<span class=\"mdl-chip__text\">$name</span>
                               	<button type=\"button\" class=\"mdl-chip__action\"><i class=\"material-icons\">cancel</i></button>
@@ -81,7 +82,7 @@
 													}
 													endif;
                           $befreundet = isFriendsWith($_SESSION['user']['uid'], $user['uid'], $mysqli);
-                          if($befreundet) :	?>
+                          if($befreundet || $_SESSION['user']['is_mod']) :	?>
                           	<button id="btnaddname" class="mdl-color-text--white mdl-color--primary data-section__button mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                               <i class="material-icons">add</i>
                               <span class="visuallyhidden">Rufnamen hinzufügen</span>
@@ -157,7 +158,7 @@
                   <?php if($befreundet && $_SESSION['user'] != $user) : ?>, darunter auch du<?php endif; ?>.
                 </p>
             </div>
-          <?php if($befreundet) : ?>
+          <?php if($befreundet || $_SESSION['user']['is_mod']) : ?>
             <div class="mdl-cell fragen befreundet mdl-color--white mdl-shadow--2dp mdl-cell--7-col mdl-cell--7-col-desktop">
               <p class="mdl-typography--headline">Fragen für die Freunde</p>
               <ol>

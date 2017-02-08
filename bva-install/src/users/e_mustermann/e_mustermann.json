@@ -1,0 +1,54 @@
+{
+    "spruch": "Besser sp\u00e4t als nie",
+    "rufnamen": [],
+    "freundesfragen": [
+        {
+            "frage": "Was ist ein Talent von mir?",
+            "antworten": []
+        },
+        {
+            "frage": "Was sind Eigenschaften die dich an mir nerven?",
+            "antworten": []
+        },
+        {
+            "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
+            "antworten": []
+        },
+        {
+            "frage": "Was sind deine alternativen Fakten?",
+            "antworten": []
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "Lasse leidenschaftlich abschreiben",
+            "beantwortet": true
+        },
+        {
+            "frage": "Du hast eine S\u00fcnde frei, welche verbotene Sache w\u00fcrdest du machen?",
+            "antwort": "Keine Ahnung",
+            "beantwortet": true
+        },
+        {
+            "frage": "Schon mal aufs Maul gekriegt? Wenn ja, zur\u00fcckgeschlagen?",
+            "antwort": "Mit der Handtasche",
+            "beantwortet": true
+        },
+        {
+            "frage": "Seit wann bist du speifrei? (nur alkoholische Verschuldungen)",
+            "antwort": "Vorgestern",
+            "beantwortet": true
+        },
+        {
+            "frage": "Was ist das langweiligste Buch, dass du in deiner Schulzeit gelesen hast?",
+            "antwort": "Lambacher Schweizer Mathematik f\u00fcr die Oberstufe",
+            "beantwortet": true
+        },
+        {
+            "frage": "Was ist dein Lieblingsort in der Schule?",
+            "antwort": "Die Raucherecke",
+            "beantwortet": true
+        }
+    ]
+}

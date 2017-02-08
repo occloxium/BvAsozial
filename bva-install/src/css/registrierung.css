@@ -1,0 +1,73 @@
+.container form {
+	max-width: 360px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.container form .mdl-textfield {
+	width: 100%;
+	display: block;
+}
+
+.container form .mdl-button {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+img.avatar {
+	width: 80%;
+	margin: 2em auto;
+	display: block;
+	border-radius: 1000px;
+}
+.avatar__image {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+}
+.slider-wrapper {
+	margin: 1em auto 2em;
+	max-width: 360px;
+	width: 100%;
+	display: flex;
+}
+
+.slider-wrapper .mdl-slider__container {
+	flex-grow: 1;
+}
+
+.form--fill-wrapper {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+.form--fill-wrapper .mdl-button {
+	max-width: 288px;
+	width: 80%;
+}
+
+.fragenkatalog-table {
+	padding: 0 2em;
+	width: calc(100% + 2em);
+	margin-left: -1em;
+	margin-bottom: 2em;
+}
+
+.fragenkatalog-table tr {
+	padding: 0.8em 2em;
+	display: block;
+	cursor: pointer;
+	transition: background 0.33s ease-in-out;
+}
+
+.fragenkatalog-table tr:active,
+.fragenkatalog-table tr:hover {
+	background: #eee;
+}
+
+.fragenkatalog-table tr:not(:first-child) {
+	border-top: 1px solid rgba(0,0,0,.12);
+}

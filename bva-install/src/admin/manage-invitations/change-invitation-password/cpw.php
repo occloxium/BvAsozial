@@ -1,0 +1,27 @@
+<?php
+	require('constants.php');
+	require_once(ABS_PATH.INC_PATH.'functions.php');
+
+	secure_session_start();
+
+	if(isset($_POST['uid'], $_POST['password'])){
+		if(login_check($mysqli) && $_SESSION['user']['is_admin']){
+			$h_pw = hash('sha384', $_POST['password']);
+			if($stmt = $mysqli->prepare('UPDATE ausstehende_einladungen SET password = ? WHERE uid = ?')){
+				$stmt->bind_param('ss', $h_pw, $_POST['uid']);
+				$stmt->execute();
+				if($stmt->errno == 00000){
+					echo success(["html" => "<p class=\"mdl-typography--headline\">Passwort wurde gesetzt!</p><p>Das neue Passwort wurde gesetzt<br>Die Einladung des Benutzers {$_POST['uid']} hat nun das Passwort: <b>{$_POST['password']}</b></p><a href=\"../\">Zurück</a>"]);
+				} else {
+					echo error('internalError', 500, 'Could not execute request');
+				}
+			} else {
+				echo error('internalError', 500, 'Could not prepare statement');
+			}
+		} else {
+			echo error('clientError', 403, 'Forbidden');
+		}
+	} else {
+		echo error('clientError', 400, 'Bad Request');
+	}
+?>

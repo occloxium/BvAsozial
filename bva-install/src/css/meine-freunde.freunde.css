@@ -1,0 +1,43 @@
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form .mdl-textfield {
+  flex-grow: 1;
+}
+
+main .mdl-card {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  width: 720px;
+}
+
+main .mdl-card.container--top-margin {
+  margin-top: 6em;
+}
+
+.request__user-avatar {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.seamless-anchor {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.seamless-anchor li {
+  cursor: pointer;
+}
+
+.no-entries {
+  color: rgba(0,0,0,0.33);
+  text-align: center;
+}

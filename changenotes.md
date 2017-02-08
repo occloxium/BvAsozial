@@ -1,5 +1,18 @@
 # Changenotes
 
+# Versio 1.2.34
+**08.02.2017**
+
+*   Minor changes to some scripts
+*   Added mod access to user properties
+
+# Version 1.2.33
+**01.02.2017**
+
+*   Prepared distant server execution
+*   Fixed some errors in question alteration
+
+
 # Version 1.2.32
 **31.01.2017**
 

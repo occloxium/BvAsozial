@@ -1,9 +1,7 @@
 <?php
-
-
 	// Domain
-	define('DOMAIN','bvasozial.de');
-	
+	define('DOMAIN', $domain);
+
 	// Sicherheitskonstante
 	define('SECURE', false);
 
@@ -28,5 +26,9 @@
 	define('INVITE_PASSWORD', $smtp_password);
 	define('INVITE_PORT', $smtp_port);
 
+  // load mysqli connection
   require_once('db_connect.php');
+
+  // Load Composer dependencies
+  require(ABS_PATH.'/vendor/autoload.php');
 ?>

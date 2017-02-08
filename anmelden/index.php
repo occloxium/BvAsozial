@@ -1,7 +1,7 @@
 
 <?php
   require_once('constants.php');
-  require_once(ABS_PATH.INC_PATH.'functions.php')
+  require_once(ABS_PATH . INC_PATH . 'functions.php')
  ?>
 <!DOCTYPE html>
 <html lang="de">
