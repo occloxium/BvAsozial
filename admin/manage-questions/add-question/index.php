@@ -22,6 +22,17 @@
         </header>
         <main class="page-content mdl-color--grey-100">
           <div class="mdl-card container mdl-color--white mdl-shadow--2dp">
+            <div class="breadcrumb">
+              <li class="breadcrumb__item">
+                <a href="../../">Admin</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a href="../">Fragen verwalten</a>
+              </li>
+              <li class="breadcrumb__item">
+                Frage hinzufügen
+              </li>
+            </div>
             <form action="./aq.php" method="post">
               <p class="mdl-typography--headline">Frage hinzufügen</p>
               <p class="mdl-typography--body-1">

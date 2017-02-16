@@ -20,9 +20,10 @@
 	define('DATABASE', 'bvasozial-2016');
 
 	// SMTP-Server-Daten
-	define('INVITE_HOST', 'host90.checkdomain.de');
+	define('INVITE_HOST', 'occloxium.com');
 	define('INVITE_NAME', 'Abi-Zeitung 2016');
-	define('INVITE_MAIL', 'bvasozial.2016@occloxium.com');
+	define('INVITE_MAIL', 'bvasozial@occloxium.com');
+  define('INVITE_UID', 'bvasozial');
 	define('INVITE_PASSWORD', 'kralle2209');
 	define('INVITE_PORT', 587);
 

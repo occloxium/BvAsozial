@@ -1,6 +1,16 @@
 # Changenotes
 
-# Versio 1.2.34
+# Version 1.2.35
+**16.02.2017**
+
+*   Added the "Ultra-Fragen-Manager" back-end script (`/includes/frage.php`);
+*   Dropped "Fragen für Freunde" section from `/users/`
+*   Added *most* moderator features to the front-end. See [Milestones](milestones.md) for details on the mod feature
+*   Added *mod management* to the admin panel
+*   Added breadcrump navigation to most singleton operation-only pages in `/admin/`
+*   Added `/mod/`. See [Milestones](milestones.md) for details
+
+# Version 1.2.34
 **08.02.2017**
 
 *   Minor changes to some scripts

@@ -1,0 +1,85 @@
+.daten-container {
+  background-color: #00BCD4 !important;
+  color: #fff;
+}
+.daten-container h3 {
+  font-weight: bold;
+}
+.daten-container span {
+  font-size: 0.8em;
+  display: block;
+}
+.flex-container--left {
+  flex-grow: 1;
+}
+.flex-container--right {
+  padding-right: 16px;
+}
+.avatar.avatar--profile {
+  height: 96px;
+  width: 96px;
+  border-radius: 100px;
+}
+input.mdl-chip__text {
+  border: none;
+  background: none;
+}
+.form--rufnamen, .form--eigeneFragen, .form--freundesfragen {
+  margin: 0 !important;
+  max-width: none !important;
+  width: auto !important;
+  padding: 1em;
+}
+.form--rufnamen > button {
+  width: 80%;
+  max-width: 320px;
+}
+.form--rufnamen ul {
+  padding: 1em 0 2em;
+}
+.form--rufnamen ul li {
+  vertical-align: middle;
+}
+.form--rufnamen ul li.none {
+  list-style: none;
+  color: rgba(0,0,0,0.5);
+  font-size: 0.8em;
+  display: inline-block;
+}
+.form--rufnamen ul button.mdl-button--icon {
+  width: 32px;
+  display: inline-block;
+  margin: 0 8px;
+}
+.mdl-chip__action i {
+  font-size: 24px !important;
+}
+.mdl-chip.empty::before {
+  content: 'Rufname';
+  color: rgba(0,0,0,0.5);
+  font-size: 0.8rem;
+  position: absolute;
+}
+.mdl-chip {
+  position: relative;
+  margin: 4px 4px;
+}
+.mdl-chip__text {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  min-width: 48px;
+}
+.form--eigeneFragen li .mdl-button {
+  width: auto;
+}
+ul li {
+  list-style: none outside none;
+}
+ul {
+  padding-left: 0;
+}
+.form--freundesfragen ul li span {
+  font-size: 0.8rem;
+  color: rgba(0,0,0,0.5);
+}

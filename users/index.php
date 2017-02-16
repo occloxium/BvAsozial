@@ -158,36 +158,6 @@
                   <?php if($befreundet && $_SESSION['user'] != $user) : ?>, darunter auch du<?php endif; ?>.
                 </p>
             </div>
-          <?php if($befreundet || $_SESSION['user']['is_mod']) : ?>
-            <div class="mdl-cell fragen befreundet mdl-color--white mdl-shadow--2dp mdl-cell--7-col mdl-cell--7-col-desktop">
-              <p class="mdl-typography--headline">Fragen für die Freunde</p>
-              <ol>
-                <?php
-                  $key = 0;
-									foreach($json['freundesfragen'] as $fragenobjekt){
-                    $i = $key + 1;
-										$fragenobjekt = $json['freundesfragen'][$key];
-										$frage = $fragenobjekt['frage'];
-										$antwort = "";
-										if(array_key_exists($_SESSION['user']['uid'], $fragenobjekt['antworten'])){
-											$antwort = $fragenobjekt['antworten'][$_SESSION['user']['uid']];
-										} else {
-											$antwort = "";
-										}
-										require(ABS_PATH.INC_PATH.'frage.php');
-                    $key++;
-                    if($key >= 5){
-                      break;
-                    }
-								} ?>
-              </ol>
-              <a class="fragen__link" href="/fragen/?user=<?php echo urlencode(base64_encode($user['uid']))?>">Weitere Fragen beantworten...</a>
-            </div>
-          <?php else : ?>
-            <div class="mdl-cell fragen mdl-color--white mdl-shadow--2dp mdl-cell--7-col mdl-cell--7-col-desktop">
-              <p class="mdl-typography--text-center mdl-typography--title">Du musst mit <?php echo $user['vorname'] ?> befreundet sein, um seine Fragen beantworten zu können</p>
-            </div>
-          <?php endif; ?>
         </div>
         <?php else : ?>
         <div class="mdl-grid">

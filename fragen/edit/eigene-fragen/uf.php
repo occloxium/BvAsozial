@@ -26,14 +26,15 @@
           } else {
             $new_obj = [
               "frage" => $fragenkatalog['eigeneFragen'][$num - 1],
-              "antwort" => ""
+              "antwort" => "",
+              "beantwortet" => false
             ];
             $new_userfile[] = $new_obj;
           }
         }
       }
       $userfile['eigeneFragen'] = $new_userfile;
-      if(file_put_contents(ABS_PATH."/users/{$user['uid']}/{$user['uid']}.json", json_encode($userfile, JSON_PRETTY_PRINT)) > 0)
+      if(file_put_contents(ABS_PATH . "/users/{$user['uid']}/{$user['uid']}.json", json_encode($userfile, JSON_PRETTY_PRINT)) > 0)
         echo success(["message" => "Fragen angepasst"]);
       else
         echo error('internalError', 500, 'Unable to write to file');

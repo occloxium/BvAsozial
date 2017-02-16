@@ -17,7 +17,7 @@
 			if(!isset($_POST['undo'])){
 				if(!in_array(strtolower($_POST['name']), array_map('strtolower', $json['rufnamen']))){
 					array_push($json['rufnamen'], $_POST['name']); // Success!
-          $html = rufnamenliste($user, $_SESSION['user']['uid'], $json['rufnamen']);
+          $html = rufnamenliste($user, $_SESSION['user']['uid'], $json['rufnamen'], $mysqli);
           success(["html" => $html]);
 				} else {
 					error('clientError', 400, 'Bad Request', ["Der angegebene Rufname ist ein Dublikat und bereits vorhanden"]);
@@ -30,7 +30,7 @@
 				if($key !== false){
 					unset($list[$key]);
 					// echo response object
-	        $html = rufnamenliste($_POST['username'], $_SESSION['user']['uid'], $list);
+	        $html = rufnamenliste($_POST['username'], $_SESSION['user']['uid'], $list, $mysqli);
 					success(["html" => $html]);
 					$json['rufnamen'] = $list;
 				} else {

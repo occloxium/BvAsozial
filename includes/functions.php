@@ -65,8 +65,8 @@
    * @param $mysqli the mysqli object refering to the database
    * @return a mysqli::result object for further iteration in loops
 	 */
-	function getUsers($mysqli){
-		return $mysqli->query("SELECT * FROM person");
+	function getUsers($mysqli, $query = "SELECT * FROM person"){
+		return $mysqli->query($query);
 	}
 
   /**
@@ -106,9 +106,9 @@
 	}
 
   /**
-   * GETs a list of a user's friends
+   * Returns an array of a user's friends [string]
    * @param $username the user's id
-   * @param $mysqli the mysqli refering to the database
+   * @param $mysqli the mysqli object refering to the database
    * @return an array containing the uid of the user's friend
    */
 	function getFriends($username, $mysqli){
@@ -124,6 +124,20 @@
 		}
     return $friends;
 	}
+
+  /**
+   * returns an array of a users friends [user objects]
+   * @param $freunde array containing the usernames of the friends
+   * @param $mysqli the mysqli object refering to the database
+   * @param an array containing the user objects of a friend list
+   */
+  function _getFriends($freunde, $mysqli){
+    $friends = [];
+    foreach($freunde as $freund){
+      $friends[] = getUser($freund, $mysqli);
+    }
+    return $friends;
+  }
 
   /**
    * Creates a new user
@@ -364,7 +378,7 @@
    * @return true if the $accessor is privileged to alter, otherwise false
    */
   function is_privileged($accessor, $target, $mysqli){
-    if(is_admin($accessor) || is_mod($accessor) || $accessor == $target){
+    if(is_admin($accessor, $mysqli) || is_mod($accessor, $mysqli) || $accessor == $target){
       return true;
     } else {
       return false;
@@ -448,7 +462,6 @@
         false;
     }
   }
-
 
   /*
   * USER FUNCTIONS END ---------------------------------------------------------
@@ -600,18 +613,22 @@
    * @param $rufnamen an array containing all additional names a user can have
    * @return a string containing the HTML to be inserted
    */
-  function rufnamenliste($user, $logged_in_user, $rufnamen){
+  function rufnamenliste($user, $logged_in_user, $rufnamen, $mysqli){
     $html = "";
-    $detailedUser = getMinimalUser($user);
-    // signed-in user and requesting user are equivalent -> add option button to remove names
+    $detailedUser = getMinimalUser($user, $mysqli);
+    $i = 0;
     if(empty($rufnamen))
-      return "<li class=\"list__item\" id=\"noname\">{$detailedUser['name']} ist (noch) anonym</li>";
-    if(is_privileged($logged_in_user, $user)){
-      foreach($rufnamen as $name)
-        $html .= "<span class=\"mdl-chip mdl-chip--deletable\" data-name=\"$name\"><span class=\"mdl-chip__text\">$name</span><button type=\"button\" class=\"mdl-chip__action\"><i class=\"material-icons\">cancel</i></button></span>";
+      return "<li class=\"none\">{$detailedUser['name']} ist (noch) anonym</li>";
+    if(is_privileged($logged_in_user, $user, $mysqli)){
+      foreach($rufnamen as $name){
+        $html .= "<span id=\"r-$i\" class=\"mdl-chip mdl-chip--deletable\" contenteditable=\"true\"><span class=\"mdl-chip__text\">$name</span><button type=\"button\" class=\"mdl-chip__action\"><i class=\"material-icons\">cancel</i></button></span>";
+        $i++;
+      }
     } else {
-      foreach($rufnamen as $name)
-        $html .= "<span class=\"mdl-chip\" data-name=\"$name\"><span class=\"mdl-chip__text\">$name</span></span>";
+      foreach($rufnamen as $name){
+        $html .= "<span id=\"r-$i\" class=\"mdl-chip\" data-name=\"$name\"><span class=\"mdl-chip__text\">$name</span></span>";
+        $i++;
+      }
     }
     return $html;
   }

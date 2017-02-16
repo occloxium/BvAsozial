@@ -1,0 +1,20 @@
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form .mdl-textfield {
+  flex-grow: 1;
+}
+.container form {
+  max-width: none;
+}
+.container form .mdl-button {
+  width: 32px;
+}
+li.none {
+  list-style: none;
+  color: rgba(0,0,0,0.5);
+  font-size: 0.8em;
+  display: inline-block;
+}

@@ -12,7 +12,7 @@ var attemptLogin = function(uid, password){
     try {
 			var obj = JSON.parse(data);
 			if(obj.isValid){
-				$('form').submit();
+				location.replace('./index.php');
 			} else {
         if(obj.message == "Wrong password"){
           $('.mdl-snackbar')[0].MaterialSnackbar.showSnackbar({

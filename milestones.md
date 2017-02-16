@@ -5,9 +5,9 @@
 -   [x] __Zentraler Login__ : Alle Benuter, ob normale Benutzer, Admins oder Moderatoren benutzen die gleiche Oberfläche um sich anzumelden. Im Back-End wird dann entschieden, welcher Inhalt dem Benutzer präsentiert wird.
 Wie bereits erwähnt bringt 1.2 eine neue Gruppe von Benutzern mit sich:
 -   [x] __Moderatoren__ : Admins können bestimmte normale Benutzer zu Moderatoren der Plattform machen. Moderatoren können
-    -   [ ] auf alle Profile zugreifen
-    -   [ ] Rufnamen löschen und verändern
-    -   [ ] Antworten auf Fragen aller Personen bearbeiten und löschen
+    -   [x] auf alle Profile zugreifen
+    -   [x] Rufnamen löschen und verändern
+    -   [x] Antworten auf Fragen aller Personen bearbeiten und löschen
 -   [ ] __Profilbilder__ : Nun können Benutzer ihre eigenen Profilbilder setzen und auch wieder löschen
 -   [ ] __Privatsphäre-Einstellungen für Profile__ : Nutzer können nun festlegen, ob sie mit der Suche gefunden werden wollen oder nicht und welche Daten von ihnen angezeigt werden sollen
 -   [ ] __Einstellungen__ : Über den neuen Menüpunkt "Einstellungen" können Benutzer nun verschiedene Sachen an ihrem Profil einstellen. Unter anderem sind die

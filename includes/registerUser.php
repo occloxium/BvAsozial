@@ -1,7 +1,7 @@
 <?php
 	require('constants.php');
 	require_once(ABS_PATH.INC_PATH.'functions.php');
-	require(ABS_PATH.'/vendor/autoload.php');
+
 	secure_session_start();
 
 	$user = createUserObject($_POST);
@@ -23,11 +23,19 @@
 
 					$mail->Host = INVITE_HOST;
 					$mail->SMTPAuth = true;
-					$mail->SMTPDebug = 0;
+					$mail->SMTPDebug = 2;
 					$mail->Port = INVITE_PORT;
 					$mail->Username = INVITE_MAIL;
 					$mail->Password = INVITE_PASSWORD;
 					$mail->SMTPSecure = 'tls';
+          $mail->SMTPOptions = array(
+            'ssl' => array(
+              'verify_peer' => false,
+              'verify_peer_name' => false,
+              'allow_self_signed' => true
+            )
+          );
+
 
 					$mail->setFrom(INVITE_MAIL, INVITE_NAME);
 					$mail->addAddress($_POST['email'], $_POST['name']);

@@ -1,23 +1,24 @@
 <?php
 	require_once('constants.php');
 	require_once(ABS_PATH.INC_PATH.'functions.php');
+
 	secure_session_start();
 	if(login_check($mysqli) == true && $_SESSION['user']['is_admin'] && isset($_GET['_'])) :
-		$uid = base64_decode($_GET['_']);
+    $user = getUser(base64_decode($_GET['_']), $mysqli);
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php _getHead() ?>
+		<?php _getHead(); ?>
 	</head>
 	<body>
 		<div class="mdl-layout__container">
 			<div class="layout-wrapper">
-				<header class="layout__header layout__header--small mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+				<header class="layout__header layout__header--small mdl-color--accent mdl-color-text--blue-grey-50">
 					<img class="logo prime" src="/img/logo-cropped.png">
 					<div class="header__inner">
 						<p class="mdl-typography--headline header__title">
-							Benutzer-Passwort ändern
+							Moderator suspendieren
 						</p>
 					</div>
 				</header>
@@ -25,31 +26,30 @@
 					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
             <div class="breadcrumb">
               <li class="breadcrumb__item">
-                <a href="../../">Admin</a>
+                <a href="../../../">Admin</a>
               </li>
               <li class="breadcrumb__item">
-                <a href="../">Benutzer verwalten</a>
+                <a href="../../">Benutzer verwalten</a>
               </li>
               <li class="breadcrumb__item">
-                Benutzer-Passwort ändern
+                <a href="../">Moderatoren verwalten</a>
+              </li>
+              <li class="breadcrumb__item">
+                Moderator suspendieren
               </li>
             </div>
-						<form action="./cpw.php">
-							<input type="hidden" name="step" value="0">
-							<p class="mdl-typography--headline">Passwort neu setzen...</p>
+						<form action="./rmu.php">
+							<p class="mdl-typography--headline">Moderator suspendieren</p>
 							<p class="mdl-typography--body-1">
-								Im Falle von Passwort-Verlust kannst du hiermit ein neues Passwort für den Benutzer setzen. Ein neues zufälliges wird dir direkt vorgeschlagen
+                Wenn ein Moderator nicht seinen Dienst erfüllt, seine Macht missbraucht oder andere Dinge anstellt, so kann er von seiner Tätigkeit suspendiert werden. <br />
+								Bist du dir sicher, dass du den Moderator<br /><b><?php echo $user['name']?></b><br />final suspendieren möchtest?<br /> <small>Das kann nur mit Datenbankzugriff rückgängig gemacht werden.</small>
 							</p>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input type="text" class="mdl-textfield__input" value="<?php echo $uid ?>" id="uid" name="uid" readonly>
+								<input type="text" class="mdl-textfield__input" value="<?php echo $user['uid'] ?>" id="uid" name="uid" readonly>
 								<label for="uid" class="mdl-textfield__label">Benutzername</label>
 							</div>
-							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input type="text" class="mdl-textfield__input" id="password" name="password">
-								<label for="password" class="mdl-textfield__label">Neues Passwort</label>
-							</div>
-							<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect" type="button">
-								Passwort setzen
+							<button class="mdl-button mdl-js-button mdl-color--accent mdl-color-text--white mdl-js-ripple-effect" type="button">
+								Suspendieren
 							</button>
 						</form>
 					</div>
@@ -58,21 +58,21 @@
 		</div>
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 		<script>
-			$('input#password').val(Math.random().toString(36).substr(2,8));
 			$('.mdl-button').click(function(){
 				$('#response').detach();
 				$.ajax({
 					data: $('form').serialize(),
 					method: 'post',
-					url: 'cpw.php',
+					url: 'sum.php',
 					success: function(data){
 						try {
 							var obj = JSON.parse(data);
 							if(obj.success){
-                $('.mdl-button').detach();
-                $('form').append($('<p>Passwort wurde geändert.</p>'));
-                $('form').append($('<a></a>').addClass('mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect').attr('href','../').append($('<i></i>').addClass('material-icons').text('keyboard_arrow_left')).text('Zurück');
-              } else {
+                $('form .mdl-button').detach();
+                $('form').append($('<p>Moderator wurde suspendiert.</p>'));
+                $('form').append($('<a></a>').addClass('mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect').attr('href','../').prepend($('<i></i>').addClass('material-icons').text('keyboard_arrow_left')).text('Zurück'));
+								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append(obj.html));
+							} else {
 								$('main').append($('<div></div>').addClass('mdl-card container mdl-color--white mdl-shadow--2dp').attr('response').append($('<pre></pre>').text(data)));
 							}
 						} catch (e) {
