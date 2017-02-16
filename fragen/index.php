@@ -18,12 +18,6 @@
       <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="drawer-header">
           <img class="avatar" src="<?php echo '/users/' . $user['directory'] . '/avatar.jpg'?>">
-          <div>
-            <div class="flex-container">
-              <span><?php echo $user['email']; ?></span>
-              <div class="mdl-layout-spacer"></div>
-            </div>
-          </div>
         </header>
         <?php _getNav('fragen'); ?>
       </div>

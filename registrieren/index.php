@@ -433,7 +433,8 @@
                 $num = intVal(substr($key,8));
                 $userfile['eigeneFragen'][] = [
                   "frage" => $obj['eigeneFragen'][$num - 1],
-                  "antwort" => ""
+                  "antwort" => "",
+                  "beantwortet" => false
                 ];
               }
             }

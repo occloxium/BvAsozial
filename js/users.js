@@ -9,7 +9,6 @@ $('ul.data-section__list').on("click", '.mdl-chip.mdl-chip--deletable > .mdl-chi
   	var data = {
       username: $('main').attr('data-username'),
       name: $(this).prev('span').text(),
-      directory: $('main').attr('data-directory')
     };
 	  $.ajax({
       method: 'post',

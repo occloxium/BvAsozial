@@ -98,6 +98,7 @@ html {
 
 .navigation.is-collapsed {
   max-width: 72px;
+  overflow-x: hidden;
 }
 
 .layout .navigation .mdl-navigation__link {
@@ -387,4 +388,29 @@ a:visited {
 
 .mdl-tooltip {
   will-change: unset;
+}
+
+.breadcrumb {
+  padding: 0.5em;
+  font-size: 0.8rem;
+  margin-bottom: 1em;
+  list-style: none;
+
+}
+.breadcrumb__item {
+  float: left;
+} .breadcrumb__item::before {
+  display: inline-block;
+  content: '/';
+  padding: 0 0.5em;
+} .breadcrumb-item:hover::before {
+  text-decoration: none;
+} .breadcrumb-item:hover::before {
+  text-decoration: underline;
+} .breadcrumb__item a {
+  text-decoration: none;
+  color: #0275d8;
+} .breadcrumb__item a:hover {
+  text-decoration: underline;
+  color: #014c8c;
 }

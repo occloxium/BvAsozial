@@ -30,5 +30,6 @@
 <script src="/js/hash.js"></script>
 <script src="/js/jquery-3.1.1.min.js"></script>
 <script src="/js/dialog-polyfill.js"></script>
+<script defer src="/js/material.min.js"></script>
 HTML;
 ?>

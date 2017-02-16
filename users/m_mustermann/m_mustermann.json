@@ -1,0 +1,49 @@
+{
+    "spruch": "",
+    "rufnamen": [],
+    "freundesfragen": [
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": []
+        },
+        {
+            "frage": "Was ist mein Lieblingsschnaps\/ -bier\/ -zigarette\/ -zigarre?",
+            "antworten": []
+        },
+        {
+            "frage": "Was sind Eigenschaften die dich an mir nerven?",
+            "antworten": []
+        },
+        {
+            "frage": "Welche Eigenschaft hatte ich in der 5. noch nicht?",
+            "antworten": []
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": "",
+            "beantwortet": false
+        },
+        {
+            "frage": "Mit welchem Promi w\u00fcrdest du gerne mal im Aufzug steckenbleiben?",
+            "antwort": "",
+            "beantwortet": false
+        },
+        {
+            "frage": "Was war deine Lieblingsbesch\u00e4ftigung in Freistunden?",
+            "antwort": "",
+            "beantwortet": false
+        },
+        {
+            "frage": "Was wird dir nicht fehlen?",
+            "antwort": "",
+            "beantwortet": false
+        },
+        {
+            "frage": "Welches Schulfach war dein pers\u00f6nlicher Super- GAU?",
+            "antwort": "",
+            "beantwortet": false
+        }
+    ]
+}

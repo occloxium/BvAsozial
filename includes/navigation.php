@@ -24,7 +24,7 @@ if(isset($_SESSION['user']['uid'])){
       <a class="mdl-navigation__link" data-toggle="tooltip" data-placement="right" title="Fragen" href="/fragen/" id="fragen"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">question_answer</i><span>Fragen</span></a>
       <a class="mdl-navigation__link" data-toggle="tooltip" data-placement="right" title="Ausloggen" href="/logout/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i><span>Abmelden</span></a>
       <div class="mdl-layout-spacer"></div>
-      <a class="mdl-navigation__link" data-toggle="tooltip" data-placement="right" title="Moderation" href="/mod/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i><span>Moderation</span></a>
+      <a class="mdl-navigation__link" data-toggle="tooltip" data-placement="right" title="Moderation" id="moderation" href="/mod/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i><span>Moderation</span></a>
       <a class="mdl-navigation__link" href="/support/" id="hilfe"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
     </nav>
     <?php
