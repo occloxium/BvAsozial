@@ -1,5 +1,13 @@
 # Changenotes
 
+# Version 1.2.36
+**18.02.2017**
+
+*   Added moderator addition
+*   Fixed control flow in `is_mod` & `is_admin`
+*   Fixed unstable registration logins
+*   Fixed not properly executing javascript in `js/fragen.registrierung.js`
+
 # Version 1.2.35
 **16.02.2017**
 
@@ -29,7 +37,7 @@
 *   Changed the accent color of the whole platform to a bright blue
 *   Fixed all errors in main user interaction files like `/fragen/`, `/users/`, `/freunde/` etc.
 *   Removed the remaining usage of `$_SESSION['username']` and replaced it with `$_SESSION['user']['uid']` to access the complete user object instead of an own value out of context
-*   Reworked most of the AJAX PHP Content files to use the the `require` functions
+*   Reworked most of the AJAX PHP Content files to use the `require` functions
 *   Fixed some other bugs in quite a few files
 *   Minor changes to backend structure
 

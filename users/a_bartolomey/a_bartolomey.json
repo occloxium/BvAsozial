@@ -1,31 +1,31 @@
 {
-    "spruch": "",
+    "spruch": "Noch 5 Minuten!",
     "rufnamen": [],
     "freundesfragen": [
         {
             "frage": "Aktuelles Lieblingslied?",
-            "antworten": {}
+            "antworten": []
         },
         {
             "frage": "Was ist ein typischer Satz von mir?",
-            "antworten": {}
+            "antworten": []
         },
         {
             "frage": "Was sind Eigenschaften die dich an mir nerven?",
-            "antworten": {}
+            "antworten": []
         },
         {
             "frage": "Was sind lustige Dinge die du mit mir gemacht hast?",
-            "antworten": {}
+            "antworten": []
         },
         {
             "frage": "Welche Mutprobe w\u00fcrdest du mir gerne verschreiben?",
-            "antworten": {}
+            "antworten": []
         },
         {
             "frage": "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
             "antworten": {
-              "a_bartolomey": "Janina <3"
+                "a_bartolomey": "Janina <3"
             }
         }
     ],
@@ -37,43 +37,43 @@
         },
         {
             "frage": "Wann stehst du in der Regel auf?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "Viertel vor Viertel",
+            "beantwortet": true
         },
         {
             "frage": "Was ist das d\u00fcmmste was du je gemacht hast?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "Hab meine Freundin in Aachen West am Bahnhof stehen gelassen...",
+            "beantwortet": true
         },
         {
             "frage": "Was ist dein Lieblingsstar?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "Bradley Cooper oder Jennifer Lawrence",
+            "beantwortet": true
         },
         {
             "frage": "Was ist deine Lieblingsserie\/-sendung?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "Suits & Game of Thrones",
+            "beantwortet": true
         },
         {
             "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "'Das ist schlicht falsch!'",
+            "beantwortet": true
         },
         {
             "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "Gelb wie der Sonnenschein",
+            "beantwortet": true
         },
         {
             "frage": "Wenn du nicht du w\u00e4rst, wer w\u00e4rst du dann?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "\"Ein s\u00fc\u00dfer Pinguin oder eine Knutschkugel\"",
+            "beantwortet": true
         },
         {
             "frage": "Wie alt warst du bei deiner ersten Alkoholvergiftung?",
-            "antwort": "",
-            "beantwortet": false
+            "antwort": "F\u00fcnfzehn. Ganz sch\u00f6n \u00fcbel.",
+            "beantwortet": true
         }
     ]
 }

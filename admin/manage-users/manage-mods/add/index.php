@@ -12,7 +12,7 @@
 	<body>
 		<div class="mdl-layout__container">
 			<div class="layout-wrapper">
-				<header class="layout__header layout__header--small mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+				<header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
 					<img class="logo prime" src="/img/logo-cropped.png">
 					<div class="header__inner">
 						<p class="mdl-typography--headline header__title">
@@ -40,8 +40,7 @@
             <p class="mdl-typography--body-1">
               Wähle die Person aus, die Du zum Moderator machen möchtest.
             </p>
-						<form action="./am.php">
-
+            <form>
               <div class="form--search">
                 <div class="mdl-textfield mdl-js-textfield">
                   <input type="text" class="mdl-textfield__input" name="search" id="search">
@@ -51,6 +50,8 @@
                   <i class="material-icons">search</i>
                 </button>
               </div>
+            </form>
+						<form class="list" action="./am.php">
               <div class="list--users">
                 <ul>
                   <?php
@@ -66,7 +67,7 @@
                       while($user = $users->fetch_assoc()):
                       ?>
                       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-<?= $user['uid'] ?>">
-                        <input type="checkbox" value="<?= $user['uid'] ?>" id="checkbox-<?= $user['uid'] ?>" class="mdl-checkbox__input">
+                        <input type="checkbox" value="" name="<?= $user['uid'] ?>" id="checkbox-<?= $user['uid'] ?>" class="mdl-checkbox__input">
                         <span class="mdl-checkbox__label"><?= $user['name']?></span>
                       </label>
                       <?php
@@ -90,7 +91,28 @@
 			</div>
 		</div>
     <script>
-      
+      $('form.list button').click(function(){
+        $.ajax({
+          type: 'post',
+          url: 'am.php',
+          data: $('form.list').serialize()
+        }).done(function(data){
+          try {
+            var obj = JSON.parse(data);
+            $('form.list button, .warnung').detach();
+            if(obj.success){
+              $('main').append($('<div></div>').addClass('log mdl-card container mdl-color--white mdl-shadow--2dp').append($('<pre></pre>').append(obj.log)));
+            } else {
+              $('main').append($('<div></div>').addClass('log mdl-card container mdl-color--white mdl-shadow--2dp').append($('<pre></pre>').append(obj.message)));
+            }
+          } catch (e){
+            console.error(data);
+          }
+          $('form.list').append($('<a></a>').addClass('mdl-button mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white').attr('href', '../').text('Zurück').prepend($('<i></i>').addClass('material-icons').text('keyboard_arrow_left')));
+        }).fail(function(e){
+
+        });
+      });
     </script>
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	</body>

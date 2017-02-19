@@ -42,3 +42,6 @@ li.none {
   margin: 0.5em 0;
   font-size: 1.5em;
 }
+.log {
+  border-left: 2px solid rgb(0, 188, 212);
+}

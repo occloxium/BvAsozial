@@ -17,10 +17,11 @@
           <p class="mdl-typography--headline" style="font-size: 250%; font-weight: bold; margin: 1em 0 2em; text-align: center">Support</p>
           <p class="mdl-typography--body-1" style="width: 80%; margin: 0 auto; font-size: 100%; line-height: 2em;">
             Wir haben uns Mühe gegeben, alles fehlerfrei und -unanfällig zu programmieren, aber auch wir sind nur Menschen und keine Maschinen, wir machen Fehler.
-            <br> Wenn ihr daher über einen stolpert, nicht wisst, wie euch geschieht oder die Website plötzlich wilde Sachen macht, berichtet uns davon, per Mail an <a href="mailto:occloxium@gmail.com" target="_blank">occloxium@gmail.com</a>, per Whatsapp an die Administratoren oder persönlich, falls ihr uns sehen solltet. Berichtet, wo der Fehler aufgetreten ist, was ihr davor gemacht habt und was passiert ist. Im Regelfall sollte das aber immer <i>nichts</i> sein ;).
+            <br> Wenn ihr daher über einen stolpert, nicht wisst, wie euch geschieht oder die Website plötzlich wilde Sachen macht, berichtet uns davon, per Mail an <a href="mailto:occloxium@gmail.com" target="_blank">occloxium@gmail.com</a>, per Whatsapp an die Administratoren oder persönlich, falls ihr uns sehen solltet. Berichtet, wo der Fehler aufgetreten ist, was ihr davor gemacht habt und was passiert ist. Im Regelfall sollte das aber immer <i>nichts</i> sein ;).<br />
+            Der Quellcode der Plattform ist offen, jeder kann ihn haben, bearbeiten und verändern und seine eigene Version davon schaffen. Das Projekt ist verfügbar unter <a href="https://github.com/occloxium/BvAsozial" target="_blank">https://github.com/occloxium/BvAsozial</a>. Dort findet ihr auch weitere Informationen über das Selber-Hosten der Plattform auf den eigenen Servern.
           </p>
           <p class="mdl-typography-body-1" style="width: 80%; margin: 1em auto; font-size: 120%; line-height: 2em;">
-            Vielen Dank für jegliche Rückmeldung<br> Euer <b>Abi-Zeitungsteam</b>
+            Vielen Dank für jegliche Rückmeldung<br> Euer <b>BvAsozial-Team</b>
           </p>
         </div>
       </main>

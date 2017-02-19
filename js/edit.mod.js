@@ -16,7 +16,7 @@ function rufnamenState(){
    */
   this.events = {
     removeName: function(){
-    	var data = {
+    	/*var data = {
         username: $('main').attr('data-username'),
         name: $(this).prev('span').text(),
       };
@@ -37,7 +37,7 @@ function rufnamenState(){
         } catch (e) {
           console.error(d);
         }
-  	  });
+  	  });*/
     },
     blur: function(){
       window.getSelection().removeAllRanges();
@@ -164,6 +164,12 @@ function rufnamenState(){
   window.rufnamenState = new rufnamenState();
 })();
 
+function Rufname(name, by){
+  this.for = $('main').attr('data-username');
+  this.name = name;
+  this.by = by || $('main').attr('data-signedInUser');
+}
+
 /**
  * WINDOW Event Handlers for Components like adding new chips
  */
@@ -179,59 +185,35 @@ var events = {
   /**
    * TODO Update event handlers
    */
-	pushNameToServer: function() {
-		var	postData = {
-			for: _DATA_.specatedUser.username,
-			name: $('#textfieldAddName').val(),
-			postedBy: _DATA_.signedInUser.username
-		};
-		if(postData.name.length <= 1){
-			var snackbar = $('.mdl-snackbar');
-			snackbar.attr('data-success', "false");
-			snackbar[0].MaterialSnackbar.showSnackbar({
-				message: 'Fehler: Der eingegebene Name ist ungültig',
-				timeout: 2000
-			});
-			console.warn('Kein Name.');
-			return;
-		}
-		$(this).children('i.material-icons').text('done');
+	pushNamesToServer: function() {
+		var postData = [];
+    for(var key in window.rufnamenState.currentState){
+      if(window.rufnamenState.hasOwnProperty(key)){
+        postData.push({key: window.rufnamenState[key]});
+      }
+    }
 		$.ajax({
 			method: 'post',
 			data: postData,
 			url: '/includes/addName.php'
 		}).done(function(data){
-			// Request done : wether successfully or failure occured has to be differentiated after this
 			try {
 				var obj = JSON.parse(data);
-				window.document.Rufnamen.lastRequest = obj.request;
 				var snackbar = $('.mdl-snackbar');
 				if(obj.success == true){
-					// success
 					snackbar.attr('data-success', 'true');
 					snackbar[0].MaterialSnackbar.showSnackbar({
-						message: 'Dein vorgeschlagener Rufname wurde verpasst.',
+						message: 'Die Rufnamen wurden abgespeichert',
 						timeout: 2000,
-						actionHandler: _EVENTS_.undoPushAndRemoveName,
-						actionText: 'Rückgängig'
 					});
-					_EVENTS_.updateList_(obj.html);
-					$('#saveNameAndPushToServer').children('i.material-icons').text('done_all');
-					setTimeout(function(){
-						$('button#btnaddname').click();
-					}, 300);
 				} else {
-					// failure serverside
 					snackbar.attr('data-success', 'false');
 					snackbar[0].MaterialSnackbar.showSnackbar({
 						message: obj.error,
 						timeout: 2000,
 					});
-					$('#saveNameAndPushToServer').children('i.material-icons').text('save');
-					$('.data-section__form .mdl-textfield').val("");
 				}
 			} catch(e){
-				console.error(e);
 				console.error(data);
 			}
 		}).fail(function(data){
@@ -276,6 +258,8 @@ var events = {
     });
   }
 };
+
+$('.form--rufnamen button').on('click', events.pushNamesToServer);
 
 $('.form--eigeneFragen ul li button, .form--freundesfragen ul li button').click(function () {
     events.submitAnswers($(this).get());

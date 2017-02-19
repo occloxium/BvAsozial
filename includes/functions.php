@@ -312,20 +312,21 @@
    * Checks, if a user is an admin and, in case of that event, sets a session variable to mark the user as an admin
    * @param $username the username to be searched for
    * @param $mysqli the mysqli object refering to the database
+   * @param $nochanges determines if there should not be made any changes to the session
    */
-  function is_admin($username, $mysqli){
-    if(isset($_SESSION['user']['is_admin'])){
+  function is_admin($username, $mysqli, $nochanges = false){
+    if(isset($_SESSION['user']['is_admin']) && $_SESSION['user']['uid'] === $username){
       if($_SESSION['user']['is_admin']){
         return true;
       } else {
         return false;
       }
     } else {
-      $stmt = $mysqli->prepare("SELECT boundTo FROM admins WHERE boundTo = ? LIMIT 1");
+      $stmt = $mysqli->prepare("SELECT * FROM admins WHERE boundTo = ? LIMIT 1");
       $stmt->bind_param("s", $username);
       $stmt->execute();
       $stmt->store_result();
-      if(isset($_SESSION)){
+      if(isset($_SESSION) && !$nochanges){
         if($stmt->num_rows == 1){
           $_SESSION['user']['is_admin'] = true;
           return true;
@@ -334,7 +335,11 @@
           return false;
         }
       } else {
-        return false;
+        if($stmt->num_rows == 1){
+          return true;
+        } else {
+          return false;
+        }
       }
     }
   }
@@ -343,9 +348,10 @@
    * Checks if a user is a moderator and, in case of that event, sets a session variable to mark the user as a moderator
    * @param $username the username to be searched for
    * @param $mysqli the mysqli object refering to the database
+   * @param $nochanges determines if there should not be made any changes to the session
    */
-  function is_mod($username, $mysqli){
-    if(isset($_SESSION['user']['is_mod'])){
+  function is_mod($username, $mysqli, $nochanges = false){
+    if(isset($_SESSION['user']['is_mod']) && $_SESSION['user']['uid'] === $username){
       if($_SESSION['user']['is_mod']){
         return true;
       } else {
@@ -356,7 +362,7 @@
       $stmt->bind_param("s", $username);
       $stmt->execute();
       $stmt->store_result();
-      if(isset($_SESSION)){
+      if(isset($_SESSION) && !$nochanges){
         if($stmt->num_rows == 1){
           $_SESSION['user']['is_mod'] = true;
           return true;
@@ -365,7 +371,11 @@
           return false;
         }
       } else {
-        return false;
+        if($stmt->num_rows == 1){
+          return true;
+        } else {
+          return false;
+        }
       }
     }
   }
