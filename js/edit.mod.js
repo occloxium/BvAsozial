@@ -16,28 +16,8 @@ function rufnamenState(){
    */
   this.events = {
     removeName: function(){
-    	/*var data = {
-        username: $('main').attr('data-username'),
-        name: $(this).prev('span').text(),
-      };
-  	  $.ajax({
-        method: 'post',
-        url: '/includes/removeName.php',
-        data: data
-  	  }).done(function(d){
-        try {
-  	      var obj = JSON.parse(d);
-  	      if(obj.success){
-            $('.form--rufnamen ul li').each(function(){$(this).detach();});
-            $('.form--rufnamen ul').prepend(obj.html);
-            rufnamenState.setCurrentState().overrideInitialState().bindEventHandlers($('.form--rufnamen ul .mdl-chip'),{'click': [rufnamenState.events.removeName, '.mdl-chip__action'], 'input': [rufnamenState.events.nameChanged], 'focusout': [rufnamenState.events.blur]});
-  	      } else {
-            console.log(obj.msg);
-  	      }
-        } catch (e) {
-          console.error(d);
-        }
-  	  });*/
+      rufnamenState.removeElementFromCurrentState($(this).parent());
+      $(this).parent().detach();
     },
     blur: function(){
       window.getSelection().removeAllRanges();
@@ -126,7 +106,12 @@ function rufnamenState(){
    * Removes a certain element from the current state set
    */
   this.removeElementFromCurrentState = function(e){
-
+    var id = e.attr('id');
+    delete this.currentState[id];
+    if(this.initialState.hasOwnProperty(id)){
+      delete this.initialState[id];
+    }
+    return this;
   }
   /**
    * Fully sets the current state
@@ -186,11 +171,16 @@ var events = {
    * TODO Update event handlers
    */
 	pushNamesToServer: function() {
-		var postData = [];
+		var names = [];
     for(var key in window.rufnamenState.currentState){
-      if(window.rufnamenState.hasOwnProperty(key)){
-        postData.push({key: window.rufnamenState[key]});
+      if(window.rufnamenState.currentState.hasOwnProperty(key)){
+        names.push(window.rufnamenState.currentState[key]);
       }
+    }
+    var postData = {
+      'names': names,
+      'for': $('main').attr('data-username'),
+      'by': $('body').attr('data-mod')
     }
 		$.ajax({
 			method: 'post',
@@ -201,19 +191,12 @@ var events = {
 				var obj = JSON.parse(data);
 				var snackbar = $('.mdl-snackbar');
 				if(obj.success == true){
-					snackbar.attr('data-success', 'true');
-					snackbar[0].MaterialSnackbar.showSnackbar({
-						message: 'Die Rufnamen wurden abgespeichert',
-						timeout: 2000,
-					});
+					console.log(obj.log);
 				} else {
-					snackbar.attr('data-success', 'false');
-					snackbar[0].MaterialSnackbar.showSnackbar({
-						message: obj.error,
-						timeout: 2000,
-					});
+					console.error(data);
 				}
 			} catch(e){
+        console.error(e);
 				console.error(data);
 			}
 		}).fail(function(data){
@@ -221,51 +204,47 @@ var events = {
 			console.error(data);
 		});
 	},
-  submitAnswers: function (buttons) {
+  submitAnswers: function (e) {
     var fragen = [];
-    buttons.forEach(function (el, index) {
+    e.forEach(function (el, index) {
       fragen.push({
-        antwort: $(el).prev('.mdl-textfield').children('.mdl-textfield__input').val(),
-        von: $(el).parents('main').attr('data-username'),
+        antwort: $(el).val(),
+        von: $(el).attr('data-freund'),
         frageID: $(el).attr('data-item'),
         type: $(el).attr('data-category'),
         "for": $(el).attr('data-for')
       });
     });
+    var postData = {
+      "fragen": fragen,
+      by: $('body').attr('data-mod')
+    };
     $.ajax({
-      method: 'post',
+      type: 'post',
       url: '/includes/answerQuestions.php',
-      data: {
-        "fragen": fragen,
-        "uid": $(buttons[0]).parents('main').attr('data-username')
-      }
+      data: postData
     }).done(function (d) {
       try {
         var obj = JSON.parse(d);
-        if (obj.success) {
-          buttons.forEach(function (el) {
-            $(el).children('i').text('done_all');
-          });
-          $('button.save-all').prop('disabled', true);
-        } else {
-          window.console.error(d);
+        if (!obj.success) {
+          console.error(d);
         }
       } catch (error) {
-        window.console.error(error);
+        console.error(error);
       }
     }).fail(function (e) {
-      window.console.error(e);
+      console.error(e);
     });
   }
 };
 
-$('.form--rufnamen button').on('click', events.pushNamesToServer);
+$('.form--rufnamen button.save-all').on('click', events.pushNamesToServer);
 
-$('.form--eigeneFragen ul li button, .form--freundesfragen ul li button').click(function () {
-    events.submitAnswers($(this).get());
+$('.form--eigeneFragen ul li button').click(function () {
+    events.submitAnswers($(this).prev('.mdl-textfield').children('input').get());
 });
 $('button.save-all').click(function () {
-    events.submitAnswers($(this).prev('ol').children('li').find('button').get());
+    events.submitAnswers($(this).prev('ul').children('li').find('input').get());
 });
 
 $('.mdl-textfield__input').change(function () {

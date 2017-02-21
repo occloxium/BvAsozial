@@ -1,6 +1,10 @@
 {
     "spruch": "Noch 5 Minuten!",
-    "rufnamen": [],
+    "rufnamen": [
+        "ZOO MATE",
+        "zoomoid",
+        "Alex"
+    ],
     "freundesfragen": [
         {
             "frage": "Aktuelles Lieblingslied?",
@@ -25,7 +29,8 @@
         {
             "frage": "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
             "antworten": {
-                "a_bartolomey": "Janina <3"
+                "a_bartolomey": "Janina <3",
+                "m_mustermann": "Janina Pesch"
             }
         }
     ],
@@ -57,12 +62,12 @@
         },
         {
             "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
-            "antwort": "'Das ist schlicht falsch!'",
+            "antwort": "Janina",
             "beantwortet": true
         },
         {
             "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
-            "antwort": "Gelb wie der Sonnenschein",
+            "antwort": "Janina",
             "beantwortet": true
         },
         {

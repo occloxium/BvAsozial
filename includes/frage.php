@@ -33,8 +33,9 @@
     $button; // Define the HTML for the save button
     $input; // Define the HTML of the input section - in case content bigger than 35 chars, use a textarea
     if($multiple_inputs){ // There are no buttons allowed if multiple input boxes are present. The UI gets too messy
-      $input = _multipleInputs($frage, $i);
+      $input = _multipleInputs($frage, $user, $i, $type_long);
       $button = "";
+      return '<li class="frage"><b>'.$frage['frage'].'</b><div class="antworten">'.$input.'</div></li>';
     } else {
       $for = ($for !== "" ? $for .= 's' : "Deine"); // If not otherly specified, the questions response is users response
       $for = ($typ === 1 ? $freund['vorname'] : $for); // Overide in case of type 1 - friend answered users question
@@ -46,18 +47,19 @@
       $_readonly = ($typ === 1 ? "readonly" : ''); // readonly for type 1
 
       if(strlen($frage['antwort']) <= 35){
-        $input = '<input type="text" class="mdl-textfield__input" '.$_readonly.' value="'. $_antwort .'" id="item-'.$i.'" data-item="'.$i.'">';
+        $input = '<input '.$_for.' data-category="'.$type_long.'" '.$_freund.' type="text" class="mdl-textfield__input" '.$_readonly.' value="'. $_antwort .'" id="item-'.$i.'" data-item="'.$i.'">';
       } else {
-        $input = '<textarea class="mdl-textfield__input" '.$_readonly.' type="text" id="item-'.$i.'" data-item="'.$i.'">'. $_antwort .'</textarea>';
+        $input = '<textarea '.$_for.' data-category="'.$type_long.'" '.$_freund.' class="mdl-textfield__input" '.$_readonly.' type="text" id="item-'.$i.'" data-item="'.$i.'">'. $_antwort .'</textarea>';
       }
-      $input .= '<label class="mdl-textfield__label" for="item-$i">'.$for.' Antwort</label>';
-      $button = '<button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" '.$_for.' data-category="'.$type_long.'" data-item="'.$i.'" '.$_freund.'><i class="material-icons">save</i></button>';
+      $input .= '<label class="mdl-textfield__label" for="item-$i">Antwort von '.$for.'</label>';
+      $button = '<button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-item="'.$i.'"><i class="material-icons">save</i></button>';
 
       $button = ($typ === 1 || $no_button ? "" : $button); // override in case of type 1 - Type 1 questions do not have a save button
+      return '<li class="frage"><b>'.$frage['frage'].'</b><div class="flex-container"><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-focused">'.$input.'</div>'.$button.'</div></li>';
     }
-    return '<li class="frage"><b>'.$frage['frage'].'</b><div class="flex-container"><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-focused">'.$input.'</div>'.$button.'</div></li>';
+
 	}
-  function _multipleInputs($frage, $i){
+  function _multipleInputs($frage, $user, $i, $type_long){
     $mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
     $html = "";
     if(count($frage['antworten']) > 0){
@@ -65,17 +67,19 @@
         $freund = getUser($uid, $mysqli);
         $for = $freund['vorname'];
         $_antwort = $frage['antworten'][$freund['uid']];
+        $_for = 'data-for="'. $user['uid'] . '"';
+        $_freund = 'data-freund="' . $freund['uid'] . '"';
         $input;
         if(strlen($antwort) <= 35){
-          $input = '<input type="text" class="mdl-textfield__input" value="'. $_antwort .'" id="item-'.$i.'" data-item="'.$i.'">';
+          $input = '<input '.$_for.' data-category="'.$type_long.'" '.$_freund.' type="text" class="mdl-textfield__input" value="'. $_antwort .'" id="item-'.$i.'" data-item="'.$i.'">';
         } else {
           $input = '<textarea class="mdl-textfield__input" type="text" id="item-'.$i.'" data-item="'.$i.'">'. $_antwort .'</textarea>';
         }
-        $input .= '<label class="mdl-textfield__label" for="item-$i">'.$for.' Antwort</label>';
-        $html .= $input;
+        $input .= '<label class="mdl-textfield__label" for="item-$i">Antwort von '.$for.'</label>';
+        $html .= ('<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-focused">'. $input ."</div>");
       }
     } else {
-      $html = "<span>Auf diese Frage hat noch niemand geantwortet</span>";
+      $html = '<span class="none">Auf diese Frage hat noch niemand geantwortet</span>';
     }
     return $html;
   }

@@ -37,8 +37,8 @@ input.mdl-chip__text {
 .form--rufnamen ul {
   padding: 1em 0 2em;
 }
-.form--rufnamen ul li {
-  vertical-align: middle;
+.form--rufnamen ul > * {
+  vertical-align: middle !important;
 }
 .form--rufnamen ul li.none {
   list-style: none;
@@ -60,6 +60,9 @@ input.mdl-chip__text {
   font-size: 0.8rem;
   position: absolute;
 }
+.mdl-chip.empty .mdl-chip__text {
+  min-width: 40px;
+}
 .mdl-chip {
   position: relative;
   margin: 4px 4px;
@@ -68,8 +71,10 @@ input.mdl-chip__text {
   position: relative;
   z-index: 3;
   background: transparent;
-  min-width: 48px;
+  padding: 0 3px;
+  /*min-width: 48px;*/
 }
+
 .form--eigeneFragen li .mdl-button {
   width: auto;
 }
@@ -82,4 +87,9 @@ ul {
 .form--freundesfragen ul li span {
   font-size: 0.8rem;
   color: rgba(0,0,0,0.5);
+}
+
+.form--freundesfragen .antworten .none {
+  padding: 16px 0;
+  display: block;
 }

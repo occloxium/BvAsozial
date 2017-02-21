@@ -44,6 +44,10 @@
             "frage": "Welches Schulfach war dein pers\u00f6nlicher Super- GAU?",
             "antwort": "",
             "beantwortet": false
+        },
+        {
+            "beantwortet": true,
+            "antwort": "Janina Pesch"
         }
     ]
 }

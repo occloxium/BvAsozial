@@ -51,6 +51,8 @@ html {
   width: auto;
   box-shadow: none;
   position: relative;
+  max-width: 72px;
+  min-width: 72px;
 }
 @media (max-width: 1024px) {
   .mdl-layout__drawer {

@@ -1,3 +1,7 @@
+/**
+ * Pure JS Plugin for generating those cool pie charts in the dashboard
+ */
+
 window.Element.prototype.setAttributes = function(attrs) {
 	for (var idx in attrs) {
 		if ((idx === 'styles' || idx === 'style') && typeof attrs[idx] === 'object') {
@@ -10,7 +14,6 @@ window.Element.prototype.setAttributes = function(attrs) {
 	}
 }
 var hexToRGBA = function (hexColor) {
-	'use strict';
 	var color = {
 		r: parseInt(hexColor.substr(1, 2), 16),
 		g: parseInt(hexColor.substr(3, 2), 16),
@@ -28,7 +31,6 @@ var hexToRGBA = function (hexColor) {
 };
 
 function PieChart(pArgs) {
-	'use strict';
 	this.total = pArgs.total;
 	this.current = pArgs.initial;
 	this.color = pArgs.color || '#00b84f';
@@ -42,7 +44,6 @@ function PieChart(pArgs) {
 		this.container = pArgs.container;
 	}
 	this.init = function () {
-		
 		var group = document.createElementNS("http://www.w3.org/2000/svg", 'g'),
 			pie = document.createElementNS("http://www.w3.org/2000/svg", 'circle'),
 			pieBackface = document.createElementNS("http://www.w3.org/2000/svg", 'circle'),
@@ -63,7 +64,6 @@ function PieChart(pArgs) {
 				'transition': 'stroke-dasharray 1.5s ease'
 			}
 		});
-		
 		pieBackface.setAttributes({
 			'class':'pieBackface',
 			'r': this.radius,
@@ -75,7 +75,6 @@ function PieChart(pArgs) {
 				'strokeWidth': this.strokeWidth
 			}
 		});
-		
 		text.setAttributes({
 			'x': (this.radius + 10),
 			'y': (this.radius + 10),
@@ -87,12 +86,9 @@ function PieChart(pArgs) {
 			'dy': (this.radius + 10) / 5,
 			'html': (Math.floor(this.getValue() * 100)) + '<tspan font-size="' + ((this.radius + 10) / 5) + '" dy="' + (-((this.radius + 10) / 5)) + '">%</tspan>'
 		});
-		
 		group.appendChild(pie);
 		group.appendChild(pieBackface);
-
 		this.container.appendChild(group);
-
 		this.container.appendChild(text);
 		var save_current = this.current;
 		this.setValue(0);
@@ -119,7 +115,7 @@ function PieChart(pArgs) {
 			this.setValue(this.current);
 			return this;
 		} else {
-			window.console.warn('Totals of 0 will break relative calculations due to divisions by 0');
+			window.console.warn('Relative calculation will be broken since 1/0 breaks the universe');
 			return this;
 		}
 	};
@@ -127,8 +123,7 @@ function PieChart(pArgs) {
 		if (this.total !== 0) {
 			return this.current / this.total;
 		} else {
-			window.console.error("Division by 0");
-			return this;
+			return 0;
 		}
 	};
 	this.getDasharray = function () {

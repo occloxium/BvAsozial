@@ -1,5 +1,16 @@
 # Changenotes
 
+# Version 1.2.37
+**21.02.2017**
+
+*   Fully ported the name system to the v2 state of `/mod/edit/` in `/users/`
+*   Updated the control flow in `/includes/answerQuestions.php` to fit the new post data structure
+*   Fixed some minor problems with the "Ultra-Fragen-Manager"
+*   Fixed some CSS
+*   Improved the pie chart progress indicators to properly calculate progress of a users profile
+*   Milestones are now stored directly in the repository / project
+*   Added offline support for the Material Icon Pack to even work if Google is not reachable
+
 # Version 1.2.36
 **18.02.2017**
 

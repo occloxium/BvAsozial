@@ -13,7 +13,7 @@
   <head>
     <?php _getHead('edit.mod'); ?>
   </head>
-  <body>
+  <body data-mod="<?php echo $_SESSION['user']['uid'] ?>">
     <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="drawer-header">
@@ -50,7 +50,7 @@
             <div class="mdl-tooltip" for="btnaddname">
               Rufnamen hinzufügen
             </div>
-            <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white">
+            <button type="button" class="mdl-button save-all mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white">
               Änderungen speichern
             </button>
           </form>
