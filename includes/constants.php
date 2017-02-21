@@ -1,4 +1,7 @@
 <?php
+
+	/* DEFINE YOUR SETTINGS HERE */
+	
 	// Domain
 	define('DOMAIN','localhost');
 
@@ -14,18 +17,18 @@
 	define('ADMIN_PATH', '/admin/');
 
 	// Datenbank-Daten
-	define('HOST', 'localhost');
-	define('USER', 'bvasozial-2016');
-	define('PASSWORD', '2MvfymPYJN7YBWqm');
-	define('DATABASE', 'bvasozial-2016');
+	define('HOST', '');
+	define('USER', '');
+	define('PASSWORD', '');
+	define('DATABASE', '');
 
 	// SMTP-Server-Daten
-	define('INVITE_HOST', 'smtp.gmail.com');
-	define('INVITE_NAME', 'Abi-Zeitung 2016');
-	define('INVITE_MAIL', 'occloxium@gmail.com');
-  define('INVITE_UID', 'occloxium@gmail.com');
-	define('INVITE_PASSWORD', 'nullpointers2015');
-	define('INVITE_PORT', 587);
+	define('INVITE_HOST', '');
+	define('INVITE_NAME', '');
+	define('INVITE_MAIL', '');
+  	define('INVITE_UID', '');
+	define('INVITE_PASSWORD', '');
+	define('INVITE_PORT', );
 
 	// load mysqli connection
 	require_once('db_connect.php');
