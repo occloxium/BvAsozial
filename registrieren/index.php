@@ -4,6 +4,7 @@
 
   secure_session_start(); // (2)
 
+
   // if an already registered user trys to register again whilst being logged in, redirect him immediately
   if(login_check($mysqli)){ // (1a)
     header("Location: ../"); exit;
@@ -29,10 +30,17 @@
     							Bestätige deine Einladung zum BvAsozial-Netzwerk, um fortzufahren
     						</p>
     					</div>
-    					<div id="global-progress" class="mdl-progress mdl-js-progress mdl-color--grey-100"></div>
     				</header>
     				<main class="page-content mdl-color--grey-100">
     					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
+                <div class="breadcrumb">
+                  <li class="breadcrumb__item">
+                    <a href="../">BvAsozial</a>
+                  </li>
+                  <li class="breadcrumb__item">
+                    Registrieren
+                  </li>
+                </div>
     						<form action="./index.php" method="post">
     							<input type="hidden" name="step" value="0">
     							<p class="mdl-typography--headline">Hallo!</p>
@@ -69,9 +77,10 @@
   else : // (4)
     if(isValidInvite($_SESSION['registering']['uid'], $_SESSION['registering']['password'], $mysqli)) :
       $user = getInvitedUser($_SESSION['registering']['uid'], $mysqli);
-      if(isset($_POST['steps']) && $_POST['steps'] == $_SESSION['registering']['steps'] + 1){
+    if((isset($_POST['steps']) && $_POST['steps'] == $_SESSION['registering']['steps'] + 1) /*|| $_SESSION['registering']['steps'] == 0*/){
         $_SESSION['registering']['steps']++;
       }
+      $_SESSION['registering']['steps'] = intval($_SESSION['registering']['steps']);
       switch($_SESSION['registering']['steps']):
         case 0 :
           ?>
@@ -433,7 +442,8 @@
                 $num = intVal(substr($key,8));
                 $userfile['eigeneFragen'][] = [
                   "frage" => $obj['eigeneFragen'][$num - 1],
-                  "antwort" => ""
+                  "antwort" => "",
+                  "beantwortet" => false
                 ];
               }
             }

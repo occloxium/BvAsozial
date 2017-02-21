@@ -129,12 +129,59 @@
 	margin: 0 auto;
 }
 
-#noname.list__item {
-	color: #888;
+input.mdl-chip__text {
+  border: none;
+  background: none;
 }
-
-span.mdl-chip.mdl-chip--deletable {
-	margin: 2px;
+.form--rufnamen, .form--eigeneFragen, .form--freundesfragen {
+  margin: 0 !important;
+  max-width: none !important;
+  width: auto !important;
+  padding: 1em;
+}
+.form--rufnamen > button {
+  width: 80%;
+  max-width: 320px;
+}
+.form--rufnamen ul {
+  padding: 1em 0 2em;
+}
+.form--rufnamen ul > * {
+  vertical-align: middle !important;
+}
+.form--rufnamen ul li.none {
+  list-style: none;
+  color: rgba(0,0,0,0.5);
+  font-size: 0.8em;
+  display: inline-block;
+}
+.form--rufnamen ul button.mdl-button--icon {
+  width: 32px;
+  display: inline-block;
+  margin: 0 8px;
+}
+.mdl-chip__action i {
+  font-size: 24px !important;
+}
+.mdl-chip.empty::before {
+  content: 'Rufname';
+  color: rgba(0,0,0,0.5);
+  font-size: 0.8rem;
+  position: absolute;
+}
+.mdl-chip.empty .mdl-chip__text {
+  min-width: 40px;
+}
+.mdl-chip {
+  position: relative;
+  margin: 4px 4px;
+}
+.mdl-chip__text {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  padding: 0 3px;
+  /*min-width: 48px;*/
 }
 
 .list--no-entries {

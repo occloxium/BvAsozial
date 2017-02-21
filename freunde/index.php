@@ -75,8 +75,8 @@
                     <h1 class="failure__title mdl-color-text--accent">Oh nein!</h1>
                     <p class="failure__subtitle">Wir konnten den von dir eingegeben Namen nicht in unserer schlauen Tabelle voller Namen finden. Entweder hast du dich schlicht vertippt oder der von dir gesuchte Benutzer ist uns noch unbekannt. In diesem Fall erinnere ihn doch bitte daran, sich zu registrieren!</p>
                   </div>
-                  </div>
                 </div>
+              </div>
             <?php else : ?>
               <div class="mdl-card friend-list__container mdl-color--white mdl-shadow--2dp mdl-card--border" id="found">
                 <p class="section__title">Auf der Suche nach <b>"<?php echo $_GET['search']?>"</b> haben wir gefunden:</p>

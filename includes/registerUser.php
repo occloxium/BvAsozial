@@ -1,7 +1,7 @@
 <?php
 	require('constants.php');
 	require_once(ABS_PATH.INC_PATH.'functions.php');
-	require(ABS_PATH.'/vendor/autoload.php');
+
 	secure_session_start();
 
 	$user = createUserObject($_POST);

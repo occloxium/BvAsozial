@@ -12,7 +12,7 @@
 		<?php _getHead(); ?>
 		<style>
 			.successful-response {
-				border-left: solid 2px rgb(30, 215, 96);
+				border-left: solid 2px rgb(0, 188, 212);
 				min-height: 0;
 			}
 			.successful-response b {
@@ -35,6 +35,17 @@
 				</header>
 				<main class="page-content mdl-color--grey-100">
 					<div class="mdl-card container form mdl-color--white mdl-shadow--2dp">
+            <div class="breadcrumb">
+              <li class="breadcrumb__item">
+                <a href="../../">Admin</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a href="../">Einladungen verwalten</a>
+              </li>
+              <li class="breadcrumb__item">
+                Einladung entfernen
+              </li>
+            </div>
 						<form action="./cpw.php">
 							<input type="hidden" name="step" value="0">
 							<p class="mdl-typography--headline">Passwort neu setzen...</p>

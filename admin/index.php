@@ -116,11 +116,9 @@
       									<button id="<?php echo 'extra-'.$uid ?>" class="mdl-button mdl-js-button mdl-button--icon">
       										<i class="material-icons">more_vert</i>
       									</button>
-      									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="<?php echo 'extra-'.$uid ?>">
+      									<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="<?php echo 'extra-'.$uid ?>">
       										<li class="mdl-menu__item">Name: <?php echo $name ?></li>
-      										<li class="mdl-menu__item">E-Mail: <?php echo $email ?></li>
       										<li class="mdl-menu__item">Benutzername: <?php echo $uid ?></li>
-      										<li class="mdl-menu__item">Password: <?php echo $password ?></li>
       									</ul>
       								</span>
                   	</li>

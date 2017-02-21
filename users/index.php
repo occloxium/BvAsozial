@@ -62,40 +62,27 @@
 								<div class="data-container__main">
                   <div id="rufnamen" class="data-section">
                     <span class="data-section__title">Auch bekannt als:</span>
-                    <ul class="data-section__list">
-                      <?php
-												if(empty($json['rufnamen'])) :
-													echo "<li class=\"list__item\" id=\"noname\">{$user['name']} ist noch anonym</li>";
-												else :
-													foreach($json['rufnamen'] as $name){
-                          	if($_SESSION['user']['uid'] === $user['uid'] || $_SESSION['user']['is_mod']){
-                              // Can edit names
-                          		echo "<span class=\"mdl-chip mdl-chip--deletable\" data-name=\"$name\">
-                              	<span class=\"mdl-chip__text\">$name</span>
-                              	<button type=\"button\" class=\"mdl-chip__action\"><i class=\"material-icons\">cancel</i></button>
-                              </span>";
-                            } else {
-                              echo "<span class=\"mdl-chip mdl-chip\">
-                                <span class=\"mdl-chip__text\">$name</span>
-                              </span>";
-                            }
-													}
-													endif;
-                          $befreundet = isFriendsWith($_SESSION['user']['uid'], $user['uid'], $mysqli);
-                          if($befreundet || $_SESSION['user']['is_mod']) :	?>
-                          	<button id="btnaddname" class="mdl-color-text--white mdl-color--primary data-section__button mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                              <i class="material-icons">add</i>
-                              <span class="visuallyhidden">Rufnamen hinzufügen</span>
-                            </button>
-                            <div class="mdl-tooltip" for="btnaddname">
-                              Rufnamen hinzufügen
-                            </div>
-                      <?php
-                        endif;
-                      ?>
-                    </ul>
+                    <form class="form--rufnamen">
+                      <ul>
+                        <?php
+                         echo rufnamenliste($user['uid'], $_SESSION['user']['uid'], $json['rufnamen'], $mysqli);
+                        ?>
+                        <button class="rufnamen__add mdl-color-text--white mdl-color--primary mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" type="button">
+                          <i class="material-icons">add</i>
+                          <span class="visuallyhidden">Rufnamen hinzufügen</span>
+                        </button>
+                      </ul>
+                      <div class="mdl-tooltip" for="btnaddname">
+                        Rufnamen hinzufügen
+                      </div>
+                      <button type="button" class="mdl-button save-all mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white">
+                        Änderungen speichern
+                      </button>
+                    </form>
                   </div>
-									<?php if(requestSent($_SESSION['user']['uid'], $user['uid'], $mysqli) || ($befreundet && !($_SESSION['user']['uid'] == $user['uid']))) :?>
+									<?php
+                    $befreundet = isFriendsWith($_SESSION['user']['uid'], $user['uid'], $mysqli);
+                    if(requestSent($_SESSION['user']['uid'], $user['uid'], $mysqli) || ($befreundet && !($_SESSION['user']['uid'] == $user['uid']))) :?>
 										<div class="data-section data-section--border data-section--no-flex">
 											<button class="mdl-button mdl-js-button" id="btnadddisabled" disabled>
 												Als Freund hinzufügen
@@ -158,36 +145,6 @@
                   <?php if($befreundet && $_SESSION['user'] != $user) : ?>, darunter auch du<?php endif; ?>.
                 </p>
             </div>
-          <?php if($befreundet || $_SESSION['user']['is_mod']) : ?>
-            <div class="mdl-cell fragen befreundet mdl-color--white mdl-shadow--2dp mdl-cell--7-col mdl-cell--7-col-desktop">
-              <p class="mdl-typography--headline">Fragen für die Freunde</p>
-              <ol>
-                <?php
-                  $key = 0;
-									foreach($json['freundesfragen'] as $fragenobjekt){
-                    $i = $key + 1;
-										$fragenobjekt = $json['freundesfragen'][$key];
-										$frage = $fragenobjekt['frage'];
-										$antwort = "";
-										if(array_key_exists($_SESSION['user']['uid'], $fragenobjekt['antworten'])){
-											$antwort = $fragenobjekt['antworten'][$_SESSION['user']['uid']];
-										} else {
-											$antwort = "";
-										}
-										require(ABS_PATH.INC_PATH.'frage.php');
-                    $key++;
-                    if($key >= 5){
-                      break;
-                    }
-								} ?>
-              </ol>
-              <a class="fragen__link" href="/fragen/?user=<?php echo urlencode(base64_encode($user['uid']))?>">Weitere Fragen beantworten...</a>
-            </div>
-          <?php else : ?>
-            <div class="mdl-cell fragen mdl-color--white mdl-shadow--2dp mdl-cell--7-col mdl-cell--7-col-desktop">
-              <p class="mdl-typography--text-center mdl-typography--title">Du musst mit <?php echo $user['vorname'] ?> befreundet sein, um seine Fragen beantworten zu können</p>
-            </div>
-          <?php endif; ?>
         </div>
         <?php else : ?>
         <div class="mdl-grid">

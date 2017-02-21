@@ -1,0 +1,47 @@
+.form--search {
+  display: flex;
+  align-items: center;
+}
+.form--search .mdl-textfield {
+  flex-grow: 1;
+}
+.container form, .form--search {
+  max-width: none;
+}
+.form--search .mdl-button {
+  width: 32px !important;
+}
+li.none {
+  list-style: none;
+  color: rgba(0,0,0,0.5);
+  font-size: 0.8em;
+  display: block;
+  text-align: center;
+}
+.list--users {
+  padding: 2em 1em;
+}
+.list--users ul {
+  padding-left: 0;
+}
+.warnung {
+  display: flex;
+  align-items: center;
+  border: 2px solid #faf2cc;
+  color: #8a6d3b;
+  border-radius: 5px;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #fcf8e3;
+}
+.warnung i {
+  padding-right: 16px;
+}
+.warnung b {
+  display: block;
+  margin: 0.5em 0;
+  font-size: 1.5em;
+}
+.log {
+  border-left: 2px solid rgb(0, 188, 212);
+}

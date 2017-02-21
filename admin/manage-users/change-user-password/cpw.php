@@ -2,7 +2,9 @@
 	require_once('constants.php');
 	require_once(ABS_PATH.INC_PATH.'functions.php');
 	secure_session_start();
-
+  /**
+   * TODO CLIENT-SIDE HASHING!
+   */
 	if(isset($_POST['uid'], $_POST['password'])){
 		if(login_check($mysqli) && $_SESSION['user']['is_admin']){
 			$h_pw = hash('sha384', $_POST['password']);

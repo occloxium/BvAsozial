@@ -1,6 +1,35 @@
 # Changenotes
 
-# Versio 1.2.34
+# Version 1.2.37
+**21.02.2017**
+
+*   Fully ported the name system to the v2 state of `/mod/edit/` in `/users/`
+*   Updated the control flow in `/includes/answerQuestions.php` to fit the new post data structure
+*   Fixed some minor problems with the "Ultra-Fragen-Manager"
+*   Fixed some CSS
+*   Improved the pie chart progress indicators to properly calculate progress of a users profile
+*   Milestones are now stored directly in the repository / project
+*   Added offline support for the Material Icon Pack to even work if Google is not reachable
+
+# Version 1.2.36
+**18.02.2017**
+
+*   Added moderator addition
+*   Fixed control flow in `is_mod` & `is_admin`
+*   Fixed unstable registration logins
+*   Fixed not properly executing javascript in `js/fragen.registrierung.js`
+
+# Version 1.2.35
+**16.02.2017**
+
+*   Added the "Ultra-Fragen-Manager" back-end script (`/includes/frage.php`);
+*   Dropped "Fragen für Freunde" section from `/users/`
+*   Added *most* moderator features to the front-end. See [Milestones](milestones.md) for details on the mod feature
+*   Added *mod management* to the admin panel
+*   Added breadcrump navigation to most singleton operation-only pages in `/admin/`
+*   Added `/mod/`. See [Milestones](milestones.md) for details
+
+# Version 1.2.34
 **08.02.2017**
 
 *   Minor changes to some scripts
@@ -19,7 +48,7 @@
 *   Changed the accent color of the whole platform to a bright blue
 *   Fixed all errors in main user interaction files like `/fragen/`, `/users/`, `/freunde/` etc.
 *   Removed the remaining usage of `$_SESSION['username']` and replaced it with `$_SESSION['user']['uid']` to access the complete user object instead of an own value out of context
-*   Reworked most of the AJAX PHP Content files to use the the `require` functions
+*   Reworked most of the AJAX PHP Content files to use the `require` functions
 *   Fixed some other bugs in quite a few files
 *   Minor changes to backend structure
 
