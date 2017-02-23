@@ -16,19 +16,16 @@
 	define('ADMIN_PATH', '/admin/');
 
 	// Datenbank-Daten
-	define('HOST', 'localhost');
-	define('USER', 'bvasozial-2016');
-	define('PASSWORD', '2MvfymPYJN7YBWqm');
-	define('DATABASE', 'bvasozial-2016');
+
 
 	// SMTP-Server-Daten
 	define('INVITE_HOST', 'smtp.gmail.com');
 	define('INVITE_NAME', 'Abi-Zeitung 2016');
-	define('INVITE_MAIL', 'occloxium@gmail.com');
-  define('INVITE_UID', 'occloxium@gmail.com');
-	define('INVITE_PASSWORD', 'alpspitze022017');
+
 	define('INVITE_PORT', 587);
 
+  // load private DATABASE
+  require_once('../../constants.inc.php');
 	// load mysqli connection
 	require_once('db_connect.php');
 

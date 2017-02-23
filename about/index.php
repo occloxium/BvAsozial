@@ -13,7 +13,7 @@
 	      <?php _getNav('über'); ?>
 	    </div>
       <main class="mdl-layout__content mdl-color--white">
-
+        <h1 class="mdl-typography--display-1">Über BvAsozial</h1>
       </main>
     </div>
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
