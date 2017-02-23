@@ -33,12 +33,14 @@
 		echo $data === null ? json_encode($error = [
 			"error" => $type,
 			"code" => $code,
-			"message" => $msg
+			"message" => $msg,
+      "backtrace" => debug_backtrace()
 		], JSON_PRETTY_PRINT) : json_encode($error = [
 			"error" => $type,
 			"code" => $code,
 			"message" => $msg,
-			"data" => $data
+			"data" => $data,
+      "backtrace" => debug_backtrace()
 		], JSON_PRETTY_PRINT);
 	}
 

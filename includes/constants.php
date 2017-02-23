@@ -1,7 +1,8 @@
 <?php
 
+  define('VERSION', '1.2.38');
 	/* DEFINE YOUR SETTINGS HERE */
-	
+
 	// Domain
 	define('DOMAIN','localhost');
 
@@ -16,20 +17,14 @@
 	define('INC_PATH', '/includes/');
 	define('ADMIN_PATH', '/admin/');
 
-	// Datenbank-Daten
-	define('HOST', '');
-	define('USER', '');
-	define('PASSWORD', '');
-	define('DATABASE', '');
-
 	// SMTP-Server-Daten
-	define('INVITE_HOST', '');
-	define('INVITE_NAME', '');
-	define('INVITE_MAIL', '');
-  	define('INVITE_UID', '');
-	define('INVITE_PASSWORD', '');
-	define('INVITE_PORT', );
+	define('INVITE_HOST', 'smtp.gmail.com');
+	define('INVITE_NAME', 'Abi-Zeitung 2016');
 
+	define('INVITE_PORT', 587);
+
+  // load private DATABASE
+  require_once('../../constants.inc.php');
 	// load mysqli connection
 	require_once('db_connect.php');
 

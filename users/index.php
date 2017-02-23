@@ -195,7 +195,7 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-desktop">
-                        <p class="mdl-typography--title"><a class="link--no-highlight" href="/freunde/">Meine Freunde</a></p>
+                        <p class="mdl-typography--title"><a class="highlight" href="/freunde/">Meine Freunde</a></p>
                         <ul class="mdl-list list--border-bottom list--flex-spacer">
                           <?php	if(count($user['freunde']) > 0) : ?>
                             <ul class="mdl-list list--border-bottom list--flex-spacer">
@@ -242,7 +242,7 @@
                 </p>
 
                     <?php
-											require(ABS_PATH . '/fragen/_ajax/frage.php');
+											require(ABS_PATH . INC_PATH . '/frage.php');
 											$j = 1;
                       if(count($json['eigeneFragen']) > 0) :
                         echo "<ol>";
