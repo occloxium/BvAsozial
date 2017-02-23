@@ -1,4 +1,6 @@
 <?php
+
+  define('VERSION', '1.2.38');
 	// Domain
 	define('DOMAIN','localhost');
 
@@ -24,7 +26,7 @@
 	define('INVITE_NAME', 'Abi-Zeitung 2016');
 	define('INVITE_MAIL', 'occloxium@gmail.com');
   define('INVITE_UID', 'occloxium@gmail.com');
-	define('INVITE_PASSWORD', 'nullpointers2015');
+	define('INVITE_PASSWORD', 'alpspitze022017');
 	define('INVITE_PORT', 587);
 
 	// load mysqli connection

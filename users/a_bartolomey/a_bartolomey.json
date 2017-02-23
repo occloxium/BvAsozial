@@ -1,9 +1,7 @@
 {
     "spruch": "Noch 5 Minuten!",
     "rufnamen": [
-        "ZOO MATE",
-        "zoomoid",
-        "Alex"
+        "zoomoid"
     ],
     "freundesfragen": [
         {
@@ -29,8 +27,7 @@
         {
             "frage": "Wer ist der\/die perfekte Freund\/Freundin f\u00fcr mich?",
             "antworten": {
-                "a_bartolomey": "Janina <3",
-                "m_mustermann": "Janina Pesch"
+                "e_mustermann": "Janina Pesch"
             }
         }
     ],
@@ -42,7 +39,7 @@
         },
         {
             "frage": "Wann stehst du in der Regel auf?",
-            "antwort": "Viertel vor Viertel",
+            "antwort": "Viertel vor Viertel Nach - Also um Punkt",
             "beantwortet": true
         },
         {
@@ -62,12 +59,12 @@
         },
         {
             "frage": "Was war das Krasseste, dass du einem Lehrer je gesagt hast?",
-            "antwort": "Janina",
+            "antwort": "\"Das ist schlicht falsch!\"",
             "beantwortet": true
         },
         {
             "frage": "Wenn du Kreide w\u00e4rst, welche Farbe w\u00e4rst du dann?",
-            "antwort": "Janina",
+            "antwort": "Sonnengelb wie meine Skijacke :)",
             "beantwortet": true
         },
         {

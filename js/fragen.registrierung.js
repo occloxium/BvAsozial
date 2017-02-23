@@ -1,3 +1,9 @@
+/**
+ * Keeps track of te questions a user selected for his profile
+ * Alexander Bartolomey | 2017
+ * @package BvAsozial 1.2
+ */
+
 var $ = jQuery;
 /**
  * Checkboard to keep track of the files the user selected.

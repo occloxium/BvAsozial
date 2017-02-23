@@ -51,7 +51,6 @@ html {
   width: auto;
   box-shadow: none;
   position: relative;
-  max-width: 72px;
   min-width: 72px;
 }
 @media (max-width: 1024px) {
@@ -100,7 +99,7 @@ html {
 
 .navigation.is-collapsed {
   max-width: 72px;
-  overflow-x: hidden;
+  min-width: 72px;
 }
 
 .layout .navigation .mdl-navigation__link {
@@ -415,4 +414,9 @@ a:visited {
 } .breadcrumb__item a:hover {
   text-decoration: underline;
   color: #014c8c;
+}
+
+.highlight {
+  color: rgb(0,188,212) !important;
+  text-decoration: none;
 }

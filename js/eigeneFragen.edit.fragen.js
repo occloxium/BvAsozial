@@ -13,7 +13,7 @@ $('.mdl-checkbox__input').on('click', function (e) {
 $('.button--submit').click(function(){
   $.ajax({
     method: 'post',
-		url: '/fragen/edit/meine-fragen/uf.php',
+		url: '/fragen/edit/eigene-fragen/uf.php',
 		data: $('form').serialize()
   }).done(function(data){
     try {
