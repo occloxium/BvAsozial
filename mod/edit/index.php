@@ -64,7 +64,7 @@
                 $i = 1;
                 $obj = $json['eigeneFragen'];
                 foreach($obj as $frage){
-									echo frage($frage, $user, null, $i, 0, $user['vorname']);
+									echo frage($frage, $user, $user, $i, 0, $user['vorname']);
 									$i++;
 								}
               ?>

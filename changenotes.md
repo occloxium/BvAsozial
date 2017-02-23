@@ -1,5 +1,14 @@
 # Changenotes
 
+# Version 1.2.38
+**23.02.2017**
+
+*   Fixed some mayor problems with the "Ultra-Fragen-Manager"
+*   Fixed a huge Rufnamen error for both `/users/` & `/mod/edit/`
+*   Added some CSS improvements
+*   Added `/about/` frame
+*   Fixed other minor bugs
+
 # Version 1.2.37
 **21.02.2017**
 

@@ -11,7 +11,7 @@ require_once(ABS_PATH.INC_PATH.'functions.php');
 secure_session_start();
 
 if(login_check($mysqli) && $_SESSION['user']['uid'] == $_POST['by']){
-	if(isset($_POST['fragen'])){
+	if(isset($_POST['fragen'], $_POST['by'])){
     $log = "";
 		foreach($_POST['fragen'] as $frage){
 			if(isFriendsWith($frage['for'], $_POST['by'], $mysqli) || is_privileged($_POST['by'], $frage['for'], $mysqli)){
@@ -23,7 +23,7 @@ if(login_check($mysqli) && $_SESSION['user']['uid'] == $_POST['by']){
           } else {
             unset($obj['freundesfragen'][$frage['frageID']]['antworten'][$frage['von']]);
           }
-          $log .= $obj['freundesfragen'][$frage['frageID']]['antworten'][$frage['von']] . "\n";
+          //$log .= $obj['freundesfragen'][$frage['frageID']]['antworten'][$frage['von']] . "\n";
         } else {
           if(strlen($frage['antwort']) > 0){
             $obj['eigeneFragen'][$frage['frageID']]['beantwortet'] = true;
@@ -31,6 +31,7 @@ if(login_check($mysqli) && $_SESSION['user']['uid'] == $_POST['by']){
             $obj['eigeneFragen'][$frage['frageID']]['beantwortet'] = false;
           }
 					$obj['eigeneFragen'][$frage['frageID']]['antwort'] = $frage['antwort'];
+          $log .= $frage['antwort'] . "\n";
 				}
         $log .= "Answer from {$frage['von']} for {$frage['for']} saved. \n";
 				file_put_contents(ABS_PATH . "/users/{$frage['for']}/{$frage['for']}.json", json_encode($obj, JSON_PRETTY_PRINT));

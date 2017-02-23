@@ -26,11 +26,6 @@
         </div>
       </main>
     </div>
-    <div class="mdl-snackbar mdl-js-snackbar">
-        <div class="mdl-snackbar__text"></div>
-        <button class="mdl-snackbar__action" type="button"></button>
-    </div>
-    <script src="/js/anmelden.js"></script>
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	</body>
 </html>
