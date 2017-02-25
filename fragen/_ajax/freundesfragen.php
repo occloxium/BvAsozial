@@ -22,7 +22,7 @@
         $i++;
       }
       $saveAll = '<button class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect save-all">Alles abspeichern</button>';
-    $html = "<ul><p class=\"container--freundesfragen__auswahl\">Fragen von <a class=\"highlight\"href=\"/users/index.php/e_mustermann\"><b>". getUser($_POST['uid'], $mysqli)['vorname'] ."</b></a></p></h6>$fragen</ul>$saveAll";
+    $html = "<ul><p class=\"container--freundesfragen__auswahl\">Fragen von <a class=\"highlight highlight--inline\"href=\"/users/index.php/e_mustermann\"><b>". getUser($_POST['uid'], $mysqli)['vorname'] ."</b></a></p></h6>$fragen</ul>$saveAll";
       success(["html" => $html]);
     } else {
       error('clientError', 403, 'Forbidden');

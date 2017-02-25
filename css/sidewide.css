@@ -287,6 +287,7 @@ ul {
   width: 720px;
   padding: 2em 1em;
   border-radius: 0;
+  min-height: 0 !important;
 }
 
 .container--wide {
@@ -304,6 +305,11 @@ ul {
 .container--border-top {
   border-top: solid 1px #ddd;
 }
+
+.container--margin-bottom {
+  margin-bottom: 4em;
+}
+
 
 .element--margin-bottom {
   margin-bottom: 2em;
@@ -340,7 +346,7 @@ html * {
 }
 
 .container form {
-  max-width: 360px;
+  /*max-width: 360px; */
   margin: 0 auto;
   width: 80%;
 }
@@ -417,6 +423,50 @@ a:visited {
 }
 
 .highlight {
-  color: rgb(0,188,212) !important;
+  display: block;
+	margin: 1em 8px;
   text-decoration: none;
+}
+.highlight.highlight--inline {
+  display: inline !important;
+  margin-left: 4px;
+  margin-right: 0;
+}
+.highlight i,
+.highlight span {
+  display: inline-block;
+	vertical-align: middle;
+	line-height: 1.5em;
+}
+.highlight:hover,
+.highlight:active {
+	color: rgb(0, 188, 212);
+}
+.warnung {
+  display: flex;
+  align-items: center;
+  border: 2px solid #faf2cc;
+  color: #8a6d3b;
+  border-radius: 5px;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #fcf8e3;
+}
+.warnung i {
+  padding-right: 16px;
+}
+.warnung b {
+  display: block;
+  margin: 0.5em 0;
+  font-size: 1.5em;
+}
+.bemerkung {
+  display: block;
+  align-items: center;
+  border: 2px solid #bcdff1;
+  color: #31708f;
+  border-radius: 5px;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #d9edf7;
 }

@@ -1,5 +1,12 @@
 # Changenotes
 
+# Version 1.2.39
+**25.02.2017**
+
+*   Added Settings page & implemented back-end functionality
+*   Added seamless integration of privacy settings
+*   Moved changing passwords from `/users/` to `/einstellungen/`
+
 # Version 1.2.38
 **23.02.2017**
 

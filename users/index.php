@@ -149,36 +149,15 @@
         <?php else : ?>
         <div class="mdl-grid">
             <div class="mdl-cell personal-data mdl-color--white mdl-shadow--2dp mdl-cell--12-col mdl-cell--12-col-desktop">
-                <p class="mdl-typography--headline">Meine persönlichen Daten</p>
+                <p class="mdl-typography--headline">Meine persönlichen Angaben</p>
                 <div class="mdl-grid personal-data__inner">
                     <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-desktop">
-                        <p class="mdl-typography--title">Persönliche Angaben</p>
+                        <p class="mdl-typography--title">Dein Spruch</p>
+                        <p class="mdl-typography--body-1">
+                          Dieser Spruch landet in deinem Steckbrief. Er kann jederzeit geändert werden.
+                        </p>
                         <div class="mdl-grid">
-                            <form class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop personal-data__form form--update-profile" action="/includes/updateUserProfile.php" method="post">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty">
-                                    <input value="<?= $user['name']?>" name="name" id="textfieldname" class="mdl-textfield__input">
-                                    <label class="mdl-textfield__label" for="textfieldname">Mein Name</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty">
-                                    <input value="<?= $user['email']?>" name="email" id="textfieldemail" readonly class="mdl-textfield__input">
-                                    <label class="mdl-textfield__label" for="textfieldname">Meine E-Mail-Adresse</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty">
-                                    <input value="<?= $user['uid']?>" name="uid" id="textfielduid" readonly class="mdl-textfield__input">
-                                    <label class="mdl-textfield__label" for="textfielduid">Mein Benutzername</label>
-                                </div>
-                                <div class="mdl-tooltip" for="textfielduid">
-                                    Deinen Benutzernamen haben wir festgelegt und ihn zu ändern würde nur Probleme machen.
-                                </div>
-                                <a href="/users/me/change-password/" class="form__internal-link">
-                                    <i class="material-icons">redo</i><span>Mein Passwort ändern</span>
-                                </a>
-                                <input type="hidden" value="<?php echo $_SESSION['user']['uid']?>" name="uid">
-                                <button type="button" id="updateUserData" class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
-																	Änderungen speichern
-																</button>
-                            </form>
-                            <form class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop flex-container flex-container--vertical" action="/includes/addQuote.php" method="post">
+                            <form class="mdl-cell mdl-cell--8-col mdl-cell--8-col-desktop flex-container flex-container--vertical" action="/includes/addQuote.php" method="post">
                                 <input type="hidden" value="<?php echo $_SESSION['user']['uid']?>" name="uid">
                                 <div class="flex-container quote-container">
 																	<span class="intro">&#8220;</span>
