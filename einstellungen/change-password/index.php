@@ -25,7 +25,31 @@
   						$stmt->execute();
   						if($stmt->errno == 0){
   							logout();
-  							header('Location: ../../'); exit;
+  							?>
+  								<body>
+  									<div class="mdl-layout__container">
+  										<div class="layout-wrapper">
+  											<header class="layout__header header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+  												<div class="header__inner">
+  													<p class="mdl-typography--headline header__title">
+  														Überprüfung...
+  													</p>
+  												</div>
+  												<div class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+  											</header>
+  											<main class="page-content mdl-color--grey-100">
+
+  											</main>
+  										</div>
+  									</div>
+  									<script>
+  									setTimeout(function(){
+  										location.replace('./../../')
+  									}, 3000);
+  									</script>
+  									<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  								</body>
+  							<?php
   						} else {
   								$_POST = array();
   							?>

@@ -1,6 +1,6 @@
 <?php
 
-  define('VERSION', '1.2.38');
+  define('VERSION', '1.2.39');
 	/* DEFINE YOUR SETTINGS HERE */
 
 	// Domain

@@ -35,7 +35,7 @@
           </nav>
         </section>
           <div class="mdl-card fragen-container mdl-color--white mdl-shadow--2dp mdl-card--border" id="meine-fragen">
-            <h1 class="mdl-typography--title">Meine eigenen Fragen<a class="highlight highlight--hover" href="./edit/eigene-fragen/"><i class="material-icons">edit</i></a></h1>
+            <h1 class="mdl-typography--title">Meine eigenen Fragen<a class="highlight highlight--inline" href="./edit/eigene-fragen/"><i class="material-icons">edit</i></a></h1>
             <ul>
               <?php
 								$obj = $json['eigeneFragen'];
@@ -54,7 +54,7 @@
 						$freunde = $user['freunde'];
 					?>
             <div class="mdl-card fragen-container mdl-color--white mdl-shadow--2dp mdl-card--border" id="antworten-freunde">
-              <h1 class="mdl-typography--title">Antworten meiner Freunde <a class="highlight highlight--hover" href="/fragen/edit/freundesfragen/"><i class="material-icons">edit</i></a></h1>
+              <h1 class="mdl-typography--title">Antworten meiner Freunde <a class="highlight highlight--inline" href="/fragen/edit/freundesfragen/"><i class="material-icons">edit</i></a></h1>
               <ul>
                 <?php
                   $i = 1;
