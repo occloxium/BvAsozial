@@ -1,13 +1,8 @@
-
-includes/constants.php
-users/*
-!users/index.php
-!users/
 .travis.yml
 build/
 ~statics/
 bva-install/
-!users/me/
+includes/constants.inc.php
 #################
 ## Eclipse
 #################
