@@ -1,1 +1,10 @@
 php_value include_path "C:\xampp\htdocs\bvasozial\BvAsozial/includes/"
+
+Order deny,allow
+Options -Indexes
+<Files "users/index.php">
+  Allow from all
+</Files>
+<Files ~ "\.json$">
+  Deny from all
+</Files>

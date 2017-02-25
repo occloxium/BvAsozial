@@ -3,6 +3,11 @@ build/
 ~statics/
 bva-install/
 includes/constants.inc.php
+
+# User Directory
+users/*
+!users/me/
+!users/index.php
 #################
 ## Eclipse
 #################
