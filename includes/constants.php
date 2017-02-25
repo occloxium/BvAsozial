@@ -18,13 +18,10 @@
 	define('ADMIN_PATH', '/admin/');
 
 	// SMTP-Server-Daten
-	define('INVITE_HOST', 'smtp.gmail.com');
-	define('INVITE_NAME', 'Abi-Zeitung 2016');
-
 	define('INVITE_PORT', 587);
 
   // load private DATABASE
-  require_once('../../constants.inc.php');
+  require_once('constants.inc.php');
 	// load mysqli connection
 	require_once('db_connect.php');
 
