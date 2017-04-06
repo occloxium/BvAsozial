@@ -19,9 +19,9 @@
         <?php _getNav('anfragen'); ?>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100" data-username="<?php echo $user['uid'] ?>" data-directory="<?php echo $user['uid'] ?>">
-        <div class="mdl-card container--top-margin mdl-color--white mdl-shadow--2dp" id="meine-anfragen">
-          <p class="mdl-typography--title element--margin-bottom element--border-bottom">Freundschaftsanfragen</p>
-          <p class="mdl-typography--headline">Erhaltene Anfragen</p>
+        <div class="mdl-card container container--margin-top mdl-color--white mdl-shadow--2dp" id="meine-anfragen">
+          <p class="mdl-typography--headline element--margin-bottom element--border-bottom">Freundschaftsanfragen</p>
+          <p class="mdl-typography--title">Erhaltene Anfragen</p>
           <ul class="mdl-list" id="received">
             <script>
               $.ajax({
@@ -35,8 +35,8 @@
             </script>
           </ul>
         </div>
-        <div class="mdl-card mdl-color--white mdl-shadow--2dp" id="gesendete-anfragen">
-          <p class="mdl-typography--headline">Gesendete Anfragen</p>
+        <div class="mdl-card container mdl-color--white mdl-shadow--2dp" id="gesendete-anfragen">
+          <p class="mdl-typography--title">Gesendete Anfragen</p>
           <ul class="mdl-list" id="sent">
             <script>
               $.ajax({

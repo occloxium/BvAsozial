@@ -27,7 +27,7 @@
         <?php _getNav('freunde'); ?>
       </div>
         <main class="mdl-layout__content mdl-color--grey-100" meta-username="<?php echo $user['uid'] ?>" meta-directory="<?php echo $user['uid'] ?>">
-          <div class="mdl-card friend-list__container friend-list__container--top mdl-color--white mdl-shadow--2dp mdl-card--border">
+          <div class="mdl-card container container--margin-top mdl-color--white mdl-shadow--2dp mdl-card--border">
             <h3>Nach Freunden suchen</h3>
             <form class="flex-container" action="./index.php" method="get">
               <?php if(isset($_GET['search'])) : ?>
@@ -66,7 +66,7 @@
 							}
 						}
 	          if(empty($found)) : ?>
-              <div class="mdl-card friend-list__container mdl-color--white mdl-shadow--2dp mdl-card--border" id="noResults">
+              <div class="mdl-card container mdl-color--white mdl-shadow--2dp mdl-card--border" id="noResults">
                 <div class="flex-container failure">
                   <div class="flex-container__item flex-container__primary-item">
                     <i class="material-icons mdl-color-text--accent">accessibility</i>
@@ -78,7 +78,7 @@
                 </div>
               </div>
             <?php else : ?>
-              <div class="mdl-card friend-list__container mdl-color--white mdl-shadow--2dp mdl-card--border" id="found">
+              <div class="mdl-card container mdl-color--white mdl-shadow--2dp mdl-card--border" id="found">
                 <p class="section__title">Auf der Suche nach <b>"<?php echo $_GET['search']?>"</b> haben wir gefunden:</p>
                 <ul class="mdl-list">
                   <?php foreach($found as $person){ ?>
@@ -92,7 +92,7 @@
                 </ul>
               </div>
             <?php endif; ?>
-              <div class="mdl-card friend-list__container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
+              <div class="mdl-card container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
                 <p class="section__title">Weitere Menschen, die deine Freunde sein könnten:</p>
                 <ul class="mdl-list">
                   <?php foreach($rest as $person){ ?>
@@ -114,7 +114,7 @@
       						}
       					}
               ?>
-                <div class="mdl-card friend-list__container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
+                <div class="mdl-card container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
                   <p class="section__title">Menschen, die deine Freunde sein könnten:</p>
                   <ul class="mdl-list">
                     <?php

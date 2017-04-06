@@ -30,14 +30,11 @@
 		if(!empty($requests)) :
 			foreach($requests as $element){
 				$fetched_user = getMinimalUser($element, $mysqli);
-				$output .= '<li class="mdl-list__item request">
-											<span class="mdl-list__item-primary-content">
-												<a href="/users/index.php/' . $fetched_user['uid'] . '">
-												<img class="mdl-list__item-icon request__user-avatar" src="/users/' . $fetched_user['uid'] . '/avatar.jpg">' . $fetched_user['name'] . '
-												</a>
-											</span>
-											<span class="mdl-list__item-secondary-action request__label--pending">
-												Warte auf Annahme...
+				$output .= '<li class="mdl-list__item request mdl-list__item--two-line">
+											<a href="/users/index.php/' . $fetched_user['uid'] . '" class="mdl-list__item-primary-content">
+							            <img class="mdl-list__item-icon request__user-avatar" src="/users/' . $fetched_user['uid'] . '/avatar.jpg">
+                          <span>'. $fetched_user['name'] . '</span>
+                          <span class="mdl-list__item-sub-title">Warte auf Annahme...</span>
 											</span>
 										</li>';
 			}

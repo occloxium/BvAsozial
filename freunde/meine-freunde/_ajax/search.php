@@ -60,7 +60,7 @@
 										</span>
 									</li>';
 			}
-			echo $output;
+			echo success(["html" => $output]);
 		} else {
 			echo error('clientError', 400, 'Bad Request');
 		}

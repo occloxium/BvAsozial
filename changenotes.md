@@ -1,5 +1,14 @@
 # Changenotes
 
+# Version 1.2.40
+**06.04.2017**
+
+*   Fixed the [#40](https://github.com/occloxium/BvAsozial/issues/40) closure issue by ditching the whole feature
+*   Protected the `/users/` directory from external HTTP access
+*   Now accesses the `/users/` files through a designated `getUserFile.php`
+*   Made some typographical changes
+*   Minor refinements to some AJAX scripts
+
 # Version 1.2.39
 **25.02.2017**
 

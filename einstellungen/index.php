@@ -59,12 +59,12 @@
                 </a>
                 <input type="hidden" value="<?php echo $_SESSION['user']['uid']?>" name="uid">
                 <button type="button" class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
-                  Änderungen speichern
+                  speichern
                 </button>
             </form>
           </div>
           <div class="mdl-card container mdl-color--white mdl-shadow--2dp mdl-card--border">
-            <h2 class="mdl-typography--display-2">Benachrichtigungseinstellungen</h2>
+            <h2 class="mdl-typography--display-2">Benachrichtigungs-Einstellungen</h2>
             <form class="form--notification-settings" method="post">
               <?php
                 if($_SESSION['user']['allowedEmails']):
@@ -96,7 +96,7 @@
                </p>
                <input type="hidden" value="<?php echo $_SESSION['user']['uid']?>" name="uid">
               <button type="button" class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
-                Änderungen speichern
+                speichern
               </button>
             </form>
           </div>
@@ -161,12 +161,13 @@
                ?>
               <input type="hidden" value="<?php echo $_SESSION['user']['uid']?>" name="uid">
               <button type="button" class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
-                Änderungen speichern
+                speichern
               </button>
             </form>
           </div>
         </main>
       </div>
+      <script src="/js/settings.js"></script>
       <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </body>
   </html>

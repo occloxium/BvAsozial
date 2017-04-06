@@ -841,7 +841,7 @@ p {
   margin-bottom: 16px; }
 
 a {
-  color: rgb(244, 67, 54);
+  color: inherit;
   font-weight: 500; }
 
 blockquote {

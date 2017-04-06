@@ -20,7 +20,7 @@
           <?php _getNav('meine-freunde'); ?>
         </div>
           <main class="mdl-layout__content mdl-color--grey-100" data-username="<?php echo $user['uid'] ?>" data-directory="<?php echo $user['uid'] ?>">
-            <div class="mdl-card container--top-margin mdl-color--white mdl-shadow--2dp" id="meine-anfragen">
+            <div class="mdl-card container container--margin-top mdl-color--white mdl-shadow--2dp" id="meine-anfragen">
               <p class="mdl-typography--title element--margin-bottom element--border-bottom">Meine Freunde</p>
                 <form class="search-form" method="get">
                   <div class="mdl-textfield mdl-js-textfield">
@@ -31,18 +31,8 @@
 			              <i class="material-icons">search</i>
 				          </button>
                 </form>
-                <script>
-                    (function() {
-                        $.ajax({
-                            url: './_ajax/init.php',
-                            method: 'get'
-                        }).done(function(data) {
-                            $('.freunde-container ul').append(data);
-                        });
-                    }());
-                </script>
                 </div>
-                <div class="mdl-card container mdl-color--white mdl-shadow--2dp freunde-container">
+                <div class="mdl-card container mdl-color--white mdl-shadow--2dp">
                     <ul class="mdl-list">
 
                     </ul>

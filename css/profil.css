@@ -137,7 +137,6 @@ input.mdl-chip__text {
   margin: 0 !important;
   max-width: none !important;
   width: auto !important;
-  padding: 1em;
 }
 .form--rufnamen > button {
   width: 80%;
@@ -240,7 +239,7 @@ input.mdl-chip__text {
 .flex-container {
 	display: flex;
 	align-items: center;
-	width: 90%;
+	/*width: 90%;*/
 	max-width: 720px;
 }
 
@@ -347,6 +346,11 @@ input.mdl-chip__text {
 .fragen:not(.befreundet) p.mdl-typography--title {
 	color: rgba(0,0,0,0.2);
 	width: 100%;
+}
+
+.fragen ul {
+  list-style: none outside none;
+  padding-left: 0;
 }
 
 .mdl-tabs__tab--external-link {

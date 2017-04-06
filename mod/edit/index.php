@@ -51,7 +51,7 @@
               Rufnamen hinzufügen
             </div>
             <button type="button" class="mdl-button save-all mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white">
-              Änderungen speichern
+              speichern
             </button>
           </form>
         </div>

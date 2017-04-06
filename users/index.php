@@ -76,7 +76,7 @@
                         Rufnamen hinzufügen
                       </div>
                       <button type="button" class="mdl-button save-all mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white">
-                        Änderungen speichern
+                        speichern
                       </button>
                     </form>
                   </div>
@@ -106,7 +106,7 @@
         </div>
         <?php if($_SESSION['user'] != $user) : ?>
         <div class="mdl-grid">
-            <div class="mdl-cell personal-data mdl-color--white mdl-shadow--2dp mdl-cell--5-col mdl-cell--5-col-desktop">
+            <div class="mdl-cell personal-data mdl-color--white mdl-shadow--2dp mdl-cell--12-col mdl-cell--5-col-desktop">
                 <p class="mdl-typography--headline">Persönliche Daten</p>
                 <p class="mdl-typography--title">Freunde</p>
                 <?php	if(count($user['freunde']) > 0) : ?>
@@ -224,7 +224,7 @@
 											require(ABS_PATH . INC_PATH . '/frage.php');
 											$j = 1;
                       if(count($json['eigeneFragen']) > 0) :
-                        echo "<ol>";
+                        echo "<ul>";
                         foreach($json['eigeneFragen'] as $frage){
   												if(!isset($frage['antwort'])){
   													$frage['antwort'] = null;
@@ -232,7 +232,7 @@
   												echo frage($frage, $user, null, $j, 0);
   												$j++;
   											}
-                        echo "</ol>";
+                        echo "</ul>";
                       else :
                         ?>
                         <ul class="mdl-list list--no-entries list--border-bottom list--flex-spacer">
