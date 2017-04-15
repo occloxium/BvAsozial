@@ -5,7 +5,7 @@ bva-install/
 includes/constants.inc.php
 
 # User Directory
-users/*
+users/data
 !users/me/
 !users/index.php
 #################

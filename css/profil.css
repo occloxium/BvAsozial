@@ -137,11 +137,12 @@ input.mdl-chip__text {
   margin: 0 !important;
   max-width: none !important;
   width: auto !important;
-  padding: 1em;
 }
 .form--rufnamen > button {
   width: 80%;
   max-width: 320px;
+  display: block;
+  margin: 0 auto 1em;
 }
 .form--rufnamen ul {
   padding: 1em 0 2em;
@@ -240,7 +241,7 @@ input.mdl-chip__text {
 .flex-container {
 	display: flex;
 	align-items: center;
-	width: 90%;
+	/*width: 90%;*/
 	max-width: 720px;
 }
 
@@ -349,9 +350,23 @@ input.mdl-chip__text {
 	width: 100%;
 }
 
+.fragen ul {
+  list-style: none outside none;
+  padding-left: 0;
+}
+
 .mdl-tabs__tab--external-link {
 	color: #aaa;
 	padding: 0 24px;
+}
+
+.private-profile__wrapper {
+  padding: 6em 0;
+  color: rgba(0,0,0,0.33);
+  text-align: center;
+}
+.private-profile__subtitle i.material-icons {
+  vertical-align: bottom;
 }
 
 .mdl-tabs__tab--external-link:active,

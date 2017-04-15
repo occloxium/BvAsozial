@@ -26,7 +26,7 @@
     						<p class="mdl-typography--headline header__title">
     							Herzlich Willkommen!
     						</p>
-    						<p class="mdl-typography--title header__subtitle">
+    						<p class="mdl-typography--body-1 header__subtitle">
     							Bestätige deine Einladung zum BvAsozial-Netzwerk, um fortzufahren
     						</p>
     					</div>
@@ -45,7 +45,7 @@
     							<input type="hidden" name="step" value="0">
     							<p class="mdl-typography--headline">Hallo!</p>
     							<p class="mdl-typography--body-1">
-    								Trage hier bitte die Anmeldedaten ein, die wir dir geschickt haben, um fortzufahren und dein Profil einzurichten
+    								Trage hier die Anmeldedaten ein, die wir dir geschickt haben, um fortzufahren und dein Profil einzurichten
     							</p>
     							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     								<input type="text" class="mdl-textfield__input" id="uid" name="uid">

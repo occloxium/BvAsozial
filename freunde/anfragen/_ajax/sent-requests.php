@@ -7,21 +7,12 @@
 		if(isset($_GET['amount'])){
 			// fetch a limited amount of data
 			$limit = intval($_GET['amount']);
-			$stmt = $mysqli->prepare('SELECT an FROM anfragen WHERE von = ? LIMIT ?');
-			$stmt->bind_param('si', $_SESSION['user']['uid'], $limit);
-			$stmt->execute();
-			$stmt->bind_result($an);
-			$stmt->store_result();
+			$stmt = fetch("an", "anfragen", "von", $_SESSION['user']['uid'], "LIMIT $limit");
 			while($stmt->fetch()){
 				$request[] = $an;
 			}
 		} else {
-			// fetch all data
-			$stmt = $mysqli->prepare('SELECT an FROM anfragen WHERE von = ?');
-			$stmt->bind_param('s', $_SESSION['user']['uid']);
-			$stmt->execute();
-			$stmt->bind_result($an);
-			$stmt->store_result();
+			$stmt = fetch("an", "anfragen", "von", $_SESSION['user']['uid'], $mysqli);
 			while($stmt->fetch()){
 				$requests[] = $an;
 			}
@@ -29,17 +20,16 @@
 		$output = "";
 		if(!empty($requests)) :
 			foreach($requests as $element){
-				$fetched_user = getMinimalUser($element, $mysqli);
-				$output .= '<li class="mdl-list__item request">
-											<span class="mdl-list__item-primary-content">
-												<a href="/users/index.php/' . $fetched_user['uid'] . '">
-												<img class="mdl-list__item-icon request__user-avatar" src="/users/' . $fetched_user['uid'] . '/avatar.jpg">' . $fetched_user['name'] . '
-												</a>
-											</span>
-											<span class="mdl-list__item-secondary-action request__label--pending">
-												Warte auf Annahme...
-											</span>
-										</li>';
+        if(is_visible($element, $_SESSION['user']['uid'], $mysqli)){
+          $fetched_user = getMinimalUser($element, $mysqli);
+  				$output .= '<li class="mdl-list__item request mdl-list__item--two-line">
+  											<a href="/users/index.php/' . $fetched_user['uid'] . '" class="mdl-list__item-primary-content">
+  							            <img class="mdl-list__item-icon request__user-avatar" src="/users/data/' . $fetched_user['uid'] . '/avatar.jpg">
+                            <span>'. $fetched_user['name'] . '</span>
+                            <span class="mdl-list__item-sub-title">Warte auf Annahme...</span>
+  											</span>
+  										</li>';
+        }
 			}
 			echo $output;
 		else :

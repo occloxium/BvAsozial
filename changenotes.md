@@ -1,5 +1,25 @@
 # Changenotes
 
+# Version 1.2.41
+**15.04.2017**
+
+*   **Implemented privacy mod** See [#23](https://github.com/occloxium/BvAsozial/issues/23), [#22](https://github.com/occloxium/BvAsozial/issues/22), [#21](https://github.com/occloxium/BvAsozial/issues/21) for further details
+*   Moved user data to `/users/data/` and adjusted most of the content links
+*   Introduced new API functions for accessing user data
+*   Capsulated some huge files to compose their code from *sections* See [#41](https://github.com/occloxium/BvAsozial/issues/41)
+*   Added the first unofficial PHP unit test for the privacy module
+*   Factorized the HTML Drawer
+*   Adjusted some CSS and JavaScript
+
+# Version 1.2.40
+**06.04.2017**
+
+*   Fixed the [#40](https://github.com/occloxium/BvAsozial/issues/40) closure issue by ditching the whole feature
+*   Protected the `/users/` directory from external HTTP access
+*   Now accesses the `/users/` files through a designated `getUserFile.php`
+*   Made some typographical changes
+*   Minor refinements to some AJAX scripts
+
 # Version 1.2.39
 **25.02.2017**
 

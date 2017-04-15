@@ -14,7 +14,7 @@
 	if(isset($_POST['by'], $_POST['for'])){
 		if(login_check($mysqli) && (is_privileged($_POST['by'], $_POST['for'], $mysqli) || isFriendsWith($_POST['for'], $_POST['by'], $mysqli))){
       $user = getUser($_POST['for'], $mysqli);
-      $directory = ABS_PATH . '/users/' . $user['uid'] . '/' . $user['uid'] . '.json';
+      $directory = ABS_PATH . '/users/data/' . $user['uid'] . '/' . $user['uid'] . '.json';
       $json = json_decode(file_get_contents($directory), true);
       $log = "";
       $json['rufnamen'] = [];
