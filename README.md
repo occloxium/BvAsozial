@@ -1,15 +1,10 @@
 # BvAsozial
-BvAsozial ist eine Plattform, entwickelt von einem kleinen Team junger Webentwickler, die der Erhebnung von Daten für die Abiturzeitung dienen soll.
-Weil während der Entwicklung das volle Potential einer solchen Plattform auffiel, wurde die Plattform seitdem weiterentwickelt und soll nun noch anderen
-Stufen bei der Produktion ihrer Abiturzeitung helfen.
+BvAsozial ist eine Plattform, entwickelt von einem kleinen Team junger Webentwickler, die der Erhebung von Daten für die Abiturzeitung dienen soll. 
+Weil während der Entwicklung das volle Potential einer solchen Plattform auffiel, wurde die Plattform seitdem weiterentwickelt und soll nun noch anderen Stufen bei der Produktion ihrer Abiturzeitung helfen.
 
 ## Installation
-Wenn ihr die Plattform auf unseren Servern nutzen wollt, dann stellt einen Antrag an occloxium@gmail.com und wir werden diesen so schnell wie möglich bearbeiten.
-Wenn ihr die Plattform lieber selber hosten wollt, müsst ihr euch noch ein bisschen gedulten, wir arbeiten mit Hochtouren an einem einfach zu installierenen Paket, dass das gesamte Drum und Dran installiert, da neben den ganzen angepassten Dateien auch noch eine Datenbank erforderlich ist.
-
-## Meilensteine
-
-[Meilensteine](milestones.md)
+Halbwegs erfahrene Entwickler können dieses Repository auf einem Webserver clonen und mit einem eigenen Mailserver benutzen.
+Es dauert aber noch eine Weile, bis ein vollautomatischer Installer bereitgestellt wird, der die Datenbank mit einrichtet. Wir arbeiten momentan an einem solchen Feature.
 
 ## Changenotes
 
