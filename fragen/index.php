@@ -7,7 +7,7 @@
 	secure_session_start();
 	if(login_check($mysqli) == true) :
 		$user = $_SESSION['user'];
-    $path = "../users/{$user['directory']}/{$user['uid']}.json";
+    $path = ABS_PATH . "/users/data/{$user['directory']}/{$user['uid']}.json";
     $jsonstr = file_get_contents($path);
     $json = json_decode($jsonstr, true);
 ?>
@@ -19,9 +19,7 @@
   <body>
     <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="drawer-header">
-          <img class="avatar" src="<?php echo '/users/' . $user['uid'] . '/avatar.jpg'?>">
-        </header>
+        <?php require_once(ABS_PATH . '/_sections/drawer.php'); ?>
         <?php _getNav('fragen'); ?>
       </div>
       <main class="mdl-layout__content mdl-color--blue-grey-900" data-username="<?php echo $user['uid'] ?>">
@@ -51,7 +49,7 @@
 						</button>
           </div>
           <?php
-						$freunde = $user['freunde'];
+						$freunde = filterUsers($user['uid'], $user['freunde'], $mysqli);
 					?>
             <div class="mdl-card fragen-container mdl-color--white mdl-shadow--2dp mdl-card--border" id="antworten-freunde">
               <h1 class="mdl-typography--title">Antworten meiner Freunde <a class="highlight highlight--inline" href="/fragen/edit/freundesfragen/"><i class="material-icons">edit</i></a></h1>

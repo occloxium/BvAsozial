@@ -15,3 +15,6 @@ form {
   margin: 1em 0;
   display: block;
 }
+.small {
+  font-size: 0.8em;
+}

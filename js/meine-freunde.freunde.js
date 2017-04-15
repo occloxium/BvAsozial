@@ -5,7 +5,16 @@ $('#search').on('input', function(){
 		method: 'get',
 		data: {friend: $('#search').val()}
 	}).done(function(data){
-		$('.container ul').append(data);
+		try {
+      var obj = JSON.parse(data);
+      if(obj.success){
+        $('.container ul').append(obj.html);
+      } else {
+        console.log(obj);
+      }
+    } catch (e) {
+      console.error(data);
+    }
 	});
 });
 
@@ -50,7 +59,6 @@ var listFriends = function(searchKey){
         }
       } catch(e){
         console.error(data);
-        console.error(d);
       }
 		}).fail(function(e){
       console.error(e);
@@ -70,7 +78,6 @@ var listFriends = function(searchKey){
         }
       } catch(e){
         console.error(data);
-        console.error(d);
       }
 		}).fail(function(e){
       console.error(e);
@@ -92,7 +99,6 @@ var listFriends = function(searchKey){
       }
     } catch(e){
       console.error(data);
-      console.error(d);
     }
   }).fail(function(e){
     console.error(e);

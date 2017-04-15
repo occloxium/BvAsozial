@@ -15,17 +15,9 @@
     <body>
       <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
         <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-          <header class="drawer-header">
-            <img class="avatar" src="<?php echo '/users/' . $user['uid'] . '/avatar.jpg'?>">
-            <div>
-            <div class="flex-container">
-              <span><?php echo $user['email']; ?></span>
-              <div class="mdl-layout-spacer"></div>
-            </div>
-          </div>
-        </header>
-        <?php _getNav('einstellungen'); ?>
-      </div>
+          <?php require_once(ABS_PATH . '/_sections/drawer.php'); ?>
+          <?php _getNav('einstellungen'); ?>
+        </div>
         <main class="mdl-layout__content mdl-color--blue-grey-900">
           <div class="mdl-card container container--margin-top mdl-color--white mdl-shadow--2dp mdl-card--border">
             <h1 class="mdl-typography--display-1">Einstellungen</h1>
@@ -110,47 +102,73 @@
                 Für wen soll dein Profil sichtbar sein?
               </p>
               <?php
-                /**
-                 * TODO Privatsphäre-Branch: Introduce visisiblity to user profile entry in DB
-                 */
-                $_SESSION['user']['visibility'] = 1;
-                switch($_SESSION['user']['visibility']) :
-                  case 2 : ?>
+                switch($_SESSION['user']['privacySettings']) :
+                  case "3" : ?>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowAll">
-                    <input type="radio" id="allowAll" class="mdl-radio__button" name="allow" value="2" checked>
+                    <input type="radio" id="allowAll" class="mdl-radio__button" name="allow" value="3" checked>
                     <span class="mdl-radio__label">Öffentlich</span>
                   </label>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowFriends">
-                    <input type="radio" id="allowFriends" class="mdl-radio__button" name="allow" value="1">
+                    <input type="radio" id="allowFriends" class="mdl-radio__button" name="allow" value="2">
                     <span class="mdl-radio__label">Nur meine Freunde</span>
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowCustom">
+                    <input type="radio" id="allowCustom" class="mdl-radio__button" name="allow" value="1">
+                    <span class="mdl-radio__label">Benutzerdefinierte Liste (<a class="small" href="/einstellungen/privatsphaere/">Liste anpassen</a>)</span>
                   </label>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowNone">
                     <input type="radio" id="allowNone" class="mdl-radio__button" name="allow" value="0">
                     <span class="mdl-radio__label">Nur Ich</span>
                   </label>
                   <?php break;
-                  case 1 : ?>
+                  case "2" : ?>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowAll">
-                    <input type="radio" id="allowAll" class="mdl-radio__button" name="allow" value="2" >
+                    <input type="radio" id="allowAll" class="mdl-radio__button" name="allow" value="3" >
                     <span class="mdl-radio__label">Öffentlich</span>
                   </label>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowFriends">
-                    <input type="radio" id="allowFriends" class="mdl-radio__button" name="allow" value="1" checked>
+                    <input type="radio" id="allowFriends" class="mdl-radio__button" name="allow" value="2" checked>
                     <span class="mdl-radio__label">Nur meine Freunde</span>
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowCustom">
+                    <input type="radio" id="allowCustom" class="mdl-radio__button" name="allow" value="1">
+                    <span class="mdl-radio__label">Benutzerdefinierte Liste (<a class="small" href="/einstellungen/privatsphaere/">Liste anpassen</a>)</span>
                   </label>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowNone">
                     <input type="radio" id="allowNone" class="mdl-radio__button" name="allow" value="0" >
                     <span class="mdl-radio__label">Nur Ich</span>
                   </label>
                   <?php break;
-                  case 0 : ?>
+                  case "1" : ?>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowAll">
-                    <input type="radio" id="allowAll" class="mdl-radio__button" name="allow" value="2">
+                    <input type="radio" id="allowAll" class="mdl-radio__button" name="allow" value="3">
                     <span class="mdl-radio__label">Öffentlich</span>
                   </label>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowFriends">
-                    <input type="radio" id="allowFriends" class="mdl-radio__button" name="allow" value="1">
+                    <input type="radio" id="allowFriends" class="mdl-radio__button" name="allow" value="2">
                     <span class="mdl-radio__label">Nur meine Freunde</span>
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowCustom">
+                    <input type="radio" id="allowCustom" class="mdl-radio__button" name="allow" value="1" checked>
+                    <span class="mdl-radio__label">Benutzerdefinierte Liste (<a class="small" href="/einstellungen/privatsphaere/">Liste anpassen</a>)</span>
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowNone">
+                    <input type="radio" id="allowNone" class="mdl-radio__button" name="allow" value="0">
+                    <span class="mdl-radio__label">Nur Ich</span>
+                  </label>
+                  <?php break;
+                  case "0" : ?>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowAll">
+                    <input type="radio" id="allowAll" class="mdl-radio__button" name="allow" value="3">
+                    <span class="mdl-radio__label">Öffentlich</span>
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowFriends">
+                    <input type="radio" id="allowFriends" class="mdl-radio__button" name="allow" value="2">
+                    <span class="mdl-radio__label">Nur meine Freunde</span>
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowCustom">
+                    <input type="radio" id="allowCustom" class="mdl-radio__button" name="allow" value="1">
+                    <span class="mdl-radio__label">Benutzerdefinierte Liste (<a class="small" href="/einstellungen/privatsphaere/">Liste anpassen</a>)</span>
                   </label>
                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="allowNone">
                     <input type="radio" id="allowNone" class="mdl-radio__button" name="allow" value="0" checked>

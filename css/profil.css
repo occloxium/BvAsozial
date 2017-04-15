@@ -141,6 +141,8 @@ input.mdl-chip__text {
 .form--rufnamen > button {
   width: 80%;
   max-width: 320px;
+  display: block;
+  margin: 0 auto 1em;
 }
 .form--rufnamen ul {
   padding: 1em 0 2em;
@@ -356,6 +358,15 @@ input.mdl-chip__text {
 .mdl-tabs__tab--external-link {
 	color: #aaa;
 	padding: 0 24px;
+}
+
+.private-profile__wrapper {
+  padding: 6em 0;
+  color: rgba(0,0,0,0.33);
+  text-align: center;
+}
+.private-profile__subtitle i.material-icons {
+  vertical-align: bottom;
 }
 
 .mdl-tabs__tab--external-link:active,

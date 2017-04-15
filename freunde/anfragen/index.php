@@ -13,9 +13,7 @@
   <body>
     <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="drawer-header">
-          <img class="avatar" src="<?php echo '/users/'.$user['uid'].'/avatar.jpg'?>">
-        </header>
+        <?php require_once(ABS_PATH . '/_sections/drawer.php'); ?>
         <?php _getNav('anfragen'); ?>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100" data-username="<?php echo $user['uid'] ?>" data-directory="<?php echo $user['uid'] ?>">

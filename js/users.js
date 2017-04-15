@@ -40,10 +40,10 @@ events = {
     var postData = {
       'names': names,
       'for': $('main').attr('data-username'),
-      'by': $('body').attr('data-mod')
+      'by': data.signedInUser.username
     };
     $.ajax({
-      method: 'post',
+      type: 'post',
       data: postData,
       url: '/includes/addName.php'
     }).done(function(data) {
@@ -70,7 +70,7 @@ events = {
     }
     $.ajax({
       data: request,
-      method: 'post',
+      type: 'post',
       url: '/includes/sendFriendRequest.php',
       cache: false
     }).done(function(data){

@@ -29,3 +29,6 @@
   color: rgba(0,0,0,0.33);
   text-align: center;
 }
+.container form .mdl-button {
+  width: auto;
+}
