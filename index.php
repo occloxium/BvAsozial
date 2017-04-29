@@ -34,7 +34,7 @@
 	    <div class="mdl-grid content">
 	        <div class="mdl-color--white personal-data mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 	            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-desktop">
-	                <img class="avatar" src="<?php echo './users/'.$_SESSION['user']['directory'].'/avatar.jpg'?>">
+	                <img class="avatar" src="<?php echo './users/data/'.$_SESSION['user']['directory'].'/avatar.jpg'?>">
 	            </div>
 	            <div class="mdl-cell mdl-cell--8-col mdl-cell--8-desktop">
 								<div class="data-container" id="personalData">
