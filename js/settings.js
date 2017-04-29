@@ -10,7 +10,7 @@ $('.form--personal-data .mdl-button').click(function(){
   $.ajax({
     type: 'post',
     url: '/einstellungen/uup.php',
-    data: $('.form--personal-data').serialize();
+    data: $('.form--personal-data').serialize()
   }).done(function(d){
     try {
       var obj = JSON.parse(d);
@@ -31,7 +31,7 @@ $('.form--privacy-settings .mdl-button').click(function(){
   $.ajax({
     type: 'post',
     url: '/einstellungen/up.php',
-    data: $('.form--privacy-settings').serialize();
+    data: $('.form--privacy-settings').serialize()
   }).done(function(d){
     try {
       var obj = JSON.parse(d);
@@ -51,7 +51,7 @@ $('.form--notification-settings .mdl-button').click(function(){
   $.ajax({
     type: 'post',
     url: '/einstellungen/un.php',
-    data: $('.form--notification-settings').serialize();
+    data: $('.form--notification-settings').serialize()
   }).done(function(d){
     try {
       var obj = JSON.parse(d);

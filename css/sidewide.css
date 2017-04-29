@@ -2,6 +2,9 @@ body,
 html {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
+ul, ol {
+  padding-left: 0;
+}
 
 .mdl-layout {
   flex-direction: row;
@@ -127,6 +130,16 @@ html {
   display: none;
 }
 
+@media only screen and (max-width: 480px){
+  .navigation.is-collapsed {
+    max-width: none;
+    min-width: 0;
+  }
+  .navigation.is-collapsed a.mdl-navigation__link > span {
+    display: inherit;
+  }
+}
+
 .mdl-layout.is-small-screen .mdl-layout__drawer.is-visible .mdl-navigation__link > span {
   display: flex;
   margin-left: 16px;
@@ -244,7 +257,7 @@ ul {
 
 .layout-wrapper {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -263,10 +276,8 @@ ul {
 }
 
 .header__inner {
-  bottom: 0;
-  padding-bottom: 1em;
-  padding-left: 2em;
-  position: absolute;
+  padding: 1em 2em;
+  position: static;
 }
 
 .layout__header > .mdl-progress {
@@ -281,7 +292,7 @@ ul {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   width: 720px;
@@ -348,7 +359,7 @@ html * {
 .container form {
   /*max-width: 360px; */
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 .container form .mdl-textfield {
@@ -369,18 +380,24 @@ html * {
 }
 
 .logo.prime {
-  float: right;
-  margin: 6rem;
+  margin: 4em auto 0;
   width: 200px;
+  display: block;
 }
-
+@media only screen and (min-width: 481px){
+  .logo.prime {
+    float: right;
+    margin: 6rem;
+    width: 200px;
+    display: block;
+  }
+  .header__inner {
+    position: absolute;
+    bottom: 0;
+  }
+}
 .inherit-flex {
   display: flex;
-}
-
-a:link,
-a:visited {
-  color: inherit;
 }
 
 .link--no-highlight {

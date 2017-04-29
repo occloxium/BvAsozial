@@ -1,44 +1,20 @@
 <?php
-    include_once '../../../includes/db_connect.php';
-    include_once '../../../includes/functions.php';
+    require('constants.php');
+    require(ABS_PATH . INC_PATH . 'functions.php');
 
     secure_session_start();
     if (login_check($mysqli) == true) :
-      $user = getUser($_SESSION{'username'}, $mysqli);
+      $user = getUser($_SESSION['user']['uid'], $mysqli);
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-		<title>BvAsozial</title>
-
-		<meta name="mobile-web-app-capable" content="yes">
-		<link rel="icon" sizes="192x192" href="/images/android-desktop.png">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta name="apple-mobile-web-app-title" content="BvAsozial">
-		<link rel="apple-touch-icon-precomposed" href="/images/ios-desktop.png">
-
-		<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
-		<meta name="msapplication-TileColor" content="#252830">
-
-		<link rel="shortcut icon" href="/images/favicon.png">
-
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-		<link rel="stylesheet" href="/css/bvasozial.mdl.min.css">
-		<link rel="stylesheet" href="/css/sidewide.css">
-    <link rel="stylesheet" href="/css/edit.me.profile-picture.css">
-		<script src="/js/jquery-2.1.4.min.js"></script>
+		<?php _getHead(); ?>
 	</head>
 	<body>
 		<div class="mdl-layout__container">
 			<div class="layout-wrapper">
-				<header class="layout__header layout__header--small mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+				<header class="layout__header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
 					<div class="header__inner">
 						<p class="mdl-typography--headline header__title">
 							Profilbild ändern
@@ -47,6 +23,14 @@
 				</header>
 				<main class="page-content mdl-color--grey-100">
 					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
+            <div class="breadcrumb">
+              <li class="breadcrumb__item">
+                <a href="/">BvAsozial</a>
+              </li>
+              <li class="breadcrumb__item">
+                Profilbild ändern
+              </li>
+            </div>
             <p class="mdl-typography--body-1 mdl-typography--text-center">
               Das ist dein aktuelles Profilbild
             </p>

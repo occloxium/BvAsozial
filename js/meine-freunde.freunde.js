@@ -1,15 +1,23 @@
 $('#search').on('input', function(){
-	$('.freunde-container ul').children().each(function(){
-		$(this).detach();
-	});
+	$('.container ul').children().detach();
 	$.ajax({
 		url: './_ajax/search.php',
 		method: 'get',
 		data: {friend: $('#search').val()}
 	}).done(function(data){
-		$('.freunde-container ul').append(data);
+		try {
+      var obj = JSON.parse(data);
+      if(obj.success){
+        $('.container ul').append(obj.html);
+      } else {
+        console.log(obj);
+      }
+    } catch (e) {
+      console.error(data);
+    }
 	});
 });
+
 $('.mdl-list').on('click', '.unfriend', function(e){
 	e.stopPropagation();
 	var request = {
@@ -18,7 +26,7 @@ $('.mdl-list').on('click', '.unfriend', function(e){
 	};
 	$.ajax({
 		method: 'post',
-		url: './_ajax/unfriend.php', 
+		url: './_ajax/unfriend.php',
 		data: request
 	}).done(function(data){
 		try {
@@ -33,27 +41,66 @@ $('.mdl-list').on('click', '.unfriend', function(e){
 		}
 	})
 });
+
 var listFriends = function(searchKey){
 	if(searchKey.length > 0){
-		$('.freunde-container ul').children().forEach(function(){
-			$(this).detach();
-		});
+    $('.container ul').children().detach();
 		$.ajax({
 			url: './_ajax/search.php',
 			method: 'get',
 			data: {friend: searchKey}
 		}).done(function(data){
-			$('.freunde-container').append(data);
-		});
+      try {
+        var obj = JSON.parse(data);
+        if(obj.success){
+          $('.container ul').append(obj.html);
+        } else {
+          console.error(data.message);
+        }
+      } catch(e){
+        console.error(data);
+      }
+		}).fail(function(e){
+      console.error(e);
+    });
 	} else {
-		$('.freunde-container ul').children().forEach(function(){
-			$(this).detach();
-		});
+		$('.container ul').children().detach();
 		$.ajax({
 			url: './_ajax/init.php',
 			method: 'get'
 		}).done(function(data){
-			$('.freunde-container ul').append(data);
-		});
+      try {
+        var obj = JSON.parse(data);
+        if(obj.success){
+          $('.container ul').append(obj.html);
+        } else {
+          console.error(data.message);
+        }
+      } catch(e){
+        console.error(data);
+      }
+		}).fail(function(e){
+      console.error(e);
+    });
 	}
-}
+};
+
+(function() {
+  $.ajax({
+    url: './_ajax/init.php',
+    method: 'get'
+  }).done(function(data){
+    try {
+      var obj = JSON.parse(data);
+      if(obj.success){
+        $('.container ul').append(obj.html);
+      } else {
+        console.error(data.message);
+      }
+    } catch(e){
+      console.error(data);
+    }
+  }).fail(function(e){
+    console.error(e);
+  });
+})();

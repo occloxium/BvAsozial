@@ -1,6 +1,6 @@
 <?php
 
-  define('VERSION', '1.2.39');
+  define('VERSION', '1.2.40');
 	/* DEFINE YOUR SETTINGS HERE */
 
 	// Domain
@@ -24,6 +24,9 @@
   require_once('constants.inc.php');
 	// load mysqli connection
 	require_once('db_connect.php');
+
+  // defines constant to check if constants are loaded
+  define('CONSTANTS_LOADED', true);
 
 	// Load Composer dependencies
 	require(ABS_PATH . '/vendor/autoload.php');
