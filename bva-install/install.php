@@ -31,13 +31,23 @@
   $admin = ($_POST['admin_uid'] != "" ? $_POST['admin_uid'] : die('admin name cannot be null'));
   $admin_password = ($_POST['admin_password'] != "" && $_POST['admin_password'] == $_POST['admin_password_confirm'] ? $_POST['admin_password'] : die('admin password cannot be null and must be the confirmed right'));
   $admin_email = ($_POST['admin_email'] != "" ? $_POST['admin_email'] : die('admin email cannot be null'));
-  $query .= "INSERT INTO admin_login (uid, email, password) VALUES ('$admin','$admin_email',SHA2('$admin_password', 384));";
+  $result = $mysqli->multi_query($query );
+
+    do {
+        if($result == FALSE){
+            echo $mysqli->error;
+            $success = false;
+            die('failure on db creation');
+        }
+    } while ($mysqli->next_result());
+
+//  $mysqli = new mysqli($db_host, $db_user, $db_password, $db_name) or die('Wrong login data for mysql server');
+  $query = "INSERT INTO login (id, uid, email, password) VALUES (1,'$admin','$admin_email',SHA2('$admin_password', 384));";
+  $query .= "INSERT INTO admins (id, boundTo) VALUES (1,'$admin');";
   $result = $mysqli->multi_query($query);
-  if($result == FALSE){
-    echo $mysqli->error;
-    $success = false;
-    die('failure on db creation');
-  }
+
+  $mysqli->close();
+
   // Create root folder & include folder
   mkdir(__DIR__ . '/../includes/');
 
