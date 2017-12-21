@@ -1,3 +1,8 @@
+/**
+ * @todo ConfigFile erstellen, damit jeder eine andere URL eintragen kann.
+ * @todo JS-Dateien müssen noch minifiziert werden.
+ */
+
 // Project Variables
 var projectDomain = '192.168.33.10';
 
