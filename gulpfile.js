@@ -3,34 +3,11 @@ var projectDomain = '192.168.33.10';
 
 //CSS concat sources -> root = projectSource
 var concatScssSources = [
-    './node_modules/owl.carousel/dist/assets/owl.carousel.min.css'
 ];
 
 //JS concat sources -> root = projectSource
 var concatJsSources = [
-    // './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/mustache/mustache.min.js',
-    './node_modules/owl.carousel/dist/owl.carousel.min.js',
-    './web/js/vendor/debounce.js',
-    './web/js/modules/autocomplete.js',
-    './web/js/modules/disableScrollingOnHover.js',
-    './web/js/modules/errorHandler.js',
-    './web/js/modules/logger.js',
-    './web/js/modules/login.js',
-    './web/js/modules/overlays.js',
-    './web/js/modules/searchbox.js',
-    './web/js/modules/exposeSlider.js',
-    './web/js/modules/numberFormatter.js',
-    './web/js/modules/wizard.js',
-    './web/js/modules/maps.js',
-    './web/js/modules/scrollTo.js',
-    './web/js/modules/baufi-calculator.js',
-    './web/js/modules/sticky-nav.js',
-    './web/js/modules/contactMultiForm.js',
-    './web/js/modules/rentorbuy-calculator.js',
-    './web/js/modules/additionalexpenses-calculator.js',
-    './web/js/modules/sell-form.js',
-    './web/js/app.js'
+    './node_modules/jquery/dist/jquery.min.js'
 ];
 
 // Gulp
