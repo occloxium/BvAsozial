@@ -1,3 +1,8 @@
+# ACHTUNG!
+
+Dieser Branch dient nur zum Testen! Diese Änderungen sollen **NIEMALS** in die laufende
+Entwicklung einfießen!
+
 # BvAsozial
 BvAsozial ist eine Plattform, entwickelt von einem kleinen Team junger Webentwickler, die der Erhebung von Daten für die Abiturzeitung dienen soll. 
 Weil während der Entwicklung das volle Potential einer solchen Plattform auffiel, wurde die Plattform seitdem weiterentwickelt und soll nun noch anderen Stufen bei der Produktion ihrer Abiturzeitung helfen.
