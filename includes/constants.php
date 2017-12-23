@@ -1,33 +1,34 @@
 <?php
-
-  define('VERSION', '1.2.40');
-	/* DEFINE YOUR SETTINGS HERE */
-
 	// Domain
-	define('DOMAIN','localhost');
+	define('DOMAIN', 'http://bvasozial.localhost/bva-install/');
 
 	// Sicherheitskonstante
 	define('SECURE', false);
 
 	// Development constants
-	define('DEVELOPMENT', true);
+	define('DEVELOPMENT', false);
 
 	// Absolut-Pfade
-	define('ABS_PATH', realpath(__DIR__ . '/../'));
+	define('ABS_PATH', realpath('/Users/mark/Projects/BvAsozial/includes' . "/../"));
 	define('INC_PATH', '/includes/');
 	define('ADMIN_PATH', '/admin/');
 
-	// SMTP-Server-Daten
-	define('INVITE_PORT', 587);
+	// Datenbank-Daten
+  define('HOST', 'localhost');
+	define('USER', 'root');
+	define('PASSWORD', '');
+	define('DATABASE', 'bvasozial');
 
-  // load private DATABASE
-  require_once('constants.inc.php');
-	// load mysqli connection
-	require_once('db_connect.php');
+	// SMTP-Daten
+	define('INVITE_HOST', 'mail.bvasozial.de');
+	define('INVITE_NAME', '');
+	define('INVITE_MAIL', '');
+	define('INVITE_PASSWORD', 'k');
+	define('INVITE_PORT', '587');
 
-  // defines constant to check if constants are loaded
-  define('CONSTANTS_LOADED', true);
+  // load mysqli connection
+  require_once('db_connect.php');
 
-	// Load Composer dependencies
-	require(ABS_PATH . '/vendor/autoload.php');
+  // Load Composer dependencies
+  require(ABS_PATH.'/vendor/autoload.php');
 ?>

@@ -15,11 +15,19 @@
     <body>
       <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
         <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-          <?php require_once(ABS_PATH . '/_sections/drawer.php'); ?>
-          <?php _getNav('freunde'); ?>
-        </div>
+          <header class="drawer-header">
+            <img class="avatar" src="<?php echo '/users/' . $user['uid'] . '/avatar.jpg'?>">
+            <div>
+            <div class="flex-container">
+              <span><?php echo $user['email']; ?></span>
+              <div class="mdl-layout-spacer"></div>
+            </div>
+          </div>
+        </header>
+        <?php _getNav('freunde'); ?>
+      </div>
         <main class="mdl-layout__content mdl-color--grey-100" meta-username="<?php echo $user['uid'] ?>" meta-directory="<?php echo $user['uid'] ?>">
-          <div class="mdl-card container container--margin-top mdl-color--white mdl-shadow--2dp mdl-card--border">
+          <div class="mdl-card friend-list__container friend-list__container--top mdl-color--white mdl-shadow--2dp mdl-card--border">
             <h3>Nach Freunden suchen</h3>
             <form class="flex-container" action="./index.php" method="get">
               <?php if(isset($_GET['search'])) : ?>
@@ -58,7 +66,7 @@
 							}
 						}
 	          if(empty($found)) : ?>
-              <div class="mdl-card container mdl-color--white mdl-shadow--2dp mdl-card--border" id="noResults">
+              <div class="mdl-card friend-list__container mdl-color--white mdl-shadow--2dp mdl-card--border" id="noResults">
                 <div class="flex-container failure">
                   <div class="flex-container__item flex-container__primary-item">
                     <i class="material-icons mdl-color-text--accent">accessibility</i>
@@ -67,16 +75,16 @@
                     <h1 class="failure__title mdl-color-text--accent">Oh nein!</h1>
                     <p class="failure__subtitle">Wir konnten den von dir eingegeben Namen nicht in unserer schlauen Tabelle voller Namen finden. Entweder hast du dich schlicht vertippt oder der von dir gesuchte Benutzer ist uns noch unbekannt. In diesem Fall erinnere ihn doch bitte daran, sich zu registrieren!</p>
                   </div>
+                  </div>
                 </div>
-              </div>
             <?php else : ?>
-              <div class="mdl-card container mdl-color--white mdl-shadow--2dp mdl-card--border" id="found">
+              <div class="mdl-card friend-list__container mdl-color--white mdl-shadow--2dp mdl-card--border" id="found">
                 <p class="section__title">Auf der Suche nach <b>"<?php echo $_GET['search']?>"</b> haben wir gefunden:</p>
                 <ul class="mdl-list">
-                  <?php foreach(filterUsers($_SESSION['user']['uid'], $found, $mysqli) as $person){ ?>
+                  <?php foreach($found as $person){ ?>
                   <li class="mdl-list__item">
-                    <a href="/users/index.php/<?= $person['uid']?>/" class="mdl-list__item-primary-content">
-      								<img src="/users/data/<?= $person['uid']?>/avatar.jpg" class="mdl-list__item-avatar">
+                    <a href="../users/index.php/<?= $person['uid']?>/" class="mdl-list__item-primary-content">
+      								<img src="/users/<?= $person['uid']?>/avatar.jpg" class="mdl-list__item-avatar">
       								<span class="name mdl-color-text--black"><?= $person['name']?></span>
       							</a>
                   </li>
@@ -84,13 +92,13 @@
                 </ul>
               </div>
             <?php endif; ?>
-              <div class="mdl-card container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
+              <div class="mdl-card friend-list__container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
                 <p class="section__title">Weitere Menschen, die deine Freunde sein könnten:</p>
                 <ul class="mdl-list">
-                  <?php foreach(filterUsers($_SESSION['user']['uid'], $rest, $mysqli) as $person){ ?>
+                  <?php foreach($rest as $person){ ?>
                   <li class="mdl-list__item">
-                    <a href="/users/index.php/<?= $person['uid']?>/" class="mdl-list__item-primary-content">
-  										<img src="/users/data/<?= $person['uid']?>/avatar.jpg" class="mdl-list__item-avatar">
+                    <a href="../users/index.php/<?= $person['uid']?>/" class="mdl-list__item-primary-content">
+  										<img src="/users/<?= $person['uid']?>/avatar.jpg" class="mdl-list__item-avatar">
   										<span class="name mdl-color-text--black"><?= $person['name']?></span>
   									</a>
                   </li>
@@ -106,7 +114,7 @@
       						}
       					}
               ?>
-                <div class="mdl-card container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
+                <div class="mdl-card friend-list__container friend-list__container--bottom mdl-color--white mdl-shadow--2dp" id="rest">
                   <p class="section__title">Menschen, die deine Freunde sein könnten:</p>
                   <ul class="mdl-list">
                     <?php
@@ -117,10 +125,10 @@
                       </li>
                     <?php
       							} else {
-      								foreach(filterUsers($_SESSION['user']['uid'], $users, $mysqli) as $person){ ?>
+      								foreach($users as $person){ ?>
                         <li class="mdl-list__item">
-                            <a href="/users/index.php/<?= $person['uid']?>/" class="mdl-list__item-primary-content">
-          										<img src="/users/data/<?= $person['uid']?>/avatar.jpg" class="mdl-list__item-avatar">
+                            <a href="../users/index.php/<?= $person['uid']?>/" class="mdl-list__item-primary-content">
+          										<img src="/users/<?= $person['uid']?>/avatar.jpg" class="mdl-list__item-avatar">
           										<span class="name mdl-color-text--black"><?= $person['name']?></span>
           									</a>
                         </li>

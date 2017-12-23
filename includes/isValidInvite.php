@@ -17,7 +17,7 @@
 					]
 				];
 			}
-  		success(["isValid" => true, "session" => $_SESSION]);
+  		success(["isValid" => true]);
     } else {
 			if(isInvited($_POST['uid'], $mysqli)){
 				success(["isValid" => false, "message" => "Wrong password"]);

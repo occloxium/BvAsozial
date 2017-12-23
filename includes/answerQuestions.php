@@ -1,6 +1,6 @@
 <?php
 /**
- * Answers a set of questions
+ * Answers a certain question
  * Alexander Bartolomey - 2017
  *
  * @package BvAsozial 1.2
@@ -10,36 +10,29 @@ require('constants.php');
 require_once(ABS_PATH.INC_PATH.'functions.php');
 secure_session_start();
 
-if(login_check($mysqli) && $_SESSION['user']['uid'] == $_POST['by']){
-	if(isset($_POST['fragen'], $_POST['by'])){
-    $log = "";
+if(login_check($mysqli) && $_POST['uid'] == $_SESSION['user']['uid']){
+	if(isset($_POST['fragen'])){
 		foreach($_POST['fragen'] as $frage){
-			if(isFriendsWith($frage['for'], $_POST['by'], $mysqli) || is_privileged($_POST['by'], $frage['for'], $mysqli)){
-				$obj = json_decode(file_get_contents(ABS_PATH . "/users/{$frage['for']}/{$frage['for']}.json"), true);
+			$user['uid'] = $frage['for'];
+			if(isFriendsWith($user['uid'], $_POST['uid'], $mysqli) || is_privileged($_POST['uid'], $user['uid'])){
+				$obj = json_decode(file_get_contents(ABS_PATH . "/users/{$user['uid']}/{$user['uid']}.json"), true);
 				$frage['frageID'] = intVal($frage['frageID']) - 1;
-				if($frage['type'] == 'freundesfrage'){
-          if(strlen($frage['antwort']) > 0){
-            $obj['freundesfragen'][$frage['frageID']]['antworten'][$frage['von']] = $frage['antwort'];
-          } else {
-            unset($obj['freundesfragen'][$frage['frageID']]['antworten'][$frage['von']]);
-          }
-          //$log .= $obj['freundesfragen'][$frage['frageID']]['antworten'][$frage['von']] . "\n";
+				if($frage['type'] == 'freundesfragen'){
+					$obj['freundesfragen'][$frage['frageID']]['antworten'][$frage['von']] = $frage['antwort'];
         } else {
-          if(strlen($frage['antwort']) > 0){
-            $obj['eigeneFragen'][$frage['frageID']]['beantwortet'] = true;
+          if(strlen($frage['antwort']) > 1){
+              $obj['eigeneFragen'][$frage['frageID']]['beantwortet'] = true;
           } else {
-            $obj['eigeneFragen'][$frage['frageID']]['beantwortet'] = false;
+              $obj['eigeneFragen'][$frage['frageID']]['beantwortet'] = false;
           }
 					$obj['eigeneFragen'][$frage['frageID']]['antwort'] = $frage['antwort'];
-          $log .= $frage['antwort'] . "\n";
 				}
-        $log .= "Answer from {$frage['von']} for {$frage['for']} saved. \n";
-				file_put_contents(ABS_PATH . "/users/{$frage['for']}/{$frage['for']}.json", json_encode($obj, JSON_PRETTY_PRINT));
+				file_put_contents("../users/{$user['uid']}/{$user['uid']}.json", json_encode($obj, JSON_PRETTY_PRINT));
+				success(["msg" => "Frage beantwortet"]);
 			} else {
-				$log .= "There was no relationship and/or privilege found for the requesting user \n";
+				error('internalError', 403, 'Forbidden', ['There was no relationship and/or privilege found for the requesting user']);
 			}
 		}
-    echo success(['log' => $log]);
 	} else {
 		echo error('clientError', 400, 'Bad Request');
 	}

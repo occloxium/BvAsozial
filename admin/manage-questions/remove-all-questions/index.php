@@ -12,26 +12,15 @@
   <body>
     <div class="mdl-layout__container">
       <div class="layout-wrapper">
-        <header class="layout__header layout__header--small mdl-color--accent mdl-color-text--blue-grey-50">
+        <header class="layout__header layout__header--small mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
           <div class="header__inner">
             <p class="mdl-typography--headline header__title">
-              Alle Fragen löschen
+              Frage hinzufügen
             </p>
           </div>
         </header>
         <main class="page-content mdl-color--grey-100">
           <div class="mdl-card container mdl-color--white mdl-shadow--2dp">
-            <div class="breadcrumb">
-              <li class="breadcrumb__item">
-                <a href="../../">Admin</a>
-              </li>
-              <li class="breadcrumb__item">
-                <a href="../">Fragen verwalten</a>
-              </li>
-              <li class="breadcrumb__item">
-                Alle Fragen entfernen
-              </li>
-            </div>
             <form action="./rmaq.php" method="post">
               <p class="mdl-typography--headline">Frage hinzufügen</p>
               <p class="mdl-typography--body-1">

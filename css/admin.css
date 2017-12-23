@@ -48,17 +48,3 @@ h4 {
 	display: block;
 	margin: 1em 0;
 }
-.to-subsite {
-  display: block;
-  font-size: 0.8rem !important;
-  color: #0275d8 !important;
-  text-decoration: none;
-}
-.to-subsite:hover, .to-subsite:focus {
-  text-decoration: underline;
-  color: #014c8c;
-}
-.to-subsite * {
-  vertical-align: middle;
-  font-size: 1rem !important;
-}

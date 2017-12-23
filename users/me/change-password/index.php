@@ -25,7 +25,31 @@
   						$stmt->execute();
   						if($stmt->errno == 0){
   							logout();
-  							header('Location: ../../'); exit;
+  							?>
+  								<body>
+  									<div class="mdl-layout__container">
+  										<div class="layout-wrapper">
+  											<header class="layout__header header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+  												<div class="header__inner">
+  													<p class="mdl-typography--headline header__title">
+  														Überprüfung...
+  													</p>
+  												</div>
+  												<div class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+  											</header>
+  											<main class="page-content mdl-color--grey-100">
+
+  											</main>
+  										</div>
+  									</div>
+  									<script>
+  									setTimeout(function(){
+  										location.replace('./../../')
+  									}, 3000);
+  									</script>
+  									<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  								</body>
+  							<?php
   						} else {
   								$_POST = array();
   							?>
@@ -52,7 +76,7 @@
   															<label class="mdl-textfield__label" for="password">Neues Passwort</label>
   														</div>
   														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-  															<input type="password" class="mdl-textfield__input" id="passwordconfrim" name="passwordconfirm">
+  															<input type="password" class="mdl-textfield__input" id="passwordconfrim" name="passwordconfrim">
   															<label class="mdl-textfield__label" for="passwordconfrim">Neues Passwort bestätigen</label>
   														</div>
   														<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white">
@@ -104,7 +128,7 @@
   															<label class="mdl-textfield__label" for="password">Neues Passwort</label>
   														</div>
   														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-  															<input type="password" class="mdl-textfield__input" id="passwordconfrim" name="passwordconfirm">
+  															<input type="password" class="mdl-textfield__input" id="passwordconfrim" name="passwordconfrim">
   															<label class="mdl-textfield__label" for="passwordconfrim">Neues Passwort bestätigen</label>
   														</div>
   														<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color--primary mdl-color-text--white">
@@ -147,7 +171,7 @@
   								</header>
   								<main class="page-content mdl-color--grey-100">
   									<?php
-  										echo 'Fehler: Server konnte Anfrage nicht erstellen. Sende bitte den nachfolgenden Text an occloxium@gmail.com:<br><br>';
+  										echo 'Fehler: Server konnte Anfrage nicht erstellen. Sende bitte den nachfolgenden Text an abi.zeitung.bva2016@gmail.com:<br><br>';
   										echo base64_encode($mysqli->error . ';' . $mysqli-errno .';' . $mysqli->sqlstate);
   									?>
   								</main>
@@ -177,21 +201,7 @@
   				</header>
   				<main class="page-content mdl-color--grey-100">
   					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
-              <div class="breadcrumb">
-                <li class="breadcrumb__item">
-                  <a href="/">Dashboard</a>
-                </li>
-                <li class="breadcrumb__item">
-                  <a href="/einstellungen/">Einstellungen</a>
-                </li>
-                <li class="breadcrumb__item">
-                  Passwort ändern
-                </li>
-              </div>
-  						<h1 class="mdl-typography--headline">Passwort ändern für <?= $_SESSION['user']['name'] ?></h1>
-              <p class="mdl-typography--body-1">
-                Du willst dein Passwort ändern, weil du es nicht mehr sicher findest? Gar kein Problem!
-              </p>
+  						<p class="mdl-typography--title">Passwort ändern für <?= $_SESSION['user']['name'] ?></p>
   						<form action="./index.php" method="post" class="layout__form">
   							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
   								<input type="password" class="mdl-textfield__input" id="oldpassword" name="oldpassword">

@@ -129,60 +129,12 @@
 	margin: 0 auto;
 }
 
-input.mdl-chip__text {
-  border: none;
-  background: none;
+#noname.list__item {
+	color: #888;
 }
-.form--rufnamen, .form--eigeneFragen, .form--freundesfragen {
-  margin: 0 !important;
-  max-width: none !important;
-  width: auto !important;
-}
-.form--rufnamen > button {
-  width: 80%;
-  max-width: 320px;
-  display: block;
-  margin: 0 auto 1em;
-}
-.form--rufnamen ul {
-  padding: 1em 0 2em;
-}
-.form--rufnamen ul > * {
-  vertical-align: middle !important;
-}
-.form--rufnamen ul li.none {
-  list-style: none;
-  color: rgba(0,0,0,0.5);
-  font-size: 0.8em;
-  display: inline-block;
-}
-.form--rufnamen ul button.mdl-button--icon {
-  width: 32px;
-  display: inline-block;
-  margin: 0 8px;
-}
-.mdl-chip__action i {
-  font-size: 24px !important;
-}
-.mdl-chip.empty::before {
-  content: 'Rufname';
-  color: rgba(0,0,0,0.5);
-  font-size: 0.8rem;
-  position: absolute;
-}
-.mdl-chip.empty .mdl-chip__text {
-  min-width: 40px;
-}
-.mdl-chip {
-  position: relative;
-  margin: 4px 4px;
-}
-.mdl-chip__text {
-  position: relative;
-  z-index: 3;
-  background: transparent;
-  padding: 0 3px;
-  /*min-width: 48px;*/
+
+span.mdl-chip.mdl-chip--deletable {
+	margin: 2px;
 }
 
 .list--no-entries {
@@ -241,7 +193,7 @@ input.mdl-chip__text {
 .flex-container {
 	display: flex;
 	align-items: center;
-	/*width: 90%;*/
+	width: 90%;
 	max-width: 720px;
 }
 
@@ -350,23 +302,9 @@ input.mdl-chip__text {
 	width: 100%;
 }
 
-.fragen ul {
-  list-style: none outside none;
-  padding-left: 0;
-}
-
 .mdl-tabs__tab--external-link {
 	color: #aaa;
 	padding: 0 24px;
-}
-
-.private-profile__wrapper {
-  padding: 6em 0;
-  color: rgba(0,0,0,0.33);
-  text-align: center;
-}
-.private-profile__subtitle i.material-icons {
-  vertical-align: bottom;
 }
 
 .mdl-tabs__tab--external-link:active,

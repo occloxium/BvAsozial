@@ -1,6 +1,4 @@
-<?php
-$version = VERSION;
-echo <<<HTML
+<?php echo <<<HTML
 <meta http-equiv="cache-control" content="max-age=0" />
 <meta http-equiv="cache-control" content="no-cache" />
 <meta http-equiv="expires" content="0" />
@@ -24,14 +22,13 @@ echo <<<HTML
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-<link rel="stylesheet" href="/css/material-icons.css" />
-<link rel="stylesheet" href="/css/bvasozial.mdl.src.css?v=$version" />
+
+<link rel="stylesheet" href="/css/bvasozial.mdl.src.css?v=1.2.32" />
 <link rel="stylesheet" type="text/css" href="/css/dialog-polyfill.css" />
-<link rel="stylesheet" href="/css/sidewide.css?v=$version">
+<link rel="stylesheet" href="/css/sidewide.css?v=1.2.32">
 <script src="/js/sha.js"></script>
 <script src="/js/hash.js"></script>
 <script src="/js/jquery-3.1.1.min.js"></script>
 <script src="/js/dialog-polyfill.js"></script>
-<script defer src="/js/material.min.js"></script>
 HTML;
 ?>

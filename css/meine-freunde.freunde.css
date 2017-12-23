@@ -7,6 +7,18 @@
   flex-grow: 1;
 }
 
+main .mdl-card {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  width: 720px;
+}
+
+main .mdl-card.container--top-margin {
+  margin-top: 6em;
+}
+
 .request__user-avatar {
   border-radius: 100px;
   width: 50px;
@@ -28,7 +40,4 @@
 .no-entries {
   color: rgba(0,0,0,0.33);
   text-align: center;
-}
-.container form .mdl-button {
-  width: auto;
 }

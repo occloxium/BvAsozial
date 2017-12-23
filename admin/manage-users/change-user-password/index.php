@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php _getHead() ?>
+		<?php _getHead('admin') ?>
 	</head>
 	<body>
 		<div class="mdl-layout__container">
@@ -23,17 +23,6 @@
 				</header>
 				<main class="page-content mdl-color--grey-100">
 					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
-            <div class="breadcrumb">
-              <li class="breadcrumb__item">
-                <a href="../../">Admin</a>
-              </li>
-              <li class="breadcrumb__item">
-                <a href="../">Benutzer verwalten</a>
-              </li>
-              <li class="breadcrumb__item">
-                Benutzer-Passwort ändern
-              </li>
-            </div>
 						<form action="./cpw.php">
 							<input type="hidden" name="step" value="0">
 							<p class="mdl-typography--headline">Passwort neu setzen...</p>

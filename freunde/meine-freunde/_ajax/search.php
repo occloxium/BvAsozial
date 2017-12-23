@@ -8,10 +8,14 @@
 		if(isset($_GET['friend'])){
 			if(strlen($_GET['friend']) < 1){
 				$output = "";
-        $_SESSION['user']['freunde'] = filterUsers($_SESSION['user']['uid'], $_SESSION['user']['freunde'], $mysqli);
-				if(count($_SESSION['user']['freunde']) > 0){
-					foreach($_SESSION['user']['freunde'] as $freund){
-					$fetched_user = getMinimalUser($freund, $mysqli);
+				$stmt = $mysqli->prepare('SELECT friend FROM freunde WHERE uid = ? ORDER BY friendsSince ASC');
+				$stmt->bind_param('s', $_SESSION['user']['uid']);
+				$stmt->execute();
+				$stmt->bind_result($von);
+				$stmt->store_result();
+				if($stmt->num_rows > 0){
+					while($stmt->fetch()){
+					$fetched_user = getMinimalUser($von, $mysqli);
 					$output .= '<li class="mdl-list__item">
 												<a class="seamless-anchor mdl-list__item-primary-content" href="/users/index.php/' . $fetched_user['uid'] . '/">
 													<span class="inherit-flex">
@@ -31,7 +35,7 @@
 				exit;
 			}
 			$output = "";
-			$friends = filterUsers($_SESSION['user']['uid'], getFriendsByName($_SESSION['user']['uid'], $_GET['friend'], $mysqli), $mysqli);
+			$friends = getFriendsByName($_SESSION['user']['uid'], $_GET['friend'], $mysqli);
 			if(!empty($friends)){
 				foreach($friends as $friend){
 				$fetched_user = getMinimalUser($friend, $mysqli);
@@ -56,7 +60,7 @@
 										</span>
 									</li>';
 			}
-			echo success(["html" => $output]);
+			echo $output;
 		} else {
 			echo error('clientError', 400, 'Bad Request');
 		}

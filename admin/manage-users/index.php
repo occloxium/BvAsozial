@@ -13,11 +13,11 @@
 	<body>
 		<div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
 		  <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-				<?php _getNav('manage-users'); ?>
+				<?php _getNav('manange-users'); ?>
 			  </div>
 			  <main class="mdl-layout__content mdl-color--grey-100">
 				  <div class="mdl-card mdl-color--white mdl-shadow--2dp container container--margin-top container--wide">
-					  <p class="mdl-typography--headline">Benutzer verwalten<a href="manage-mods/" class="to-subsite"><i class="material-icons">subdirectory_arrow_right</i><span>Moderatoren verwalten</span></a></p>
+					  <p class="mdl-typography--headline">Alle Benutzer</p>
 					  <ul class="mdl-list">
 					  <?php
               $query = 'SELECT * FROM person';

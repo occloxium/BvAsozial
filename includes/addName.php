@@ -1,37 +1,43 @@
 <?php
 	/**
-	 * Performs an addition of names by batch
+	 * Adds a certain additional name of a user
 	 * Alexander Bartolomey - 2017
 	 *
 	 * @package BvAsozial 1.2
 	 */
 
 	require('constants.php');
- 	require(ABS_PATH.INC_PATH.'functions.php');
-
+ 	require_once(ABS_PATH.INC_PATH.'functions.php');
  	secure_session_start();
 
-	if(isset($_POST['by'], $_POST['for'])){
-		if(login_check($mysqli) && (is_privileged($_POST['by'], $_POST['for'], $mysqli) || isFriendsWith($_POST['for'], $_POST['by'], $mysqli))){
-      $user = getUser($_POST['for'], $mysqli);
-      $directory = ABS_PATH . '/users/data/' . $user['uid'] . '/' . $user['uid'] . '.json';
-      $json = json_decode(file_get_contents($directory), true);
-      $log = "";
-      $json['rufnamen'] = [];
-      if(isset($_POST['names']) && count($_POST['names']) > 0){
-        foreach($_POST['names'] as $key=>$name){
-          if(!in_array(strtolower($name), array_map('strtolower', $json['rufnamen']))){
-            $json['rufnamen'][] = $name;
-            $log .= "{$name} wurde {$_POST['for']} verpasst. \n";
-          } else {
-            $log .= "Der angegebene Rufname ist ein Dublikat und wurde deshalb nicht hinzugefügt \n";
-          }
-        }
-      } else {
-        $log .= "Es wurden keine hinzufügbaren Daten gesendet";
-      }
-      $html = rufnamenliste($user['uid'], $_SESSION['user']['uid'], $json['rufnamen'], $mysqli);
-      echo success(["log" => $log, "html" => $html]);
+	if(isset($_POST['for'], $_POST['name'], $_POST['postedBy'])){
+		if(login_check($mysqli) && (is_privileged($_POST['postedBy'], $_POST['for']) || isFriendsWith($_POST['for'], $_POST['postedBy'], $mysqli))){
+			$directory = '../users/' . $user['directory'] . '/' . $user['uid'] . '.json';
+			$json = json_decode(file_get_contents($directory), true);
+			if(!isset($_POST['undo'])){
+				if(!in_array(strtolower($_POST['name']), array_map('strtolower', $json['rufnamen']))){
+					array_push($json['rufnamen'], $_POST['name']); // Success!
+          $html = rufnamenliste($user, $_SESSION['user']['uid'], $json['rufnamen']);
+          success(["html" => $html]);
+				} else {
+					error('clientError', 400, 'Bad Request', ["Der angegebene Rufname ist ein Dublikat und bereits vorhanden"]);
+				}
+			} else {
+				// undo post
+				// find requested 'name' in 'rufnamen'-array and remove the entry.
+				$list = $json['rufnamen'];
+				$key = array_search($_POST['name'], $list);
+				if($key !== false){
+					unset($list[$key]);
+					// echo response object
+	        $html = rufnamenliste($_POST['username'], $_SESSION['user']['uid'], $list);
+					success(["html" => $html]);
+					$json['rufnamen'] = $list;
+				} else {
+	        $html = rufnamenliste($user, $_SESSION['user']['uid'], $list);
+					success(["html" => $html, "request" => $_request, "error" => "Konnte zu widerrufenden Rufnamen nicht mehr in der Liste finden"]);
+				}
+			}
 			file_put_contents($directory, json_encode($json, JSON_PRETTY_PRINT));
 		} else {
 			error('clientError', 403, 'Forbidden');

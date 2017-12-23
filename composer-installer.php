@@ -1,0 +1,1 @@
+<?php exec('php composer.phar install'); exec('php composer.phar require phpmailer/phpmailer'); ?>

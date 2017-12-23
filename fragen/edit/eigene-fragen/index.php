@@ -58,7 +58,7 @@
 								?>
 							</table>
 							<button type="button" class="button--submit mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect">
-								speichern
+								Änderungen speichern
 							</button>
 					</form>
 					<a style="max-width: 240px; margin: 2em auto; display: block;" class="mdl-button mdl-js-button mdl-color--accent mdl-color-text--white mdl-js-ripple-effect" href="../../">

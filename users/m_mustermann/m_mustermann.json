@@ -1,0 +1,68 @@
+{
+    "spruch": "",
+    "rufnamen": [],
+    "freundesfragen": [
+        {
+            "frage": "Bei welchem Film muss ich immer weinen?",
+            "antworten": {
+                "a_bartolomey": "Findet Nemo"
+            }
+        },
+        {
+            "frage": "In welches Abenteuer sollte ich mich in der Zukunft st\u00fcrzen?",
+            "antworten": {
+                "a_bartolomey": "Prostitution"
+            }
+        },
+        {
+            "frage": "Was ist die schlimmste Angewohnheit von mir?",
+            "antworten": {
+                "a_bartolomey": "Prostitution"
+            }
+        },
+        {
+            "frage": "Was ist ein typischer Satz von mir?",
+            "antworten": {
+                "a_bartolomey": "Succ Nats"
+            }
+        },
+        {
+            "frage": "Was ist mein Lieblingsschnaps\/ -bier\/ -zigarette\/ -zigarre?",
+            "antworten": {
+                "a_bartolomey": "Erdbeerlimes"
+            }
+        },
+        {
+            "frage": "Was sind meine St\u00e4rken und Schw\u00e4chen?",
+            "antworten": {
+                "a_bartolomey": "Deine Muskeln"
+            }
+        }
+    ],
+    "eigeneFragen": [
+        {
+            "frage": "Bist du Abschreiber oder l\u00e4sst du abschreiben?",
+            "antwort": ""
+        },
+        {
+            "frage": "Ohne was gehst du nicht aus dem Haus?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wann das letzte Mal bei einem Helene Fischer-Song mitgesungen?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist das d\u00fcmmste was du je gemacht hast?",
+            "antwort": ""
+        },
+        {
+            "frage": "Was ist dein aktuelles Lieblingslied?",
+            "antwort": ""
+        },
+        {
+            "frage": "Wie oft hast du letztes Jahr \u201eHoch auf uns\u201c gesungen?",
+            "antwort": ""
+        }
+    ]
+}

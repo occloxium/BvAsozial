@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php _getHead('admin'); ?>
+		<?php _getHead(); ?>
 	</head>
 	<body>
 		<div class="mdl-layout__container">
@@ -24,17 +24,6 @@
 				</header>
 				<main class="page-content mdl-color--grey-100">
 					<div class="mdl-card container mdl-color--white mdl-shadow--2dp">
-            <div class="breadcrumb">
-              <li class="breadcrumb__item">
-                <a href="../../">Admin</a>
-              </li>
-              <li class="breadcrumb__item">
-                <a href="../">Einladungen verwalten</a>
-              </li>
-              <li class="breadcrumb__item">
-                Einladung entfernen
-              </li>
-            </div>
 						<form action="./cpw.php">
 							<input type="hidden" name="step" value="0">
 							<p class="mdl-typography--headline">Einladung entfernen...</p>
@@ -45,9 +34,14 @@
 								<input type="text" class="mdl-textfield__input" value="<?php echo $uid ?>" id="uid" name="uid" readonly>
 								<label for="uid" class="mdl-textfield__label">Benutzername</label>
 							</div>
-              <button class="mdl-button mdl-js-button mdl-color--accent mdl-color-text--white mdl-js-ripple-effect" type="button">
-                Entfernen
-              </button>
+							<div class="flex-container">
+								<button class="mdl-button mdl-js-button mdl-color--accent mdl-color-text--white mdl-js-ripple-effect" type="button">
+									Entfernen
+								</button>
+								<a class="mdl-button mdl-js-button mdl-color--primary mdl-color-text--white mdl-js-ripple-effect" href="../">
+									Abbrechen
+								</a>
+							</div>
 						</form>
 					</div>
 				</main>
