@@ -3,6 +3,7 @@ build/
 ~statics/
 bva-install/
 includes/constants.inc.php
+users/
 
 # User Directory
 users/data
