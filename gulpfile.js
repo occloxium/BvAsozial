@@ -6,6 +6,26 @@
 // Project Variables
 var projectDomain = '192.168.33.10';
 
+var sourcePathScss = './scss/';
+var targetPathCss = './css/';
+
+//Files on Watchlist.
+var watchLiveReload = [
+    './app/Resources/**/*.twig',
+    './web/css/main.min.css',
+    './web/js/main.min.js',
+    './app/Resources/views/**/*.html.twig',
+    './src/AppBundle/**/*.php'
+];
+
+var watchFilesScss = './web/scss/**/*.scss';
+var watchFilesJs = './web/js/**/*.js';
+
+var scssLintFiles = [
+    './web/scss/**/*.scss',
+    '!./web/scss/modules/vendor/**/*.scss'
+];
+
 //CSS concat sources -> root = projectSource
 var concatScssSources = [
 ];
@@ -32,19 +52,16 @@ var gulpPostcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var stylelint = require('gulp-stylelint');
 
-gulp.task('default', ['main.min.css', 'main.min.js'],function() {
-    gulp.watch('./web/scss/**/*.scss', ['main.min.css'] );
-    gulp.watch('./web/js/**/*.js', ['main.min.js']);
+gulp.task('default', [
+    'main.min.css'
+    // 'main.min.js'
+],function() {
+    gulp.watch(watchFilesScss, ['main.min.css'] );
+    // gulp.watch(watchFilesJs, ['main.min.js']);
 });
 
 gulp.task('live:default', ['default'], function() {
-    gulpBrowserSync.init([
-        './app/Resources/**/*.twig',
-        './web/css/main.min.css',
-        './web/js/main.min.js',
-        './app/Resources/views/**/*.html.twig',
-        './src/AppBundle/**/*.php'
-    ], {
+    gulpBrowserSync.init(watchLiveReload, {
         proxy: projectDomain,
         host: projectDomain,
         open: false,
@@ -58,7 +75,7 @@ gulp.task('main.min.css', function(callback) {
 
 gulp.task('main.min.css:lint', function() {
     return gulp
-        .src(['./web/scss/**/*.scss', '!./web/scss/modules/vendor/**/*.scss'])
+        .src(scssLintFiles)
         .pipe(stylelint({
             failAfterError: false,
             reportOutputDir: './',
@@ -70,7 +87,7 @@ gulp.task('main.min.css:lint', function() {
 
 gulp.task('main.min.css:sass', function() {
     return gulp
-        .src('./web/scss/main.scss')
+        .src(sourcePathScss + 'main.scss')
         .pipe(gulpSourcemaps.init())
         .pipe(gulpSass({
             errLogToConsole: true,
@@ -81,20 +98,20 @@ gulp.task('main.min.css:sass', function() {
             autoprefixer('> .1%')
         ]))
         .pipe(gulpSourcemaps.write({includeContent: false, sourceRoot: '../scss'}))
-        .pipe(gulp.dest('./web/css/'));
+        .pipe(gulp.dest(targetPathCss));
 });
 
 gulp.task('main.min.css:concat', function() {
-    concatScssSources[concatScssSources.length + 1] = './web/css/main.temp.css';
+    concatScssSources[concatScssSources.length + 1] = targetPathCss + 'main.temp.css';
     return gulp.src(concatScssSources)
         .pipe(gulpSourcemaps.init({loadMaps: true}))
         .pipe(gulpConcat('main.min.css'))
         .pipe(gulpSourcemaps.write('./'))
-        .pipe(gulp.dest('./web/css/'));
+        .pipe(gulp.dest(targetPathCss));
 });
 
 gulp.task('main.min.css:clean', function() {
-    return gulpDel.sync(['./web/css/main.temp.css']);
+    return gulpDel.sync([targetPathCss + 'main.temp.css']);
 });
 
 gulp.task('main.min.js', function(callback) {
