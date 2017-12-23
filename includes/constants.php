@@ -20,11 +20,11 @@
 	define('DATABASE', 'bvasozial');
 
 	// SMTP-Daten
-	define('INVITE_HOST', 'mail.bvasozial.de');
-	define('INVITE_NAME', '');
-	define('INVITE_MAIL', '');
-	define('INVITE_PASSWORD', 'k');
-	define('INVITE_PORT', '587');
+	define('INVITE_HOST', '	smtp.mailtrap.io');
+	define('INVITE_NAME', 'd25821052d92ad');
+	define('INVITE_MAIL', 'd25821052d92ad');
+	define('INVITE_PASSWORD', '8214e1e7c30541');
+	define('INVITE_PORT', '2525');
 
   // load mysqli connection
   require_once('db_connect.php');
